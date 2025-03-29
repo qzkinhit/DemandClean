@@ -97,16 +97,17 @@ The framework automatically generates and saves:
 - ✅ **OpenAI Gym-style environment** for modeling data cleaning as sequential decision making
 - ✅ **Multiple cleaning strategy evaluations**
 - ✅ **Tolerance boundary estimation**
-- ✅ 🔧 **Interactive Streamlit front-end** for user-defined data exploration
+- ✅ **Interactive Streamlit front-end** for user-defined data exploration
 
 ---
 
 📜 Citation
 
 If you find this project helpful, please consider citing:
-
-@article{your2025demandclean,
+```
+@article{demo4demandclean,
   title={DemandClean: A Multi-Objective Learning Framework for Balancing Model Tolerance to Data Authenticity and Diversity},
   author={Zekai Qian and Xiaoou Ding and Hongzhi Wang},
   year={2025}
 }
+```
