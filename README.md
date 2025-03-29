@@ -7,7 +7,7 @@ This repository contains the implementation for our paper:
 
 ## 🔍 Overview
 
-DemandClean introduces a unified simulation environment that injects multiple types of data errors (missing values, outliers, and noise) and trains a **DQN-based RL agent** to make optimal cleaning decisions (`no-op`, `repair`, or `delete`) on a per-cell basis.
+DemandClean introduces a unified simulation environment that injects multiple types of data errors (Missing Errors, Semantic Errors, and Syntactic Errors) and trains a **DQN-based RL agent** to make optimal cleaning decisions (`no-op`, `repair`, or `delete`) on a per-cell basis.
 
 It balances two competing goals:
 - **Authenticity**: preserving real-world data semantics by avoiding unnecessary modifications.
@@ -92,7 +92,7 @@ The framework automatically generates and saves:
 ## 🧠 Core Features
 
 - ✅ **Custom synthetic data generation** (classification/regression)
-- ✅ **Error injectors**: missing values, outliers, and noise
+- ✅ **Error injectors**: Missing Errors, Semantic Errors, and Syntactic Errors
 - ✅ **DQN-based reinforcement learning cleaning agent**
 - ✅ **OpenAI Gym-style environment** for modeling data cleaning as sequential decision making
 - ✅ **Multiple cleaning strategy evaluations**
