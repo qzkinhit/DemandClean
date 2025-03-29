@@ -78,7 +78,7 @@ The framework automatically generates and saves:
 - 📊 **Bar charts** comparing strategies:  
   *Do Nothing*, *Delete All*, *Repair All*, *DemandClean*
 
-- 📈 **Line plots** showing action trends vs. error rate
+- 📈 **plots** showing action trends vs. error rate
 
 - 📉 **Tolerance boundary analysis**:
   - Overall model tolerance to errors  
