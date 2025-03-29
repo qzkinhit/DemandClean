@@ -21,25 +21,17 @@ Our system evaluates and visualizes:
 ---
 
 ## 📁 Project Structure
-
+```
 DemandClean/
-
 ├── Data/                  # Datasets (adult, Bank, beers, Sick, etc.)
-
 ├── saved_models/          # Trained DQN agents
-
 │   └── default_agent.h5
-
 ├── DQN_extract.py         # RL inference utilities
-
 ├── experiments.py         # Main experiment pipeline
-
 ├── WelcomeDemandClean.py  # 🌐 Streamlit-based front-end UI
-
 ├── requirements.txt       # Python dependencies
-
 ├── README.md              # This file
-
+```
 ---
 
 ## ⚙️ Installation
