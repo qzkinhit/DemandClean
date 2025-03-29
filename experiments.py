@@ -4,7 +4,6 @@ import matplotlib.patches as mpatches
 from tensorflow.keras.optimizers import Adam
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 import matplotlib.patheffects as path_effects
 
 def setup_experiment(error_rates, models, task_type, n_samples, n_features,
