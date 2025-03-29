@@ -1,8 +1,4 @@
-
-
-# DemandClean
-
-**DemandClean: A Multi-Objective Learning Framework for Balancing Model Tolerance to Data Authenticity and Diversity**
+# DemandClean: A Multi-Objective Learning Framework for Balancing Model Tolerance to Data Authenticity and Diversity
 
 This repository contains the implementation for our paper:  
 **"DemandClean: A Multi-Objective Learning Framework for Balancing Model Tolerance to Data Authenticity and Diversity"**, which proposes a reinforcement learning-based framework to explore how machine learning models tolerate and respond to various types of data quality issues.
@@ -32,98 +28,85 @@ DemandClean/
 │   └── default_agent.h5
 ├── DQN_extract.py         # RL inference utilities
 ├── experiments.py         # Main experiment pipeline
+├── WelcomeDemandClean.py  # 🌐 Streamlit-based front-end UI
+├── requirements.txt       # Python dependencies
 ├── README.md              # This file
 
 ---
 
 ## ⚙️ Installation
 
-You can install the dependencies using `pip`:
+Install dependencies using:
 
 ```bash
 pip install -r requirements.txt
 ```
-If requirements.txt is not provided, install manually:
 
-pip install numpy pandas scikit-learn tensorflow gym tqdm matplotlib
+If requirements.txt is not available, install manually:
 
-We recommend Python 3.9+.
+pip install numpy pandas scikit-learn tensorflow gym tqdm matplotlib streamlit
 
+💡 Recommended: Python 3.9+
 
 ---
+
 🚀 How to Run
 
-To run the full experiment pipeline:
+1. Run the Core Experiment Pipeline
 ```bash
 python experiments.py
 ```
-By default, this runs the classification task using an SVM downstream model. You can modify parameters in main():
+By default, this runs the classification task using an SVM downstream model. You can customize:
 ```
-task_type = 'classification'  # or 'regression'
-n_episodes = 50               # training episodes per error rate
-error_rates = [0.1, 0.2, ...] # error severity levels
-model_type = 'svm'            # downstream model: 'random_forest', 'logistic_regression', etc.
+task_type = 'classification'       # or 'regression'
+n_episodes = 50                    # training episodes per error rate
+error_rates = [0.1, 0.2, 0.3, ...] # error severity levels
+model_type = 'svm'                 # downstream model: 'random_forest', 'logistic_regression', etc.
 ```
-During training, a DQN agent learns to clean data in an environment simulating dirty features and evaluates performance using multiple strategies.
+2. Launch the Interactive Streamlit UI 🌐
+
+To try an interactive front-end for exploring DemandClean:
+```bash
+streamlit run WelcomeDemandClean.py
+```
 
 ---
 
 📊 Visualization & Results
 
 The framework automatically generates and saves:
-	•	Bar charts comparing strategies (Do Nothing, Delete All, Repair All, DemandClean);
-	•	Line plots showing action trends vs. error rate;
-	•	Tolerance boundary analysis:
+	•	📊 Bar charts comparing strategies (Do Nothing, Delete All, Repair All, DemandClean)
+	•	📈 Line plots showing action trends vs. error rate
+	•	📉 Tolerance boundary analysis:
 	•	Overall model tolerance to errors
-	•	Preference shift from repair to delete
-	•	Sensitivity to missing vs. outlier errors
-	•	Final results saved in experiment_results.json
+	•	Strategy preference shift (repair vs. delete)
+	•	Error-type-specific sensitivity (missing vs. outlier)
+	•	📁 Final results saved in experiment_results.json
 
-Sample generated figures:
+Sample figure outputs:
 	•	strategy_comparison*.png
 	•	tolerance_threshold*.png
 	•	repair_vs_delete_threshold*.png
 
-⸻
+---
 
 🧠 Core Features
-	•	✅ Custom data generation for classification/regression
-	•	✅ Error injectors (missing, outliers, noise)
-	•	✅ Reinforcement learning-based cleaning agent (DQN)
-	•	✅ Gym-style cleaning environment
-	•	✅ Unified evaluation of multiple cleaning strategies
-	•	✅ Tolerance boundary detection and visualization
+	•	✅ Custom synthetic data generation (classification/regression)
+	•	✅ Error injectors: missing values, outliers, and noise
+	•	✅ DQN-based reinforcement learning cleaning agent
+	•	✅ OpenAI Gym-style environment for modeling data cleaning as sequential decision making
+	•	✅ Multiple cleaning strategy evaluations
+	•	✅ Tolerance boundary estimation
+	•	✅ 🔧 Interactive Streamlit front-end for user-defined data exploration
 
-⸻
+---
 
 📜 Citation
 
-If you find this project useful, please consider citing our paper.
+If you find this project helpful, please consider citing:
 
-[//]: # (@article{your2025demandclean,)
-
-[//]: # (  title={DemandClean: A Multi-Objective Learning Framework for Balancing Model Tolerance to Data Authenticity and Diversity},)
-
-[//]: # (  author={Your Name and Coauthors},)
-
-[//]: # (  journal={Preprint / Conference},)
-
-[//]: # (  year={2025})
-
-[//]: # (})
-
-
-
-[//]: # (⸻)
-
-[//]: # ()
-[//]: # (🤝 Acknowledgements)
-
-[//]: # ()
-[//]: # (This project is developed and maintained by [Your Name] and collaborators at [Your Lab/Institution].)
-
-[//]: # ()
-[//]: # (For questions, contributions, or feedback, please open an issue or contact us directly.)
-
-[//]: # ()
-[//]: # (⸻)
+@article{your2025demandclean,
+  title={DemandClean: A Multi-Objective Learning Framework for Balancing Model Tolerance to Data Authenticity and Diversity},
+  author={Zekai Qian and Xiaoou Ding and Hongzhi Wang},
+  year={2025}
+}
