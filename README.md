@@ -69,35 +69,35 @@ To try an interactive front-end for exploring DemandClean:
 ```bash
 streamlit run WelcomeDemandClean.py
 ```
-
 ---
 
-📊 Visualization & Results
+## 📊 Visualization & Results
 
 The framework automatically generates and saves:
-	•	📊 Bar charts comparing strategies (Do Nothing, Delete All, Repair All, DemandClean)
-	•	📈 Line plots showing action trends vs. error rate
-	•	📉 Tolerance boundary analysis:
-	•	Overall model tolerance to errors
-	•	Strategy preference shift (repair vs. delete)
-	•	Error-type-specific sensitivity (missing vs. outlier)
-	•	📁 Final results saved in experiment_results.json
 
-Sample figure outputs:
-	•	strategy_comparison*.png
-	•	tolerance_threshold*.png
-	•	repair_vs_delete_threshold*.png
+- 📊 **Bar charts** comparing strategies:  
+  *Do Nothing*, *Delete All*, *Repair All*, *DemandClean*
+
+- 📈 **Line plots** showing action trends vs. error rate
+
+- 📉 **Tolerance boundary analysis**:
+  - Overall model tolerance to errors  
+  - Strategy preference shift (*repair* vs. *delete*)  
+  - Error-type-specific sensitivity (*missing* vs. *outlier*)
+
+- 📁 Final results saved in `experiment_results.json`
 
 ---
 
-🧠 Core Features
-	•	✅ Custom synthetic data generation (classification/regression)
-	•	✅ Error injectors: missing values, outliers, and noise
-	•	✅ DQN-based reinforcement learning cleaning agent
-	•	✅ OpenAI Gym-style environment for modeling data cleaning as sequential decision making
-	•	✅ Multiple cleaning strategy evaluations
-	•	✅ Tolerance boundary estimation
-	•	✅ 🔧 Interactive Streamlit front-end for user-defined data exploration
+## 🧠 Core Features
+
+- ✅ **Custom synthetic data generation** (classification/regression)
+- ✅ **Error injectors**: missing values, outliers, and noise
+- ✅ **DQN-based reinforcement learning cleaning agent**
+- ✅ **OpenAI Gym-style environment** for modeling data cleaning as sequential decision making
+- ✅ **Multiple cleaning strategy evaluations**
+- ✅ **Tolerance boundary estimation**
+- ✅ 🔧 **Interactive Streamlit front-end** for user-defined data exploration
 
 ---
 
