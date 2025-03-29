@@ -20,8 +20,6 @@ from collections import deque
 import random
 from tqdm import tqdm
 
-# 设置全局字体（中文支持）
-# plt.rcParams['font'] = ['simsun']
 plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 plt.rcParams["axes.unicode_minus"] = False
 
