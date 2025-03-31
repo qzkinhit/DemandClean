@@ -1,0 +1,819 @@
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/bin/python /Users/qianzekai/PycharmProjects/TolerDM/expdraw.py
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+生成干净的训练和测试数据...
+生成分类任务数据集...
+特征重要性: {'feature_0': 0.06586363395874113, 'feature_1': 0.17408465841734833, 'feature_2': 0.17224227782572046, 'feature_3': 0.36340539717726283, 'feature_4': 0.22440403262092729}
+生成分类任务数据集...
+Running experiment with error rate: 0.1
+注入缺失值错误: 共注入 164 个单元格错误.
+注入异常值错误: 共注入 155 个单元格错误.
+注入噪声错误: 共注入 157 个单元格错误.
+  Testing model: random_forest
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2025-03-26 20:22:19.820779: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M2
+2025-03-26 20:22:19.820808: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 16.00 GB
+2025-03-26 20:22:19.820814: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 5.33 GB
+2025-03-26 20:22:19.820953: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2025-03-26 20:22:19.820962: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+Training new model with learning rate: 0.001
+Training episodes:   0%|          | 0/80 [00:00<?, ?it/s]2025-03-26 20:22:28.361999: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+Training episodes:  10%|█         | 8/80 [01:25<12:46, 10.64s/it]Episode 8/80 - Avg Reward: -321.52, Avg Steps: 476.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [02:43<11:59, 11.07s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -312.29, Avg Steps: 476.00, Epsilon: 0.9229
+Training episodes:  20%|██        | 16/80 [02:54<12:04, 11.32s/it]Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [04:26<10:46, 11.54s/it]Episode 24/80 - Avg Reward: -295.32, Avg Steps: 476.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [05:50<09:49, 12.03s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -270.90, Avg Steps: 476.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [06:02<09:35, 11.99s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [07:41<08:17, 12.44s/it]Episode 40/80 - Avg Reward: -255.13, Avg Steps: 476.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [09:10<07:02, 12.81s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -228.97, Avg Steps: 476.00, Epsilon: 0.7862
+Training episodes:  60%|██████    | 48/80 [09:23<06:48, 12.76s/it]Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [11:08<05:13, 13.05s/it]Episode 56/80 - Avg Reward: -214.31, Avg Steps: 476.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [12:44<03:56, 13.88s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -183.82, Avg Steps: 476.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [14:52<01:54, 14.33s/it]Episode 72/80 - Avg Reward: -181.70, Avg Steps: 476.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [16:32<00:14, 14.14s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -178.90, Avg Steps: 476.00, Epsilon: 0.6696
+Training episodes: 100%|██████████| 80/80 [16:46<00:00, 12.58s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 161 个单元格错误.
+注入异常值错误: 共注入 161 个单元格错误.
+注入噪声错误: 共注入 160 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.97, 'f1_score': 0.9699729756781104}
+Delete All: {'accuracy': 0.9666666666666667, 'f1_score': 0.9666429460950009}
+Repair All: {'accuracy': 0.9866666666666667, 'f1_score': 0.9866642958748222}
+RL Optimal: {'accuracy': 0.97, 'f1_score': 0.96998365776923}
+  Testing model: svm
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [01:54<17:25, 14.53s/it]Episode 8/80 - Avg Reward: -315.05, Avg Steps: 476.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [03:36<15:57, 14.73s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -320.21, Avg Steps: 476.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [05:58<15:02, 16.12s/it]Episode 24/80 - Avg Reward: -284.80, Avg Steps: 476.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [07:56<13:45, 16.85s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -264.39, Avg Steps: 476.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [08:11<13:10, 16.48s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [10:23<10:43, 16.09s/it]Episode 40/80 - Avg Reward: -247.49, Avg Steps: 476.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [12:16<09:00, 16.37s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -232.62, Avg Steps: 476.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [14:47<06:41, 16.71s/it]Episode 56/80 - Avg Reward: -205.86, Avg Steps: 476.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [16:47<04:52, 17.20s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  80%|████████  | 64/80 [17:05<04:35, 17.24s/it]Episode 64/80 - Avg Reward: -196.34, Avg Steps: 476.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [19:26<02:21, 17.71s/it]Episode 72/80 - Avg Reward: -177.92, Avg Steps: 476.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [21:30<00:17, 17.74s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -169.94, Avg Steps: 476.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+Training episodes: 100%|██████████| 80/80 [21:48<00:00, 16.36s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+注入缺失值错误: 共注入 162 个单元格错误.
+注入异常值错误: 共注入 161 个单元格错误.
+注入噪声错误: 共注入 154 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9066666666666666, 'f1_score': 0.9058464849354376}
+Delete All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+  Testing model: logistic_regression
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training episodes:   0%|          | 0/80 [00:00<?, ?it/s]Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [01:07<10:10,  8.49s/it]Episode 8/80 - Avg Reward: -329.49, Avg Steps: 476.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [02:09<09:38,  8.89s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -308.35, Avg Steps: 476.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [03:31<08:38,  9.25s/it]Episode 24/80 - Avg Reward: -297.31, Avg Steps: 476.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [04:38<07:55,  9.69s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  40%|████      | 32/80 [04:48<07:47,  9.74s/it]Episode 32/80 - Avg Reward: -262.60, Avg Steps: 476.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [06:07<06:40, 10.01s/it]Episode 40/80 - Avg Reward: -234.26, Avg Steps: 476.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [07:20<05:46, 10.49s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -217.86, Avg Steps: 476.00, Epsilon: 0.7862
+Training episodes:  60%|██████    | 48/80 [07:31<05:37, 10.55s/it]Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [08:57<04:21, 10.89s/it]Episode 56/80 - Avg Reward: -214.33, Avg Steps: 476.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [10:14<03:04, 10.85s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -199.74, Avg Steps: 476.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [11:53<01:28, 11.10s/it]Episode 72/80 - Avg Reward: -193.10, Avg Steps: 476.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [13:13<00:11, 11.51s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes: 100%|██████████| 80/80 [13:24<00:00, 10.06s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -180.66, Avg Steps: 476.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 161 个单元格错误.
+注入异常值错误: 共注入 154 个单元格错误.
+注入噪声错误: 共注入 150 个单元格错误.
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Delete All: {'accuracy': 0.9133333333333333, 'f1_score': 0.9126774439120504}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.9133333333333333, 'f1_score': 0.9126774439120504}
+Running experiment with error rate: 0.3
+注入缺失值错误: 共注入 460 个单元格错误.
+注入异常值错误: 共注入 406 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+注入噪声错误: 共注入 398 个单元格错误.
+  Testing model: random_forest
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [03:15<29:41, 24.75s/it]Episode 8/80 - Avg Reward: -1887.93, Avg Steps: 1264.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [06:15<27:51, 25.72s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -1807.24, Avg Steps: 1264.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [10:17<25:11, 26.99s/it]Episode 24/80 - Avg Reward: -1682.69, Avg Steps: 1264.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [13:33<22:55, 28.07s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -1550.35, Avg Steps: 1264.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [14:02<22:43, 28.40s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [17:55<19:27, 29.18s/it]Episode 40/80 - Avg Reward: -1467.99, Avg Steps: 1264.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [21:27<16:36, 30.19s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -1349.95, Avg Steps: 1264.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [26:07<12:31, 31.30s/it]Episode 56/80 - Avg Reward: -1265.45, Avg Steps: 1264.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [29:52<09:09, 32.31s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -1183.80, Avg Steps: 1264.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [34:49<04:26, 33.26s/it]Episode 72/80 - Avg Reward: -1092.37, Avg Steps: 1264.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [38:49<00:34, 34.38s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes: 100%|██████████| 80/80 [39:24<00:00, 29.55s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -1012.25, Avg Steps: 1264.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 459 个单元格错误.
+注入异常值错误: 共注入 406 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+注入噪声错误: 共注入 391 个单元格错误.
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9533333333333334, 'f1_score': 0.9532314818939023}
+Delete All: {'accuracy': 0.95, 'f1_score': 0.9499059344769624}
+Repair All: {'accuracy': 0.9866666666666667, 'f1_score': 0.9866642958748222}
+RL Optimal: {'accuracy': 0.9466666666666667, 'f1_score': 0.9465145302192904}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+  Testing model: svm
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [04:19<39:07, 32.61s/it]Episode 8/80 - Avg Reward: -1891.34, Avg Steps: 1264.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [08:15<36:53, 34.06s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -1773.98, Avg Steps: 1264.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [13:27<32:29, 34.80s/it]Episode 24/80 - Avg Reward: -1669.05, Avg Steps: 1264.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [17:42<29:45, 36.44s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -1526.14, Avg Steps: 1264.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [18:19<29:15, 36.56s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [23:19<25:02, 37.57s/it]Episode 40/80 - Avg Reward: -1488.70, Avg Steps: 1264.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [27:52<21:22, 38.87s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -1368.45, Avg Steps: 1264.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [33:55<16:12, 40.53s/it]Episode 56/80 - Avg Reward: -1265.38, Avg Steps: 1264.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [38:45<11:40, 41.23s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -1147.41, Avg Steps: 1264.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [45:07<05:42, 42.84s/it]Episode 72/80 - Avg Reward: -1089.50, Avg Steps: 1264.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [50:13<00:43, 43.98s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes: 100%|██████████| 80/80 [50:58<00:00, 38.23s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -1037.91, Avg Steps: 1264.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 463 个单元格错误.
+注入异常值错误: 共注入 411 个单元格错误.
+注入噪声错误: 共注入 364 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+Delete All: {'accuracy': 0.9, 'f1_score': 0.898989898989899}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+  Testing model: logistic_regression
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training episodes:   0%|          | 0/80 [00:00<?, ?it/s]Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [02:29<22:44, 18.95s/it]Episode 8/80 - Avg Reward: -1867.78, Avg Steps: 1264.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [04:48<21:35, 19.93s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -1748.57, Avg Steps: 1264.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [07:55<19:37, 21.03s/it]Episode 24/80 - Avg Reward: -1654.71, Avg Steps: 1264.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [10:30<17:55, 21.95s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -1577.15, Avg Steps: 1264.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [10:52<17:34, 21.98s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [13:58<15:40, 23.52s/it]Episode 40/80 - Avg Reward: -1460.85, Avg Steps: 1264.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [16:47<13:17, 24.17s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -1388.79, Avg Steps: 1264.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [20:32<10:00, 25.02s/it]Episode 56/80 - Avg Reward: -1266.21, Avg Steps: 1264.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [23:32<07:18, 25.82s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  80%|████████  | 64/80 [23:58<06:54, 25.88s/it]Episode 64/80 - Avg Reward: -1178.97, Avg Steps: 1264.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [27:31<03:32, 26.54s/it]Episode 72/80 - Avg Reward: -1092.29, Avg Steps: 1264.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [30:45<00:27, 27.80s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes: 100%|██████████| 80/80 [31:12<00:00, 23.41s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -1054.23, Avg Steps: 1264.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 466 个单元格错误.
+注入异常值错误: 共注入 420 个单元格错误.
+注入噪声错误: 共注入 385 个单元格错误.
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Delete All: {'accuracy': 0.9133333333333333, 'f1_score': 0.9126774439120504}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+Running experiment with error rate: 0.5
+注入缺失值错误: 共注入 739 个单元格错误.
+注入异常值错误: 共注入 619 个单元格错误.
+注入噪声错误: 共注入 504 个单元格错误.
+  Testing model: random_forest
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training episodes:   0%|          | 0/80 [00:00<?, ?it/s]Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [04:35<41:39, 34.72s/it]Episode 8/80 - Avg Reward: -3522.70, Avg Steps: 1862.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [08:47<39:01, 36.02s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -3390.35, Avg Steps: 1862.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [14:25<35:26, 37.98s/it]Episode 24/80 - Avg Reward: -3125.62, Avg Steps: 1862.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [19:01<32:19, 39.58s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -2976.97, Avg Steps: 1862.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [25:14<27:57, 41.94s/it]Episode 40/80 - Avg Reward: -2748.95, Avg Steps: 1862.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [30:12<23:39, 43.01s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -2549.96, Avg Steps: 1862.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [36:52<17:51, 44.64s/it]Episode 56/80 - Avg Reward: -2394.85, Avg Steps: 1862.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [42:13<13:02, 46.04s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -2304.94, Avg Steps: 1862.00, Epsilon: 0.7256
+Training episodes:  80%|████████  | 64/80 [42:59<12:17, 46.09s/it]Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [49:17<06:20, 47.61s/it]Episode 72/80 - Avg Reward: -2162.82, Avg Steps: 1862.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [54:58<00:48, 48.83s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -1999.87, Avg Steps: 1862.00, Epsilon: 0.6696
+Training episodes: 100%|██████████| 80/80 [55:46<00:00, 41.84s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 750 个单元格错误.
+注入异常值错误: 共注入 619 个单元格错误.
+注入噪声错误: 共注入 538 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9466666666666667, 'f1_score': 0.9465145302192904}
+Delete All: {'accuracy': 0.9133333333333333, 'f1_score': 0.9133179231863441}
+Repair All: {'accuracy': 0.9866666666666667, 'f1_score': 0.9866642958748222}
+RL Optimal: {'accuracy': 0.94, 'f1_score': 0.9399332591768632}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+  Testing model: svm
+Training episodes:   0%|          | 0/80 [00:00<?, ?it/s]Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [06:10<55:58, 46.65s/it]Episode 8/80 - Avg Reward: -3525.24, Avg Steps: 1862.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [11:48<52:28, 48.45s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -3364.55, Avg Steps: 1862.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [19:23<47:43, 51.13s/it]Episode 24/80 - Avg Reward: -3190.57, Avg Steps: 1862.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [25:30<42:58, 52.61s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -3017.97, Avg Steps: 1862.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [26:23<42:14, 52.81s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [33:40<36:28, 54.70s/it]Episode 40/80 - Avg Reward: -2819.66, Avg Steps: 1862.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [40:11<31:03, 56.47s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -2656.27, Avg Steps: 1862.00, Epsilon: 0.7862
+Training episodes:  60%|██████    | 48/80 [41:08<30:10, 56.58s/it]Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [48:54<23:21, 58.41s/it]Episode 56/80 - Avg Reward: -2448.05, Avg Steps: 1862.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [55:58<17:10, 60.61s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -2305.98, Avg Steps: 1862.00, Epsilon: 0.7256
+Training episodes:  80%|████████  | 64/80 [56:57<16:01, 60.11s/it]Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [1:05:14<08:17, 62.14s/it]Episode 72/80 - Avg Reward: -2203.96, Avg Steps: 1862.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [1:12:42<01:04, 64.09s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -1963.62, Avg Steps: 1862.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training episodes: 100%|██████████| 80/80 [1:13:48<00:00, 55.36s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 753 个单元格错误.
+注入异常值错误: 共注入 603 个单元格错误.
+注入噪声错误: 共注入 519 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9066666666666666, 'f1_score': 0.9058464849354376}
+Delete All: {'accuracy': 0.9, 'f1_score': 0.898989898989899}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.9033333333333333, 'f1_score': 0.902421516616382}
+  Testing model: logistic_regression
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [03:28<31:42, 26.42s/it]Episode 8/80 - Avg Reward: -3595.12, Avg Steps: 1862.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [06:42<30:08, 27.82s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  20%|██        | 16/80 [07:11<29:59, 28.11s/it]Episode 16/80 - Avg Reward: -3371.91, Avg Steps: 1862.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [11:06<27:33, 29.52s/it]Episode 24/80 - Avg Reward: -3146.51, Avg Steps: 1862.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [14:42<25:20, 31.03s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -2973.77, Avg Steps: 1862.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [19:34<21:47, 32.68s/it]Episode 40/80 - Avg Reward: -2812.57, Avg Steps: 1862.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [23:32<18:42, 34.02s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -2661.29, Avg Steps: 1862.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [28:47<14:05, 35.25s/it]Episode 56/80 - Avg Reward: -2437.29, Avg Steps: 1862.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [33:02<10:19, 36.43s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -2345.38, Avg Steps: 1862.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [38:43<05:05, 38.13s/it]Episode 72/80 - Avg Reward: -2167.13, Avg Steps: 1862.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [43:15<00:38, 38.89s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes: 100%|██████████| 80/80 [43:54<00:00, 32.93s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -2032.35, Avg Steps: 1862.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 745 个单元格错误.
+注入异常值错误: 共注入 618 个单元格错误.
+注入噪声错误: 共注入 523 个单元格错误.
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+Delete All: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+Running experiment with error rate: 0.7
+注入缺失值错误: 共注入 1007 个单元格错误.
+注入异常值错误: 共注入 773 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+注入噪声错误: 共注入 597 个单元格错误.
+  Testing model: random_forest
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [05:36<51:01, 42.53s/it]Episode 8/80 - Avg Reward: -5034.49, Avg Steps: 2377.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [10:48<48:22, 44.65s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -4748.53, Avg Steps: 2377.00, Epsilon: 0.9229
+Training episodes:  20%|██        | 16/80 [11:34<47:51, 44.86s/it]Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [17:50<44:15, 47.42s/it]Episode 24/80 - Avg Reward: -4449.23, Avg Steps: 2377.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [23:32<40:02, 49.03s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -4202.47, Avg Steps: 2377.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [31:08<33:52, 50.82s/it]Episode 40/80 - Avg Reward: -4046.12, Avg Steps: 2377.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [37:17<29:14, 53.15s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -3706.19, Avg Steps: 2377.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [45:31<22:05, 55.23s/it]Episode 56/80 - Avg Reward: -3488.78, Avg Steps: 2377.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [52:08<16:05, 56.80s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  80%|████████  | 64/80 [53:05<15:09, 56.86s/it]Episode 64/80 - Avg Reward: -3308.22, Avg Steps: 2377.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [1:00:54<07:55, 59.40s/it]Episode 72/80 - Avg Reward: -3193.89, Avg Steps: 2377.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [1:08:03<01:01, 61.44s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -2899.32, Avg Steps: 2377.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training episodes: 100%|██████████| 80/80 [1:09:05<00:00, 51.81s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 1005 个单元格错误.
+注入异常值错误: 共注入 776 个单元格错误.
+注入噪声错误: 共注入 605 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.93, 'f1_score': 0.9296553110240177}
+Delete All: {'accuracy': 0.83, 'f1_score': 0.8299073940256362}
+Repair All: {'accuracy': 0.9866666666666667, 'f1_score': 0.9866642958748222}
+RL Optimal: {'accuracy': 0.9666666666666667, 'f1_score': 0.9666295884315907}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+  Testing model: svm
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [07:29<1:08:24, 57.01s/it]Episode 8/80 - Avg Reward: -4985.02, Avg Steps: 2377.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [14:18<1:03:51, 58.94s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -4768.46, Avg Steps: 2377.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [23:36<58:30, 62.69s/it]Episode 24/80 - Avg Reward: -4395.00, Avg Steps: 2377.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [31:06<52:50, 64.71s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -4253.95, Avg Steps: 2377.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [32:12<52:08, 65.17s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [41:14<44:49, 67.23s/it]Episode 40/80 - Avg Reward: -3964.75, Avg Steps: 2377.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [49:30<39:16, 71.41s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -3725.22, Avg Steps: 2377.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [1:00:21<28:51, 72.13s/it]Episode 56/80 - Avg Reward: -3571.04, Avg Steps: 2377.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [1:09:00<21:04, 74.36s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -3425.97, Avg Steps: 2377.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [1:20:38<10:24, 78.03s/it]Episode 72/80 - Avg Reward: -3151.65, Avg Steps: 2377.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [1:29:56<01:20, 80.07s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -2931.28, Avg Steps: 2377.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+Training episodes: 100%|██████████| 80/80 [1:31:16<00:00, 68.45s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+注入缺失值错误: 共注入 1012 个单元格错误.
+注入异常值错误: 共注入 756 个单元格错误.
+注入噪声错误: 共注入 574 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9, 'f1_score': 0.898989898989899}
+Delete All: {'accuracy': 0.87, 'f1_score': 0.8677652324280336}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.8966666666666666, 'f1_score': 0.8955513875942003}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+  Testing model: logistic_regression
+Training episodes:   0%|          | 0/80 [00:00<?, ?it/s]Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [04:20<39:44, 33.12s/it]Episode 8/80 - Avg Reward: -5112.49, Avg Steps: 2377.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [08:23<37:49, 34.92s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -4812.65, Avg Steps: 2377.00, Epsilon: 0.9229
+Training episodes:  20%|██        | 16/80 [08:58<37:19, 34.99s/it]Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [13:53<34:41, 37.17s/it]Episode 24/80 - Avg Reward: -4529.48, Avg Steps: 2377.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [18:24<31:40, 38.78s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -4278.41, Avg Steps: 2377.00, Epsilon: 0.8518
+Training episodes:  40%|████      | 32/80 [19:03<31:07, 38.91s/it]Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [24:31<27:24, 41.11s/it]Episode 40/80 - Avg Reward: -3997.84, Avg Steps: 2377.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [29:27<23:22, 42.49s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -3793.92, Avg Steps: 2377.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [36:08<17:54, 44.79s/it]Episode 56/80 - Avg Reward: -3478.57, Avg Steps: 2377.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [41:29<13:01, 45.96s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -3329.27, Avg Steps: 2377.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [48:36<06:22, 47.83s/it]Episode 72/80 - Avg Reward: -3156.07, Avg Steps: 2377.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [54:20<00:49, 49.37s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -2959.73, Avg Steps: 2377.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+Training episodes: 100%|██████████| 80/80 [55:09<00:00, 41.37s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+注入缺失值错误: 共注入 1014 个单元格错误.
+注入异常值错误: 共注入 777 个单元格错误.
+注入噪声错误: 共注入 630 个单元格错误.
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9033333333333333, 'f1_score': 0.902421516616382}
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Delete All: {'accuracy': 0.66, 'f1_score': 0.6279906632950788}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+Running experiment with error rate: 0.9
+注入缺失值错误: 共注入 1244 个单元格错误.
+注入异常值错误: 共注入 902 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+注入噪声错误: 共注入 626 个单元格错误.
+  Testing model: random_forest
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [06:32<59:19, 49.44s/it]Episode 8/80 - Avg Reward: -5984.89, Avg Steps: 2772.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [12:33<56:01, 51.71s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -5921.18, Avg Steps: 2772.00, Epsilon: 0.9229
+Training episodes:  20%|██        | 16/80 [13:26<55:30, 52.04s/it]Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [20:41<51:09, 54.82s/it]Episode 24/80 - Avg Reward: -5556.52, Avg Steps: 2772.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [27:20<46:47, 57.29s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -5281.67, Avg Steps: 2772.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [36:15<39:52, 59.81s/it]Episode 40/80 - Avg Reward: -4990.53, Avg Steps: 2772.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [43:28<34:01, 61.85s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -4732.32, Avg Steps: 2772.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [53:03<25:43, 64.29s/it]Episode 56/80 - Avg Reward: -4563.75, Avg Steps: 2772.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [1:00:49<18:53, 66.65s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -4241.09, Avg Steps: 2772.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [1:11:08<09:13, 69.24s/it]Episode 72/80 - Avg Reward: -3943.49, Avg Steps: 2772.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [1:19:22<01:10, 70.47s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -3691.15, Avg Steps: 2772.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+Training episodes: 100%|██████████| 80/80 [1:20:36<00:00, 60.46s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+注入缺失值错误: 共注入 1249 个单元格错误.
+注入异常值错误: 共注入 859 个单元格错误.
+注入噪声错误: 共注入 678 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.8866666666666667, 'f1_score': 0.8862571925598824}
+Delete All: {'accuracy': 0.6466666666666666, 'f1_score': 0.6044579332305091}
+Repair All: {'accuracy': 0.9866666666666667, 'f1_score': 0.9866642958748222}
+RL Optimal: {'accuracy': 0.9266666666666666, 'f1_score': 0.9264574790515242}
+  Testing model: svm
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [08:38<1:18:34, 65.48s/it]Episode 8/80 - Avg Reward: -6147.04, Avg Steps: 2772.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [16:31<1:13:19, 67.69s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -5861.71, Avg Steps: 2772.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [27:13<1:06:56, 71.72s/it]Episode 24/80 - Avg Reward: -5580.08, Avg Steps: 2772.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [35:54<1:00:50, 74.50s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 32/80 - Avg Reward: -5202.11, Avg Steps: 2772.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [47:33<52:01, 78.04s/it]Episode 40/80 - Avg Reward: -4922.18, Avg Steps: 2772.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [56:53<44:24, 80.75s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 48/80 - Avg Reward: -4662.60, Avg Steps: 2772.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [1:09:23<33:40, 84.20s/it]Episode 56/80 - Avg Reward: -4379.66, Avg Steps: 2772.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [1:19:30<24:41, 87.15s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  80%|████████  | 64/80 [1:20:56<23:07, 86.70s/it]Episode 64/80 - Avg Reward: -4232.52, Avg Steps: 2772.00, Epsilon: 0.7256
+Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [1:32:55<11:58, 89.80s/it]Episode 72/80 - Avg Reward: -3993.40, Avg Steps: 2772.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [1:43:46<01:32, 92.74s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -3715.76, Avg Steps: 2772.00, Epsilon: 0.6696
+Training episodes: 100%|██████████| 80/80 [1:45:18<00:00, 78.99s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 1265 个单元格错误.
+注入异常值错误: 共注入 872 个单元格错误.
+注入噪声错误: 共注入 618 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9033333333333333, 'f1_score': 0.902421516616382}
+Delete All: {'accuracy': 0.81, 'f1_score': 0.8028841166096067}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.9, 'f1_score': 0.898989898989899}
+  Testing model: logistic_regression
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Training new model with learning rate: 0.001
+Training episodes:  10%|█         | 8/80 [05:05<46:27, 38.72s/it]Episode 8/80 - Avg Reward: -6127.54, Avg Steps: 2772.00, Epsilon: 0.9607
+Training episodes:  19%|█▉        | 15/80 [09:51<44:24, 41.00s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 16/80 - Avg Reward: -5724.92, Avg Steps: 2772.00, Epsilon: 0.9229
+Model saved to saved_models/default_agent.h5 after episode 16/80
+Training episodes:  30%|███       | 24/80 [16:22<41:07, 44.06s/it]Episode 24/80 - Avg Reward: -5458.17, Avg Steps: 2772.00, Epsilon: 0.8867
+Training episodes:  39%|███▉      | 31/80 [21:39<37:05, 45.41s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  40%|████      | 32/80 [22:26<36:39, 45.83s/it]Episode 32/80 - Avg Reward: -5220.74, Avg Steps: 2772.00, Epsilon: 0.8518
+Model saved to saved_models/default_agent.h5 after episode 32/80
+Training episodes:  50%|█████     | 40/80 [28:48<32:02, 48.07s/it]Episode 40/80 - Avg Reward: -4883.10, Avg Steps: 2772.00, Epsilon: 0.8183
+Training episodes:  59%|█████▉    | 47/80 [34:37<27:34, 50.15s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes:  60%|██████    | 48/80 [35:28<26:51, 50.35s/it]Episode 48/80 - Avg Reward: -4676.38, Avg Steps: 2772.00, Epsilon: 0.7862
+Model saved to saved_models/default_agent.h5 after episode 48/80
+Training episodes:  70%|███████   | 56/80 [42:23<20:45, 51.89s/it]Episode 56/80 - Avg Reward: -4449.66, Avg Steps: 2772.00, Epsilon: 0.7553
+Training episodes:  79%|███████▉  | 63/80 [48:39<15:15, 53.87s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 64/80 - Avg Reward: -4178.61, Avg Steps: 2772.00, Epsilon: 0.7256
+Training episodes:  80%|████████  | 64/80 [49:34<14:28, 54.26s/it]Model saved to saved_models/default_agent.h5 after episode 64/80
+Training episodes:  90%|█████████ | 72/80 [57:02<07:27, 55.96s/it]Episode 72/80 - Avg Reward: -3887.73, Avg Steps: 2772.00, Epsilon: 0.6970
+Training episodes:  99%|█████████▉| 79/80 [1:03:47<00:57, 57.96s/it]WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Training episodes: 100%|██████████| 80/80 [1:04:45<00:00, 48.57s/it]
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Episode 80/80 - Avg Reward: -3597.01, Avg Steps: 2772.00, Epsilon: 0.6696
+Model saved to saved_models/default_agent.h5 after episode 80/80
+Training completed. Final model saved to saved_models/default_agent.h5
+注入缺失值错误: 共注入 1246 个单元格错误.
+注入异常值错误: 共注入 873 个单元格错误.
+/Users/qianzekai/PycharmProjects/TolerDM/TolerRL/lib/python3.9/site-packages/gym/spaces/box.py:127: UserWarning: WARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+注入噪声错误: 共注入 649 个单元格错误.
+Evaluating strategies...
+Do Nothing: {'accuracy': 0.9033333333333333, 'f1_score': 0.902421516616382}
+Delete All: {'accuracy': 0.7166666666666667, 'f1_score': 0.6919359710057384}
+Repair All: {'accuracy': 0.9166666666666666, 'f1_score': 0.916083916083916}
+RL Optimal: {'accuracy': 0.91, 'f1_score': 0.9092650468797256}
+
+===== 关键量化结果 =====
+
+1. 低错误率(0.1)下的动作分布:
+   random_forest: 不作为=53.7%, 修复=21.4%, 删除=24.9%
+   svm: 不作为=53.7%, 修复=23.7%, 删除=22.6%
+   logistic_regression: 不作为=55.5%, 修复=21.1%, 删除=23.4%
+
+2. 高错误率(0.9)下的动作分布:
+   random_forest: 不作为=55.6%, 修复=22.6%, 删除=21.7%
+   svm: 不作为=55.3%, 修复=21.9%, 删除=22.9%
+   logistic_regression: 不作为=54.5%, 修复=22.6%, 删除=22.9%
+
+3. 不同模型的平均容忍度:
+   random_forest: 平均容忍度=13.6%
+   svm: 平均容忍度=4.3%
+   logistic_regression: 平均容忍度=30.0%
+
+4. RL策略与全部修复的性能比较:
+   random_forest: RL=95.0%, 全部修复=98.7%, 比例=96.3%
+   svm: RL=90.5%, 全部修复=91.7%, 比例=98.8%
+   logistic_regression: RL=91.1%, 全部修复=91.7%, 比例=99.3%
+
+5. 动作成本效益分析:
+   random_forest: 减少修复=78.1%, 减少删除=77.4%, 性能保持=96.3%
+   svm: 减少修复=77.6%, 减少删除=77.3%, 性能保持=98.8%
+   logistic_regression: 减少修复=77.9%, 减少删除=76.7%, 性能保持=99.3%
+
+6. 错误率阈值分析:
+   random_forest: 性能显著下降阈值=0.9
+   svm: 性能显著下降阈值=0.9
+   logistic_regression: 性能显著下降阈值=0.9
+
+7. 模型敏感度分析:
+   random_forest: 修复敏感度=0.02, 性能敏感度=0.05
+   svm: 修复敏感度=-0.02, 性能敏感度=0.02
+   logistic_regression: 修复敏感度=0.02, 性能敏感度=0.00
+
+8. 模型容忍度排名:
+   第1名: logistic_regression (容忍度=0.30)
+   第2名: random_forest (容忍度=0.14)
+   第3名: svm (容忍度=0.04)
+
+===== 完整实验结果 =====
+
+Action Distribution:
+{
+  "random_forest": {
+    "0.1": {
+      "no_action": 0.5373443983402489,
+      "repair": 0.21369294605809128,
+      "delete": 0.24896265560165975
+    },
+    "0.3": {
+      "no_action": 0.5692675159235668,
+      "repair": 0.21894904458598727,
+      "delete": 0.21178343949044587
+    },
+    "0.5": {
+      "no_action": 0.5715783953854221,
+      "repair": 0.2034609334032512,
+      "delete": 0.22496067121132668
+    },
+    "0.7": {
+      "no_action": 0.5414920368818106,
+      "repair": 0.2338642078792959,
+      "delete": 0.22464375523889354
+    },
+    "0.9": {
+      "no_action": 0.5563531945441493,
+      "repair": 0.22648959081119885,
+      "delete": 0.21715721464465182
+    }
+  },
+  "svm": {
+    "0.1": {
+      "no_action": 0.5366876310272537,
+      "repair": 0.23689727463312368,
+      "delete": 0.22641509433962265
+    },
+    "0.3": {
+      "no_action": 0.5533117932148627,
+      "repair": 0.21405492730210016,
+      "delete": 0.23263327948303716
+    },
+    "0.5": {
+      "no_action": 0.5445333333333333,
+      "repair": 0.22506666666666666,
+      "delete": 0.2304
+    },
+    "0.7": {
+      "no_action": 0.553800170794193,
+      "repair": 0.22758326216908625,
+      "delete": 0.21861656703672075
+    },
+    "0.9": {
+      "no_action": 0.5528130671506352,
+      "repair": 0.21851179673321233,
+      "delete": 0.22867513611615245
+    }
+  },
+  "logistic_regression": {
+    "0.1": {
+      "no_action": 0.5548387096774193,
+      "repair": 0.210752688172043,
+      "delete": 0.23440860215053763
+    },
+    "0.3": {
+      "no_action": 0.5601888276947286,
+      "repair": 0.2116443745082612,
+      "delete": 0.22816679779701024
+    },
+    "0.5": {
+      "no_action": 0.5206786850477201,
+      "repair": 0.23170731707317074,
+      "delete": 0.24761399787910923
+    },
+    "0.7": {
+      "no_action": 0.5518380834365965,
+      "repair": 0.22263527467988434,
+      "delete": 0.2255266418835192
+    },
+    "0.9": {
+      "no_action": 0.5451589595375722,
+      "repair": 0.22579479768786126,
+      "delete": 0.22904624277456648
+    }
+  }
+}
+
+Performance Results:
+{
+  "random_forest": {
+    "0.1": {
+      "do_nothing": 0.97,
+      "delete_all": 0.9666666666666667,
+      "repair_all": 0.9866666666666667,
+      "rl_optimal": 0.97
+    },
+    "0.3": {
+      "do_nothing": 0.9533333333333334,
+      "delete_all": 0.95,
+      "repair_all": 0.9866666666666667,
+      "rl_optimal": 0.9466666666666667
+    },
+    "0.5": {
+      "do_nothing": 0.9466666666666667,
+      "delete_all": 0.9133333333333333,
+      "repair_all": 0.9866666666666667,
+      "rl_optimal": 0.94
+    },
+    "0.7": {
+      "do_nothing": 0.93,
+      "delete_all": 0.83,
+      "repair_all": 0.9866666666666667,
+      "rl_optimal": 0.9666666666666667
+    },
+    "0.9": {
+      "do_nothing": 0.8866666666666667,
+      "delete_all": 0.6466666666666666,
+      "repair_all": 0.9866666666666667,
+      "rl_optimal": 0.9266666666666666
+    }
+  },
+  "svm": {
+    "0.1": {
+      "do_nothing": 0.9066666666666666,
+      "delete_all": 0.9166666666666666,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.9166666666666666
+    },
+    "0.3": {
+      "do_nothing": 0.91,
+      "delete_all": 0.9,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.91
+    },
+    "0.5": {
+      "do_nothing": 0.9066666666666666,
+      "delete_all": 0.9,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.9033333333333333
+    },
+    "0.7": {
+      "do_nothing": 0.9,
+      "delete_all": 0.87,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.8966666666666666
+    },
+    "0.9": {
+      "do_nothing": 0.9033333333333333,
+      "delete_all": 0.81,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.9
+    }
+  },
+  "logistic_regression": {
+    "0.1": {
+      "do_nothing": 0.91,
+      "delete_all": 0.9133333333333333,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.9133333333333333
+    },
+    "0.3": {
+      "do_nothing": 0.91,
+      "delete_all": 0.9133333333333333,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.91
+    },
+    "0.5": {
+      "do_nothing": 0.91,
+      "delete_all": 0.91,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.91
+    },
+    "0.7": {
+      "do_nothing": 0.9033333333333333,
+      "delete_all": 0.66,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.91
+    },
+    "0.9": {
+      "do_nothing": 0.9033333333333333,
+      "delete_all": 0.7166666666666667,
+      "repair_all": 0.9166666666666666,
+      "rl_optimal": 0.91
+    }
+  }
+}
+
+进程已结束，退出代码为 0
