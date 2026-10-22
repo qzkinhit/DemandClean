@@ -1,0 +1,36 @@
+# Console output of the run.
+
+DemandClean unified runner
+Datasets: ['beers']
+Enabled versions: ['v10_auto_duelingflat_single']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Seed: 0
+  60/20/20 split: train=1446, val=482, test=482
+  Dataset: beers
+  Dirty:   (1446, 8)
+  Features: 8, label: style
+  Categorical cols: {'city', 'state', 'brewery_name', 'beer_name'}
+  LE fit: dirty only (1446 rows)
+  SS fit: dirty only (1446 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(1446, 8), X_clean_train=(1446, 8), X_clean_val=(482, 8), X_clean_test=(482, 8)
+Version: v10_auto_duelingflat_single
+Dataset: beers | task: classification | model: random_forest
+Detector: auto | Agent: dueling_single | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.02s
+[Step 2] training (300 episodes)...
+  model saved: ./model/v10_auto_duelingflat_single_agent.pt
+  [time] Step 2 (train): 655.08s
+[Step 3] inference (mode: single_phase)...
+  ground truth used: 101
+  action counts: {'no_action': 0, 'repair_value': 101, 'delete': 0, 'replace_nearby': 2562}
+  encoded version saved: ./data/v10_auto_duelingflat_single_cleaned_encoded.npz
+  [time] Step 3 (infer): 129.48s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.07s
+  Version v10_auto_duelingflat_single done! elapsed: 971.42s
+All done! total: 982.91s

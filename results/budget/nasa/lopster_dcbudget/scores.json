@@ -1,0 +1,13 @@
+{
+ "dataset": "nasa",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "lr",
+ "metric": "r2",
+ "test": 0.16393488782140486,
+ "n_train_rows": 901,
+ "redr": {
+  "r_before": 459,
+  "r_after": 901,
+  "redr": -0.9629629629629629
+ }
+}

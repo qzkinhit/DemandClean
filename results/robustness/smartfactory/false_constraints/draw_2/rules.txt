@@ -1,0 +1,37 @@
+# =============================================================================
+# Dataset: smartfactory (Industrial Smart Factory)
+# =============================================================================
+# 23,645 rows x 20 cols (including index and labels)
+# Task: classification (label column: labels, binary {0, 1})
+# Errors: pure missing values (30% of rows, one column "empty" per such row); label is error-free
+#
+# Detection strategy: NaN detection alone covers 100% of errors; RAHA is optional
+# =============================================================================
+
+[DOMAIN]
+i_w_blo_weg: INT [-210, 633]
+o_w_blo_power: INT [3482, 31336]
+o_w_blo_voltage: INT [-83, 149]
+i_w_bhl_weg: INT [-363, 1117]
+o_w_bhl_power: INT [989, 43416]
+o_w_bhl_voltage: INT [-13, 57]
+i_w_bhr_weg: INT [-1127, 426]
+o_w_bhr_power: INT [3254, 29282]
+o_w_bhr_voltage: INT [7, 60]
+i_w_bru_weg: INT [-526, 553]
+o_w_bru_power: INT [3268, 29406]
+o_w_bru_voltage: INT [8, 67]
+i_w_hr_weg: INT [-928, -104]
+o_w_hr_power: INT [4290, 38606]
+o_w_hr_voltage: INT [55, 488]
+i_w_hl_weg: INT [-964, -18]
+o_w_hl_power: INT [4179, 37611]
+o_w_hl_voltage: INT [60, 536]
+labels: ENUM {0, 1}
+
+# FDs removed: the original 12 weg=>power/voltage FDs had 33-73% violation rates on clean data.
+# A pure-missing-value dataset does not need FDs for detection.
+
+[FD]
+o_w_blo_power => o_w_bru_voltage
+o_w_blo_voltage => o_w_bru_voltage

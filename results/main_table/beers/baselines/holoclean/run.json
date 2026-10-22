@@ -1,0 +1,13 @@
+{
+  "dataset": "beers",
+  "method": "HoloClean",
+  "seconds": 120.7,
+  "postprocessing": [
+    "For each non-index column, use the same dirty cell when it matches ignoring letter case; otherwise use the most frequent dirty value with the same lowercase form; otherwise retain the HoloClean output.",
+    "The vocabulary comes from the entire supplied dirty table, including style. Frequency ties follow first appearance. No clean data are read.",
+    "Convert the exact HoloClean null marker _nan_ to an empty cell."
+  ],
+  "raw_output": "raw_cleaned.csv.gz",
+  "postprocessing_command": "python baselines/runners/run_holoclean/restore_case.py --dirty data/beers/dirty_index.csv --table results/main_table/beers/baselines/holoclean/raw_cleaned.csv.gz --check results/main_table/beers/baselines/holoclean/cleaned.csv.gz",
+  "postprocessing_export_command": "python baselines/runners/run_holoclean/restore_case.py --dirty data/beers/dirty_index.csv --table results/main_table/beers/baselines/holoclean/raw_cleaned.csv.gz --out results/runs/holoclean/beers_caserestored.csv"
+}

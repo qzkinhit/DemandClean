@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "soilmoisture",
+    "model": "rf",
+    "metric": "r2",
+    "test": 0.9264367248434918,
+    "n_train_rows": 407,
+    "method": "ReplaceAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "soilmoisture",
+    "model": "gb",
+    "metric": "r2",
+    "test": 0.9202106247455096,
+    "n_train_rows": 407,
+    "method": "ReplaceAll",
+    "encoding": "train_fitted"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "dataset": "soccer",
+  "task": "classification",
+  "search_task": "classification",
+  "n_train": 6366,
+  "n_train_used": 6366,
+  "n_val": 2122,
+  "n_test": 2122,
+  "gt_cells": 0,
+  "secs": 740.8,
+  "search_secs": 720.8,
+  "eval_hp": [
+    0.0,
+    10.0,
+    0.001
+  ],
+  "export": {
+    "rows_in": 6366,
+    "rows_out": 6366,
+    "rows_deleted": 0,
+    "synthetic_dropped": 0,
+    "steps": [
+      {
+        "op": "outlierBySd",
+        "action": "applied"
+      },
+      {
+        "op": "scale",
+        "action": "affine recorded"
+      },
+      {
+        "op": "dummycoding",
+        "action": "skipped encoder"
+      }
+    ]
+  },
+  "config": {
+    "topk": 3,
+    "rv": 20,
+    "max_iter": 10,
+    "sample": 1.0,
+    "expectedIncrease": 10.0,
+    "seed": 42,
+    "cv": false,
+    "eval_maxi": 1000,
+    "eval_maxii": 0,
+    "enablePruning": true,
+    "eval_func": "evalClassification",
+    "xmx": "8g",
+    "threads": 1,
+    "cluster_k": 2,
+    "sil_n": 3000,
+    "parse_units": true
+  },
+  "method": "SAGA",
+  "pipeline": [
+    "outlierBySd",
+    "scale",
+    "dummycoding"
+  ],
+  "implementation": "Apache SystemDS 3.2.0; SAGA adapter described in baselines/THIRD_PARTY.md"
+}

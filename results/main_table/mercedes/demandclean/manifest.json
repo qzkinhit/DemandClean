@@ -1,0 +1,72 @@
+{
+  "run_id": "main_table/mercedes/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "mercedes",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/mercedes.yaml --variant full",
+  "arguments": {
+    "n_episodes": 300
+  },
+  "seed": null,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "ridge",
+    "training": {
+      "n_episodes": 300
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-04-16T06:01:19+08:00",
+  "end_time": "2026-04-16T09:48:32+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true,
+      "policy_equals_policy_written_by_log": true
+    },
+    "cleaned_csv": "rebuilt from cleaned_encoded.npz by evaluation/redecode_npz.py",
+    "artifact_sha256": {
+      "cleaned.csv": "58c3e157611ea4d46cb0c23b82345217a4ace244af0ddb05fc584273eb45e0cf",
+      "cleaned_encoded.npz": "85c928a065dfd66aaabd01c7e92c63b67b4d0e8070598934a9a058c563614165",
+      "model/agent_stage1.pt": "d367111a7612d312bc8de4775334a0052183f741aceb418d54d04fc3fa67a971",
+      "model/agent_stage2.pt": "c99910c56b67964178d6ead1b78c5141a20b5baeb66207cb4dad816cb5ef82db"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "ground_truth_cells": 32391,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/mercedes/demandclean",
+    "checkpoint": "results/main_table/mercedes/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

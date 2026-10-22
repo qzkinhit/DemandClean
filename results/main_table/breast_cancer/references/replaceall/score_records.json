@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "breast_cancer",
+    "model": "lr",
+    "metric": "accuracy",
+    "test": 0.9857142857142858,
+    "n_train_rows": 419,
+    "method": "ReplaceAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "breast_cancer",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.9785714285714285,
+    "n_train_rows": 419,
+    "method": "ReplaceAll",
+    "encoding": "train_fitted"
+  }
+]

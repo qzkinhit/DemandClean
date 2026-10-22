@@ -1,0 +1,13 @@
+{
+ "dataset": "bike",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "lr",
+ "metric": "r2",
+ "test": 0.9549539178928137,
+ "n_train_rows": 10427,
+ "redr": {
+  "r_before": 10128,
+  "r_after": 10427,
+  "redr": -0.029522116903633492
+ }
+}

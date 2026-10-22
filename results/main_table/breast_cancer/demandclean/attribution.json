@@ -1,0 +1,41 @@
+{
+  "dataset": "breast_cancer",
+  "run": "results/main_table/breast_cancer/demandclean",
+  "model": "lr",
+  "v_empty": 0.9571428571428572,
+  "v_full": 0.9928571428571429,
+  "run_score": 0.9928571428571429,
+  "full_equals_run": true,
+  "phi": {
+    "gt": 0.0023809523809523725,
+    "ve": 0.02023809523809522,
+    "del": 0.013095238095238104
+  },
+  "phi_hat": {
+    "noop": 0.0,
+    "gt": 0.0667,
+    "ve": 0.5667,
+    "del": 0.3667
+  },
+  "coalitions": {
+    "none": 0.9571428571428572,
+    "gt": 0.9571428571428572,
+    "ve": 0.9785714285714285,
+    "del": 0.9642857142857143,
+    "gt+ve": 0.9714285714285714,
+    "del+gt": 0.9714285714285714,
+    "del+ve": 0.9857142857142858,
+    "del+gt+ve": 0.9928571428571429
+  },
+  "outcome_cells": {
+    "gt": 54,
+    "ve": 94,
+    "del_rows": 102
+  },
+  "operation_counts": {
+    "noop": 4,
+    "gt": 5,
+    "del": 102,
+    "ve": 149
+  }
+}

@@ -1,0 +1,14 @@
+Running CtxPipe with dirty file: data/nasa/dirty_index.csv
+Task name: nasa_ctxpipe
+Model tag: ctx_50000
+
+CtxPipe output saved to: nasa_ctxpipe_cleaned.csv
+Pipeline info saved to: nasa_ctxpipe_pipeline_info.txt
+
+CtxPipe Results:
+AI Sequence: ['blank', 'ImputerCatMode', 'LabelEncoder', 'blank', 'PowerTransformer', 'RandomTreesEmbedding']
+ML Score: 0.0133
+Execution Time: 8.67 seconds
+
+CtxPipe finished successfully!
+Results saved to: nasa_ctxpipe

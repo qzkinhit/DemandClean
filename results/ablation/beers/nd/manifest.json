@@ -1,0 +1,83 @@
+{
+  "dataset": "beers",
+  "method": "DemandClean",
+  "variant": "nd",
+  "seed": 0,
+  "status": "complete",
+  "command": "python scripts/run_demandclean.py --config results/ablation/beers/nd/config.yaml --variant nd --seed 0",
+  "score_command": "python evaluation/paper_score.py results/ablation/beers/nd",
+  "configuration": {
+    "config": "config.yaml",
+    "variant_definitions": "configs/variants.yaml",
+    "detector": "oracle",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "agent_parameters": {
+      "state_size": 10,
+      "gamma": 0.95,
+      "epsilon_start": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay": 0.995,
+      "learning_rate": 0.0005,
+      "batch_size": 64,
+      "memory_size": 10000,
+      "target_update_freq": 5,
+      "missing_rate_range": [
+        0.02,
+        0.08
+      ],
+      "semantic_rate_range": [
+        0.05,
+        0.15
+      ],
+      "syntactic_rate_range": [
+        0.1,
+        0.25
+      ],
+      "label_rate_range": [
+        0.0,
+        0.05
+      ],
+      "auto_select_base": true,
+      "base_cv_folds": 5
+    },
+    "reward_model_kwargs": {
+      "n_estimators": 10,
+      "max_depth": 8
+    },
+    "eval_sample_ratio": 1.0
+  },
+  "start_time": "2026-10-17T03:49:31+08:00",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "7959967499250ec3a556d94340c6ac0a8d13c77cec66bd6856be6fa2c4cbe444",
+      "model/agent_stage1.pt": "b8db1b82785275f83c003a780c6a30c5932921f36388776772727fae274ec2aa",
+      "model/agent_stage2.pt": "3a04c38322fb7985cad749671cde6206b5a59d0940c75a885ee88d2dc35f5db9"
+    },
+    "log": "console output of the run",
+    "checkpoint": "Original checkpoint bytes, renamed by removing the source version prefix. The runner logs a common agent.pt stem; a two-stage agent writes agent_stage1.pt and agent_stage2.pt.",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "history_episodes": 300,
+    "queue_completion_record_present": true
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ]
+}

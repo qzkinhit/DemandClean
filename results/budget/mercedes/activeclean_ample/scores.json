@@ -1,0 +1,13 @@
+{
+ "dataset": "mercedes",
+ "method": "ActiveClean (ample GT)",
+ "model": "rf",
+ "metric": "r2",
+ "test": 0.36792564027994357,
+ "n_train_rows": 2525,
+ "redr": {
+  "r_before": 2525,
+  "r_after": 2025,
+  "redr": 0.19801980198019803
+ }
+}

@@ -1,0 +1,37 @@
+# Console output of the checkpoint-inference run; no training took place.
+
+DemandClean unified runner
+Datasets: ['breast_cancer']
+Enabled versions: ['dueling_two_stage']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Inference-only mode: ON (skip training, load existing model)
+Seed: 0
+  60/20/20 split: train=419, val=140, test=140
+  Dataset: breast_cancer
+  Dirty:   (419, 9)
+  Features: 9, label: class
+  Categorical cols: (none)
+  LE fit: dirty only (419 rows)
+  SS fit: dirty only (419 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(419, 9), X_clean_train=(419, 9), X_clean_val=(140, 9), X_clean_test=(140, 9)
+Version: dueling_two_stage
+Dataset: breast_cancer | task: classification | model: random_forest
+Detector: auto | Agent: dueling_two_stage | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.01s
+Agent loaded: ./model/dueling_two_stage_agent.pt
+[Step 2] training skipped (inference_only); loaded model: ./model/dueling_two_stage_agent.pt
+[Step 3] inference (mode: single_phase)...
+[config0901] inference-only detector built as in fit(): rules_path=results/robustness/breast_cancer/remove75/draw_2/rules.txt, disable_raha=False
+  ground truth used: 14
+  action counts: {'no_action': 21, 'repair_value': 14, 'delete': 22, 'replace_nearby': 190}
+  encoded version saved: ./data/dueling_two_stage_cleaned_encoded.npz
+  [time] Step 3 (infer): 56.09s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.02s
+  Version dueling_two_stage done! elapsed: 64.91s
+All done! total: 64.99s

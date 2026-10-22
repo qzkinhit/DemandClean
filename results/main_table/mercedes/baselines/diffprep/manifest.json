@@ -1,0 +1,31 @@
+{
+  "id": "main_table/mercedes/baselines/diffprep",
+  "dataset": "mercedes",
+  "role": "baselines",
+  "method": "DiffPrep",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 1586793,
+  "scoring": {
+    "model": "rf",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "fe34b836c049a60bff3bbae56bd4c29ed989ad9b2cd3c150bab61679d17ef1f6",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table mercedes:diffprep:results/main_table/mercedes/baselines/diffprep/cleaned_encoded.npz",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json"
+  ]
+}

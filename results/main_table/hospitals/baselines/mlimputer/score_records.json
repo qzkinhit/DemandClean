@@ -1,0 +1,11 @@
+[
+  {
+    "dataset": "hospitals",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 1.0,
+    "n_train_rows": 600,
+    "method": "MLImputer",
+    "encoding": "nearest"
+  }
+]

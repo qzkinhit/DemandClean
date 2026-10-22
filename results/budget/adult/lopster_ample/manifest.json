@@ -1,0 +1,20 @@
+{
+  "id": "budget/adult/lopster_ample",
+  "dataset": "adult",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 203490,
+  "seconds": 857.63,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "77bb25c4cf2ec04dd0fba3e4401fa7b8bacbf7c4188c33034066d1ea16ee54b4"
+    }
+  }
+}

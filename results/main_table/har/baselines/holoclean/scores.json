@@ -1,0 +1,20 @@
+{
+  "dataset": "har",
+  "method": "HoloClean",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.5169659323437445,
+  "all_models": {
+    "agglomerative": 0.5169659323437445,
+    "kmeans": 0.5320315476874408
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 41949,
+  "table_rows": 70000,
+  "gt_cells": 0,
+  "gt_pct": 0.0,
+  "redr": {
+    "redr": 0.029090158861151228
+  }
+}

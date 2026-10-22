@@ -1,0 +1,21 @@
+{
+  "dataset": "mercedes",
+  "method": "Lopster",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.401252232868754,
+  "all_models": {
+    "rf": 0.401252232868754,
+    "ridge": 0.2733703881764683
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2525,
+  "n_test": 842,
+  "table_rows": 2525,
+  "gt_cells": 32045,
+  "gt_pct": 2.019482062247565,
+  "redr": {
+    "redr": 0.0
+  }
+}

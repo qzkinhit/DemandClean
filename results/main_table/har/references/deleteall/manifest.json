@@ -1,0 +1,32 @@
+{
+  "id": "main_table/har/references/deleteall",
+  "dataset": "har",
+  "role": "references",
+  "method": "DeleteAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 168000,
+  "gt_pct": 60.0,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "5b8d4c67ece600b6c159305e5101997cf686ee93e58663a8c5a695e1d12e0fec",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:deleteall:results/main_table/har/references/deleteall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

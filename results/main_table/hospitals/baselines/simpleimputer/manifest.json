@@ -1,0 +1,31 @@
+{
+  "id": "main_table/hospitals/baselines/simpleimputer",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "SimpleImputer",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 20000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "2c8c4676c23c86349322855b53d78c1efcfdc67245345c19a0beb9041a936382",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:simpleimputer:results/main_table/hospitals/baselines/simpleimputer/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

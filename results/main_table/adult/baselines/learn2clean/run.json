@@ -1,0 +1,37 @@
+{
+  "dataset": "adult",
+  "method": "Learn2Clean",
+  "upstream": {
+    "repository": "https://github.com/LaureBerti/Learn2Clean",
+    "commit": "169bac3236632d738dbe8b67e9373fd2bd19be16",
+    "patch": "baselines/Methods/Learn2Clean/learn2clean_v1.patch"
+  },
+  "goal": "NB",
+  "selected_actions": [
+    6,
+    20
+  ],
+  "forbidden_actions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "adaptations": [
+    "official V1 Q-learning graph, greedy traversal and native operators with the implementation fixes of learn2clean_v1.patch",
+    "transitions into normalization and feature-selection states removed; traversals starting there discarded",
+    "operators fit and act on training rows only; validation and test rows untouched",
+    "selection on the clean validation split with the main-table model; test split never passed to Learn2Clean"
+  ],
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_learn2clean/l2c_clean.py (plan, candidate, finalize)"
+}

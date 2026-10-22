@@ -1,0 +1,16 @@
+Run started at 2026-10-17 00:31:59
+DeleteAll Baseline (drop_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: adult_deleteall
+deletion mode: drop_errors
+output data saved: adult_deleteall_cleaned.csv
+input rows: 27133
+kept rows: 26103
+deleted rows: 1030
+run time: 76.99 s
+status: success
+ground-truth cost: 1030
+
+results saved to: adult_deleteall
+log file: adult_deleteall.log

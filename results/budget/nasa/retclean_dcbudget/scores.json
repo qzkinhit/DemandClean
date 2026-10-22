@@ -1,0 +1,11 @@
+{
+  "dataset": "nasa",
+  "method": "RetClean (lower GT level)",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.5086282407141176,
+  "nearest": false,
+  "n_train_rows": 901,
+  "gt_cells": 588,
+  "gt_pct": 6.520292747837658
+}

@@ -1,0 +1,20 @@
+{
+  "id": "budget/mercedes/comet_dcbudget",
+  "dataset": "mercedes",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 949400,
+  "seconds": 28182.19,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "374851f4c2bc4a622c2018c10ae4260a3a7eff91ea54bc05c20cc0f7f29f61c7"
+    }
+  }
+}

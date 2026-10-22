@@ -1,0 +1,14 @@
+Running CtxPipe with dirty file: data/breast_cancer/dirty_index.csv
+Task name: breast_cancer_ctxpipe
+Model tag: ctx_50000
+
+CtxPipe output saved to: breast_cancer_ctxpipe_cleaned.csv
+Pipeline info saved to: breast_cancer_ctxpipe_pipeline_info.txt
+
+CtxPipe Results:
+AI Sequence: ['ImputerNumMode', 'ImputerCatMode', 'LabelEncoder', 'blank', 'PowerTransformer', 'RandomTreesEmbedding']
+ML Score: -1.0000
+Execution Time: 5.26 seconds
+
+CtxPipe finished successfully!
+Results saved to: breast_cancer_ctxpipe

@@ -1,0 +1,82 @@
+{
+  "run_id": "main_table/nasa/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "nasa",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/nasa.yaml --variant full --seed 0 --checkpoint results/main_table/nasa/demandclean/model",
+  "arguments": {
+    "n_episodes": 200,
+    "max_repair_ratio": 1.0,
+    "repair_lambda": 0.0001,
+    "reward_model_type": "random_forest"
+  },
+  "seed": 0,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 200,
+      "max_repair_ratio": 1.0,
+      "repair_lambda": 0.0001,
+      "reward_model_type": "random_forest"
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-10-17T12:11:29+08:00",
+  "end_time": "2026-10-17T12:13:03+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json",
+    "training.log",
+    "training_demandclean.log",
+    "training_stderr.log"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true,
+      "policy_equals_policy_written_by_training_log": true
+    },
+    "artifact_sha256": {
+      "cleaned.csv": "cecc6130e98e61557e5a111e6ce804d19dbcbf9aa3906c2ff44c36890d285e1d",
+      "cleaned_encoded.npz": "75b09556e9d01c38b2931ce7b39a961bf42208ca1957ed32c44fa05fc145acae",
+      "model/agent_stage1.pt": "8249ad2c2353d0cdd0ec93ff210d08e426fb0ab5c0099960de2c0b7331a14bd3",
+      "model/agent_stage2.pt": "be848421e8518d936156d503c98be77e19bdaccb66b0f6c37985a03f30306dbb"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "policy": "trained by the run of training.log, the policy of model/ is the policy that training.log wrote (identical files)",
+  "notes": "the policy was trained by the run of training.log and cleans the training split in run.log with scripts/run_demandclean.py --checkpoint (hybrid detector built as in training, seed 0)",
+  "ground_truth_cells": 584,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/nasa/demandclean",
+    "checkpoint": "results/main_table/nasa/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

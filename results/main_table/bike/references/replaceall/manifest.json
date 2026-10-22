@@ -1,0 +1,31 @@
+{
+  "id": "main_table/bike/references/replaceall",
+  "dataset": "bike",
+  "role": "references",
+  "method": "ReplaceAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 166832,
+  "gt_pct": 59.997698371597906,
+  "gt_denominator": 295443,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "8c4bd00abab95d5cd3b7e69fe3a6e40e3111e741603926bf1d6609d30148a0ca",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table bike:replaceall:results/main_table/bike/references/replaceall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

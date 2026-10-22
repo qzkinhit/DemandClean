@@ -1,0 +1,20 @@
+{
+  "id": "budget/soilmoisture/lopster_dcbudget",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 2560,
+  "seconds": 264.26,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "a3b4d6139b78a4300f5b114436d5b180c701f2004cd26ebda7768861102960d5"
+    }
+  }
+}

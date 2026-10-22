@@ -1,0 +1,33 @@
+{
+  "id": "main_table/bike/baselines/activeclean",
+  "dataset": "bike",
+  "role": "baselines",
+  "method": "ActiveClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 8000,
+  "gt_pct": 2.8770355026181025,
+  "gt_denominator": 295443,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "cb196ef4daab9e3539670da5351aa3030b8ce86a70793d97317cb9173bf6bcc2",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table bike:activeclean:results/main_table/bike/baselines/activeclean/cleaned.csv.gz",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

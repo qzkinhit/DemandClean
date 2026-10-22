@@ -1,0 +1,21 @@
+{
+  "id": "budget/soilmoisture/retclean_dcbudget",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "RetClean (lower GT level)",
+  "ground_truth_cells": 2560,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "7f98f4ea693bc63296a7e5de8796d7dda335a52a471adc33b9aa7ee04bde0e58"
+    }
+  }
+}

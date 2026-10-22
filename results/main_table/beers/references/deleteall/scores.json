@@ -1,0 +1,17 @@
+{
+  "dataset": "beers",
+  "method": "DeleteAll",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.3068893528183716,
+  "all_models": {
+    "rf": 0.3068893528183716,
+    "gb": 0.25260960334029225
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 289,
+  "table_rows": 290,
+  "gt_cells": 14460,
+  "gt_pct": 60.0
+}

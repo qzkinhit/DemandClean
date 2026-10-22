@@ -1,0 +1,12 @@
+Run started at 2026-10-17 01:29:00
+DoNothing baseline (no cleaning)
+dirty table: data/bike/dirty_index.csv (training rows)
+clean table: data/bike/clean_index.csv (training rows)
+task: bike_donothing
+output data saved: bike_donothing_cleaned.csv
+run time: 0.26 s
+status: success
+ground-truth cost: 0 (fully automatic, no operation)
+
+results saved to: bike_donothing
+log file: bike_donothing.log

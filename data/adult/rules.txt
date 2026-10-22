@@ -1,0 +1,40 @@
+[DOMAIN]
+age: INT [17, 90]
+educational_num: INT [1, 16]
+capital_gain: INT [0, 99999]
+capital_loss: INT [0, 4356]
+hours_per_week: INT [1, 99]
+income: ENUM {0, 1}
+
+[FD]
+education => educational_num
+
+[CFD]
+
+income=0, age<=20 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, age<=22 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, marital_status=Never-married, educational_num<=9, age<=30 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, relationship=Own-child, age<=30 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, marital_status=Never-married, educational_num<=8 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, relationship=Own-child, educational_num<=10 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, age<=27, hours_per_week<=38 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, marital_status=Never-married, educational_num<=10, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, marital_status=Never-married, educational_num<=12, age<=35, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+
+income=0, marital_status=Separated, educational_num<=12, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, marital_status=Divorced, educational_num<=12, hours_per_week<=40, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, marital_status=Divorced, occupation=Adm-clerical, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, relationship=Unmarried, educational_num<=9, age<=40 => income DEFICIT >= 1 FROM_BASELINE 1
+income=0, relationship=Not-in-family, educational_num<=10, capital_gain<=0, hours_per_week<=40 => income DEFICIT >= 1 FROM_BASELINE 1
+
+income=1, capital_gain>=5000 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, educational_num>=14, age>=35 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, marital_status=Married-civ-spouse, educational_num>=13, capital_gain>=3000 => income EXCESS >= 1 FROM_BASELINE 0
+
+income=1, marital_status=Married-civ-spouse, educational_num>=13, hours_per_week>=45 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, occupation=Exec-managerial, educational_num>=12, capital_gain>=3000 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, occupation=Prof-specialty, educational_num>=13, age>=40 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, relationship=Husband, educational_num>=13, hours_per_week>=50 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, workclass=Self-emp-inc, educational_num>=12 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, marital_status=Married-civ-spouse, educational_num>=12, age>=40, capital_loss>=100 => income EXCESS >= 1 FROM_BASELINE 0
+income=1, workclass=Federal-gov, educational_num>=13, age>=35 => income EXCESS >= 1 FROM_BASELINE 0

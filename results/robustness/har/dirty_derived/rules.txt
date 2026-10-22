@@ -1,0 +1,9 @@
+# rules derived from the dirty table of har only
+
+[DOMAIN]
+x: FLOAT [-26.982, 20.8913]
+y: FLOAT [-3.14995, 3.0592]
+z: FLOAT [0.873066, 17.1187]
+gt: ENUM {stand, sit}
+
+[FD]

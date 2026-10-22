@@ -1,0 +1,10 @@
+SimpleImputer data cleaning (mean)
+dirty table: data/har/dirty_index.csv
+clean table: data/har/clean_index.csv
+task: har_simpleimputer
+fill strategy: mean
+repaired data saved: har_simpleimputer_cleaned.csv
+run time: 0.60 s
+status: success
+filled cells: 9112
+ground-truth cost: 0 (fully automatic)

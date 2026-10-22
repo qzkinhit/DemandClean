@@ -1,0 +1,11 @@
+Running CtxPipe with dirty file: data/mercedes/dirty_index.csv
+Task name: mercedes_ctxpipe
+Model tag: ctx_50000
+
+CtxPipe output saved to: mercedes_ctxpipe_cleaned.csv
+Pipeline info saved to: mercedes_ctxpipe_pipeline_info.txt
+
+CtxPipe Results:
+AI Sequence: ['ImputerNumMode', 'ImputerCatMode', 'LabelEncoder', 'blank', 'PowerTransformer', 'RandomTreesEmbedding']
+ML Score: -1.0000
+Execution Time: 16.16 seconds

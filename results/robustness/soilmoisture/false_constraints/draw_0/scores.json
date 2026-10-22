@@ -1,0 +1,20 @@
+{
+  "dataset": "soilmoisture",
+  "model": "gb",
+  "metric": "r2",
+  "test": 0.9344891863238755,
+  "tol_rel": 0.7716891764580591,
+  "references": {
+    "NoFix": 0.8559105942583121,
+    "RepairAll": 0.9577373328763495
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.5894901364423605,
+  "n_train_rows": 407,
+  "n_test": 136,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "fdd3de9734b86f35d3efa1f4c9b0d9800b12390b25519d9d6fbe553f6bb73da3"
+}

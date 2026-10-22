@@ -1,0 +1,41 @@
+{
+  "dataset": "soilmoisture",
+  "run": "results/main_table/soilmoisture/demandclean",
+  "model": "gb",
+  "v_empty": 0.8559105942583121,
+  "v_full": 0.9401252396850616,
+  "run_score": 0.9401252396850616,
+  "full_equals_run": true,
+  "phi": {
+    "gt": 0.04500001104670959,
+    "ve": 0.039214634380039914,
+    "del": 0.0
+  },
+  "phi_hat": {
+    "noop": 0.0,
+    "gt": 0.5343,
+    "ve": 0.4657,
+    "del": 0.0
+  },
+  "coalitions": {
+    "none": 0.8559105942583121,
+    "gt": 0.9058396324640245,
+    "ve": 0.9000542557973549,
+    "del": 0.8559105942583121,
+    "gt+ve": 0.9401252396850616,
+    "del+gt": 0.9058396324640245,
+    "del+ve": 0.9000542557973549,
+    "del+gt+ve": 0.9401252396850616
+  },
+  "outcome_cells": {
+    "gt": 4258,
+    "ve": 15056,
+    "del_rows": 0
+  },
+  "operation_counts": {
+    "noop": 0,
+    "gt": 0,
+    "del": 0,
+    "ve": 15120
+  }
+}

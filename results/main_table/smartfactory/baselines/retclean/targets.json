@@ -1,0 +1,20 @@
+{
+  "i_w_blo_weg": 205,
+  "o_w_blo_power": 236,
+  "o_w_blo_voltage": 243,
+  "i_w_bhl_weg": 252,
+  "o_w_bhl_power": 244,
+  "o_w_bhl_voltage": 262,
+  "i_w_bhr_weg": 222,
+  "o_w_bhr_power": 239,
+  "o_w_bhr_voltage": 227,
+  "i_w_bru_weg": 235,
+  "o_w_bru_power": 269,
+  "o_w_bru_voltage": 257,
+  "i_w_hr_weg": 232,
+  "o_w_hr_power": 236,
+  "o_w_hr_voltage": 231,
+  "i_w_hl_weg": 231,
+  "o_w_hl_power": 258,
+  "o_w_hl_voltage": 245
+}

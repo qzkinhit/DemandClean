@@ -1,0 +1,11 @@
+{
+  "dataset": "adult",
+  "method": "RetClean (ample GT)",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.8518518518518519,
+  "nearest": false,
+  "n_train_rows": 27133,
+  "gt_cells": 0,
+  "gt_pct": 0.0
+}

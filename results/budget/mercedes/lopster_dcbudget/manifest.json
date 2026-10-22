@@ -1,0 +1,20 @@
+{
+  "id": "budget/mercedes/lopster_dcbudget",
+  "dataset": "mercedes",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 32045,
+  "seconds": 2226.65,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "e9d6feca1b51cb8e71f47d15d2bd58a1e9ac26ea705a857f8cab56e2d938055b"
+    }
+  }
+}

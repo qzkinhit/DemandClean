@@ -1,0 +1,17 @@
+[11:22:54] INFO:   Clean base selection (5-fold CV, weighted by the row retention rate):
+[11:22:54] INFO:     DeleteFix: 120 rows, CV=0.9917, weight=0.447, weighted=0.4435
+[11:22:54] INFO:     VE-Fill:   600 rows, CV=0.9983, weight=1.000, weighted=0.9983
+[11:22:54] INFO:     -> selected VE-Fill (600 rows)
+[11:24:43] INFO: Model saved: model/agent.pt
+  File "scripts/run_demandclean.py" (code snapshot of the run), in _inverse_transform_to_csv
+    result_df[col] = le.inverse_transform(col_rounded)
+  File "lib/python3.8/site-packages/sklearn/preprocessing/_label.py", line 160, in inverse_transform
+    raise ValueError("y contains previously unseen labels: %s" % str(diff))
+ValueError: y contains previously unseen labels: [-1]
+
+During handling of the above exception, another exception occurred:
+
+    cleaned_original_df = _inverse_transform_to_csv(
+  File "scripts/run_demandclean.py" (code snapshot of the run), in _inverse_transform_to_csv
+    safe_vals.append(nearest if nearest else known[0])
+IndexError: list index out of range

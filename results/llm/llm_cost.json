@@ -1,0 +1,146 @@
+{
+ "adult": {
+  "files": 38,
+  "turns": 113,
+  "input_tokens": 3876952,
+  "cache_read_tokens": 1877493,
+  "cache_write_tokens": 1999233,
+  "output_tokens": 406462,
+  "usd": 23.6,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "beers": {
+  "files": 1,
+  "turns": 5,
+  "input_tokens": 316070,
+  "cache_read_tokens": 201060,
+  "cache_write_tokens": 115000,
+  "output_tokens": 37911,
+  "usd": 1.77,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "bike": {
+  "files": 12,
+  "turns": 58,
+  "input_tokens": 3264540,
+  "cache_read_tokens": 1241134,
+  "cache_write_tokens": 2023290,
+  "output_tokens": 907864,
+  "usd": 35.96,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "breast_cancer": {
+  "files": 1,
+  "turns": 4,
+  "input_tokens": 77072,
+  "cache_read_tokens": 50776,
+  "cache_write_tokens": 26288,
+  "output_tokens": 34063,
+  "usd": 1.04,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "flights": {
+  "files": 1,
+  "turns": 4,
+  "input_tokens": 188476,
+  "cache_read_tokens": 106259,
+  "cache_write_tokens": 82209,
+  "output_tokens": 10773,
+  "usd": 0.84,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "har": {
+  "files": 1,
+  "turns": 9,
+  "input_tokens": 1151947,
+  "cache_read_tokens": 851550,
+  "cache_write_tokens": 300379,
+  "output_tokens": 80492,
+  "usd": 4.32,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "hospitals": {
+  "files": 1,
+  "turns": 6,
+  "input_tokens": 328723,
+  "cache_read_tokens": 245373,
+  "cache_write_tokens": 83338,
+  "output_tokens": 31753,
+  "usd": 1.44,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "mercedes": {
+  "files": 67,
+  "turns": 308,
+  "input_tokens": 16007989,
+  "cache_read_tokens": 10535754,
+  "cache_write_tokens": 5471619,
+  "output_tokens": 2352121,
+  "usd": 98.27,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "nasa": {
+  "files": 1,
+  "turns": 6,
+  "input_tokens": 182787,
+  "cache_read_tokens": 93407,
+  "cache_write_tokens": 89368,
+  "output_tokens": 144134,
+  "usd": 4.21,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "smartfactory": {
+  "files": 19,
+  "turns": 75,
+  "input_tokens": 3404385,
+  "cache_read_tokens": 1989788,
+  "cache_write_tokens": 1414447,
+  "output_tokens": 569370,
+  "usd": 24.07,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "soccer": {
+  "files": 1,
+  "turns": 23,
+  "input_tokens": 5062671,
+  "cache_read_tokens": 4615969,
+  "cache_write_tokens": 446656,
+  "output_tokens": 14140,
+  "usd": 5.45,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ },
+ "soilmoisture": {
+  "files": 11,
+  "turns": 32,
+  "input_tokens": 948963,
+  "cache_read_tokens": 504523,
+  "cache_write_tokens": 444376,
+  "output_tokens": 131863,
+  "usd": 6.33,
+  "models": [
+   "claude-opus-4-8"
+  ]
+ }
+}

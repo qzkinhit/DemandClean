@@ -1,0 +1,20 @@
+{
+  "id": "budget/breast_cancer/activeclean_ample",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 2090,
+  "seconds": 0.676,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "cc14bbb9371ff43bbb5db7751ddeb2c7a14dab7d0358733069ecbc45343fb7f8"
+    }
+  }
+}

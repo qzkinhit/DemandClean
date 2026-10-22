@@ -1,0 +1,32 @@
+{
+  "id": "main_table/hospitals/baselines/activeclean",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "ActiveClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 5700,
+  "gt_pct": 30.0,
+  "gt_denominator": 20000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "c2013e55ef2470710ab634bd6ec674e22a7da7cff4375b72f441b8491290bb8a",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:activeclean:results/main_table/hospitals/baselines/activeclean/cleaned.csv.gz --nearest",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

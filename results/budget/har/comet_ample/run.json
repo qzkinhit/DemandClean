@@ -1,0 +1,592 @@
+{
+ "dataset": "har",
+ "method": "comet",
+ "paper": "Comet, Mohammed/Naumann/Harmouch, EDBT 2025",
+ "budget_mode": "cost_units",
+ "cost_budget": 50.0,
+ "gt_budget": null,
+ "cost_model": "constant",
+ "n_train": 42000,
+ "n_val": 3000,
+ "n_test": 14000,
+ "n_features": 3,
+ "model": "agglo",
+ "metric": "silhouette",
+ "task": "clustering",
+ "labels": "clean",
+ "label_diff_train": 1632,
+ "comet_rows": 3000,
+ "n_clusters": 3,
+ "deviations": [
+  "split, encoder and validation set given by the benchmark (reeval_unified.split_idx, preprocess_data fitted on the dirty training split), not the paper's own split",
+  "utility model agglo with the common evaluator's hyperparameters (downstream model of the main table: agglo), not the paper's model list",
+  "error types of the real dirty cells are assigned by classify_errors (missing, scaling by 10^k, Gaussian noise otherwise, categorical shift), the paper injects known error types",
+  "Estimator posterior in closed form instead of NUTS sampling (same Gaussian posterior)",
+  "clustering extension: utility = silhouette on 3000 clean validation rows of the labels given by the nearest centroid of an Agglomerative (Ward) clustering fitted on the training rows, number of clusters fixed to 3, the k of the Clean4ML evaluator (distinct gt strings of the clean training split); the label column is not read",
+  "Comet works on a fixed random sample of 3000 of the 42000 training rows (seed 42); steps are 1% of that sample, cells outside it stay dirty"
+ ],
+ "step_fraction": 0.01,
+ "step_cells": 30,
+ "select_positives": true,
+ "dirty_feature_cells_train": 22285,
+ "dirty_cells_by_type": {
+  "MissingValues": 3807,
+  "GaussianNoise": 17965,
+  "Scaling": 513
+ },
+ "dirty_cells_by_pair": {
+  "x/MissingValues": 1259,
+  "x/GaussianNoise": 6026,
+  "x/Scaling": 187,
+  "y/MissingValues": 1223,
+  "y/GaussianNoise": 5843,
+  "y/Scaling": 290,
+  "z/MissingValues": 1325,
+  "z/GaussianNoise": 6096,
+  "z/Scaling": 36
+ },
+ "gt_cells": 1384,
+ "gt_cells_applied": 1384,
+ "gt_cells_reverted_never_applied": 0,
+ "cleaned_cells_by_pair": {
+  "x/Scaling": 20,
+  "z/Scaling": 1,
+  "y/GaussianNoise": 423,
+  "y/MissingValues": 95,
+  "y/Scaling": 23,
+  "z/GaussianNoise": 432,
+  "x/GaussianNoise": 390
+ },
+ "cost_used": 50,
+ "iterations": 50,
+ "attempts": 52,
+ "applied_steps": 50,
+ "step_modes": {
+  "fallback_history": 46,
+  "improved": 4
+ },
+ "stop_reason": "budget exhausted",
+ "val_score_initial": 0.9034048222469236,
+ "val_score_final": 0.9034792089092119,
+ "val_report_final": {
+  "silhouette": 0.9034792089092119,
+  "n_clusters_used": 2
+ },
+ "secs_comet": 1700.59,
+ "secs": 1713.78,
+ "steps": [
+  {
+   "iteration": 1,
+   "pair": "x/Scaling",
+   "feature": "x",
+   "error_type": "Scaling",
+   "cells": 20,
+   "mode": "improved",
+   "f1_before": 0.9034048222469236,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 2,
+   "pair": "z/Scaling",
+   "feature": "z",
+   "error_type": "Scaling",
+   "cells": 1,
+   "mode": "improved",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 3,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "improved",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 4,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 5,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 6,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 7,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 8,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 9,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 10,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 11,
+   "pair": "y/MissingValues",
+   "feature": "y",
+   "error_type": "MissingValues",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.9034392939263307
+  },
+  {
+   "iteration": 12,
+   "pair": "y/MissingValues",
+   "feature": "y",
+   "error_type": "MissingValues",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034392939263307,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 13,
+   "pair": "y/MissingValues",
+   "feature": "y",
+   "error_type": "MissingValues",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 14,
+   "pair": "y/MissingValues",
+   "feature": "y",
+   "error_type": "MissingValues",
+   "cells": 5,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 15,
+   "pair": "y/Scaling",
+   "feature": "y",
+   "error_type": "Scaling",
+   "cells": 23,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 16,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 17,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 18,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 19,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 20,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.903319844765464
+  },
+  {
+   "iteration": 21,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.903319844765464,
+   "f1_after": 0.903319844765464
+  },
+  {
+   "iteration": 22,
+   "pair": "y/GaussianNoise",
+   "feature": "y",
+   "error_type": "GaussianNoise",
+   "cells": 3,
+   "mode": "fallback_history",
+   "f1_before": 0.903319844765464,
+   "f1_after": 0.903319844765464
+  },
+  {
+   "iteration": 23,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.903319844765464,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 24,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "improved",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.9033877665282657
+  },
+  {
+   "iteration": 25,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9033877665282657,
+   "f1_after": 0.903319844765464
+  },
+  {
+   "iteration": 26,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.903319844765464,
+   "f1_after": 0.9034392939263307
+  },
+  {
+   "iteration": 27,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034392939263307,
+   "f1_after": 0.9034392939263307
+  },
+  {
+   "iteration": 28,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034392939263307,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 29,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 30,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 31,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034392939263307
+  },
+  {
+   "iteration": 32,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034392939263307,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 33,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 34,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 35,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 36,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 37,
+   "pair": "z/GaussianNoise",
+   "feature": "z",
+   "error_type": "GaussianNoise",
+   "cells": 12,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 38,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 39,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 40,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 41,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 42,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 43,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 44,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 45,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 46,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 47,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 48,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 49,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  },
+  {
+   "iteration": 50,
+   "pair": "x/GaussianNoise",
+   "feature": "x",
+   "error_type": "GaussianNoise",
+   "cells": 30,
+   "mode": "fallback_history",
+   "f1_before": 0.9034792089092119,
+   "f1_after": 0.9034792089092119
+  }
+ ],
+ "command": "python baselines/runners/run_comet.py --dataset har --method_name comet --n_jobs 2 --cost_budget 50 --labels dirty --project_root . --output_root results/runs/baselines --records_path results/runs/baselines/records.jsonl",
+ "python": "3.8.20",
+ "numpy": "1.24.3",
+ "pandas": "2.0.3",
+ "sklearn": "1.3.2",
+ "finished": "2026-10-17T09:50:32",
+ "deviations_at_run": [
+  "split, encoder and validation set given by the benchmark (reeval_unified.split_idx, preprocess_data fitted on the dirty training split), not the paper's own split",
+  "utility model agglo with the common evaluator's hyperparameters (downstream model of the main table: agglo), not the paper's model list",
+  "error types of the real dirty cells are assigned by classify_errors (missing, scaling by 10^k, Gaussian noise otherwise, categorical shift), the paper injects known error types",
+  "Estimator posterior in closed form instead of NUTS sampling (same Gaussian posterior)",
+  "clustering extension: utility = silhouette on 3000 clean validation rows of the labels given by the nearest centroid of an Agglomerative (Ward) clustering fitted on the training rows, number of clusters fixed to 3, the k of the Clean4ML evaluator (distinct gt strings of the clean training split); the label column is not read"
+ ]
+}

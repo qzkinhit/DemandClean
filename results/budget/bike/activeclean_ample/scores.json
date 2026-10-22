@@ -1,0 +1,13 @@
+{
+ "dataset": "bike",
+ "method": "ActiveClean (ample GT)",
+ "model": "lr",
+ "metric": "r2",
+ "test": 0.9428863438058618,
+ "n_train_rows": 10427,
+ "redr": {
+  "r_before": 10128,
+  "r_after": 9637,
+  "redr": 0.04847946287519747
+ }
+}

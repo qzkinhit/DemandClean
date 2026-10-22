@@ -1,0 +1,13 @@
+{
+  "dataset": "hospitals",
+  "method": "Learn2Clean",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 1.0,
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 600,
+  "n_test": 200,
+  "gt_cells": 0,
+  "gt_pct": 0.0
+}

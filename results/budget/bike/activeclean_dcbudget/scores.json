@@ -1,0 +1,13 @@
+{
+ "dataset": "bike",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "lr",
+ "metric": "r2",
+ "test": 0.8946009752934638,
+ "n_train_rows": 10427,
+ "redr": {
+  "r_before": 10128,
+  "r_after": 9962,
+  "redr": 0.016390205371248027
+ }
+}

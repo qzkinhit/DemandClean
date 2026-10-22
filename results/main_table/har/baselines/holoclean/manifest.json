@@ -1,0 +1,34 @@
+{
+  "id": "main_table/har/baselines/holoclean",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "HoloClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "99f76a799323316d6950a47694063d54b8a3dc5e1a26e9c9ca16d491fece2e70",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:holoclean:results/main_table/har/baselines/holoclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

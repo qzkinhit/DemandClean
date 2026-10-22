@@ -1,0 +1,22 @@
+{
+  "id": "main_table/breast_cancer/baselines/llm",
+  "dataset": "breast_cancer",
+  "role": "baselines",
+  "method": "LLM",
+  "ground_truth_cells": 0,
+  "files": [
+    "cleaned.csv.gz",
+    "scores.json"
+  ],
+  "model": "claude-opus-4-8",
+  "replay_command": "python baselines/runners/run_llm.py --dataset breast_cancer --check",
+  "records": "results/llm/records/breast_cancer.jsonl.gz",
+  "input_files": 1,
+  "cost": "results/llm/llm_cost.json",
+  "provenance": {
+    "table": "Final saved indexed CSV, gzip compressed without changing its contents",
+    "csv_sha256": "5ab17e0d5417e8743427b6be5810e6bb56faa59d7270f7841778a84526d8bc64",
+    "log": "The task-specific requests, Read records, structured responses and token usage are in the records file",
+    "reported_model_scores_source_sha256": "e16de9d317f7e09a6b71298551bb42885e48242a29c82e1ee639631f131a0611"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "breast_cancer",
+  "model": "lr",
+  "metric": "accuracy",
+  "test": 0.9785714285714285,
+  "tol_rel": 0.7499999999999971,
+  "references": {
+    "NoFix": 0.9571428571428572,
+    "RepairAll": 0.9857142857142858
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.20730797912005966,
+  "n_train_rows": 148,
+  "n_test": 140,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "229db8a5db1e6b25483ab6ca8e4b894ce9d18fd48a6ce2e241ce7adaacea25fb"
+}

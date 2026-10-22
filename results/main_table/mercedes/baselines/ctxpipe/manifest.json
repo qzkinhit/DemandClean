@@ -1,0 +1,33 @@
+{
+  "id": "main_table/mercedes/baselines/ctxpipe",
+  "dataset": "mercedes",
+  "role": "baselines",
+  "method": "CtxPipe",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 1590402,
+  "scoring": {
+    "model": "rf",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "54345f3fd30ef94fc353b23a5aa26da5a23c1e505007a4c36ac1ff1c5bcd9d9a",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table mercedes:ctxpipe:results/main_table/mercedes/baselines/ctxpipe/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

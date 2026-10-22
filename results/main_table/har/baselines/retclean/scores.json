@@ -1,0 +1,17 @@
+{
+  "dataset": "har",
+  "method": "RetClean",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.8024657937493608,
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 40368,
+  "n_test": 13863,
+  "table_rows": 42000,
+  "gt_cells": 84000,
+  "gt_pct": 30.0,
+  "redr": {
+    "redr": -1.0087683102950278
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "main_table/mercedes/baselines/learn2clean",
+  "dataset": "mercedes",
+  "role": "baselines",
+  "method": "Learn2Clean",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 1586793,
+  "scoring": {
+    "model": "rf",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "d541a13ea9141338cfd1396973092086f6763daf3fd11cb94b0d8cd519db930d",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table mercedes:learn2clean:results/main_table/mercedes/baselines/learn2clean/cleaned_encoded.npz",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json"
+  ]
+}

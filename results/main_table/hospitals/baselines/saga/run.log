@@ -1,0 +1,6 @@
+# Recorded SystemDS execution log.
+SAGA eval hp (holdout) 2.000 10.000 0.001
+SAGA_DONE search_secs=0.002408295
+Total elapsed time:		684.946 sec.
+Total compilation time:		8.792 sec.
+Total execution time:		676.153 sec.

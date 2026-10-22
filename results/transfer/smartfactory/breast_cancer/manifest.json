@@ -1,0 +1,54 @@
+{
+  "dataset": "breast_cancer",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "b2c03ee82eb73a7a356ebd72586383ffc6cf30dfd4de18f39c2b1219b1921f07"
+  },
+  "checkpoint": "results/robustness/models/smartfactory",
+  "rules": "results/transfer/rules/breast_cancer.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/smartfactory/breast_cancer/config.yaml --variant full --seed 0 --rules results/transfer/rules/breast_cancer.txt --checkpoint results/robustness/models/smartfactory --out results/runs/transfer_breast_cancer_smartfactory",
+  "score_command": "python evaluation/paper_score.py results/transfer/smartfactory/breast_cancer",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "1dbdd6118c8c313e3f15fd2419c108fa4b018a6921545c24cb9b4269920071a4"
+    },
+    "rules_sha256": "eec2c359002ba732f00279a052944eb2a890356a2bdc4a6e9664ec070a84622b",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "d5d69002a5bb3bf6af3bc5027f6fe4022de9c944fe1dbe6f15ba6b783ceb1654",
+      "agent_stage2.pt": "2e4692993da3bbb3339bd8cd189f00b86deefda1b0e3b2e161f6df2ca0784227"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 58.01
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "smartfactory",
+  "target_dataset": "breast_cancer"
+}

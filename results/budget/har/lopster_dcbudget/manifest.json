@@ -1,0 +1,20 @@
+{
+  "id": "budget/har/lopster_dcbudget",
+  "dataset": "har",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 320,
+  "seconds": 162.55,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "ae211ee7363177e8de819235fe6a9a6587a8ddfa95b6a852007bc2c6aef78766"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[DOMAIN]
+manager: ENUM {Aiqun_Levergood, Anupam_Oxenboll, Atsufumi_Comparetto, Bon_Kruiskamp, IlYoung_Giese, Jeremy_Cantu, Kazuhiko_Claybrook, Nabih_Rios, Piera_Faustini, Sigenobu_Bodagala, Vagan_Smallwood, Veit_Luks, Xiaolei_Ronchette, Xiaomin_Saoudi, Yki_Villano}
+
+[FD]
+name => surname
+name => birthyear
+name => birthplace

@@ -1,0 +1,20 @@
+{
+  "dataset": "beers",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.348643006263048,
+  "tol_rel": 0.8421052631578947,
+  "references": {
+    "NoFix": 0.31524008350730687,
+    "RepairAll": 0.35490605427974947
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.9951438177063877,
+  "n_train_rows": 1442,
+  "n_test": 479,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "941baafc0724d4b1fc2dbd4406b5e2355a0e7ad0aa8e5fa3433780ad2b36f177"
+}

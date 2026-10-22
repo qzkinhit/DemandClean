@@ -1,0 +1,43 @@
+{
+  "dataset": "soccer",
+  "method": "DAGPipe",
+  "upstream": {
+    "repository": "https://zenodo.org/records/20492518",
+    "doi": "10.5281/zenodo.20492518",
+    "sha256": "14d8f10f057cc2322328707888b7cf67cac11cdbddc43c8207d882efd418ad72"
+  },
+  "author_implementation": "dagpipe.models.dagpipe_hie.HierarchicalDAGPipe",
+  "author_training": "dagpipe.training.trainer.train/evaluate",
+  "adaptations": [
+    "Fixed canonical 60/20/20 split, train-fitted shared encoders/scaler",
+    "Dirty training labels only, no ground-truth training cells",
+    "Separate clean validation selects epoch; the author runner builds val_loader from X_train",
+    "Each official operator uses original forward during training; dirty-train-only cached statistics at validation/test",
+    "KNN inference reference is dirty train, empirical CDF/frequency and log-domain clipping fixed from train",
+    "Frozen DAG representations are scored with the common main-table model rather than the author MLP head"
+  ],
+  "seed": 0,
+  "epochs_run": 200,
+  "best_epoch": 194,
+  "search_objective": "official_MLP_cross_entropy_with_DAG_and_sparsity_penalty_on_validation",
+  "final_evaluation_model": "dt",
+  "task": "classification",
+  "task_extension": "native_classification",
+  "native_task_support": true,
+  "arithmetic_dtype": "torch.float32",
+  "labels_dropped_train": 0,
+  "labels_excluded_validation": 0,
+  "test_feature_access_after_freeze": true,
+  "test_labels_accessed": false,
+  "device": "cpu",
+  "threads": 1,
+  "representation": "transformed_features",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_dagpipe/run_dagpipe.py"
+}

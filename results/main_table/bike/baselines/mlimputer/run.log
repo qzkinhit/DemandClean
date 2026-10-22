@@ -1,0 +1,14 @@
+Run started at 2026-10-17 01:29:15
+MLImputer data cleaning (mice)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: bike_mlimputer
+imputation method: mice
+repaired data saved: bike_mlimputer_cleaned.csv
+run time: 0.73 s
+status: success
+filled cells: 0
+ground-truth cost: 0 (fully automatic)
+
+results saved to: bike_mlimputer
+log file: bike_mlimputer.log

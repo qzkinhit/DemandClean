@@ -1,0 +1,5 @@
+{
+  "dataset": "breast_cancer",
+  "method": "NoFix",
+  "seconds": 0.02
+}

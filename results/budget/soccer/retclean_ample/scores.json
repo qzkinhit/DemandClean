@@ -1,0 +1,11 @@
+{
+  "dataset": "soccer",
+  "method": "RetClean (ample GT)",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 1.0,
+  "nearest": true,
+  "n_train_rows": 6366,
+  "gt_cells": 31830,
+  "gt_pct": 30.0
+}

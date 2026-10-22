@@ -1,0 +1,83 @@
+{
+  "adult": {
+    "precision": 0.16648936170212766,
+    "recall": 0.30388349514563107,
+    "f1": 0.21512027491408933,
+    "tp": 313,
+    "fp": 1567,
+    "fn": 717,
+    "run": "results/main_table/adult/demandclean"
+  },
+  "beers": {
+    "precision": 0.9826568265682657,
+    "recall": 0.9936567164179104,
+    "f1": 0.9881261595547309,
+    "tp": 2663,
+    "fp": 47,
+    "fn": 17,
+    "run": "results/main_table/beers/demandclean"
+  },
+  "bike": {
+    "precision": 0.9686373998088095,
+    "recall": 0.9935135950522307,
+    "f1": 0.9809178069440566,
+    "tp": 26345,
+    "fp": 853,
+    "fn": 172,
+    "run": "results/main_table/bike/demandclean"
+  },
+  "breast_cancer": {
+    "precision": 0.8143322475570033,
+    "recall": 0.7621951219512195,
+    "f1": 0.7874015748031497,
+    "tp": 250,
+    "fp": 57,
+    "fn": 78,
+    "run": "results/main_table/breast_cancer/demandclean"
+  },
+  "har": {
+    "precision": 0.8582924983068404,
+    "recall": 0.9667489342607135,
+    "f1": 0.9092981049255056,
+    "tp": 21544,
+    "fp": 3557,
+    "fn": 741,
+    "run": "results/main_table/har/demandclean"
+  },
+  "mercedes": {
+    "precision": 0.9999944623801797,
+    "recall": 1.0,
+    "f1": 0.9999972311824236,
+    "tp": 180582,
+    "fp": 1,
+    "fn": 0,
+    "run": "results/main_table/mercedes/demandclean"
+  },
+  "nasa": {
+    "precision": 0.946058091286307,
+    "recall": 1.0,
+    "f1": 0.9722814498933902,
+    "tp": 456,
+    "fp": 26,
+    "fn": 0,
+    "run": "results/main_table/nasa/demandclean"
+  },
+  "smartfactory": {
+    "precision": 0.9840691852526172,
+    "recall": 1.0,
+    "f1": 0.9919706354668503,
+    "tp": 4324,
+    "fp": 70,
+    "fn": 0,
+    "run": "results/main_table/smartfactory/demandclean"
+  },
+  "soilmoisture": {
+    "precision": 0.6185694635488308,
+    "recall": 0.8584245355052176,
+    "f1": 0.7190214784416138,
+    "tp": 13491,
+    "fp": 8319,
+    "fn": 2225,
+    "run": "results/main_table/soilmoisture/demandclean"
+  }
+}

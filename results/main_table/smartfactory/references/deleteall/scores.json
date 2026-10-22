@@ -1,0 +1,17 @@
+{
+  "dataset": "smartfactory",
+  "method": "DeleteAll",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.8456333262846267,
+  "all_models": {
+    "rf": 0.8456333262846267,
+    "gb": 0.7879044195390146
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2838,
+  "table_rows": 2838,
+  "gt_cells": 269553,
+  "gt_pct": 60.0
+}

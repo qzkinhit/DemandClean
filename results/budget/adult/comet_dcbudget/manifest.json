@@ -1,0 +1,20 @@
+{
+  "id": "budget/adult/comet_dcbudget",
+  "dataset": "adult",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 379862,
+  "seconds": 80.16,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "283f1a387e009c197904221d64e0ff58d266c436d75a0dba404169bd4fc2ee63"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+# =============================================================================
+# Dataset: adult (UCI Adult Census Income)
+# =============================================================================
+# 45,222 rows x 15 cols; classification (income: {0, 1})
+# income=1 means low income (<=50K); income=0 means high income (>50K)
+# Errors: label flips in both directions (0->1 and 1->0)
+# CFD rules: bidirectional detection — low-income features in income=0
+#            and high-income features in income=1
+# =============================================================================
+
+[DOMAIN]
+capital_loss: INT [0, 4356]
+
+
+
+[FD]
+
+[CFD]
+# ===================================================================
+# Direction A: low-income features inside income=0 -> detect 1->0 flips
+# (low income was mislabeled as high income)
+# ===================================================================
+
+# ===== High-precision rules (P >= 85%): very strong low-income signals =====
+# C1: very young (P=97.9%, R=8.3%)
+# C2: young (P=90.7%)
+# C3: never-married + low education + young (P=90.0%)
+# C4: Own-child + young (P=87.8%)
+# C5: never-married + very low education (P=86.5%)
+# C6: Own-child + low education (P=84.1%)
+# C7: young + low hours (P=91.2%)
+# C8: never-married + mid education + no capital gain (P=81.5%)
+# C9: never-married + mid-high education + young + no capital (P=87.5%)
+
+# ===== Medium-precision rules (P >= 60%): covers non-Never-married subgroups =====
+# C10: separated + mid education + no capital (P=60.9%)
+# C11: divorced + mid education + normal hours + no capital (P=63.4%)
+income=0, marital_status=Divorced, educational_num<=12, hours_per_week<=40, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+# C12: divorced + admin clerical + no capital (P=71.8%)
+income=0, marital_status=Divorced, occupation=Adm-clerical, capital_gain<=0 => income DEFICIT >= 1 FROM_BASELINE 1
+# C13: Unmarried role + low education + below middle-age (P=84.1%)
+# C14: not-in-family + mid education + no capital + normal hours (P=63.9%)
+income=0, relationship=Not-in-family, educational_num<=10, capital_gain<=0, hours_per_week<=40 => income DEFICIT >= 1 FROM_BASELINE 1
+
+# ===================================================================
+# Direction B: high-income features inside income=1 -> detect 0->1 flips
+# (high income was mislabeled as low income)
+# ===================================================================
+
+# ===== Very strong high-income signals =====
+# C16: high capital gain — capital_gain>=5000 occurs almost only in the high-income group
+# C17: doctorate / professional degree + middle-aged or older
+# C18: married + high education + high capital
+
+# ===== Strong high-income combinations =====
+# C19: married + high education + long hours — a classic high-income pattern
+# C20: executive/managerial + high education + has capital gain
+# C21: professional specialty + high education + middle-aged — 45% of Prof-specialty is high-income
+# C22: Husband/Wife role + long hours + high education
+# C23: self-employed (incorporated) + high education
+# C24: married + high education + middle-aged + has capital loss — capital activity implies investments
+# C25: federal government + high education + middle-aged

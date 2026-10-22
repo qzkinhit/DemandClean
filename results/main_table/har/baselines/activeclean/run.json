@@ -1,0 +1,59 @@
+{
+  "status": "ok",
+  "n_train": 42000,
+  "n_val": 14000,
+  "n_test": 14000,
+  "gt_cells": 2000,
+  "rows_cleaned": 500,
+  "cells_per_record_without_index": 4,
+  "budget_cells": 2000,
+  "budget_rows": 500,
+  "batch_size": 50,
+  "iterations": 11,
+  "model": "linear_svm_hinge",
+  "model_regularisation": {
+    "C": 0.01,
+    "lam": 0.0024772096710265557
+  },
+  "seed": 42,
+  "task": "classification",
+  "label_col": "gt",
+  "label_source": "dirty",
+  "train_labels_replaced_by_protocol": 0,
+  "python": "3.8.20",
+  "finished": "2026-10-18 13:52:46",
+  "secs": 3.433,
+  "wall_secs": 3.767,
+  "step_constant": 1.0,
+  "output_iteration": 11,
+  "dataset": "har",
+  "method": "ActiveClean",
+  "configuration": {
+    "feature_cols": [
+      "x",
+      "y",
+      "z"
+    ],
+    "categorical_cols": [],
+    "clock_cols": [],
+    "label_col": "gt",
+    "task": "classification",
+    "budget_rows": 500,
+    "batch_size": 50,
+    "seed": 42,
+    "uniform_mix": 0.1,
+    "detector_min_per_class": 5,
+    "detector_margin": 1.0,
+    "detector_rare_class": 3,
+    "max_categories": 100,
+    "min_category_count": 2,
+    "z_clip": 10.0,
+    "svm_max_iter": 20000,
+    "step_constant": 1.0,
+    "model_regularisation": {
+      "C": 0.01,
+      "lam": 0.0024772096710265557
+    }
+  },
+  "implementation": "ActiveClean adaptation described in baselines/THIRD_PARTY.md"
+}

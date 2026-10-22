@@ -1,0 +1,20 @@
+{
+  "dataset": "beers",
+  "variant": "nd",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    1446,
+    8
+  ],
+  "cleaned_shape": [
+    1446,
+    8
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 804,
+    "delete": 0,
+    "replace_nearby": 1878
+  }
+}

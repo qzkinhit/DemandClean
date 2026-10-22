@@ -1,0 +1,9 @@
+{
+  "source_dataset": "nasa",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "cb068976f1cb56d7edc7729005b4d898552b2ba80c9d82249b8729c224e0a92d",
+    "agent_stage1.pt": "ccedf1213fa1353f93bb2b83c89ff7bdfd25b5a36d870b0fcf903116733a17a5"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

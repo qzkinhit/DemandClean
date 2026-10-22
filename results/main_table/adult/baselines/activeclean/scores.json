@@ -1,0 +1,21 @@
+{
+  "dataset": "adult",
+  "method": "ActiveClean",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.8537313432835821,
+  "all_models": {
+    "rf": 0.8537313432835821,
+    "gb": 0.8677722498618021
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 27133,
+  "n_test": 9045,
+  "table_rows": 27133,
+  "gt_cells": 7500,
+  "gt_pct": 1.1056565388527708,
+  "redr": {
+    "redr": 0.13883495145631067
+  }
+}

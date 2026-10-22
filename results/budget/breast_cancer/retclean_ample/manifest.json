@@ -1,0 +1,21 @@
+{
+  "id": "budget/breast_cancer/retclean_ample",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 2090,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "448fc75081df1d0c3a8d25f618422f82e206915884ab33af78109a00ebc91325"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "run_id": "main_table/soilmoisture/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "soilmoisture",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/soilmoisture.yaml --variant full --seed 0",
+  "arguments": {
+    "n_episodes": 300,
+    "max_truth_budget": 0
+  },
+  "seed": 0,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "ridge",
+    "training": {
+      "n_episodes": 300,
+      "max_truth_budget": 0
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-10-16T13:55:31+08:00",
+  "end_time": "2026-10-16T14:07:13+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true,
+      "policy_equals_policy_written_by_log": true
+    },
+    "artifact_sha256": {
+      "cleaned.csv": "67a9a81f9483ff38ab7bdfcc3ed48ad804166848485b612b9d658c0f25e5ec5a",
+      "cleaned_encoded.npz": "3a10fca0aad5a7f53a11790851bb09693db54948ad2d49450b1c4a57d4a8610a",
+      "model/agent_stage1.pt": "0f23d78f06528caadea9f3efa884b1e6c7e18c8b35ddc619506ab6e1d5c701a5",
+      "model/agent_stage2.pt": "1fbc98f53ecd30bc6bd6a2d6e8b25ad77467ee3eb63536b66362e2bb3e344c79"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "notes": "the configuration of soilmoisture sets max_truth_budget 0, so the run requests no ground truth beyond the calibration seed set",
+  "ground_truth_cells": 2560,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/soilmoisture/demandclean",
+    "checkpoint": "results/main_table/soilmoisture/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

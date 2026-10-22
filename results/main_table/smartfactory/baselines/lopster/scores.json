@@ -1,0 +1,21 @@
+{
+  "dataset": "smartfactory",
+  "method": "Lopster",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.7024740960033834,
+  "all_models": {
+    "rf": 0.7024740960033834,
+    "gb": 0.5893423556777332
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 14187,
+  "n_test": 4729,
+  "table_rows": 14187,
+  "gt_cells": 1026,
+  "gt_pct": 0.22837809262000422,
+  "redr": {
+    "redr": -2.280989824236818
+  }
+}

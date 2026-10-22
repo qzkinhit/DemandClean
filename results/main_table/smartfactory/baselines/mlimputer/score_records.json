@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "smartfactory",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.9610911397758511,
+    "n_train_rows": 14187,
+    "method": "MLImputer",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "smartfactory",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.8001691689574963,
+    "n_train_rows": 14187,
+    "method": "MLImputer",
+    "encoding": "train_fitted"
+  }
+]

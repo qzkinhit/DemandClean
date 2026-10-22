@@ -1,0 +1,9 @@
+{
+  "source_dataset": "smartfactory",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "2e4692993da3bbb3339bd8cd189f00b86deefda1b0e3b2e161f6df2ca0784227",
+    "agent_stage1.pt": "d5d69002a5bb3bf6af3bc5027f6fe4022de9c944fe1dbe6f15ba6b783ceb1654"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "budget/beers/lopster_ample",
+  "dataset": "beers",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 7230,
+  "seconds": 35.93,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "d8b55dfdb9bd9f6ee01ac24702bc7eabb1d4d14e92e45471fcd9644f54f1bd5e"
+    }
+  }
+}

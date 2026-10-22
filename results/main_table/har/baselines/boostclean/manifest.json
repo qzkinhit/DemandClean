@@ -1,0 +1,34 @@
+{
+  "id": "main_table/har/baselines/boostclean",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "BoostClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "42f8b8389d153581b84302d5587722defbf7fb672b3cfab3f07df46e91cc0eae",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:boostclean:results/main_table/har/baselines/boostclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "main_table/soccer/references/repairall",
+  "dataset": "soccer",
+  "role": "references",
+  "method": "RepairAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 63660,
+  "gt_pct": 60.0,
+  "gt_denominator": 116710,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "4da4962d54c75da145a0813ebccd579e2d509dbe2f212afcbc15fa197ee2ab08",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soccer:repairall:results/main_table/soccer/references/repairall/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

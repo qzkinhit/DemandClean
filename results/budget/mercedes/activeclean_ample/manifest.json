@@ -1,0 +1,20 @@
+{
+  "id": "budget/mercedes/activeclean_ample",
+  "dataset": "mercedes",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 188500,
+  "seconds": 10.856,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "deed1583d300454fdcd08d5cb2d494e96bebbce2b4829c939a01f33f478a2996"
+    }
+  }
+}

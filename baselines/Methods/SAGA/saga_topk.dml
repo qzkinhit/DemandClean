@@ -1,0 +1,234 @@
+#-------------------------------------------------------------
+# SAGA (Siddiqi, Kern, Boehm, SIGMOD 2024) on Apache SystemDS 3.2.0.
+#
+# Calls the builtin topk_cleaning in hold-out mode (cv=FALSE): pipelines are
+# fitted on the dirty training frame and scored on the clean validation frame.
+# The top-1 pipeline is then replayed on the full (unsampled) dirty training
+# frame, one primitive at a time, through the builtin executePipeline, the same
+# path fit_pipeline uses. After every primitive the encoded training matrix is
+# written so that the caller can track deleted rows and undo the affine
+# rescaling primitives before decoding the cleaned table.
+#
+# All file locations arrive as -nvargs from the runner. The evaluation
+# functions are the SAGA reproducibility functions (multiLogReg accuracy for
+# classification, lm R^2 for regression) with two argument fixes noted inline,
+# plus a k-means silhouette function for clustering tasks (an adaptation).
+#-------------------------------------------------------------
+
+source("scripts/pipelines/scripts/utils.dml") as utils;
+source("scripts/builtin/topk_cleaning.dml") as topk;
+
+sep = $sep
+trainData = read($train, data_type="frame", format="csv", header=TRUE, naStrings=[""], sep=sep);
+valData = read($val, data_type="frame", format="csv", header=TRUE, naStrings=[""], sep=sep);
+metaInfo = read($meta, data_type="frame", format="csv", header=FALSE, sep=sep);
+metaInfo = metaInfo[, 2:ncol(metaInfo)]
+primitives = read($primitives, data_type="frame", format="csv", header=TRUE)
+param = read($parameters, data_type="frame", format="csv", header=TRUE)
+outDir = $out
+evalFunc = $func
+
+t0 = time()
+[topKPipelines, topKHyperParams, topKScores, baseLineScore, evalFunHp, applyFunc] = topk_cleaning(
+  dataTrain=trainData, dataTest=valData, metaData=metaInfo, primitives=primitives, parameters=param,
+  evaluationFunc=evalFunc, evalFunHp=as.matrix(NaN), topK=$topk, resource_val=$rv, max_iter=$max_iter,
+  sample=$sample, expectedIncrease=$expectedIncrease, seed=$seed, cv=FALSE, cvk=3, isLastLabel=TRUE,
+  correctTypos=FALSE, enablePruning=TRUE)
+tSearch = (time() - t0) / 1e9
+
+write(topKPipelines, outDir+"/pip.csv", format="csv")
+write(topKHyperParams, outDir+"/hp.csv", format="csv")
+write(topKScores, outDir+"/bestAcc.csv", format="csv")
+write(baseLineScore, outDir+"/dirtyScore.csv", format="csv")
+write(evalFunHp, outDir+"/evalHp.csv", format="csv")
+write(applyFunc, outDir+"/applyFunc.csv", format="csv")
+write(tSearch, outDir+"/searchSecs.csv", format="csv")
+
+# ---------------------------------------------------------------------------
+# Deployment of the top-1 pipeline on the full dirty training frame
+# (data preparation identical to the builtin fit_pipeline).
+# ---------------------------------------------------------------------------
+[schema, mask, fdMask, maskY] = topk::prepareMeta(trainData, metaInfo)
+[Xtr, Ytr] = topk::getLabel(trainData, TRUE)
+[Xva, Yva] = topk::getLabel(valData, TRUE)
+if(maskY == 1) {
+  [eYtr, MY] = transformencode(target=Ytr, spec="{ids:true, recode:[1]}");
+  eYva = transformapply(target=Yva, spec="{ids:true, recode:[1]}", meta=MY);
+}
+else {
+  eYtr = as.matrix(Ytr)
+  eYva = as.matrix(Yva)
+}
+ctx = list(prefix="---- deploy")
+[Xtr, Xva] = topk::runStringPipeline(Xtr, Xva, schema, mask, FALSE, FALSE, ctx)
+[eXtr, eXva, metaR] = topk::recodeData(Xtr, Xva, mask, FALSE, "recode")
+write(eXtr, outDir+"/exp_X0.csv", format="csv")
+write(eYtr, outDir+"/exp_Y0.csv", format="csv")
+
+pip = removeEmpty(target=topKPipelines[1, ], margin="cols")
+af = removeEmpty(target=applyFunc[1, ], margin="cols")
+hp = topKHyperParams[1, ]
+no_of_param = as.scalar(hp[1, 1]) + 1
+hp_width = hp[1, 2:no_of_param]
+hp_matrix = matrix(hp_width, rows=ncol(pip), cols=ncol(hp_width)/ncol(pip))
+write(pip, outDir+"/exp_pipeline.csv", format="csv")
+
+# validation score of the whole top-1 pipeline fitted on the full training frame
+metaList = list(mask=mask, schema=schema, fd=fdMask, applyFunc=af)
+[cX, cY, cXv, cYv, tA, pA, cA, chA, isA] = executePipeline(pipeline=pip, Xtrain=eXtr, Ytrain=eYtr,
+  Xtest=eXva, Ytest=eYva, metaList=metaList, hyperParameters=hp_matrix, flagsCount=5, test=TRUE, verbose=FALSE)
+fullScore = eval(evalFunc, list(X=cX, Y=cY, Xtest=cXv, Ytest=cYv, Xorig=as.matrix(0), evalFunHp=evalFunHp))
+write(fullScore, outDir+"/exp_fullValScore.csv", format="csv")
+
+# primitive-by-primitive replay; encoders (dummycoding and friends) are skipped
+# because the exported table stays in the original attribute space
+X = eXtr
+Y = eYtr
+Xv = eXva
+Yv = eYva
+for(i in 1:ncol(pip)) {
+  op = as.scalar(pip[1, i])
+  isEncoder = (op == "dummycoding") | (op == "frequencyEncode") | (op == "WoE") | (op == "pca") | (op == "ppca")
+  if(!isEncoder) {
+    mlStep = list(mask=mask, schema=schema, fd=fdMask, applyFunc=af[1, i])
+    [X, Y, Xv, Yv, tS, pS, cS, chS, isS] = executePipeline(pipeline=pip[1, i], Xtrain=X, Ytrain=Y,
+      Xtest=Xv, Ytest=Yv, metaList=mlStep, hyperParameters=hp_matrix[i, ], flagsCount=5, test=TRUE, verbose=FALSE)
+  }
+  write(X, outDir+"/exp_X"+i+".csv", format="csv")
+  write(Y, outDir+"/exp_Y"+i+".csv", format="csv")
+}
+print("SAGA_DONE search_secs="+tSearch)
+
+# ---------------------------------------------------------------------------
+# Evaluation functions of the SAGA reproducibility package (scripts/topkTest1.dml):
+# multiLogReg accuracy for classification, lm R^2 for regression. The package
+# tunes the model with gridSearch(cv=TRUE); in SystemDS 3.2.0 that CV path fails
+# (rbind over a list of folds, "Unsupported scalar value type: UNKNOWN"), and the
+# 3.2.0 test script itself hard-codes the result. Here the same model family is
+# tuned once on the hold-out pair that topk_cleaning passes in (dirty train,
+# clean validation), over the package's icpt and reg ranges.
+# multiLogReg iteration limits arrive as evalMaxi and evalMaxii (package values
+# 1000 and 0, where 0 means no limit on the inner conjugate gradient loop).
+# ---------------------------------------------------------------------------
+evalClassification = function(Matrix[Double] X, Matrix[Double] Y, Matrix[Double] Xtest, Matrix[Double] Ytest,
+  Matrix[Double] Xorig=as.matrix(0), Matrix[Double] evalFunHp)
+return(Matrix[Double] output, Matrix[Double] error)
+{
+  if(is.na(as.scalar(evalFunHp[1,1])))
+  {
+    icpts = matrix("0 1 2", rows=3, cols=1)
+    regs = matrix("10 1 0.1 0.01 0.001", rows=5, cols=1)
+    best = -1.0
+    bestHp = matrix("2 10 0.001", rows=1, cols=3)
+    if(min(Y) != max(Y)) {
+      for(a in 1:3) {
+        for(b in 1:5) {
+          ic = as.scalar(icpts[a, 1])
+          rg = as.scalar(regs[b, 1])
+          Bg = multiLogReg(X=X, Y=Y, icpt=ic, reg=rg, tol=0.001, maxi=$evalMaxi, maxii=$evalMaxii, verbose=FALSE);
+          [pg, yg, accg] = multiLogRegPredict(Xtest, Bg, Ytest, FALSE)
+          if(accg > best) {
+            best = accg
+            bestHp[1, 1] = ic
+            bestHp[1, 2] = rg
+          }
+        }
+      }
+    }
+    print("SAGA eval hp (holdout) "+toString(bestHp)+" acc "+best)
+    evalFunHp = bestHp
+  }
+  error = as.matrix(0)
+  if(min(Y) == max(Y)) {
+    accuracy = as.matrix(0)
+  }
+  else {
+    beta = multiLogReg(X=X, Y=Y, icpt=as.scalar(evalFunHp[1,1]), reg=as.scalar(evalFunHp[1,2]),
+      tol=as.scalar(evalFunHp[1,3]), maxi=$evalMaxi, maxii=$evalMaxii, verbose=FALSE);
+    [prob, yhat, accuracy] = multiLogRegPredict(Xtest, beta, Ytest, FALSE)
+    accuracy = as.matrix(accuracy)
+  }
+  output = cbind(accuracy, evalFunHp)
+}
+
+evalRegression = function(Matrix[Double] X, Matrix[Double] Y, Matrix[Double] Xtest, Matrix[Double] Ytest,
+  Matrix[Double] Xorig=as.matrix(0), Matrix[Double] evalFunHp)
+return(Matrix[Double] output, Matrix[Double] error)
+{
+  Xtest = replace(target=Xtest, pattern=NaN, replacement=0)
+  X = replace(target=X, pattern=NaN, replacement=0)
+  if(is.na(as.scalar(evalFunHp[1,1])))
+  {
+    icpts = matrix("0 1 2", rows=3, cols=1)
+    regs = matrix("1 0.1 0.01 0.001 0.0001", rows=5, cols=1)
+    best = -1e300
+    bestHp = matrix("1 0.0001 0.000001", rows=1, cols=3)
+    for(a in 1:3) {
+      for(b in 1:5) {
+        ic = as.scalar(icpts[a, 1])
+        rg = as.scalar(regs[b, 1])
+        Bg = lm(X=X, y=Y, icpt=ic, reg=rg, tol=0.000001, maxi=1000, verbose=FALSE);
+        pg = lmPredict(X=Xtest, B=Bg, ytest=Ytest, icpt=ic, verbose=FALSE);
+        r2g = 1 - (sum((Ytest - pg)^2) / sum((Ytest - mean(Ytest))^2))
+        if(r2g > best) {
+          best = r2g
+          bestHp[1, 1] = ic
+          bestHp[1, 2] = rg
+        }
+      }
+    }
+    print("SAGA eval hp (holdout) "+toString(bestHp)+" r2 "+best)
+    evalFunHp = bestHp
+  }
+  beta = lm(X=X, y=Y, icpt=as.scalar(evalFunHp[1,1]), reg=as.scalar(evalFunHp[1,2]),
+    tol=as.scalar(evalFunHp[1,3]), maxi=1000, verbose=FALSE);
+  pred = lmPredict(X=Xtest, B=beta, ytest=Ytest, icpt=as.scalar(evalFunHp[1,1]), verbose=FALSE);
+  r2 = 1 - (sum((Ytest - pred)^2) / sum((Ytest - mean(Ytest))^2))
+  accuracy = ifelse(is.na(as.matrix(r2)), as.matrix(0), as.matrix(r2))
+  error = as.matrix(0)
+  output = cbind(accuracy, evalFunHp)
+}
+
+# ---------------------------------------------------------------------------
+# Clustering objective (adaptation, not part of the SAGA package). SAGA's
+# evaluation function is a plug-in; for a clustering task it is replaced by
+# k-means fitted on the cleaned training matrix, the clean validation rows
+# assigned to the nearest centroid, and the mean silhouette of that assignment
+# on the first $silN validation rows (the validation order is already a random
+# permutation from the split). Remaining NaN cells are set to 0, as in the
+# package's regression function. The label column is a row-number placeholder
+# and unused.
+# evalFunHp carries (k, runs, max_iter).
+# ---------------------------------------------------------------------------
+evalClustering = function(Matrix[Double] X, Matrix[Double] Y, Matrix[Double] Xtest, Matrix[Double] Ytest,
+  Matrix[Double] Xorig=as.matrix(0), Matrix[Double] evalFunHp)
+return(Matrix[Double] output, Matrix[Double] error)
+{
+  X = replace(target=X, pattern=NaN, replacement=0)
+  Xtest = replace(target=Xtest, pattern=NaN, replacement=0)
+  if(is.na(as.scalar(evalFunHp[1,1])))
+    evalFunHp = matrix("1 3 100", rows=1, cols=3)
+  evalFunHp[1, 1] = $clusterK
+  k = as.integer(as.scalar(evalFunHp[1, 1]))
+  [C, cl] = kmeans(X=X, k=k, runs=as.integer(as.scalar(evalFunHp[1, 2])),
+    max_iter=as.integer(as.scalar(evalFunHp[1, 3])), seed=$seed)
+  pv = kmeansPredict(X=Xtest, C=C)
+  n = min(nrow(Xtest), $silN)
+  Xs = Xtest[1:n, ]
+  ls = pv[1:n, ]
+  sq = rowSums(Xs^2)
+  D = sqrt(max(sq + t(sq) - 2 * (Xs %*% t(Xs)), 0))
+  M = table(seq(1, n), ls, n, k)
+  cnt = colSums(M)
+  S = D %*% M
+  own = rowSums(S * M)
+  ownCnt = M %*% t(cnt)
+  a = own / max(ownCnt - 1, 1)
+  other = S / max(cnt, 1) + 1e300 * M + 1e300 * (cnt == 0)
+  b = rowMins(other)
+  s = (b - a) / max(max(a, b), 1e-300)
+  s = s * (ownCnt > 1)
+  sil = ifelse(sum(cnt > 0) < 2, -1, mean(s))
+  output = cbind(as.matrix(sil), evalFunHp)
+  error = as.matrix(0)
+}

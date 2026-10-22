@@ -1,0 +1,48 @@
+{
+  "run_id": "main_table/smartfactory/demandclean",
+  "dataset": "smartfactory",
+  "variant": "full",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    14187,
+    18
+  ],
+  "cleaned_shape": [
+    11452,
+    18
+  ],
+  "operations": {
+    "no_op": 610,
+    "gt_repair": 271,
+    "delete": 2743,
+    "ve_replace": 770
+  },
+  "ground_truth_cells": {
+    "seed_set": 760,
+    "repairs": 271,
+    "total": 1031
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.9840691852526172,
+      "recall": 1.0,
+      "f1": 0.9919706354668503,
+      "tp": 4324,
+      "fp": 70,
+      "fn": 0,
+      "gt_count": 4324,
+      "det_count": 4394
+    }
+  },
+  "time_seconds": {
+    "training": 9683.62,
+    "inference": 154.31,
+    "detection_evaluation": 1.21,
+    "net_total": 10174.59
+  },
+  "calibration": {
+    "labeled_rows": 40,
+    "non_index_columns": 19
+  }
+}

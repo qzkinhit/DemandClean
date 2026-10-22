@@ -1,0 +1,28 @@
+# rules derived from the dirty table of smartfactory only
+
+[DOMAIN]
+i_w_blo_weg: INT [-110, 615]
+o_w_blo_power: INT [0, 28740]
+o_w_blo_voltage: INT [0, 58]
+i_w_bhl_weg: INT [-547, 880]
+o_w_bhl_power: INT [0, 29280]
+o_w_bhl_voltage: INT [0, 61]
+i_w_bhr_weg: INT [-1287, 479]
+o_w_bhr_power: INT [0, 26096]
+o_w_bhr_voltage: INT [0, 58]
+i_w_bru_weg: INT [-597, 604]
+o_w_bru_power: INT [0, 28853]
+o_w_bru_voltage: INT [0, 60]
+i_w_hr_weg: INT [-833, 0]
+o_w_hr_power: INT [0, 31779]
+o_w_hr_voltage: INT [0, 488]
+i_w_hl_weg: INT [-869, 0]
+o_w_hl_power: INT [0, 32504]
+o_w_hl_voltage: INT [0, 489]
+labels: INT [0, 1]
+
+[FD]
+i_w_hl_weg => i_w_hr_weg
+o_w_hl_power => i_w_hr_weg
+o_w_hl_power => i_w_hl_weg
+i_w_hr_weg => i_w_hl_weg

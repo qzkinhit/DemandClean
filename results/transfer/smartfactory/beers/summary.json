@@ -1,0 +1,33 @@
+{
+  "dataset": "beers",
+  "variant": "full",
+  "experiment": "transfer",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    1446,
+    8
+  ],
+  "cleaned_shape": [
+    1092,
+    8
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 0,
+    "delete": 354,
+    "replace_nearby": 2140
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.9823008849557522,
+      "recall": 0.9940298507462687,
+      "f1": 0.9881305637982195,
+      "tp": 2664,
+      "fp": 48,
+      "fn": 16,
+      "gt_count": 2680,
+      "det_count": 2712
+    }
+  }
+}

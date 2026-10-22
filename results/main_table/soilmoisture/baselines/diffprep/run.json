@@ -1,0 +1,1456 @@
+{
+  "dataset": "soilmoisture",
+  "method": "DiffPrep",
+  "upstream": {
+    "repository": "https://github.com/chu-data-lab/DiffPrep",
+    "commit": "6499edf",
+    "adapter": "baselines/Methods/DiffPrep/diffprep_api.py"
+  },
+  "selected_learning_rate": 0.01,
+  "pipeline": {
+    "feature_names": [
+      "f0",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f11",
+      "f12",
+      "f13",
+      "f14",
+      "f15",
+      "f16",
+      "f17",
+      "f18",
+      "f19",
+      "f20",
+      "f21",
+      "f22",
+      "f23",
+      "f24",
+      "f25",
+      "f26",
+      "f27",
+      "f28",
+      "f29",
+      "f30",
+      "f31",
+      "f32",
+      "f33",
+      "f34",
+      "f35",
+      "f36",
+      "f37",
+      "f38",
+      "f39",
+      "f40",
+      "f41",
+      "f42",
+      "f43",
+      "f44",
+      "f45",
+      "f46",
+      "f47",
+      "f48",
+      "f49",
+      "f50",
+      "f51",
+      "f52",
+      "f53",
+      "f54",
+      "f55",
+      "f56",
+      "f57",
+      "f58",
+      "f59",
+      "f60",
+      "f61",
+      "f62",
+      "f63",
+      "f64",
+      "f65",
+      "f66",
+      "f67",
+      "f68",
+      "f69",
+      "f70",
+      "f71",
+      "f72",
+      "f73",
+      "f74",
+      "f75",
+      "f76",
+      "f77",
+      "f78",
+      "f79",
+      "f80",
+      "f81",
+      "f82",
+      "f83",
+      "f84",
+      "f85",
+      "f86",
+      "f87",
+      "f88",
+      "f89",
+      "f90",
+      "f91",
+      "f92",
+      "f93",
+      "f94",
+      "f95",
+      "f96",
+      "f97",
+      "f98",
+      "f99",
+      "f100",
+      "f101",
+      "f102",
+      "f103",
+      "f104",
+      "f105",
+      "f106",
+      "f107",
+      "f108",
+      "f109",
+      "f110",
+      "f111",
+      "f112",
+      "f113",
+      "f114",
+      "f115",
+      "f116",
+      "f117",
+      "f118",
+      "f119",
+      "f120",
+      "f121",
+      "f122",
+      "f123",
+      "f124",
+      "f125",
+      "f126"
+    ],
+    "per_feature": {
+      "f0": {
+        "missing_value_imputation": [
+          "DT",
+          0.573
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.4328
+        ]
+      },
+      "f1": {
+        "missing_value_imputation": [
+          "mean",
+          0.3896
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.3719
+        ]
+      },
+      "f2": {
+        "missing_value_imputation": [
+          "mean",
+          0.4981
+        ],
+        "cleaning_outliers": [
+          "ZS_2",
+          0.4233
+        ]
+      },
+      "f3": {
+        "missing_value_imputation": [
+          "mode",
+          0.9608
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.6343
+        ]
+      },
+      "f4": {
+        "missing_value_imputation": [
+          "DT",
+          0.9798
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7286
+        ]
+      },
+      "f5": {
+        "missing_value_imputation": [
+          "mode",
+          0.9671
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.9767
+        ]
+      },
+      "f6": {
+        "missing_value_imputation": [
+          "mode",
+          0.9569
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.9796
+        ]
+      },
+      "f7": {
+        "missing_value_imputation": [
+          "mode",
+          0.9115
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.4564
+        ]
+      },
+      "f8": {
+        "missing_value_imputation": [
+          "mode",
+          0.9297
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.8907
+        ]
+      },
+      "f9": {
+        "missing_value_imputation": [
+          "mode",
+          0.9929
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8697
+        ]
+      },
+      "f10": {
+        "missing_value_imputation": [
+          "mean",
+          0.5
+        ],
+        "cleaning_outliers": [
+          "IQR_2",
+          0.8631
+        ]
+      },
+      "f11": {
+        "missing_value_imputation": [
+          "mean",
+          0.5014
+        ],
+        "cleaning_outliers": [
+          "ZS_2",
+          0.9264
+        ]
+      },
+      "f12": {
+        "missing_value_imputation": [
+          "mean",
+          0.5009
+        ],
+        "cleaning_outliers": [
+          "IQR_2",
+          0.3009
+        ]
+      },
+      "f13": {
+        "missing_value_imputation": [
+          "mean",
+          0.8955
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5901
+        ]
+      },
+      "f14": {
+        "missing_value_imputation": [
+          "mean",
+          0.5045
+        ],
+        "cleaning_outliers": [
+          "IQR_2",
+          0.6687
+        ]
+      },
+      "f15": {
+        "missing_value_imputation": [
+          "mean",
+          0.4995
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.3997
+        ]
+      },
+      "f16": {
+        "missing_value_imputation": [
+          "mean",
+          0.5015
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.8764
+        ]
+      },
+      "f17": {
+        "missing_value_imputation": [
+          "mean",
+          0.5006
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.9574
+        ]
+      },
+      "f18": {
+        "missing_value_imputation": [
+          "mean",
+          0.6056
+        ],
+        "cleaning_outliers": [
+          "ZS_3",
+          0.454
+        ]
+      },
+      "f19": {
+        "missing_value_imputation": [
+          "mode",
+          0.8311
+        ],
+        "cleaning_outliers": [
+          "IQR_2",
+          0.4132
+        ]
+      },
+      "f20": {
+        "missing_value_imputation": [
+          "mean",
+          0.5017
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4484
+        ]
+      },
+      "f21": {
+        "missing_value_imputation": [
+          "mean",
+          0.4223
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8137
+        ]
+      },
+      "f22": {
+        "missing_value_imputation": [
+          "DT",
+          0.3608
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4494
+        ]
+      },
+      "f23": {
+        "missing_value_imputation": [
+          "DT",
+          0.8475
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8984
+        ]
+      },
+      "f24": {
+        "missing_value_imputation": [
+          "mean",
+          0.5027
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4225
+        ]
+      },
+      "f25": {
+        "missing_value_imputation": [
+          "mean",
+          0.5414
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5193
+        ]
+      },
+      "f26": {
+        "missing_value_imputation": [
+          "mean",
+          0.4956
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3534
+        ]
+      },
+      "f27": {
+        "missing_value_imputation": [
+          "mean",
+          0.4997
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8042
+        ]
+      },
+      "f28": {
+        "missing_value_imputation": [
+          "mean",
+          0.5096
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.6558
+        ]
+      },
+      "f29": {
+        "missing_value_imputation": [
+          "mean",
+          0.4961
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.5458
+        ]
+      },
+      "f30": {
+        "missing_value_imputation": [
+          "mean",
+          0.5014
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7539
+        ]
+      },
+      "f31": {
+        "missing_value_imputation": [
+          "mean",
+          0.5626
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2511
+        ]
+      },
+      "f32": {
+        "missing_value_imputation": [
+          "MICE",
+          0.9409
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8714
+        ]
+      },
+      "f33": {
+        "missing_value_imputation": [
+          "mode",
+          0.9749
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.3668
+        ]
+      },
+      "f34": {
+        "missing_value_imputation": [
+          "mode",
+          0.745
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4342
+        ]
+      },
+      "f35": {
+        "missing_value_imputation": [
+          "mean",
+          0.4987
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5173
+        ]
+      },
+      "f36": {
+        "missing_value_imputation": [
+          "mean",
+          0.503
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5152
+        ]
+      },
+      "f37": {
+        "missing_value_imputation": [
+          "mean",
+          0.4996
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.1633
+        ]
+      },
+      "f38": {
+        "missing_value_imputation": [
+          "mean",
+          0.4441
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4604
+        ]
+      },
+      "f39": {
+        "missing_value_imputation": [
+          "DT",
+          0.9457
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7856
+        ]
+      },
+      "f40": {
+        "missing_value_imputation": [
+          "mode",
+          0.9612
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.4393
+        ]
+      },
+      "f41": {
+        "missing_value_imputation": [
+          "mean",
+          0.5014
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4989
+        ]
+      },
+      "f42": {
+        "missing_value_imputation": [
+          "DT",
+          0.6655
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.9174
+        ]
+      },
+      "f43": {
+        "missing_value_imputation": [
+          "mode",
+          0.9615
+        ],
+        "cleaning_outliers": [
+          "MAD_2.5",
+          0.8105
+        ]
+      },
+      "f44": {
+        "missing_value_imputation": [
+          "mode",
+          0.7435
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3696
+        ]
+      },
+      "f45": {
+        "missing_value_imputation": [
+          "mean",
+          0.4977
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5195
+        ]
+      },
+      "f46": {
+        "missing_value_imputation": [
+          "mean",
+          0.5001
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.3819
+        ]
+      },
+      "f47": {
+        "missing_value_imputation": [
+          "mean",
+          0.4243
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9026
+        ]
+      },
+      "f48": {
+        "missing_value_imputation": [
+          "MICE",
+          0.9521
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.7439
+        ]
+      },
+      "f49": {
+        "missing_value_imputation": [
+          "DT",
+          0.8678
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8707
+        ]
+      },
+      "f50": {
+        "missing_value_imputation": [
+          "mean",
+          0.4962
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.469
+        ]
+      },
+      "f51": {
+        "missing_value_imputation": [
+          "mean",
+          0.929
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7068
+        ]
+      },
+      "f52": {
+        "missing_value_imputation": [
+          "mean",
+          0.7557
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.6111
+        ]
+      },
+      "f53": {
+        "missing_value_imputation": [
+          "mean",
+          0.4991
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8979
+        ]
+      },
+      "f54": {
+        "missing_value_imputation": [
+          "DT",
+          0.5613
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8462
+        ]
+      },
+      "f55": {
+        "missing_value_imputation": [
+          "mode",
+          0.985
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.6624
+        ]
+      },
+      "f56": {
+        "missing_value_imputation": [
+          "mean",
+          0.4994
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3189
+        ]
+      },
+      "f57": {
+        "missing_value_imputation": [
+          "mode",
+          0.9436
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.2139
+        ]
+      },
+      "f58": {
+        "missing_value_imputation": [
+          "mean",
+          0.5027
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.9567
+        ]
+      },
+      "f59": {
+        "missing_value_imputation": [
+          "mode",
+          0.9523
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9971
+        ]
+      },
+      "f60": {
+        "missing_value_imputation": [
+          "mean",
+          0.4991
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4546
+        ]
+      },
+      "f61": {
+        "missing_value_imputation": [
+          "mean",
+          0.4995
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.8602
+        ]
+      },
+      "f62": {
+        "missing_value_imputation": [
+          "mean",
+          0.4978
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8851
+        ]
+      },
+      "f63": {
+        "missing_value_imputation": [
+          "DT",
+          0.8371
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.883
+        ]
+      },
+      "f64": {
+        "missing_value_imputation": [
+          "mean",
+          0.4985
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7821
+        ]
+      },
+      "f65": {
+        "missing_value_imputation": [
+          "mean",
+          0.5092
+        ],
+        "cleaning_outliers": [
+          "MAD_2.5",
+          0.257
+        ]
+      },
+      "f66": {
+        "missing_value_imputation": [
+          "mean",
+          0.8882
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.2937
+        ]
+      },
+      "f67": {
+        "missing_value_imputation": [
+          "mode",
+          0.7069
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.5768
+        ]
+      },
+      "f68": {
+        "missing_value_imputation": [
+          "mean",
+          0.5003
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.877
+        ]
+      },
+      "f69": {
+        "missing_value_imputation": [
+          "mean",
+          0.5003
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2948
+        ]
+      },
+      "f70": {
+        "missing_value_imputation": [
+          "mode",
+          0.9775
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.5662
+        ]
+      },
+      "f71": {
+        "missing_value_imputation": [
+          "mean",
+          0.531
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2236
+        ]
+      },
+      "f72": {
+        "missing_value_imputation": [
+          "mean",
+          0.5011
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.2426
+        ]
+      },
+      "f73": {
+        "missing_value_imputation": [
+          "mode",
+          0.8966
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7797
+        ]
+      },
+      "f74": {
+        "missing_value_imputation": [
+          "mode",
+          0.9769
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.8315
+        ]
+      },
+      "f75": {
+        "missing_value_imputation": [
+          "mean",
+          0.5
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.8065
+        ]
+      },
+      "f76": {
+        "missing_value_imputation": [
+          "mean",
+          0.5027
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2348
+        ]
+      },
+      "f77": {
+        "missing_value_imputation": [
+          "mean",
+          0.5017
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9373
+        ]
+      },
+      "f78": {
+        "missing_value_imputation": [
+          "mean",
+          0.7864
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4113
+        ]
+      },
+      "f79": {
+        "missing_value_imputation": [
+          "mean",
+          0.5018
+        ],
+        "cleaning_outliers": [
+          "MAD_2.5",
+          0.7219
+        ]
+      },
+      "f80": {
+        "missing_value_imputation": [
+          "MICE",
+          0.9618
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5053
+        ]
+      },
+      "f81": {
+        "missing_value_imputation": [
+          "mean",
+          0.7377
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4058
+        ]
+      },
+      "f82": {
+        "missing_value_imputation": [
+          "mean",
+          0.919
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.4958
+        ]
+      },
+      "f83": {
+        "missing_value_imputation": [
+          "mean",
+          0.5016
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.6388
+        ]
+      },
+      "f84": {
+        "missing_value_imputation": [
+          "mean",
+          0.4495
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.4793
+        ]
+      },
+      "f85": {
+        "missing_value_imputation": [
+          "mean",
+          0.5019
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.1892
+        ]
+      },
+      "f86": {
+        "missing_value_imputation": [
+          "mean",
+          0.5949
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5023
+        ]
+      },
+      "f87": {
+        "missing_value_imputation": [
+          "mean",
+          0.4965
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.6907
+        ]
+      },
+      "f88": {
+        "missing_value_imputation": [
+          "mean",
+          0.5012
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4117
+        ]
+      },
+      "f89": {
+        "missing_value_imputation": [
+          "mean",
+          0.7291
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7647
+        ]
+      },
+      "f90": {
+        "missing_value_imputation": [
+          "mean",
+          0.5011
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.6358
+        ]
+      },
+      "f91": {
+        "missing_value_imputation": [
+          "mode",
+          0.9579
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3748
+        ]
+      },
+      "f92": {
+        "missing_value_imputation": [
+          "DT",
+          0.8461
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3037
+        ]
+      },
+      "f93": {
+        "missing_value_imputation": [
+          "mean",
+          0.4998
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3283
+        ]
+      },
+      "f94": {
+        "missing_value_imputation": [
+          "mean",
+          0.4999
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4619
+        ]
+      },
+      "f95": {
+        "missing_value_imputation": [
+          "mean",
+          0.809
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.6132
+        ]
+      },
+      "f96": {
+        "missing_value_imputation": [
+          "mean",
+          0.5013
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.5176
+        ]
+      },
+      "f97": {
+        "missing_value_imputation": [
+          "DT",
+          0.9799
+        ],
+        "cleaning_outliers": [
+          "IQR_2",
+          0.2488
+        ]
+      },
+      "f98": {
+        "missing_value_imputation": [
+          "DT",
+          0.9284
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3356
+        ]
+      },
+      "f99": {
+        "missing_value_imputation": [
+          "mean",
+          0.725
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2099
+        ]
+      },
+      "f100": {
+        "missing_value_imputation": [
+          "mean",
+          0.592
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4757
+        ]
+      },
+      "f101": {
+        "missing_value_imputation": [
+          "mode",
+          0.3887
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.6419
+        ]
+      },
+      "f102": {
+        "missing_value_imputation": [
+          "mode",
+          0.9312
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4651
+        ]
+      },
+      "f103": {
+        "missing_value_imputation": [
+          "DT",
+          0.9444
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.673
+        ]
+      },
+      "f104": {
+        "missing_value_imputation": [
+          "MICE",
+          0.6553
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.482
+        ]
+      },
+      "f105": {
+        "missing_value_imputation": [
+          "mean",
+          0.5001
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5655
+        ]
+      },
+      "f106": {
+        "missing_value_imputation": [
+          "mean",
+          0.5042
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4978
+        ]
+      },
+      "f107": {
+        "missing_value_imputation": [
+          "mean",
+          0.4998
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7242
+        ]
+      },
+      "f108": {
+        "missing_value_imputation": [
+          "mean",
+          0.5023
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2547
+        ]
+      },
+      "f109": {
+        "missing_value_imputation": [
+          "mean",
+          0.5022
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.6853
+        ]
+      },
+      "f110": {
+        "missing_value_imputation": [
+          "DT",
+          0.4544
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.783
+        ]
+      },
+      "f111": {
+        "missing_value_imputation": [
+          "mean",
+          0.5019
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.3237
+        ]
+      },
+      "f112": {
+        "missing_value_imputation": [
+          "mode",
+          0.8317
+        ],
+        "cleaning_outliers": [
+          "MAD_2.5",
+          0.3503
+        ]
+      },
+      "f113": {
+        "missing_value_imputation": [
+          "mean",
+          0.4984
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.74
+        ]
+      },
+      "f114": {
+        "missing_value_imputation": [
+          "mean",
+          0.4984
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.2192
+        ]
+      },
+      "f115": {
+        "missing_value_imputation": [
+          "DT",
+          0.9012
+        ],
+        "cleaning_outliers": [
+          "ZS_2",
+          0.3003
+        ]
+      },
+      "f116": {
+        "missing_value_imputation": [
+          "mode",
+          0.5508
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.5219
+        ]
+      },
+      "f117": {
+        "missing_value_imputation": [
+          "mean",
+          0.5793
+        ],
+        "cleaning_outliers": [
+          "IQR_1.5",
+          0.4174
+        ]
+      },
+      "f118": {
+        "missing_value_imputation": [
+          "mean",
+          0.5015
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.7596
+        ]
+      },
+      "f119": {
+        "missing_value_imputation": [
+          "MICE",
+          0.9728
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2902
+        ]
+      },
+      "f120": {
+        "missing_value_imputation": [
+          "mean",
+          0.4981
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5862
+        ]
+      },
+      "f121": {
+        "missing_value_imputation": [
+          "mode",
+          0.8565
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.3899
+        ]
+      },
+      "f122": {
+        "missing_value_imputation": [
+          "MICE",
+          0.9801
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.581
+        ]
+      },
+      "f123": {
+        "missing_value_imputation": [
+          "mean",
+          0.5001
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5108
+        ]
+      },
+      "f124": {
+        "missing_value_imputation": [
+          "mean",
+          0.6676
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4563
+        ]
+      },
+      "f125": {
+        "missing_value_imputation": [
+          "MICE",
+          0.9916
+        ],
+        "cleaning_outliers": [
+          "ZS_2",
+          0.5055
+        ]
+      },
+      "f126": {
+        "missing_value_imputation": [
+          "DT",
+          0.9793
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.4893
+        ]
+      }
+    },
+    "summary": {
+      "cleaning_outliers": {
+        "MAD_2": 10,
+        "IQR_1": 8,
+        "ZS_2": 4,
+        "ZS_4": 5,
+        "identity": 77,
+        "MAD_3": 5,
+        "IQR_1.5": 8,
+        "IQR_2": 5,
+        "ZS_3": 1,
+        "MAD_2.5": 4
+      },
+      "missing_value_imputation": {
+        "DT": 16,
+        "mean": 79,
+        "mode": 25,
+        "MICE": 7
+      }
+    }
+  },
+  "deviations": [
+    "split supplied by the benchmark (60/20/20, seed 42, train rows dirty, val/test rows clean) instead of the upstream random split",
+    "remove_large_cat and remove_all_na computed on training rows only (upstream: all rows)",
+    "test rows not passed to init_parameters; imputation step presence decided on train+val; test cache filled after the search",
+    "no per-epoch test evaluation (upstream only records it, selection unchanged); best epoch snapshot also stores the fitted transformation functions",
+    "label encoder fitted on train+val labels (upstream: all labels)",
+    "regression extension (not in the paper): linear head with 1 output, MSELoss on standardized target, R^2 replaces accuracy in early stopping",
+    "gradient clipping wired up (upstream declares grad_clip but never uses it): end-model gradient L2 norm clipped to 1.0 before every SGD step incl. the virtual step, pipeline-probability gradient clipped to the same norm before every Adam step",
+    "non-finite entries of the pipeline-probability gradient set to 0 before the Adam step",
+    "search space restricted to missing-value imputation and outlier cleaning",
+    "input: dirty training matrix in the canonical encoding with missing cells kept",
+    "soft pipeline output of the training rows exported without input clamp; test split untouched"
+  ],
+  "stabilization": true,
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diffprep/diffprep_clean.py (run per learning rate, finalize)"
+}

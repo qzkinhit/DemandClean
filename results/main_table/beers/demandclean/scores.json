@@ -1,0 +1,29 @@
+{
+  "dataset": "beers",
+  "variant": "full",
+  "model": "rf",
+  "metric": "accuracy",
+  "nearest": false,
+  "test": 0.36116910229645094,
+  "n_train_rows": 1442,
+  "n_test": 479,
+  "gt_cells": 428,
+  "gt_repairs": 228,
+  "gt_seed_set": 200,
+  "gt_pct": 1.7759,
+  "model_scores": {
+    "rf": 0.36116910229645094,
+    "gb": 0.3068893528183716
+  },
+  "references": {
+    "NoFix": 0.31524008350730687,
+    "RepairAll": 0.35490605427974947
+  },
+  "scikit_learn": "1.3.2",
+  "tol_rel": 1.1578947368421053,
+  "redr": {
+    "r_before": 1446,
+    "r_after": 793,
+    "redr": 0.4515905947441217
+  }
+}

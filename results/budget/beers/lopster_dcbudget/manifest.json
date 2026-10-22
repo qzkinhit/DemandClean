@@ -1,0 +1,20 @@
+{
+  "id": "budget/beers/lopster_dcbudget",
+  "dataset": "beers",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 420,
+  "seconds": 22.03,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "5578f958a2418c7bd4fae640c7883c904fcce28bf43bf91784319060f4d4a9a1"
+    }
+  }
+}

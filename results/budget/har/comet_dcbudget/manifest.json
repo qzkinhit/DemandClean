@@ -1,0 +1,20 @@
+{
+  "id": "budget/har/comet_dcbudget",
+  "dataset": "har",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 9000,
+  "seconds": 84.55,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "19682edf740283bd36fbdaae49957b56124a4db2890f356d740ad11137329067"
+    }
+  }
+}

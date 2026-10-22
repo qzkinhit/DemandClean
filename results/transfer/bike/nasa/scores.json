@@ -1,0 +1,20 @@
+{
+  "dataset": "nasa",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.04187565653642711,
+  "tol_rel": 0.08052986559157824,
+  "references": {
+    "NoFix": -0.0010500071884296247,
+    "RepairAll": 0.5319902929476962
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.9722814498933902,
+  "n_train_rows": 897,
+  "n_test": 301,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "44145f5eaeb82d1ed391bc5830cce75b79bd27924216a101159615cf530ecd16"
+}

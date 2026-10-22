@@ -1,0 +1,21 @@
+{
+  "dataset": "mercedes",
+  "method": "ActiveClean",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.36792564027994357,
+  "all_models": {
+    "rf": 0.36792564027994357,
+    "ridge": 0.36268061035116805
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2525,
+  "n_test": 842,
+  "table_rows": 2525,
+  "gt_cells": 188500,
+  "gt_pct": 11.879306248515087,
+  "redr": {
+    "redr": 0.19801980198019803
+  }
+}

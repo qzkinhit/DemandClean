@@ -1,0 +1,217 @@
+{"dataset": "adult", "method": "HoloClean", "role": "baselines", "run": "results/main_table/adult/baselines/holoclean", "redr": 0.0}
+{"dataset": "adult", "method": "Horizon", "role": "baselines", "run": "results/main_table/adult/baselines/horizon", "redr": 0.0}
+{"dataset": "adult", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/adult/baselines/raha_baran", "redr": 0.0}
+{"dataset": "adult", "method": "UniClean", "role": "baselines", "run": "results/main_table/adult/baselines/uniclean", "redr": 0.0}
+{"dataset": "adult", "method": "Lopster", "role": "baselines", "run": "results/main_table/adult/baselines/lopster", "redr": -25.342718446601943}
+{"dataset": "adult", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/adult/baselines/activeclean", "redr": 0.13883495145631067}
+{"dataset": "adult", "method": "BoostClean", "role": "baselines", "run": "results/main_table/adult/baselines/boostclean", "redr": 0.0}
+{"dataset": "adult", "method": "SAGA", "role": "baselines", "run": "results/main_table/adult/baselines/saga", "redr": -6.05631067961165}
+{"dataset": "adult", "method": "Comet", "role": "baselines", "run": "results/main_table/adult/baselines/comet", "redr": 0.0}
+{"dataset": "adult", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/adult/baselines/ctxpipe", "redr": 0.0}
+{"dataset": "adult", "method": "MLImputer", "role": "baselines", "run": "results/main_table/adult/baselines/mlimputer", "redr": 0.0}
+{"dataset": "adult", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/adult/baselines/simpleimputer", "redr": 0.0}
+{"dataset": "adult", "method": "LLM", "role": "baselines", "run": "results/main_table/adult/baselines/llm", "r_before": 1030, "r_after": 1038, "redr": -0.007766990291262136}
+{"dataset": "adult", "method": "DC", "role": "demandclean", "run": "results/main_table/adult/demandclean", "r_before": 1030, "r_after": 950, "redr": 0.07766990291262135, "scope_rows": 27133, "kept_rows": 26214}
+{"dataset": "beers", "method": "HoloClean", "role": "baselines", "run": "results/main_table/beers/baselines/holoclean", "redr": 0.0}
+{"dataset": "beers", "method": "Horizon", "role": "baselines", "run": "results/main_table/beers/baselines/horizon", "redr": 0.0}
+{"dataset": "beers", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/beers/baselines/raha_baran", "redr": 0.6459197786998617}
+{"dataset": "beers", "method": "UniClean", "role": "baselines", "run": "results/main_table/beers/baselines/uniclean", "redr": 0.760027662517289}
+{"dataset": "beers", "method": "Lopster", "role": "baselines", "run": "results/main_table/beers/baselines/lopster", "redr": 0.0}
+{"dataset": "beers", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/beers/baselines/activeclean", "redr": 0.3457814661134163}
+{"dataset": "beers", "method": "BoostClean", "role": "baselines", "run": "results/main_table/beers/baselines/boostclean", "redr": 0.0}
+{"dataset": "beers", "method": "SAGA", "role": "baselines", "run": "results/main_table/beers/baselines/saga", "redr": 0.21300138312586445}
+{"dataset": "beers", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/beers/baselines/diffprep", "redr": 0.0027662517289073307}
+{"dataset": "beers", "method": "Comet", "role": "baselines", "run": "results/main_table/beers/baselines/comet", "redr": 0.29322268326417705}
+{"dataset": "beers", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/beers/baselines/ctxpipe", "redr": 0.0}
+{"dataset": "beers", "method": "MLImputer", "role": "baselines", "run": "results/main_table/beers/baselines/mlimputer", "redr": 0.0}
+{"dataset": "beers", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/beers/baselines/simpleimputer", "redr": 0.0}
+{"dataset": "beers", "method": "LLM", "role": "baselines", "run": "results/main_table/beers/baselines/llm", "r_before": 1446, "r_after": 1446, "redr": 0.0}
+{"dataset": "beers", "method": "DIANA", "role": "baselines", "run": "results/main_table/beers/baselines/diana", "redr": 0.0}
+{"dataset": "beers", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/beers/baselines/learn2clean", "redr": 0.0027662517289073307}
+{"dataset": "beers", "method": "RetClean", "role": "baselines", "run": "results/main_table/beers/baselines/retclean", "redr": 0.5594744121715076}
+{"dataset": "beers", "method": "DC", "role": "demandclean", "run": "results/main_table/beers/demandclean", "r_before": 1446, "r_after": 793, "redr": 0.4515905947441217, "scope_rows": 1446, "kept_rows": 1446}
+{"dataset": "breast_cancer", "method": "HoloClean", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/holoclean", "redr": 0.04838709677419355}
+{"dataset": "breast_cancer", "method": "Horizon", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/horizon", "redr": -0.036290322580645164}
+{"dataset": "breast_cancer", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/raha_baran", "redr": -0.20967741935483872}
+{"dataset": "breast_cancer", "method": "UniClean", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/uniclean", "redr": 0.008064516129032258}
+{"dataset": "breast_cancer", "method": "Lopster", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/lopster", "redr": -0.6895161290322581}
+{"dataset": "breast_cancer", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/activeclean", "redr": 0.5887096774193549}
+{"dataset": "breast_cancer", "method": "BoostClean", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/boostclean", "redr": 0.0}
+{"dataset": "breast_cancer", "method": "SAGA", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/saga", "redr": 0.0}
+{"dataset": "breast_cancer", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/diffprep", "redr": -0.5282258064516129}
+{"dataset": "breast_cancer", "method": "Comet", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/comet", "redr": 0.5120967741935484}
+{"dataset": "breast_cancer", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/ctxpipe", "redr": 0.18951612903225806}
+{"dataset": "breast_cancer", "method": "MLImputer", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/mlimputer", "redr": 0.0967741935483871}
+{"dataset": "breast_cancer", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/simpleimputer", "redr": 0.21774193548387097}
+{"dataset": "breast_cancer", "method": "LLM", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/llm", "r_before": 248, "r_after": 152, "redr": 0.3870967741935484}
+{"dataset": "breast_cancer", "method": "DIANA", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/diana", "redr": -0.6895161290322581}
+{"dataset": "breast_cancer", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/learn2clean", "redr": 0.11693548387096774}
+{"dataset": "breast_cancer", "method": "RetClean", "role": "baselines", "run": "results/main_table/breast_cancer/baselines/retclean", "redr": 0.29838709677419356}
+{"dataset": "breast_cancer", "method": "DC", "role": "demandclean", "run": "results/main_table/breast_cancer/demandclean", "r_before": 248, "r_after": 122, "redr": 0.5080645161290323, "scope_rows": 419, "kept_rows": 317}
+{"dataset": "smartfactory", "method": "HoloClean", "role": "baselines", "run": "results/main_table/smartfactory/baselines/holoclean", "redr": 0.8189176688251619}
+{"dataset": "smartfactory", "method": "Horizon", "role": "baselines", "run": "results/main_table/smartfactory/baselines/horizon", "redr": -2.280989824236818}
+{"dataset": "smartfactory", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/smartfactory/baselines/raha_baran", "redr": 0.16512488436632747}
+{"dataset": "smartfactory", "method": "UniClean", "role": "baselines", "run": "results/main_table/smartfactory/baselines/uniclean", "redr": -0.7812210915818686}
+{"dataset": "smartfactory", "method": "Lopster", "role": "baselines", "run": "results/main_table/smartfactory/baselines/lopster", "redr": -2.280989824236818}
+{"dataset": "smartfactory", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/smartfactory/baselines/activeclean", "redr": 0.03538390379278446}
+{"dataset": "smartfactory", "method": "BoostClean", "role": "baselines", "run": "results/main_table/smartfactory/baselines/boostclean", "redr": 0.0}
+{"dataset": "smartfactory", "method": "SAGA", "role": "baselines", "run": "results/main_table/smartfactory/baselines/saga", "redr": 0.0}
+{"dataset": "smartfactory", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/smartfactory/baselines/diffprep", "redr": -2.2789084181313597}
+{"dataset": "smartfactory", "method": "Comet", "role": "baselines", "run": "results/main_table/smartfactory/baselines/comet", "redr": 1.0}
+{"dataset": "smartfactory", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/smartfactory/baselines/ctxpipe", "redr": 0.0}
+{"dataset": "smartfactory", "method": "MLImputer", "role": "baselines", "run": "results/main_table/smartfactory/baselines/mlimputer", "redr": 0.05989824236817761}
+{"dataset": "smartfactory", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/smartfactory/baselines/simpleimputer", "redr": 0.37187789084181316}
+{"dataset": "smartfactory", "method": "LLM", "role": "baselines", "run": "results/main_table/smartfactory/baselines/llm", "r_before": 4324, "r_after": 365, "redr": 0.9155874190564293}
+{"dataset": "smartfactory", "method": "DIANA", "role": "baselines", "run": "results/main_table/smartfactory/baselines/diana", "redr": -1.69472710453284}
+{"dataset": "smartfactory", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/smartfactory/baselines/learn2clean", "redr": 0.44588344125809437}
+{"dataset": "smartfactory", "method": "RetClean", "role": "baselines", "run": "results/main_table/smartfactory/baselines/retclean", "redr": 0.24375578168362627}
+{"dataset": "smartfactory", "method": "DC", "role": "demandclean", "run": "results/main_table/smartfactory/demandclean", "r_before": 4324, "r_after": 642, "redr": 0.8515263644773358, "scope_rows": 14187, "kept_rows": 11452}
+{"dataset": "bike", "method": "HoloClean", "role": "baselines", "run": "results/main_table/bike/baselines/holoclean", "redr": 0.0009873617693522906}
+{"dataset": "bike", "method": "Horizon", "role": "baselines", "run": "results/main_table/bike/baselines/horizon", "redr": -0.029522116903633492}
+{"dataset": "bike", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/bike/baselines/raha_baran", "redr": -0.02646129541864139}
+{"dataset": "bike", "method": "UniClean", "role": "baselines", "run": "results/main_table/bike/baselines/uniclean", "redr": -0.011354660347551343}
+{"dataset": "bike", "method": "Lopster", "role": "baselines", "run": "results/main_table/bike/baselines/lopster", "redr": -0.029522116903633492}
+{"dataset": "bike", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/bike/baselines/activeclean", "redr": 0.04847946287519747}
+{"dataset": "bike", "method": "BoostClean", "role": "baselines", "run": "results/main_table/bike/baselines/boostclean", "redr": 0.0}
+{"dataset": "bike", "method": "SAGA", "role": "baselines", "run": "results/main_table/bike/baselines/saga", "redr": 0.0019747235387045812}
+{"dataset": "bike", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/bike/baselines/diffprep", "redr": -0.029522116903633492}
+{"dataset": "bike", "method": "Comet", "role": "baselines", "run": "results/main_table/bike/baselines/comet", "redr": 0.02448657187993681}
+{"dataset": "bike", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/bike/baselines/ctxpipe", "redr": 0.0}
+{"dataset": "bike", "method": "MLImputer", "role": "baselines", "run": "results/main_table/bike/baselines/mlimputer", "redr": 0.0}
+{"dataset": "bike", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/bike/baselines/simpleimputer", "redr": 0.0}
+{"dataset": "bike", "method": "LLM", "role": "baselines", "run": "results/main_table/bike/baselines/llm", "r_before": 10128, "r_after": 9949, "redr": 0.017673775671406003}
+{"dataset": "bike", "method": "DIANA", "role": "baselines", "run": "results/main_table/bike/baselines/diana", "redr": 0.026263823064770934}
+{"dataset": "bike", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/bike/baselines/learn2clean", "redr": 0.16696287519747235}
+{"dataset": "bike", "method": "RetClean", "role": "baselines", "run": "results/main_table/bike/baselines/retclean", "redr": 0.04225908372827804}
+{"dataset": "bike", "method": "DC", "role": "demandclean", "run": "results/main_table/bike/demandclean", "r_before": 10128, "r_after": 9327, "redr": 0.07908767772511849, "scope_rows": 10427, "kept_rows": 10051}
+{"dataset": "mercedes", "method": "HoloClean", "role": "baselines", "run": "results/main_table/mercedes/baselines/holoclean", "redr": 0.0}
+{"dataset": "mercedes", "method": "Horizon", "role": "baselines", "run": "results/main_table/mercedes/baselines/horizon", "redr": 0.0}
+{"dataset": "mercedes", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/mercedes/baselines/raha_baran", "redr": 0.0}
+{"dataset": "mercedes", "method": "UniClean", "role": "baselines", "run": "results/main_table/mercedes/baselines/uniclean", "redr": 0.0}
+{"dataset": "mercedes", "method": "Lopster", "role": "baselines", "run": "results/main_table/mercedes/baselines/lopster", "redr": 0.0}
+{"dataset": "mercedes", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/mercedes/baselines/activeclean", "redr": 0.19801980198019803}
+{"dataset": "mercedes", "method": "BoostClean", "role": "baselines", "run": "results/main_table/mercedes/baselines/boostclean", "redr": 0.0}
+{"dataset": "mercedes", "method": "SAGA", "role": "baselines", "run": "results/main_table/mercedes/baselines/saga", "redr": 0.0}
+{"dataset": "mercedes", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/mercedes/baselines/diffprep", "redr": 0.0}
+{"dataset": "mercedes", "method": "Comet", "role": "baselines", "run": "results/main_table/mercedes/baselines/comet", "redr": 0.0}
+{"dataset": "mercedes", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/mercedes/baselines/ctxpipe", "redr": 0.0}
+{"dataset": "mercedes", "method": "MLImputer", "role": "baselines", "run": "results/main_table/mercedes/baselines/mlimputer", "redr": 0.0}
+{"dataset": "mercedes", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/mercedes/baselines/simpleimputer", "redr": 0.0}
+{"dataset": "mercedes", "method": "LLM", "role": "baselines", "run": "results/main_table/mercedes/baselines/llm", "r_before": 2525, "r_after": 2525, "redr": 0.0}
+{"dataset": "mercedes", "method": "DIANA", "role": "baselines", "run": "results/main_table/mercedes/baselines/diana", "redr": 0.0}
+{"dataset": "mercedes", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/mercedes/baselines/learn2clean", "redr": 0.0}
+{"dataset": "mercedes", "method": "RetClean", "role": "baselines", "run": "results/main_table/mercedes/baselines/retclean", "redr": 0.0}
+{"dataset": "mercedes", "method": "DC", "role": "demandclean", "run": "results/main_table/mercedes/demandclean", "r_before": 2525, "r_after": 2525, "redr": 0.0, "scope_rows": 2525, "kept_rows": 2525}
+{"dataset": "nasa", "method": "HoloClean", "role": "baselines", "run": "results/main_table/nasa/baselines/holoclean", "redr": 0.037037037037037035}
+{"dataset": "nasa", "method": "Horizon", "role": "baselines", "run": "results/main_table/nasa/baselines/horizon", "redr": 0.35294117647058826}
+{"dataset": "nasa", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/nasa/baselines/raha_baran", "redr": 0.013071895424836602}
+{"dataset": "nasa", "method": "UniClean", "role": "baselines", "run": "results/main_table/nasa/baselines/uniclean", "redr": 0.5773420479302832}
+{"dataset": "nasa", "method": "Lopster", "role": "baselines", "run": "results/main_table/nasa/baselines/lopster", "redr": -0.9629629629629629}
+{"dataset": "nasa", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/nasa/baselines/activeclean", "redr": 0.6296296296296297}
+{"dataset": "nasa", "method": "BoostClean", "role": "baselines", "run": "results/main_table/nasa/baselines/boostclean", "redr": 0.0}
+{"dataset": "nasa", "method": "SAGA", "role": "baselines", "run": "results/main_table/nasa/baselines/saga", "redr": -0.023965141612200435}
+{"dataset": "nasa", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/nasa/baselines/diffprep", "redr": -0.18082788671023964}
+{"dataset": "nasa", "method": "Comet", "role": "baselines", "run": "results/main_table/nasa/baselines/comet", "redr": 0.954248366013072}
+{"dataset": "nasa", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/nasa/baselines/ctxpipe", "redr": 0.008714596949891068}
+{"dataset": "nasa", "method": "MLImputer", "role": "baselines", "run": "results/main_table/nasa/baselines/mlimputer", "redr": 0.0}
+{"dataset": "nasa", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/nasa/baselines/simpleimputer", "redr": 0.008714596949891068}
+{"dataset": "nasa", "method": "LLM", "role": "baselines", "run": "results/main_table/nasa/baselines/llm", "r_before": 459, "r_after": 40, "redr": 0.9128540305010894}
+{"dataset": "nasa", "method": "DIANA", "role": "baselines", "run": "results/main_table/nasa/baselines/diana", "redr": -0.037037037037037035}
+{"dataset": "nasa", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/nasa/baselines/learn2clean", "redr": 0.6252723311546841}
+{"dataset": "nasa", "method": "RetClean", "role": "baselines", "run": "results/main_table/nasa/baselines/retclean", "redr": 0.3420479302832244}
+{"dataset": "nasa", "method": "DC", "role": "demandclean", "run": "results/main_table/nasa/demandclean", "r_before": 459, "r_after": 24, "redr": 0.9477124183006536, "scope_rows": 901, "kept_rows": 901}
+{"dataset": "soilmoisture", "method": "HoloClean", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/holoclean", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "Horizon", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/horizon", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/raha_baran", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "UniClean", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/uniclean", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "Lopster", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/lopster", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/activeclean", "redr": 0.4987714987714988}
+{"dataset": "soilmoisture", "method": "BoostClean", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/boostclean", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "SAGA", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/saga", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/diffprep", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "Comet", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/comet", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/ctxpipe", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "MLImputer", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/mlimputer", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/simpleimputer", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "LLM", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/llm", "r_before": 407, "r_after": 407, "redr": 0.0}
+{"dataset": "soilmoisture", "method": "DIANA", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/diana", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/learn2clean", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "RetClean", "role": "baselines", "run": "results/main_table/soilmoisture/baselines/retclean", "redr": 0.0}
+{"dataset": "soilmoisture", "method": "DC", "role": "demandclean", "run": "results/main_table/soilmoisture/demandclean", "r_before": 407, "r_after": 404, "redr": 0.007371007371007371, "scope_rows": 407, "kept_rows": 407}
+{"dataset": "har", "method": "HoloClean", "role": "baselines", "run": "results/main_table/har/baselines/holoclean", "redr": 0.029090158861151228}
+{"dataset": "har", "method": "Horizon", "role": "baselines", "run": "results/main_table/har/baselines/horizon", "redr": -1.1565917062100268}
+{"dataset": "har", "method": "Raha+Baran", "role": "baselines", "run": "results/main_table/har/baselines/raha_baran", "redr": 0.0005157829585310501}
+{"dataset": "har", "method": "UniClean", "role": "baselines", "run": "results/main_table/har/baselines/uniclean", "redr": 0.0}
+{"dataset": "har", "method": "Lopster", "role": "baselines", "run": "results/main_table/har/baselines/lopster", "redr": -1.1662884258304105}
+{"dataset": "har", "method": "ActiveClean", "role": "baselines", "run": "results/main_table/har/baselines/activeclean", "redr": 0.023726016092428307}
+{"dataset": "har", "method": "BoostClean", "role": "baselines", "run": "results/main_table/har/baselines/boostclean", "redr": 0.0}
+{"dataset": "har", "method": "SAGA", "role": "baselines", "run": "results/main_table/har/baselines/saga", "redr": -0.16536001650505466}
+{"dataset": "har", "method": "DiffPrep", "role": "baselines", "run": "results/main_table/har/baselines/diffprep", "redr": -0.42319991747472663}
+{"dataset": "har", "method": "Comet", "role": "baselines", "run": "results/main_table/har/baselines/comet", "redr": 0.056632968846709306}
+{"dataset": "har", "method": "CtxPipe", "role": "baselines", "run": "results/main_table/har/baselines/ctxpipe", "redr": 0.010986177016711368}
+{"dataset": "har", "method": "MLImputer", "role": "baselines", "run": "results/main_table/har/baselines/mlimputer", "redr": 0.027181761914586343}
+{"dataset": "har", "method": "SimpleImputer", "role": "baselines", "run": "results/main_table/har/baselines/simpleimputer", "redr": 0.011398803383536209}
+{"dataset": "har", "method": "LLM", "role": "baselines", "run": "results/main_table/har/baselines/llm", "r_before": 19388, "r_after": 19388, "redr": 0.0}
+{"dataset": "har", "method": "DIANA", "role": "baselines", "run": "results/main_table/har/baselines/diana", "redr": 0.0}
+{"dataset": "har", "method": "Learn2Clean", "role": "baselines", "run": "results/main_table/har/baselines/learn2clean", "redr": 0.3530534351145038}
+{"dataset": "har", "method": "RetClean", "role": "baselines", "run": "results/main_table/har/baselines/retclean", "redr": -1.0087683102950278}
+{"dataset": "har", "method": "DC", "role": "demandclean", "run": "results/main_table/har/demandclean", "r_before": 19388, "r_after": 751, "redr": 0.9612646998143182, "scope_rows": 42000, "kept_rows": 21487}
+{"dataset": "flights", "method": "LLM", "role": "baselines", "run": "results/main_table/flights/baselines/llm", "r_before": 1148, "r_after": 1149, "redr": -0.0008710801393728223}
+{"dataset": "soccer", "method": "LLM", "role": "baselines", "run": "results/main_table/soccer/baselines/llm", "r_before": 901, "r_after": 901, "redr": 0.0}
+{"dataset": "soccer", "method": "DC", "role": "demandclean", "run": "results/main_table/soccer/demandclean", "r_before": 901, "r_after": 0, "redr": 1.0, "scope_rows": 6366, "kept_rows": 6366}
+{"dataset": "hospitals", "method": "LLM", "role": "baselines", "run": "results/main_table/hospitals/baselines/llm", "r_before": 218, "r_after": 14, "redr": 0.9357798165137615}
+{"dataset": "hospitals", "method": "DC", "role": "demandclean", "run": "results/main_table/hospitals/demandclean", "r_before": 218, "r_after": 175, "redr": 0.19724770642201836, "scope_rows": 600, "kept_rows": 457}
+{"dataset": "adult", "method": "activeclean", "role": "budget", "run": "results/budget/adult/activeclean_dcbudget", "r_before": 1030, "r_after": 1023, "redr": 0.006796116504854369}
+{"dataset": "adult", "method": "activeclean", "role": "budget", "run": "results/budget/adult/activeclean_ample", "r_before": 1030, "r_after": 887, "redr": 0.13883495145631067}
+{"dataset": "adult", "method": "comet", "role": "budget", "run": "results/budget/adult/comet_dcbudget", "r_before": 1030, "r_after": 1030, "redr": 0.0}
+{"dataset": "adult", "method": "comet", "role": "budget", "run": "results/budget/adult/comet_ample", "r_before": 1030, "r_after": 1030, "redr": 0.0}
+{"dataset": "adult", "method": "lopster", "role": "budget", "run": "results/budget/adult/lopster_dcbudget", "r_before": 1030, "r_after": 27133, "redr": -25.342718446601943}
+{"dataset": "adult", "method": "lopster", "role": "budget", "run": "results/budget/adult/lopster_ample", "r_before": 1030, "r_after": 27133, "redr": -25.342718446601943}
+{"dataset": "beers", "method": "activeclean", "role": "budget", "run": "results/budget/beers/activeclean_dcbudget", "r_before": 1446, "r_after": 1404, "redr": 0.029045643153526972}
+{"dataset": "beers", "method": "activeclean", "role": "budget", "run": "results/budget/beers/activeclean_ample", "r_before": 1446, "r_after": 946, "redr": 0.3457814661134163}
+{"dataset": "beers", "method": "comet", "role": "budget", "run": "results/budget/beers/comet_dcbudget", "r_before": 1446, "r_after": 1325, "redr": 0.08367911479944674}
+{"dataset": "beers", "method": "comet", "role": "budget", "run": "results/budget/beers/comet_ample", "r_before": 1446, "r_after": 1022, "redr": 0.29322268326417705}
+{"dataset": "beers", "method": "lopster", "role": "budget", "run": "results/budget/beers/lopster_dcbudget", "r_before": 1446, "r_after": 1446, "redr": 0.0}
+{"dataset": "beers", "method": "lopster", "role": "budget", "run": "results/budget/beers/lopster_ample", "r_before": 1446, "r_after": 1446, "redr": 0.0}
+{"dataset": "breast_cancer", "method": "activeclean", "role": "budget", "run": "results/budget/breast_cancer/activeclean_dcbudget", "r_before": 248, "r_after": 233, "redr": 0.06048387096774194}
+{"dataset": "breast_cancer", "method": "activeclean", "role": "budget", "run": "results/budget/breast_cancer/activeclean_ample", "r_before": 248, "r_after": 102, "redr": 0.5887096774193549}
+{"dataset": "breast_cancer", "method": "comet", "role": "budget", "run": "results/budget/breast_cancer/comet_dcbudget", "r_before": 248, "r_after": 236, "redr": 0.04838709677419355}
+{"dataset": "breast_cancer", "method": "comet", "role": "budget", "run": "results/budget/breast_cancer/comet_ample", "r_before": 248, "r_after": 121, "redr": 0.5120967741935484}
+{"dataset": "breast_cancer", "method": "lopster", "role": "budget", "run": "results/budget/breast_cancer/lopster_dcbudget", "r_before": 248, "r_after": 419, "redr": -0.6895161290322581}
+{"dataset": "breast_cancer", "method": "lopster", "role": "budget", "run": "results/budget/breast_cancer/lopster_ample", "r_before": 248, "r_after": 419, "redr": -0.6895161290322581}
+{"dataset": "smartfactory", "method": "activeclean", "role": "budget", "run": "results/budget/smartfactory/activeclean_dcbudget", "r_before": 4324, "r_after": 4307, "redr": 0.00393154486586494}
+{"dataset": "smartfactory", "method": "activeclean", "role": "budget", "run": "results/budget/smartfactory/activeclean_ample", "r_before": 4324, "r_after": 4171, "redr": 0.03538390379278446}
+{"dataset": "smartfactory", "method": "comet", "role": "budget", "run": "results/budget/smartfactory/comet_dcbudget", "r_before": 4324, "r_after": 4129, "redr": 0.04509713228492137}
+{"dataset": "smartfactory", "method": "comet", "role": "budget", "run": "results/budget/smartfactory/comet_ample", "r_before": 4324, "r_after": 0, "redr": 1.0}
+{"dataset": "smartfactory", "method": "lopster", "role": "budget", "run": "results/budget/smartfactory/lopster_dcbudget", "r_before": 4324, "r_after": 14187, "redr": -2.280989824236818}
+{"dataset": "smartfactory", "method": "lopster", "role": "budget", "run": "results/budget/smartfactory/lopster_ample", "r_before": 4324, "r_after": 14187, "redr": -2.280989824236818}
+{"dataset": "bike", "method": "activeclean", "role": "budget", "run": "results/budget/bike/activeclean_dcbudget", "r_before": 10128, "r_after": 9962, "redr": 0.016390205371248027}
+{"dataset": "bike", "method": "activeclean", "role": "budget", "run": "results/budget/bike/activeclean_ample", "r_before": 10128, "r_after": 9637, "redr": 0.04847946287519747}
+{"dataset": "bike", "method": "comet", "role": "budget", "run": "results/budget/bike/comet_dcbudget", "r_before": 10128, "r_after": 10035, "redr": 0.009182464454976303}
+{"dataset": "bike", "method": "comet", "role": "budget", "run": "results/budget/bike/comet_ample", "r_before": 10128, "r_after": 9880, "redr": 0.02448657187993681}
+{"dataset": "bike", "method": "lopster", "role": "budget", "run": "results/budget/bike/lopster_dcbudget", "r_before": 10128, "r_after": 10427, "redr": -0.029522116903633492}
+{"dataset": "bike", "method": "lopster", "role": "budget", "run": "results/budget/bike/lopster_ample", "r_before": 10128, "r_after": 10427, "redr": -0.029522116903633492}
+{"dataset": "mercedes", "method": "activeclean", "role": "budget", "run": "results/budget/mercedes/activeclean_dcbudget", "r_before": 2525, "r_after": 2440, "redr": 0.033663366336633666}
+{"dataset": "mercedes", "method": "activeclean", "role": "budget", "run": "results/budget/mercedes/activeclean_ample", "r_before": 2525, "r_after": 2025, "redr": 0.19801980198019803}
+{"dataset": "mercedes", "method": "comet", "role": "budget", "run": "results/budget/mercedes/comet_dcbudget", "r_before": 2525, "r_after": 2525, "redr": 0.0}
+{"dataset": "mercedes", "method": "comet", "role": "budget", "run": "results/budget/mercedes/comet_ample", "r_before": 2525, "r_after": 2525, "redr": 0.0}
+{"dataset": "mercedes", "method": "lopster", "role": "budget", "run": "results/budget/mercedes/lopster_dcbudget", "r_before": 2525, "r_after": 2525, "redr": 0.0}
+{"dataset": "mercedes", "method": "lopster", "role": "budget", "run": "results/budget/mercedes/lopster_ample", "r_before": 2525, "r_after": 2525, "redr": 0.0}
+{"dataset": "nasa", "method": "activeclean", "role": "budget", "run": "results/budget/nasa/activeclean_dcbudget", "r_before": 459, "r_after": 392, "redr": 0.14596949891067537}
+{"dataset": "nasa", "method": "activeclean", "role": "budget", "run": "results/budget/nasa/activeclean_ample", "r_before": 459, "r_after": 170, "redr": 0.6296296296296297}
+{"dataset": "nasa", "method": "comet", "role": "budget", "run": "results/budget/nasa/comet_dcbudget", "r_before": 459, "r_after": 0, "redr": 1.0}
+{"dataset": "nasa", "method": "comet", "role": "budget", "run": "results/budget/nasa/comet_ample", "r_before": 459, "r_after": 21, "redr": 0.954248366013072}
+{"dataset": "nasa", "method": "lopster", "role": "budget", "run": "results/budget/nasa/lopster_dcbudget", "r_before": 459, "r_after": 901, "redr": -0.9629629629629629}
+{"dataset": "nasa", "method": "lopster", "role": "budget", "run": "results/budget/nasa/lopster_ample", "r_before": 459, "r_after": 901, "redr": -0.9629629629629629}
+{"dataset": "soilmoisture", "method": "activeclean", "role": "budget", "run": "results/budget/soilmoisture/activeclean_dcbudget", "r_before": 407, "r_after": 387, "redr": 0.04914004914004914}
+{"dataset": "soilmoisture", "method": "activeclean", "role": "budget", "run": "results/budget/soilmoisture/activeclean_ample", "r_before": 407, "r_after": 204, "redr": 0.4987714987714988}
+{"dataset": "soilmoisture", "method": "comet", "role": "budget", "run": "results/budget/soilmoisture/comet_dcbudget", "r_before": 407, "r_after": 407, "redr": 0.0}
+{"dataset": "soilmoisture", "method": "comet", "role": "budget", "run": "results/budget/soilmoisture/comet_ample", "r_before": 407, "r_after": 407, "redr": 0.0}
+{"dataset": "soilmoisture", "method": "lopster", "role": "budget", "run": "results/budget/soilmoisture/lopster_dcbudget", "r_before": 407, "r_after": 407, "redr": 0.0}
+{"dataset": "soilmoisture", "method": "lopster", "role": "budget", "run": "results/budget/soilmoisture/lopster_ample", "r_before": 407, "r_after": 407, "redr": 0.0}
+{"dataset": "har", "method": "activeclean", "role": "budget", "run": "results/budget/har/activeclean_dcbudget", "r_before": 19388, "r_after": 19315, "redr": 0.0037652155972766658}
+{"dataset": "har", "method": "activeclean", "role": "budget", "run": "results/budget/har/activeclean_ample", "r_before": 19388, "r_after": 18928, "redr": 0.023726016092428307}
+{"dataset": "har", "method": "comet", "role": "budget", "run": "results/budget/har/comet_dcbudget", "r_before": 19388, "r_after": 19373, "redr": 0.0007736744377965752}
+{"dataset": "har", "method": "comet", "role": "budget", "run": "results/budget/har/comet_ample", "r_before": 19388, "r_after": 18290, "redr": 0.056632968846709306}
+{"dataset": "har", "method": "lopster", "role": "budget", "run": "results/budget/har/lopster_dcbudget", "r_before": 19388, "r_after": 42000, "redr": -1.1662884258304105}
+{"dataset": "har", "method": "lopster", "role": "budget", "run": "results/budget/har/lopster_ample", "r_before": 19388, "r_after": 37135, "redr": -0.9153600165050547}

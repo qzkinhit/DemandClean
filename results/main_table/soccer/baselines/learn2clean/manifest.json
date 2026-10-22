@@ -1,0 +1,30 @@
+{
+  "id": "main_table/soccer/baselines/learn2clean",
+  "dataset": "soccer",
+  "role": "baselines",
+  "method": "Learn2Clean",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 106100,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "14cfaf5b847d2476582dbc0ac2751c20dced8c1332f81151a1d27b3fe922c3b9",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soccer:learn2clean:results/main_table/soccer/baselines/learn2clean/cleaned_encoded.npz --nearest",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "run.json",
+    "scores.json"
+  ]
+}

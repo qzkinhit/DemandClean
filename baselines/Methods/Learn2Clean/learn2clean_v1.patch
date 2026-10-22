@@ -1,0 +1,247 @@
+diff --git a/Learn2Clean_V1/python-package/learn2clean/clustering/clusterer.py b/Learn2Clean_V1/python-package/learn2clean/clustering/clusterer.py
+index 5b55599..fb5552d 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/clustering/clusterer.py
++++ b/Learn2Clean_V1/python-package/learn2clean/clustering/clusterer.py
+@@ -136,7 +136,7 @@ class Clusterer():
+ 
+             k = compare_k_means(n_clusters, dataset)
+ 
+-            clusterer_final = KMeans(n_clusters=k, n_jobs=-1)
++            clusterer_final = KMeans(n_clusters=k, n_jobs=1)
+ 
+             clusterer_final = clusterer_final.fit(X)
+ 
+diff --git a/Learn2Clean_V1/python-package/learn2clean/duplicate_detection/duplicate_detector.py b/Learn2Clean_V1/python-package/learn2clean/duplicate_detection/duplicate_detector.py
+index ed1fe8b..c110aa5 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/duplicate_detection/duplicate_detector.py
++++ b/Learn2Clean_V1/python-package/learn2clean/duplicate_detection/duplicate_detector.py
+@@ -240,7 +240,7 @@ class Duplicate_detector():
+         output_pairs = ssj.jaccard_join(df, df, 'New_ID',
+                                         'New_ID', 'row', 'row', ws,
+                                         threshold, l_out_attrs=['row'],
+-                                        r_out_attrs=['row'], n_jobs=-1)
++                                        r_out_attrs=['row'], n_jobs=1)
+ 
+         dup = output_pairs[output_pairs['l_New_ID']
+                            != output_pairs['r_New_ID']]
+diff --git a/Learn2Clean_V1/python-package/learn2clean/feature_selection/feature_selector.py b/Learn2Clean_V1/python-package/learn2clean/feature_selection/feature_selector.py
+index 2b8ee2a..2a8106f 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/feature_selection/feature_selector.py
++++ b/Learn2Clean_V1/python-package/learn2clean/feature_selection/feature_selector.py
+@@ -242,15 +242,9 @@ class Feature_selector():
+ 
+             selector = SelectKBest(score_func=chi2, k='all')
+ 
+-            lsv = list(X.lt(0).sum().values)
+-
+-            lis = list(X.lt(0).sum().index)
+-
+-            for i in range(0, len(lsv)-1):
+-
+-                if lsv[i] > 0:
+-
+-                    del lis[i]
++            # Filter by original column labels; deleting list entries while
++            # iterating over original positions caused IndexError/skipped columns.
++            lis = [c for c in X.columns if not X[c].lt(0).any()]
+ 
+             if len(lis) == 0:
+ 
+@@ -467,7 +461,7 @@ class Feature_selector():
+                 from sklearn.ensemble import RandomForestRegressor
+ 
+                 model = RandomForestRegressor(n_estimators=50,
+-                                              n_jobs=-1,
++                                              n_jobs=1,
+                                               random_state=0)
+ 
+                 model.fit(dn, dt)
+diff --git a/Learn2Clean_V1/python-package/learn2clean/imputation/imputer.py b/Learn2Clean_V1/python-package/learn2clean/imputation/imputer.py
+index 2708d9a..ecc2aa6 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/imputation/imputer.py
++++ b/Learn2Clean_V1/python-package/learn2clean/imputation/imputer.py
+@@ -104,7 +104,8 @@ class Imputer():
+             Z = dataset.select_dtypes(exclude=['number'])
+ 
+             df = pd.DataFrame.from_records(
+-                X, columns=dataset.select_dtypes(['number']).columns)
++                X, columns=dataset.select_dtypes(['number']).columns,
++                index=dataset.index)
+ 
+             df = pd.concat([X, Z], axis=1)
+ 
+@@ -132,7 +133,8 @@ class Imputer():
+             Z = dataset.select_dtypes(include=['object'])
+ 
+             df = pd.DataFrame.from_records(
+-                X, columns=dataset.select_dtypes(['number']).columns)
++                X, columns=dataset.select_dtypes(['number']).columns,
++                index=dataset.index)
+ 
+             df = df.join(Z)
+ 
+@@ -197,14 +199,14 @@ class Imputer():
+ 
+             X = dataset.select_dtypes(['number'])
+ 
+-            for i in X.columns:
+-
+-                X[i] = KNN(k=k, verbose=False).fit_transform(X)
++            X = pd.DataFrame(KNN(k=k, verbose=False).fit_transform(X),
++                             index=X.index, columns=X.columns)
+ 
+             Z = dataset.select_dtypes(include=['object'])
+ 
+             df = pd.DataFrame.from_records(
+-                X, columns=dataset.select_dtypes(['number']).columns)
++                X, columns=dataset.select_dtypes(['number']).columns,
++                index=dataset.index)
+ 
+             df = df.join(Z)
+ 
+@@ -232,7 +234,8 @@ class Imputer():
+             Z = dataset.select_dtypes(include=['object'])
+ 
+             df = pd.DataFrame.from_records(
+-                X, columns=dataset.select_dtypes(['number']).columns)
++                X, columns=dataset.select_dtypes(['number']).columns,
++                index=dataset.index)
+ 
+             df = df.join(Z)
+ 
+@@ -260,7 +263,8 @@ class Imputer():
+ 
+             df = pd.DataFrame.from_records(
+ 
+-                X, columns=dataset.select_dtypes(['number']).columns)
++                X, columns=dataset.select_dtypes(['number']).columns,
++                index=dataset.index)
+ 
+             df = df.join(Z)
+ 
+diff --git a/Learn2Clean_V1/python-package/learn2clean/loading/reader.py b/Learn2Clean_V1/python-package/learn2clean/loading/reader.py
+index 0ecc06c..4f6ea08 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/loading/reader.py
++++ b/Learn2Clean_V1/python-package/learn2clean/loading/reader.py
+@@ -380,10 +380,10 @@ class Reader():
+         if (self.verbose):
+             print("Reading data ...")
+ 
+-            df = pd.concat(Parallel(n_jobs=-1)(delayed(convert_list)(df[col])
++            df = pd.concat(Parallel(n_jobs=1)(delayed(convert_list)(df[col])
+                            for col in df.columns), axis=1)
+ 
+-            df = pd.concat(Parallel(n_jobs=-1)(
++            df = pd.concat(Parallel(n_jobs=1)(
+                            delayed(convert_float_and_dates)(df[col])
+                            for col in df.columns),
+                            axis=1)
+diff --git a/Learn2Clean_V1/python-package/learn2clean/outlier_detection/outlier_detector.py b/Learn2Clean_V1/python-package/learn2clean/outlier_detection/outlier_detector.py
+index ed6af4d..0b1c49c 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/outlier_detection/outlier_detector.py
++++ b/Learn2Clean_V1/python-package/learn2clean/outlier_detection/outlier_detector.py
+@@ -100,7 +100,7 @@ class Outlier_detector():
+ 
+         outliers = X[((X < (Q1 - 1.5 * IQR)) | (X > (Q3 + 1.5 * IQR)))]
+ 
+-        to_drop = X[outliers.sum(axis=1)/outliers.shape[1] >
++        to_drop = X[outliers.count(axis=1)/outliers.shape[1] >
+                     threshold].index
+ 
+         to_keep = set(X.index) - set(to_drop)
+@@ -229,13 +229,13 @@ class Outlier_detector():
+             # Inliers tend to have a negative_outlier_factor_
+             # close to -1, while outliers tend to have a larger  score.
+ 
+-            top_k_idx = np.argsort(LOF_scores)[-k:]
+-
+-            top_k_values = [LOF_scores[i] for i in top_k_idx]
+-
+-            data = X[LOF_scores < top_k_values[0]]
+-
+-            to_drop = X[~(LOF_scores < top_k_values[0])].index
++            # sklearn negative_outlier_factor_: smaller values are more
++            # anomalous. Preserve the original fixed k, remove its lowest k.
++            top_k_idx = np.argsort(LOF_scores)[:k]
++            keep = np.ones(len(X), dtype=bool)
++            keep[top_k_idx] = False
++            data = X.iloc[keep]
++            to_drop = X.index[top_k_idx]
+ 
+             df = data.join(Y)
+ 
+diff --git a/Learn2Clean_V1/python-package/learn2clean/qlearning/__init__.py b/Learn2Clean_V1/python-package/learn2clean/qlearning/__init__.py
+index 1622ea6..9afc42e 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/qlearning/__init__.py
++++ b/Learn2Clean_V1/python-package/learn2clean/qlearning/__init__.py
+@@ -1,14 +1 @@
+-from .loading.reader import Reader
+-from .normalization.normalizer import Normalizer
+-from .feature_selection.feature_selector import Feature_selector
+-from .outlier_detection.outlier_detector import Outlier_detector
+-from .duplicate_detection.duplicate_detector import Duplicate_detector
+-from .consistency_checking.consistency_checker import Consistency_checker
+-from .imputation.imputer import Imputer
+-from .regression.regressor import Regressor
+-from .classification.classifier import Classifier
+-from .clustering.clusterer import Clusterer
+-
+-__all__ = ['Reader', 'Normalizer', 'Feature_selector', 'Outlier_detector',
+-           'Duplicate_detector', 'Consistency_checker', 'Imputer', 'Regressor',
+-           'Classifier', 'Clusterer', ]
++from .qlearner import Qlearner
+diff --git a/Learn2Clean_V1/python-package/learn2clean/qlearning/qlearner.py b/Learn2Clean_V1/python-package/learn2clean/qlearning/qlearner.py
+index fde1e86..84daf86 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/qlearning/qlearner.py
++++ b/Learn2Clean_V1/python-package/learn2clean/qlearning/qlearner.py
+@@ -307,7 +307,7 @@ class Qlearner():
+ 
+             if not check_missing:
+ 
+-                if a in range(0, 5):
++                if a in range(0, 6):
+                     # normalization 0-2, and feature selection 3-5
+ 
+                     n = L2C_class[a](dataset=dataset, strategy=actions_name[a],
+@@ -347,8 +347,10 @@ class Qlearner():
+ 
+             else:
+ 
+-                if (len(dataset['train'].dropna()) == 0) or \
+-                        (len(dataset['test'].dropna()) == 0):
++                # Imputation must run even if no row is already complete.
++                # The original guard skipped the operation needed to remove NaNs.
++                if (a not in (0, 1, 2, 3)) and (
++                        len(dataset['train'].dropna()) == 0):
+ 
+                     pass
+ 
+@@ -361,7 +363,7 @@ class Qlearner():
+                                          strategy=actions_name[a],
+                                          verbose=self.verbose).transform()
+ 
+-                    if a in range(4, 10):
++                    if a in range(4, 11):
+                         # normalization and feature selection
+                         n = L2C_class[a](dataset=dataset,
+                                          strategy=actions_name[a],
+diff --git a/Learn2Clean_V1/python-package/learn2clean/regression/regressor.py b/Learn2Clean_V1/python-package/learn2clean/regression/regressor.py
+index c84c90a..0215e41 100644
+--- a/Learn2Clean_V1/python-package/learn2clean/regression/regressor.py
++++ b/Learn2Clean_V1/python-package/learn2clean/regression/regressor.py
+@@ -4,7 +4,6 @@
+ import time
+ import warnings
+ from sklearn.model_selection import cross_val_score
+-from pyearth import Earth
+ import pandas as pd
+ from sklearn.linear_model import LassoCV
+ from sklearn.metrics import mean_squared_error
+@@ -213,6 +212,7 @@ class Regressor():
+         return mse
+ 
+     def MARS_regression(self, dataset, target):
++        from pyearth import Earth
+         # requires no missing value
+ 
+         k = self.k_folds

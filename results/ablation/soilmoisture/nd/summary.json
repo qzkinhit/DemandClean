@@ -1,0 +1,20 @@
+{
+  "dataset": "soilmoisture",
+  "variant": "nd",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    407,
+    127
+  ],
+  "cleaned_shape": [
+    82,
+    127
+  ],
+  "operations": {
+    "no_action": 1325,
+    "repair_value": 4714,
+    "delete": 325,
+    "replace_nearby": 3183
+  }
+}

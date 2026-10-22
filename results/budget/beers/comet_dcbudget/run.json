@@ -1,0 +1,237 @@
+{
+ "dataset": "beers",
+ "method": "comet",
+ "paper": "Comet, Mohammed/Naumann/Harmouch, EDBT 2025",
+ "budget_mode": "gt_cells",
+ "cost_budget": null,
+ "gt_budget": 248,
+ "cost_model": "constant",
+ "n_train": 1446,
+ "n_val": 482,
+ "n_test": 482,
+ "n_features": 8,
+ "model": "rf",
+ "metric": "macro_f1",
+ "task": "classification",
+ "labels": "dirty",
+ "label_diff_train": 6,
+ "comet_rows": 1446,
+ "n_clusters": null,
+ "deviations": [
+  "split, encoder and validation set given by the benchmark (reeval_unified.split_idx, preprocess_data fitted on the dirty training split), not the paper's own split",
+  "utility model rf with the common evaluator's hyperparameters (downstream model of the main table: rf), not the paper's model list",
+  "error types of the real dirty cells are assigned by classify_errors (missing, scaling by 10^k, Gaussian noise otherwise, categorical shift), the paper injects known error types",
+  "Estimator posterior in closed form instead of NUTS sampling (same Gaussian posterior)",
+  "budget in ground-truth cells (248) instead of 50 cost units; the last step is truncated to the remaining cells"
+ ],
+ "step_fraction": 0.01,
+ "step_cells": 15,
+ "select_positives": true,
+ "dirty_feature_cells_train": 2028,
+ "dirty_cells_by_type": {
+  "MissingValues": 1956,
+  "GaussianNoise": 1,
+  "CategoricalShift": 71
+ },
+ "dirty_cells_by_pair": {
+  "ounces/MissingValues": 1445,
+  "abv/MissingValues": 440,
+  "brewery_id/GaussianNoise": 1,
+  "city/CategoricalShift": 71,
+  "state/MissingValues": 71
+ },
+ "gt_cells": 248,
+ "gt_cells_applied": 232,
+ "gt_cells_reverted_never_applied": 16,
+ "cleaned_cells_by_pair": {
+  "ounces/MissingValues": 165,
+  "city/CategoricalShift": 37,
+  "state/MissingValues": 30
+ },
+ "cost_used": 18,
+ "iterations": 16,
+ "attempts": 20,
+ "applied_steps": 16,
+ "step_modes": {
+  "fallback_best_attempt": 6,
+  "improved": 1,
+  "fallback_history": 9
+ },
+ "stop_reason": "budget exhausted",
+ "val_score_initial": 0.13057831620263,
+ "val_score_final": 0.12616686209798522,
+ "val_report_final": {
+  "macro_f1": 0.12616686209798522,
+  "accuracy": 0.2987551867219917
+ },
+ "secs_comet": 1811.12,
+ "secs": 1880.39,
+ "steps": [
+  {
+   "iteration": 1,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.13057831620263,
+   "f1_after": 0.12661726533718762
+  },
+  {
+   "iteration": 2,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12661726533718762,
+   "f1_after": 0.12849882328607337
+  },
+  {
+   "iteration": 3,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12849882328607337,
+   "f1_after": 0.12498583815503644
+  },
+  {
+   "iteration": 4,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12498583815503644,
+   "f1_after": 0.14007738455759733
+  },
+  {
+   "iteration": 5,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.14007738455759733,
+   "f1_after": 0.13197328467738592
+  },
+  {
+   "iteration": 6,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.13197328467738592,
+   "f1_after": 0.1388296291713472
+  },
+  {
+   "iteration": 7,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.1388296291713472,
+   "f1_after": 0.13522367051756867
+  },
+  {
+   "iteration": 8,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.13522367051756867,
+   "f1_after": 0.14082320040517474
+  },
+  {
+   "iteration": 9,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.14082320040517474,
+   "f1_after": 0.1325093596093795
+  },
+  {
+   "iteration": 10,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.1325093596093795,
+   "f1_after": 0.123533460458941
+  },
+  {
+   "iteration": 11,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.123533460458941,
+   "f1_after": 0.12749776171376384
+  },
+  {
+   "iteration": 12,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12749776171376384,
+   "f1_after": 0.12168454099032758
+  },
+  {
+   "iteration": 13,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12168454099032758,
+   "f1_after": 0.11931876277221083
+  },
+  {
+   "iteration": 14,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11931876277221083,
+   "f1_after": 0.12475704035549388
+  },
+  {
+   "iteration": 15,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "improved",
+   "f1_before": 0.12475704035549388,
+   "f1_after": 0.12638021819617629
+  },
+  {
+   "iteration": 16,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 7,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12638021819617629,
+   "f1_after": 0.12616686209798522
+  }
+ ],
+ "command": "python baselines/runners/run_comet.py --dataset beers --method_name comet --n_jobs 1 --gt_budget 248 --labels dirty --project_root . --output_root results/runs/baselines --records_path results/runs/baselines/records.jsonl",
+ "python": "3.8.20",
+ "numpy": "1.24.3",
+ "pandas": "2.0.3",
+ "sklearn": "1.3.2",
+ "finished": "2026-10-17T14:22:06"
+}

@@ -1,0 +1,13 @@
+# =============================================================================
+# Dataset: mercedes (Mercedes-Benz Greener Manufacturing)
+# =============================================================================
+# 4,209 rows x 378 cols; regression (y)
+# Errors: binary-column flips + categorical empties; label is error-free
+# =============================================================================
+
+[DOMAIN]
+X2: ENUM {a, aa, ac, ae, af, ag, ah, ai, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ay, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, x, y, z}
+X3: ENUM {a, b, c, d, e, f, g}
+X4: ENUM {a, b, c, d}
+X5: ENUM {aa, ab, ac, ad, ae, af, ag, ah, c, d, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u, v, w, x, y}
+y: FLOAT [72.11, 265.32]

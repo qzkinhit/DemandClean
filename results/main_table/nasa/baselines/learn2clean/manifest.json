@@ -1,0 +1,31 @@
+{
+  "id": "main_table/nasa/baselines/learn2clean",
+  "dataset": "nasa",
+  "role": "baselines",
+  "method": "Learn2Clean",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 9018,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "e92c5ae70a05cceb4b58ee65a2081a5248ce498dbef1e89399724700fca7e23d",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table nasa:learn2clean:results/main_table/nasa/baselines/learn2clean/cleaned_encoded.npz",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json"
+  ]
+}

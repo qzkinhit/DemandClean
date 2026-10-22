@@ -1,0 +1,20 @@
+{
+  "id": "budget/bike/activeclean_ample",
+  "dataset": "bike",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 8000,
+  "seconds": 2.942,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "cb196ef4daab9e3539670da5351aa3030b8ce86a70793d97317cb9173bf6bcc2"
+    }
+  }
+}

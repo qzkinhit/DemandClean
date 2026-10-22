@@ -1,0 +1,16 @@
+Run started at 2026-10-17 01:29:03
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: bike_deleteall
+deletion mode: drop_feature_errors
+output data saved: bike_deleteall_cleaned.csv
+input rows: 10427
+kept rows: 2086
+deleted rows: 8341
+run time: 9.02 s
+status: success
+ground-truth cost: 8341
+
+results saved to: bike_deleteall
+log file: bike_deleteall.log

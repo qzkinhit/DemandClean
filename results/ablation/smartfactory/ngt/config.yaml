@@ -1,0 +1,17 @@
+dataset: smartfactory
+source: REIN
+task: classification
+label_col: labels
+categorical_cols: []
+downstream_model: rf
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 449255
+training:
+  n_episodes: 300
+  repair_lambda: 0.03
+  max_repair_ratio: 0.3
+  max_truth_budget: 0
+  reward_model_type: random_forest

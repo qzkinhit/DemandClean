@@ -1,0 +1,21 @@
+{
+  "dataset": "beers",
+  "method": "Lopster",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.11064718162839249,
+  "all_models": {
+    "rf": 0.11064718162839249,
+    "gb": 0.012526096033402923
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 1442,
+  "n_test": 479,
+  "table_rows": 1446,
+  "gt_cells": 420,
+  "gt_pct": 1.7427385892116183,
+  "redr": {
+    "redr": 0.0
+  }
+}

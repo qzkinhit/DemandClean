@@ -1,0 +1,21 @@
+{
+  "dataset": "nasa",
+  "method": "Comet",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.38959593807421367,
+  "all_models": {
+    "lr": 0.38959593807421367,
+    "rf": 0.6756961994152152
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 901,
+  "n_test": 301,
+  "table_rows": 901,
+  "gt_cells": 4505,
+  "gt_pct": 49.95564426702151,
+  "redr": {
+    "redr": 0.954248366013072
+  }
+}

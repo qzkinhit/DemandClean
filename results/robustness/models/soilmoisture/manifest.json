@@ -1,0 +1,9 @@
+{
+  "source_dataset": "soilmoisture",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "baa1ba9c5224a5a7e4b3947b7c7485583a5fa6e0028832e9cc777ef113f845a6",
+    "agent_stage1.pt": "6bcfec3b5c46a7a377c9166dfba653d27e70a4e1ace067ed73ec74c74019797e"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

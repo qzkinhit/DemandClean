@@ -1,0 +1,32 @@
+{
+  "id": "main_table/bike/baselines/comet",
+  "dataset": "bike",
+  "role": "baselines",
+  "method": "Comet",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 156405,
+  "gt_pct": 56.247842223373034,
+  "gt_denominator": 295443,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "25b7430a3048d3564e34a7efec450bf7916d9de4566d8aea26f79e171cf00ca3",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table bike:comet:results/main_table/bike/baselines/comet/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

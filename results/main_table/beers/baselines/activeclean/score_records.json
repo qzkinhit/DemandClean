@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "beers",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.34029227557411273,
+    "n_train_rows": 1441,
+    "n_test": 479,
+    "rows": 1446,
+    "sklearn": "1.3.2",
+    "method": "ActiveClean",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "beers",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.2839248434237996,
+    "n_train_rows": 1441,
+    "n_test": 479,
+    "rows": 1446,
+    "sklearn": "1.3.2",
+    "method": "ActiveClean",
+    "encoding": "train_fitted"
+  }
+]

@@ -1,0 +1,13 @@
+{
+ "dataset": "smartfactory",
+ "method": "Lopster (ample GT)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.6419961936984563,
+ "n_train_rows": 14187,
+ "redr": {
+  "r_before": 4324,
+  "r_after": 14187,
+  "redr": -2.280989824236818
+ }
+}

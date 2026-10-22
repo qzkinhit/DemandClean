@@ -1,0 +1,16 @@
+{
+  "dataset": "har",
+  "variant": "stage",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.8992418921570298,
+  "tol_rel": 0.9741853574274243,
+  "references": {
+    "NoFix": 0.5004163878039727,
+    "RepairAll": 0.9098102483381258
+  },
+  "n_train_rows": 21484,
+  "n_test": 13863,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "184f40ad085ea9730e39a0ed8c10d4565dfd29c19a5e2fbcbefede8ac39ebe3f"
+}

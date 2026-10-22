@@ -1,0 +1,33 @@
+{
+  "dataset": "mercedes",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    2525,
+    376
+  ],
+  "cleaned_shape": [
+    2525,
+    376
+  ],
+  "operations": {
+    "no_action": 123099,
+    "repair_value": 24776,
+    "delete": 0,
+    "replace_nearby": 6196
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.999618048059518,
+      "recall": 1.0,
+      "f1": 0.9998089875509713,
+      "tp": 180582,
+      "fp": 69,
+      "fn": 0,
+      "gt_count": 180582,
+      "det_count": 180651
+    }
+  }
+}

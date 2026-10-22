@@ -1,0 +1,20 @@
+{
+  "id": "budget/breast_cancer/lopster_dcbudget",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 200,
+  "seconds": 26.0,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "3496e628c33db8d2d3dab8ac2be5c7d8e5e50df31da7a4a466f8dafbd6ddb93d"
+    }
+  }
+}

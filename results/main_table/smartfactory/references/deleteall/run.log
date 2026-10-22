@@ -1,0 +1,16 @@
+Run started at 2026-10-17 01:12:43
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: smartfactory_deleteall
+deletion mode: drop_feature_errors
+output data saved: smartfactory_deleteall_cleaned.csv
+input rows: 14187
+kept rows: 2838
+deleted rows: 11349
+run time: 13.10 s
+status: success
+ground-truth cost: 11349
+
+results saved to: smartfactory_deleteall
+log file: smartfactory_deleteall.log

@@ -1,0 +1,54 @@
+{
+  "dataset": "bike",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 200,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 1.0,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "15a2f5a93ace644891a721832f28bfa1b42e869141c52946dc810fe6db803957"
+  },
+  "checkpoint": "results/robustness/models/soilmoisture",
+  "rules": "results/transfer/rules/bike.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/soilmoisture/bike/config.yaml --variant full --seed 0 --rules results/transfer/rules/bike.txt --checkpoint results/robustness/models/soilmoisture --out results/runs/transfer_bike_soilmoisture",
+  "score_command": "python evaluation/paper_score.py results/transfer/soilmoisture/bike",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "25ccf38db04b0c7babba68f6c3bd261ade03ebbb7a5761537c5a6c8d6db4dd72"
+    },
+    "rules_sha256": "efce93b2a1edd1f8fb3846aa229dc34298e4c541b04eacadded2ec1fa4b90db7",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "6bcfec3b5c46a7a377c9166dfba653d27e70a4e1ace067ed73ec74c74019797e",
+      "agent_stage2.pt": "baa1ba9c5224a5a7e4b3947b7c7485583a5fa6e0028832e9cc777ef113f845a6"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 4473.2
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "soilmoisture",
+  "target_dataset": "bike"
+}

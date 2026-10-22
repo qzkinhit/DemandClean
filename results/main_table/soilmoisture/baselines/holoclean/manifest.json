@@ -1,0 +1,34 @@
+{
+  "id": "main_table/soilmoisture/baselines/holoclean",
+  "dataset": "soilmoisture",
+  "role": "baselines",
+  "method": "HoloClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 87591,
+  "scoring": {
+    "model": "gb",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "d146f474ccf09a6b37b193dbd636ce9dccd999593fbcb69fde6bc0eddf29f9e9",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soilmoisture:holoclean:results/main_table/soilmoisture/baselines/holoclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

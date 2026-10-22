@@ -1,0 +1,9 @@
+{
+  "dataset": "adult",
+  "method": "Lopster",
+  "seconds": 388.09,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant",
+    "preserve the input target column"
+  ]
+}

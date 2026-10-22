@@ -1,0 +1,36 @@
+# Console output of the run.
+
+DemandClean unified runner
+Datasets: ['har']
+Enabled versions: ['v1_oracle_dueling_single']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Seed: 0
+  60/20/20 split: train=42000, val=14000, test=14000
+  Dataset: har
+  Dirty:   (42000, 3)
+  Features: 3, label: gt
+  Categorical cols: (none)
+  LE fit: dirty only (42000 rows)
+  SS fit: dirty only (42000 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(42000, 3), X_clean_train=(42000, 3), X_clean_val=(14000, 3), X_clean_test=(14000, 3)
+Version: v1_oracle_dueling_single
+Dataset: har | task: clustering | model: kmeans
+Detector: oracle | Agent: dueling_two_stage | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+[Step 2] training (300 episodes)...
+  model saved: ./model/v1_oracle_dueling_single_agent.pt
+  [time] Step 2 (train): 100284.55s
+[Step 3] inference (mode: single_phase)...
+  ground truth used: 3880
+  action counts: {'no_action': 865, 'repair_value': 3880, 'delete': 4083, 'replace_nearby': 14509}
+  encoded version saved: ./data/v1_oracle_dueling_single_cleaned_encoded.npz
+  [time] Step 3 (infer): 821.41s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.82s
+  Version v1_oracle_dueling_single done! elapsed: 101811.42s
+All done! total: 101822.95s

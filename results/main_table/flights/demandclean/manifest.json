@@ -1,0 +1,76 @@
+{
+  "run_id": "main_table/flights/demandclean",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "flights",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/flights.yaml --variant full --seed 0 --unseen-categories nearest",
+  "arguments": {
+    "n_episodes": 300,
+    "raha_detector": false
+  },
+  "seed": 0,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "offline",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300,
+      "raha_detector": false
+    },
+    "evaluation": {
+      "unseen_categories": "nearest"
+    }
+  },
+  "versions": {
+    "python": "3.8.20",
+    "numpy": "1.24.3",
+    "pandas": "2.0.3",
+    "scikit-learn": "1.3.2",
+    "scipy": "1.10.1",
+    "torch": "2.4.1+cpu",
+    "raha": "unknown",
+    "yaml": "6.0.3"
+  },
+  "code": null,
+  "platform": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "start_time": "2026-10-18T02:38:55+08:00",
+  "end_time": "2026-10-18T02:56:46+08:00",
+  "status": "complete",
+  "ground_truth_cells": 4,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/flights/demandclean",
+    "checkpoint": "results/main_table/flights/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  },
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned.csv": "7bed435e489c20cc0242a17a2b2e5ef43f8e11b412e5afa5a0ce8aa838925183",
+      "cleaned_encoded.npz": "917a1d7bf61bd9ba647a31f0a0fe78b968c681bfcf0917cd7cb59765b5812646",
+      "model/agent_stage1.pt": "6d2b3b4a317ee03cfe4f40c4d154b0e61dc704eb1cb40fe7a0ff5862f47e6845",
+      "model/agent_stage2.pt": "f6e5168b793b7732cc9456ebdddfd998bd0c07583198d8c187fb43c963804670"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  }
+}

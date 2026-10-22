@@ -1,0 +1,21 @@
+{
+  "id": "budget/bike/retclean_ample",
+  "dataset": "bike",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 83408,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "a29914c164c9e2cc7cffebacbfd2179862faf4fb8b78bc0fb1b416a5f3580cfc"
+    }
+  }
+}

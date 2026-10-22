@@ -1,0 +1,21 @@
+{
+  "dataset": "soilmoisture",
+  "method": "ActiveClean",
+  "model": "gb",
+  "metric": "r2",
+  "test": 0.9374068561720665,
+  "all_models": {
+    "gb": 0.9374068561720665,
+    "rf": 0.9342700004715463
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 407,
+  "n_test": 136,
+  "table_rows": 407,
+  "gt_cells": 25984,
+  "gt_pct": 29.896907216494846,
+  "redr": {
+    "redr": 0.4987714987714988
+  }
+}

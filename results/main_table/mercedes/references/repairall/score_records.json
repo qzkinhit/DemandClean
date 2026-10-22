@@ -1,0 +1,29 @@
+[
+  {
+    "dataset": "mercedes",
+    "model": "rf",
+    "metric": "r2",
+    "test": 0.3936883946813713,
+    "n_train_rows": 2525,
+    "method": "RepairAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "mercedes",
+    "model": "ridge",
+    "metric": "r2",
+    "test": 0.4108666572536225,
+    "n_train_rows": 2525,
+    "method": "RepairAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "mercedes",
+    "model": "gb",
+    "metric": "r2",
+    "test": 0.435207119230402,
+    "n_train_rows": 2525,
+    "method": "RepairAll",
+    "encoding": "train_fitted"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "dataset": "soilmoisture",
+  "method": "Comet",
+  "model": "gb",
+  "metric": "r2",
+  "test": 0.8574316226582439,
+  "all_models": {
+    "gb": 0.8574316226582439,
+    "rf": 0.8446061961462191
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 407,
+  "n_test": 136,
+  "table_rows": 407,
+  "gt_cells": 51689,
+  "gt_pct": 59.4728000736377,
+  "redr": {
+    "redr": 0.0
+  }
+}

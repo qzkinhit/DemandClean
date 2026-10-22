@@ -1,0 +1,34 @@
+{
+  "id": "main_table/soilmoisture/baselines/saga",
+  "dataset": "soilmoisture",
+  "role": "baselines",
+  "method": "SAGA",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 87591,
+  "scoring": {
+    "model": "gb",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "6779c557499c4f0432a3c0ef9d36ae90083891572a45914dddee6b5a7b97973b",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included",
+    "execution_log_format": "excerpt of the recorded SystemDS log; parameter and timing lines only"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soilmoisture:saga:results/main_table/soilmoisture/baselines/saga/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "run_id": "main_table/har/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "har",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/har.yaml --variant full --seed 0",
+  "arguments": {
+    "n_episodes": 300,
+    "repair_lambda": 0.1
+  },
+  "seed": 0,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "kmeans",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.1
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-10-16T18:07:04+08:00",
+  "end_time": "2026-10-17T16:40:30+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true
+    },
+    "artifact_sha256": {
+      "cleaned.csv": "b9ac5086f27b5accf7bd8c17cab002f939ec94af293e416b67f99be6e936038b",
+      "cleaned_encoded.npz": "184f40ad085ea9730e39a0ed8c10d4565dfd29c19a5e2fbcbefede8ac39ebe3f",
+      "model/agent_stage1.pt": "7dd6b23ad1d9d2855f816db80a4ea676c7c9a1bbf482fa18c79426a5d3b2d1fb",
+      "model/agent_stage2.pt": "9f6e1d5206868d67686f8c13ee41b292bfbf86cbb09ab51388b46d1a185ca6dc"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "ground_truth_cells": 320,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/har/demandclean",
+    "checkpoint": "results/main_table/har/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "dataset": "bike",
+  "variant": "stage",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.9999182354697692,
+  "tol_rel": 0.9994188064025773,
+  "references": {
+    "NoFix": 0.8593161889715127,
+    "RepairAll": 1.0
+  },
+  "n_train_rows": 10351,
+  "n_test": 3476,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "04b9a4773aaef51dcc21303851ca0a098a0a5d8c16010663ee747d214d5c9b31"
+}

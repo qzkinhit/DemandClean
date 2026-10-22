@@ -1,0 +1,73 @@
+{
+  "status": "ok",
+  "n_train": 6366,
+  "n_val": 2122,
+  "n_test": 2122,
+  "gt_cells": 5000,
+  "rows_cleaned": 500,
+  "cells_per_record_without_index": 10,
+  "budget_cells": 5000,
+  "budget_rows": 500,
+  "batch_size": 50,
+  "iterations": 11,
+  "model": "linear_svm_hinge",
+  "model_regularisation": {
+    "C": 0.01,
+    "lam": 0.015708451146716932
+  },
+  "seed": 42,
+  "task": "classification",
+  "label_col": "manager",
+  "label_source": "dirty",
+  "train_labels_replaced_by_protocol": 0,
+  "python": "3.8.20",
+  "finished": "2026-10-18 13:52:44",
+  "secs": 1.217,
+  "wall_secs": 1.33,
+  "step_constant": 1.0,
+  "output_iteration": 11,
+  "dataset": "soccer",
+  "method": "ActiveClean",
+  "configuration": {
+    "feature_cols": [
+      "name",
+      "surname",
+      "birthyear",
+      "birthplace",
+      "position",
+      "team",
+      "city",
+      "stadium",
+      "season"
+    ],
+    "categorical_cols": [
+      "birthplace",
+      "city",
+      "name",
+      "position",
+      "stadium",
+      "surname",
+      "team"
+    ],
+    "clock_cols": [],
+    "label_col": "manager",
+    "task": "classification",
+    "budget_rows": 500,
+    "batch_size": 50,
+    "seed": 42,
+    "uniform_mix": 0.1,
+    "detector_min_per_class": 5,
+    "detector_margin": 1.0,
+    "detector_rare_class": 3,
+    "max_categories": 100,
+    "min_category_count": 2,
+    "z_clip": 10.0,
+    "svm_max_iter": 20000,
+    "step_constant": 1.0,
+    "model_regularisation": {
+      "C": 0.01,
+      "lam": 0.015708451146716932
+    }
+  },
+  "implementation": "ActiveClean adaptation described in baselines/THIRD_PARTY.md"
+}

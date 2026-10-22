@@ -1,0 +1,17 @@
+dataset: breast_cancer
+source: REIN
+task: classification
+label_col: class
+categorical_cols: []
+downstream_model: lr
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 6990
+training:
+  n_episodes: 300
+evaluation:
+  unseen_categories: nan
+second_model: gb
+seed: 0

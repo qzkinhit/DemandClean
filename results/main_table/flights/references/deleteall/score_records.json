@@ -1,0 +1,11 @@
+[
+  {
+    "dataset": "flights",
+    "model": "dt",
+    "metric": "accuracy",
+    "test": 0.8340336134453782,
+    "n_train_rows": 277,
+    "method": "DeleteAll",
+    "encoding": "nearest"
+  }
+]

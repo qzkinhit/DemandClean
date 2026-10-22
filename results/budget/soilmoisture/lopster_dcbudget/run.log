@@ -1,0 +1,47 @@
+Run started at 2026-10-18 14:09:55
+Lopster data cleaning
+dataset: soilmoisture
+data path: Data_lopdc
+task: soilmoisture_lopster_dcbudget
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: soilmoisture
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (20, 129) -> (20, 128)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (407, 129) -> (407, 128)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: soilmoisture
+run time: 264.26 s
+status: success
+ground-truth cost: 20 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 407
+  input rows: 407
+  index column restored
+  final column order: ['index', 'datetime', 'soil_temperature', '454', '458', '462', '466', '470', '474', '478', '482', '486', '490', '494', '498', '502', '506', '510', '514', '518', '522', '526', '530', '534', '538', '542', '546', '550', '554', '558', '562', '566', '570', '574', '578', '582', '586', '590', '594', '598', '602', '606', '610', '614', '618', '622', '626', '630', '634', '638', '642', '646', '650', '654', '658', '662', '666', '670', '674', '678', '682', '686', '690', '694', '698', '702', '706', '710', '714', '718', '722', '726', '730', '734', '738', '742', '746', '750', '754', '758', '762', '766', '770', '774', '778', '782', '786', '790', '794', '798', '802', '806', '810', '814', '818', '822', '826', '830', '834', '838', '842', '846', '850', '854', '858', '862', '866', '870', '874', '878', '882', '886', '890', '894', '898', '902', '906', '910', '914', '918', '922', '926', '930', '934', '938', '942', '946', '950', 'soil_moisture']
+  saved to: cleaned.csv
+  final rows: 407
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: soilmoisture_lopster_dcbudget

@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:13:47
+RepairAll baseline (every error replaced by its clean value)
+dirty table: data/nasa/dirty_index.csv (training rows)
+clean table: data/nasa/clean_index.csv (training rows)
+task: nasa_repairall
+output data saved: nasa_repairall_cleaned.csv
+input rows: 901
+repaired cells: 762
+run time: 0.21 s
+status: success
+ground-truth cost: 762
+
+results saved to: nasa_repairall
+log file: nasa_repairall.log

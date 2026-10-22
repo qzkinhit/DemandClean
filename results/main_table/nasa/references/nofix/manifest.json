@@ -1,0 +1,32 @@
+{
+  "id": "main_table/nasa/references/nofix",
+  "dataset": "nasa",
+  "role": "references",
+  "method": "NoFix",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 10521,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "a09892824c74bd1afc4ab95a01f34613c656f40ebc73c4acf5f0dc41858b3c58",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table nasa:nofix:results/main_table/nasa/references/nofix/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "dataset": "nasa",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "regression",
+  "n_episodes": 200,
+  "data_shape": [
+    901,
+    5
+  ],
+  "cleaned_shape": [
+    901,
+    5
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 418,
+    "delete": 0,
+    "replace_nearby": 4
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.9791666666666666,
+      "recall": 0.9276315789473685,
+      "f1": 0.9527027027027027,
+      "tp": 423,
+      "fp": 9,
+      "fn": 33,
+      "gt_count": 456,
+      "det_count": 432
+    }
+  }
+}

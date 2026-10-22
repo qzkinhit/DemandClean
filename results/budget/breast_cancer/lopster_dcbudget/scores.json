@@ -1,0 +1,13 @@
+{
+ "dataset": "breast_cancer",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "lr",
+ "metric": "accuracy",
+ "test": 0.9642857142857143,
+ "n_train_rows": 419,
+ "redr": {
+  "r_before": 248,
+  "r_after": 419,
+  "redr": -0.6895161290322581
+ }
+}

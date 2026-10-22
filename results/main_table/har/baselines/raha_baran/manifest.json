@@ -1,0 +1,34 @@
+{
+  "id": "main_table/har/baselines/raha_baran",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "Raha+Baran",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 80,
+  "gt_pct": 0.02857142857142857,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "63c37be29d5f4f4a9da4f1ede785ea83af398499980d2249d91aefebaae2a228",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:raha_baran:results/main_table/har/baselines/raha_baran/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

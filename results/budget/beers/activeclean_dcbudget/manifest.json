@@ -1,0 +1,20 @@
+{
+  "id": "budget/beers/activeclean_dcbudget",
+  "dataset": "beers",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 420,
+  "seconds": 12.029,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "d53cbf669b7be358aa000ec9efb61ca3f2e34d2f9ea9f186424ee55340569003"
+    }
+  }
+}

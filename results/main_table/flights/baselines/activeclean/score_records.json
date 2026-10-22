@@ -1,0 +1,14 @@
+[
+  {
+    "dataset": "flights",
+    "model": "dt",
+    "metric": "accuracy",
+    "test": 1.0,
+    "n_train_rows": 1425,
+    "n_test": 476,
+    "rows": 1425,
+    "sklearn": "1.3.2",
+    "method": "ActiveClean",
+    "encoding": "nearest"
+  }
+]

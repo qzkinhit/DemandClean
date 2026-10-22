@@ -1,0 +1,16 @@
+Run started at 2026-10-17 01:06:15
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: mercedes_deleteall
+deletion mode: drop_feature_errors
+output data saved: mercedes_deleteall_cleaned.csv
+input rows: 2525
+kept rows: 505
+deleted rows: 2020
+run time: 50.85 s
+status: success
+ground-truth cost: 2020
+
+results saved to: mercedes_deleteall
+log file: mercedes_deleteall.log

@@ -1,0 +1,9 @@
+{
+  "source_dataset": "beers",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "26dffbe38ffa00f15198595fdca641682c8bd96699ab626152e9abe7d7ed5063",
+    "agent_stage1.pt": "8bb680da3b7e53b0436a46f98f265361e69d06e0b4d2eddf3d256de3d5bde1cb"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

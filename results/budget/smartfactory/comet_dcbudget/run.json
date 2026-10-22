@@ -1,0 +1,106 @@
+{
+ "dataset": "smartfactory",
+ "method": "comet",
+ "paper": "Comet, Mohammed/Naumann/Harmouch, EDBT 2025",
+ "budget_mode": "gt_cells",
+ "cost_budget": null,
+ "gt_budget": 311,
+ "cost_model": "constant",
+ "n_train": 14187,
+ "n_val": 4729,
+ "n_test": 4729,
+ "n_features": 18,
+ "model": "rf",
+ "metric": "macro_f1",
+ "task": "classification",
+ "labels": "clean",
+ "label_diff_train": 0,
+ "comet_rows": 14187,
+ "n_clusters": null,
+ "deviations": [
+  "split, encoder and validation set given by the benchmark (reeval_unified.split_idx, preprocess_data fitted on the dirty training split), not the paper's own split",
+  "utility model rf with the common evaluator's hyperparameters (downstream model of the main table: rf), not the paper's model list",
+  "error types of the real dirty cells are assigned by classify_errors (missing, scaling by 10^k, Gaussian noise otherwise, categorical shift), the paper injects known error types",
+  "Estimator posterior in closed form instead of NUTS sampling (same Gaussian posterior)",
+  "training labels are the clean labels, as the common evaluator uses them",
+  "budget in ground-truth cells (311) instead of 50 cost units; the last step is truncated to the remaining cells"
+ ],
+ "step_fraction": 0.01,
+ "step_cells": 142,
+ "select_positives": true,
+ "dirty_feature_cells_train": 4324,
+ "dirty_cells_by_type": {
+  "MissingValues": 4324
+ },
+ "dirty_cells_by_pair": {
+  "i_w_blo_weg/MissingValues": 205,
+  "o_w_blo_power/MissingValues": 236,
+  "o_w_blo_voltage/MissingValues": 243,
+  "i_w_bhl_weg/MissingValues": 252,
+  "o_w_bhl_power/MissingValues": 244,
+  "o_w_bhl_voltage/MissingValues": 262,
+  "i_w_bhr_weg/MissingValues": 222,
+  "o_w_bhr_power/MissingValues": 239,
+  "o_w_bhr_voltage/MissingValues": 227,
+  "i_w_bru_weg/MissingValues": 235,
+  "o_w_bru_power/MissingValues": 269,
+  "o_w_bru_voltage/MissingValues": 257,
+  "i_w_hr_weg/MissingValues": 232,
+  "o_w_hr_power/MissingValues": 236,
+  "o_w_hr_voltage/MissingValues": 231,
+  "i_w_hl_weg/MissingValues": 231,
+  "o_w_hl_power/MissingValues": 258,
+  "o_w_hl_voltage/MissingValues": 245
+ },
+ "gt_cells": 311,
+ "gt_cells_applied": 195,
+ "gt_cells_reverted_never_applied": 116,
+ "cleaned_cells_by_pair": {
+  "o_w_hl_power/MissingValues": 142,
+  "i_w_blo_weg/MissingValues": 53
+ },
+ "cost_used": 3,
+ "iterations": 2,
+ "attempts": 3,
+ "applied_steps": 2,
+ "step_modes": {
+  "improved": 2
+ },
+ "stop_reason": "budget exhausted",
+ "val_score_initial": 0.9418798670372759,
+ "val_score_final": 0.9428886454107511,
+ "val_report_final": {
+  "macro_f1": 0.9428886454107511,
+  "accuracy": 0.9602452949883696
+ },
+ "secs_comet": 3354.76,
+ "secs": 3363.59,
+ "steps": [
+  {
+   "iteration": 1,
+   "pair": "o_w_hl_power/MissingValues",
+   "feature": "o_w_hl_power",
+   "error_type": "MissingValues",
+   "cells": 142,
+   "mode": "improved",
+   "f1_before": 0.9418798670372759,
+   "f1_after": 0.9428503473775693
+  },
+  {
+   "iteration": 2,
+   "pair": "i_w_blo_weg/MissingValues",
+   "feature": "i_w_blo_weg",
+   "error_type": "MissingValues",
+   "cells": 53,
+   "mode": "improved",
+   "f1_before": 0.9428503473775693,
+   "f1_after": 0.9428886454107511
+  }
+ ],
+ "command": "python baselines/runners/run_comet.py --dataset smartfactory --method_name comet --n_jobs 1 --gt_budget 311 --labels dirty --project_root . --output_root results/runs/baselines --records_path results/runs/baselines/records.jsonl",
+ "python": "3.8.20",
+ "numpy": "1.24.3",
+ "pandas": "2.0.3",
+ "sklearn": "1.3.2",
+ "finished": "2026-10-17T14:48:29"
+}

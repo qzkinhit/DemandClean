@@ -1,0 +1,20 @@
+{
+  "id": "budget/nasa/lopster_ample",
+  "dataset": "nasa",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 2700,
+  "seconds": 26.32,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "75ba9f2e10c58542a37baa0834cf32e80d7e877b08722be4e8798f7c1c41e1c7"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "breast_cancer",
+  "method": "RetClean",
+  "upstream": {
+    "repository": "https://github.com/qcri/RetClean",
+    "commit": "7e72d93109fdfe11c80aeefe42d2d8f1451d0d97",
+    "source_archive_sha256": "b16c99599589d05b8d570706c66a725e8761ce06a97c1f3601f57078a6301102"
+  },
+  "model": "llama3.1:8b (upstream Ollama local backend)",
+  "seed": 42,
+  "retrieval": "upstream semantic cosine top-3; Qdrant local storage",
+  "reranker": null,
+  "target_selection": "missing/type/published domain/FD, dirty-only",
+  "reference_lake": "fixed random training rows holding at least as many cells as the GT that DemandClean reads on this dataset, all non-index cells charged",
+  "pivot_selection": "first eight other non-label input features, fixed column order",
+  "val_used_for_selection": false,
+  "api_cost_usd": 0,
+  "source_parser_adaptation": "ast.literal_eval instead of eval; same response format",
+  "queries": 224,
+  "failed_queries": 0,
+  "representation": "cleaned_table",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 210,
+  "runner": "baselines/runners/run_retclean/run_retclean_dcbudget.py"
+}

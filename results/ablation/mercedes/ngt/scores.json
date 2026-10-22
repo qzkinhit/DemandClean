@@ -1,0 +1,16 @@
+{
+  "dataset": "mercedes",
+  "variant": "ngt",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.35236689156926193,
+  "tol_rel": -0.22595270578317947,
+  "references": {
+    "NoFix": 0.3599827689119728,
+    "RepairAll": 0.3936883946813713
+  },
+  "n_train_rows": 505,
+  "n_test": 842,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "1844e21d6a5317ad9d38592f7eb82d6c3261897579d396ce452408b5a319a890"
+}

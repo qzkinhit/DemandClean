@@ -1,0 +1,13 @@
+{
+ "dataset": "smartfactory",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.7024740960033834,
+ "n_train_rows": 14187,
+ "redr": {
+  "r_before": 4324,
+  "r_after": 14187,
+  "redr": -2.280989824236818
+ }
+}

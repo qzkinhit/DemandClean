@@ -1,0 +1,5 @@
+{
+  "dataset": "har",
+  "method": "SimpleImputer",
+  "seconds": 0.6
+}

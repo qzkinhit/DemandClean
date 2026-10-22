@@ -1,0 +1,20 @@
+{
+  "id": "budget/adult/lopster_dcbudget",
+  "dataset": "adult",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 900,
+  "seconds": 388.09,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "0f44de8577f8c494c6ac11348613e26428c05065ef06160bb0baa6ba9cedbf75"
+    }
+  }
+}

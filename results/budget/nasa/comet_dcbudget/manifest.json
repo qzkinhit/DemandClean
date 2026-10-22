@@ -1,0 +1,20 @@
+{
+  "id": "budget/nasa/comet_dcbudget",
+  "dataset": "nasa",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 4505,
+  "seconds": 26.11,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "cfa478dd844ea57325df3a0d792abec302361922f76952f1ca6e9ea873a520d7"
+    }
+  }
+}

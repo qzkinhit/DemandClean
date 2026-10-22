@@ -1,0 +1,21 @@
+{
+  "id": "budget/hospitals/retclean_dcbudget",
+  "dataset": "hospitals",
+  "role": "budget",
+  "method": "RetClean (lower GT level)",
+  "ground_truth_cells": 304,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "53598d58f11d1080964c785c293d44f8965cf482efa6c07a23de86764af47303"
+    }
+  }
+}

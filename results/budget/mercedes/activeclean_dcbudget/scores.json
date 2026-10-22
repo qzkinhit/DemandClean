@@ -1,0 +1,13 @@
+{
+ "dataset": "mercedes",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "rf",
+ "metric": "r2",
+ "test": 0.39364613125918135,
+ "n_train_rows": 2525,
+ "redr": {
+  "r_before": 2525,
+  "r_after": 2440,
+  "redr": 0.033663366336633666
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "adult",
+  "method": "DeleteAll",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.8560530679933664,
+  "all_models": {
+    "rf": 0.8560530679933664,
+    "gb": 0.8681039248203427
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 26103,
+  "table_rows": 26103,
+  "gt_cells": 406995,
+  "gt_pct": 59.99955773738446
+}

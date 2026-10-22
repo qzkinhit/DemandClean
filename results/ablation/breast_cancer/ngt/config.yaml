@@ -1,0 +1,17 @@
+dataset: breast_cancer
+source: REIN
+task: classification
+label_col: class
+categorical_cols: []
+downstream_model: lr
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 6990
+training:
+  n_episodes: 300
+  repair_lambda: 0.03
+  max_repair_ratio: 0.3
+  max_truth_budget: 0
+  reward_model_type: random_forest

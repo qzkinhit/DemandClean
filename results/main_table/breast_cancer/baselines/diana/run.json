@@ -1,0 +1,62 @@
+{
+  "dataset": "breast_cancer",
+  "method": "DIANA",
+  "upstream": {
+    "repository": "https://github.com/camillasancricca/diana-repo",
+    "commit": "88e9b54161453893b93c679939206b420a472e1a"
+  },
+  "plan": {
+    "first_dimension": "accuracy",
+    "completion": {
+      "Clump Thickness": "impute_random_forest",
+      "Uniformity of Cell Size": "impute_random_forest",
+      "Uniformity of Cell Shape": "impute_random_forest",
+      "Marginal Adhesion": "impute_random_forest",
+      "Single Epithelial Cell Size": "impute_random_forest",
+      "Bare Nuclei": "impute_random_forest",
+      "Bland Chromatin": "impute_random_forest",
+      "Normal Nucleoli": "impute_random_forest",
+      "Mitoses": "impute_median"
+    },
+    "accuracy": {
+      "Clump Thickness": "ISO",
+      "Uniformity of Cell Size": "ISO",
+      "Uniformity of Cell Shape": "ISO",
+      "Marginal Adhesion": "ISO",
+      "Single Epithelial Cell Size": "ISO",
+      "Bare Nuclei": "ISO",
+      "Bland Chromatin": "ISO",
+      "Normal Nucleoli": "ISO",
+      "Mitoses": "ISO"
+    },
+    "feature_order": [
+      "Clump Thickness",
+      "Uniformity of Cell Size",
+      "Uniformity of Cell Shape",
+      "Marginal Adhesion",
+      "Single Epithelial Cell Size",
+      "Bare Nuclei",
+      "Bland Chromatin",
+      "Normal Nucleoli",
+      "Mitoses"
+    ],
+    "model": "LogisticRegression"
+  },
+  "adaptations": [
+    "canonical dirty-train-fitted numeric representation; target labels unchanged",
+    "official KB model recommendations and official per-column impute/outlier functions",
+    "dataset feature order fixed to canonical feature order; no factorial permutation search from fixed seven-column demo",
+    "ordered-count optimization of entropy/density preserves original formulas",
+    "Python3.11/NumPy2/sklearn1.5.2 for native RF missing-value support; canonical final scorer remains sklearn1.3.2"
+  ],
+  "test_features_check": "stored test features equal the canonical clean test encoding",
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diana/diana_run.py, then diana_rescore.py"
+}

@@ -1,0 +1,11 @@
+# =============================================================================
+# Dataset: har (Human Activity Recognition)
+# =============================================================================
+# 70,000 rows x 5 cols; classification (gt: {sit, stand})
+# Errors: outliers + empty values; labels include empty values
+# =============================================================================
+
+[DOMAIN]
+gt: ENUM {sit, stand}
+
+[FD]

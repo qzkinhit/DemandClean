@@ -1,0 +1,11 @@
+{
+  "dataset": "har",
+  "method": "RetClean (lower GT level)",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.7994527201512157,
+  "nearest": false,
+  "n_train_rows": 40368,
+  "gt_cells": 4620,
+  "gt_pct": 1.65
+}

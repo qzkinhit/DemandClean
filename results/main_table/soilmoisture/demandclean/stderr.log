@@ -1,0 +1,6 @@
+[264957 lines "Discarding [<row values>] (invalid types)" of the RAHA strategies omitted]
+[13:58:41] INFO:   Clean base selection (5-fold CV, weighted by the row retention rate):
+[13:58:41] INFO:     DeleteFix: 81 rows, CV=0.0657, weight=0.446, weighted=0.0293
+[13:58:41] INFO:     VE-Fill:   407 rows, CV=0.1787, weight=1.000, weighted=0.1787
+[13:58:41] INFO:     -> selected VE-Fill (407 rows)
+[14:03:17] INFO: Model saved: model/agent.pt

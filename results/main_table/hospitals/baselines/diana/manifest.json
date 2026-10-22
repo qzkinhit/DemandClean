@@ -1,0 +1,30 @@
+{
+  "id": "main_table/hospitals/baselines/diana",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "DIANA",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 19000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "9e2cc4e5ff3681c853cee089e49e41a98779289467e0125bdf87cbddd6f53eb1",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:diana:results/main_table/hospitals/baselines/diana/cleaned_encoded.npz --nearest",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "run.json",
+    "scores.json"
+  ]
+}

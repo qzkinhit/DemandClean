@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:33:48
+SimpleImputer data cleaning (mean)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: adult_simpleimputer
+fill strategy: mean
+repaired data saved: adult_simpleimputer_cleaned.csv
+run time: 1.51 s
+status: success
+filled cells: 0
+ground-truth cost: 0 (fully automatic)
+
+results saved to: adult_simpleimputer
+log file: adult_simpleimputer.log

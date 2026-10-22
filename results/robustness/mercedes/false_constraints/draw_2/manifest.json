@@ -1,0 +1,55 @@
+{
+  "dataset": "mercedes",
+  "experiment": "robustness",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "ridge"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "8996d24fd713dda85789e6d31b9d810ffe4a11b3a7e4a4d4adb4f0ded30ccd4b"
+  },
+  "checkpoint": "results/robustness/models/mercedes",
+  "rules": "results/robustness/mercedes/false_constraints/draw_2/rules.txt",
+  "command": "python scripts/run_demandclean.py --config results/robustness/mercedes/false_constraints/draw_2/config.yaml --variant full --seed 0 --rules results/robustness/mercedes/false_constraints/draw_2/rules.txt --checkpoint results/robustness/models/mercedes --out results/runs/robustness_mercedes_false_constraints_draw2",
+  "score_command": "python evaluation/paper_score.py results/robustness/mercedes/false_constraints/draw_2",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "e329bf64cbd23ef292d6dfbe168ca346d20f2f4c0a38653cbd586b4617446fef"
+    },
+    "rules_sha256": "b71e2e29525743f370aa29d7987a57537edccd822c43cbcba8da4ff72b7f449f",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "ba6f511799105c3a113f24bc18378ffc85303562c1854622f9f904b4508600e0",
+      "agent_stage2.pt": "b88268f9e435fd93c94140fb2840a3f6df010e5c96e52c71ab796cb5530a9ad5"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 17210.0
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json",
+    "rules.txt"
+  ],
+  "condition": "false_constraints",
+  "rule_draw": 2
+}

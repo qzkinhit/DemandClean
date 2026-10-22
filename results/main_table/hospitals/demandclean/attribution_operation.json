@@ -1,0 +1,32 @@
+{
+  "dataset": "hospitals",
+  "model": "rf",
+  "reads_clean_training_rows": false,
+  "v_empty": 1.0,
+  "v_full": 1.0,
+  "run_score": 1.0,
+  "full_equals_run": true,
+  "phi": {
+    "write": 0.0,
+    "del": 0.0
+  },
+  "phi_hat": {
+    "write": null,
+    "del": null
+  },
+  "coalitions": {
+    "none": 1.0,
+    "write": 1.0,
+    "del": 1.0,
+    "write+del": 1.0
+  },
+  "cells": {
+    "write": 1074,
+    "del_rows": 143
+  },
+  "run": "results/main_table/hospitals/demandclean",
+  "provenance": {
+    "encoded_sha256": "b9ee5bf9e8fef77bcd096bb43b31fc1967fc395d082b71f8151f0ebe7daf34bd",
+    "ordered_index_format": "Decimal-normalized index values, one per line in output order."
+  }
+}

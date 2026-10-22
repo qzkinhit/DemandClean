@@ -1,0 +1,11 @@
+{
+  "dataset": "smartfactory",
+  "method": "RetClean (lower GT level)",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.9648974413195178,
+  "nearest": false,
+  "n_train_rows": 14187,
+  "gt_cells": 7410,
+  "gt_pct": 1.6493973355889195
+}

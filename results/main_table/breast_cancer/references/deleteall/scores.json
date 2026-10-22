@@ -1,0 +1,17 @@
+{
+  "dataset": "breast_cancer",
+  "method": "DeleteAll",
+  "model": "lr",
+  "metric": "accuracy",
+  "test": 0.9714285714285714,
+  "all_models": {
+    "lr": 0.9714285714285714,
+    "gb": 0.95
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 84,
+  "table_rows": 84,
+  "gt_cells": 4190,
+  "gt_pct": 59.94277539341917
+}

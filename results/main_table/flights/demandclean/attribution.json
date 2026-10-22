@@ -1,0 +1,26 @@
+{
+  "dataset": "flights",
+  "run": "results/main_table/flights/demandclean",
+  "model": "dt",
+  "v_empty": 0.9411764705882353,
+  "v_full": 1.0,
+  "run_score": 1.0,
+  "full_equals_run": true,
+  "phi": {
+    "gt": 0.03466386554621853,
+    "del": 0.0,
+    "ve": 0.024159663865546188
+  },
+  "phi_hat": {
+    "noop": 0.0,
+    "gt": 0.5893,
+    "del": 0.0,
+    "ve": 0.4107
+  },
+  "operation_counts": {
+    "noop": 152,
+    "gt": 4,
+    "del": 0,
+    "ve": 1197
+  }
+}

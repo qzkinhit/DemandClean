@@ -1,0 +1,9 @@
+{
+  "source_dataset": "breast_cancer",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "44338e6b4628a6d241edd88e80e13991126681c146baa2ddb75e55ba5f21af19",
+    "agent_stage1.pt": "360609aa5947b5d180bfe4e6b2109e7748fa521d1ffb02fe8f7a73137009d236"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

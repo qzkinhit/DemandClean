@@ -1,0 +1,20 @@
+{
+  "dataset": "smartfactory",
+  "method": "Raha+Baran",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.962148445760203,
+  "all_models": {
+    "rf": 0.962148445760203,
+    "gb": 0.7912877986889406
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 14187,
+  "table_rows": 14187,
+  "gt_cells": 380,
+  "gt_pct": 0.08458447874814971,
+  "redr": {
+    "redr": 0.16512488436632747
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "adult",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.8494195688225539,
+  "tol_rel": -0.5238095238095284,
+  "references": {
+    "NoFix": 0.8518518518518519,
+    "RepairAll": 0.8564953012714207
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.28670634920634924,
+  "n_train_rows": 27133,
+  "n_test": 9045,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "f512cc7ed0258c48324c0cd4e89bb9254db8c724cde170c8754730bf739a3a0d"
+}

@@ -1,0 +1,14 @@
+Run started at 2026-10-17 01:05:41
+RepairAll baseline (every error replaced by its clean value)
+dirty table: data/mercedes/dirty_index.csv (training rows)
+clean table: data/mercedes/clean_index.csv (training rows)
+task: mercedes_repairall
+output data saved: mercedes_repairall_cleaned.csv
+input rows: 2525
+repaired cells: 929220
+run time: 31.72 s
+status: success
+ground-truth cost: 929220
+
+results saved to: mercedes_repairall
+log file: mercedes_repairall.log

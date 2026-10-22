@@ -1,0 +1,71 @@
+{
+  "run_id": "main_table/breast_cancer/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "breast_cancer",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/breast_cancer.yaml --variant full --seed 0",
+  "arguments": {
+    "n_episodes": 300
+  },
+  "seed": 0,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-10-16T20:54:24+08:00",
+  "end_time": "2026-10-16T20:58:46+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true,
+      "policy_equals_policy_written_by_log": true
+    },
+    "artifact_sha256": {
+      "cleaned.csv": "818bd386cef5c9facb0234d795b38704ec52985a485262363c30c2d71666d693",
+      "cleaned_encoded.npz": "2dfd820b1b4424ba1ee439dd0aff584996447761acd104f9b92c4935d0c00bf0",
+      "model/agent_stage1.pt": "bf318100c34838d839ff8084075521d75bdfbc60a1f9421ed0a8683b0c5d3fd7",
+      "model/agent_stage2.pt": "6099680801c1de23fdf6e84b4138313f57d939d0cd882f14f022ff7ba17a3c44"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "ground_truth_cells": 205,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/breast_cancer/demandclean",
+    "checkpoint": "results/main_table/breast_cancer/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

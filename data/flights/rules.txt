@@ -1,0 +1,2 @@
+[DOMAIN]
+arrival_delay_bucket: ENUM {early, late, on_time}

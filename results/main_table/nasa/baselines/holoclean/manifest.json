@@ -1,0 +1,34 @@
+{
+  "id": "main_table/nasa/baselines/holoclean",
+  "dataset": "nasa",
+  "role": "baselines",
+  "method": "HoloClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 10521,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "7cac3f522826b04d43806566c3727a1ac2f828fa1ccf2582716c8f541581335b",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table nasa:holoclean:results/main_table/nasa/baselines/holoclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

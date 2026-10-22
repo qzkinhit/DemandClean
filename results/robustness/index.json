@@ -1,0 +1,780 @@
+{
+  "datasets": [
+    "adult",
+    "beers",
+    "breast_cancer",
+    "smartfactory",
+    "bike",
+    "mercedes",
+    "nasa",
+    "soilmoisture",
+    "har"
+  ],
+  "conditions": [
+    "full",
+    "remove25",
+    "remove50",
+    "remove75",
+    "false_constraints",
+    "dirty_derived"
+  ],
+  "protocol": "Each removal level and the false-constraint condition use three fixed random library draws. Full and dirty-derived libraries use one run per dataset.",
+  "runs": [
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/robustness/mercedes/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "adult",
+      "run": "results/robustness/adult/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/robustness/breast_cancer/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/robustness/nasa/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "har",
+      "run": "results/robustness/har/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "beers",
+      "run": "results/robustness/beers/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/dirty_derived",
+      "condition": "dirty_derived",
+      "draw": null
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove25/draw_0",
+      "condition": "remove25",
+      "draw": 0
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove25/draw_2",
+      "condition": "remove25",
+      "draw": 2
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove50/draw_0",
+      "condition": "remove50",
+      "draw": 0
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove50/draw_1",
+      "condition": "remove50",
+      "draw": 1
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove50/draw_2",
+      "condition": "remove50",
+      "draw": 2
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove75/draw_1",
+      "condition": "remove75",
+      "draw": 1
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/full",
+      "condition": "full",
+      "draw": null
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/false_constraints/draw_1",
+      "condition": "false_constraints",
+      "draw": 1
+    },
+    {
+      "dataset": "bike",
+      "run": "results/robustness/bike/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/robustness/smartfactory/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove25/draw_1",
+      "condition": "remove25",
+      "draw": 1
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove75/draw_0",
+      "condition": "remove75",
+      "draw": 0
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/remove75/draw_2",
+      "condition": "remove75",
+      "draw": 2
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/false_constraints/draw_0",
+      "condition": "false_constraints",
+      "draw": 0
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/robustness/soilmoisture/false_constraints/draw_2",
+      "condition": "false_constraints",
+      "draw": 2
+    }
+  ]
+}

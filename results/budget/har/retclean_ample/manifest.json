@@ -1,0 +1,21 @@
+{
+  "id": "budget/har/retclean_ample",
+  "dataset": "har",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 84000,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "a0dcc1ef5e3ee9044df012d83f55945734afe4482cdf86e5ff3dc1178c73a507"
+    }
+  }
+}

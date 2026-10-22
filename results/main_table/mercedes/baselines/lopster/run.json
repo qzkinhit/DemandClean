@@ -1,0 +1,9 @@
+{
+  "dataset": "mercedes",
+  "method": "Lopster",
+  "seconds": 2226.65,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant",
+    "preserve the input target column"
+  ]
+}

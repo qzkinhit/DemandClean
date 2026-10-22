@@ -1,0 +1,9 @@
+{
+  "source_dataset": "mercedes",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "b88268f9e435fd93c94140fb2840a3f6df010e5c96e52c71ab796cb5530a9ad5",
+    "agent_stage1.pt": "ba6f511799105c3a113f24bc18378ffc85303562c1854622f9f904b4508600e0"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

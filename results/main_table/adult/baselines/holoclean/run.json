@@ -1,0 +1,5 @@
+{
+  "dataset": "adult",
+  "method": "HoloClean",
+  "seconds": 20.79
+}

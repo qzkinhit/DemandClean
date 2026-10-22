@@ -1,0 +1,54 @@
+{
+  "dataset": "mercedes",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "ridge"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "8996d24fd713dda85789e6d31b9d810ffe4a11b3a7e4a4d4adb4f0ded30ccd4b"
+  },
+  "checkpoint": "results/robustness/models/bike",
+  "rules": "results/transfer/rules/mercedes.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/bike/mercedes/config.yaml --variant full --seed 0 --rules results/transfer/rules/mercedes.txt --checkpoint results/robustness/models/bike --out results/runs/transfer_mercedes_bike",
+  "score_command": "python evaluation/paper_score.py results/transfer/bike/mercedes",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "51626f9ece0d0c41d3661929727eb05de961490b9454e053b5ac1c3318590c2e"
+    },
+    "rules_sha256": "5d77a1198c9c26dbcaf6f76b0bd7f313014d3f3c88a857150b27c2539bff00f0",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "9a1b8a7c585a06b0fd3d81e34fd8f2228159d10bd7712c6f92b3e94733e65cbe",
+      "agent_stage2.pt": "610d92c8b3432783d9b849b76f7fe690fa71c866994ec140eb58a3dc422f62c4"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 18727.48
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "bike",
+  "target_dataset": "mercedes"
+}

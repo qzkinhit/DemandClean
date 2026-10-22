@@ -1,0 +1,34 @@
+{
+  "id": "main_table/bike/baselines/saga",
+  "dataset": "bike",
+  "role": "baselines",
+  "method": "SAGA",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 295443,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "c4c2146a03f4c953f5b386f3951b389e1959de2ee5dff886535f817bdafe3882",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included",
+    "execution_log_format": "excerpt of the recorded SystemDS log; parameter and timing lines only"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table bike:saga:results/main_table/bike/baselines/saga/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

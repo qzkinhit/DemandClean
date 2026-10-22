@@ -1,0 +1,20 @@
+{
+  "id": "budget/smartfactory/lopster_ample",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 134767,
+  "seconds": 599.45,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "227602f6adface8bd905c8bec875c6a88aaecd965897287bf0f8e51d3b201f5c"
+    }
+  }
+}

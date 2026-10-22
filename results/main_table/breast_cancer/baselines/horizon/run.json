@@ -1,0 +1,5 @@
+{
+  "dataset": "breast_cancer",
+  "method": "Horizon",
+  "seconds": 0.77
+}

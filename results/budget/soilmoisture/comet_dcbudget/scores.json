@@ -1,0 +1,13 @@
+{
+ "dataset": "soilmoisture",
+ "method": "Comet (GT budget of DemandClean)",
+ "model": "gb",
+ "metric": "r2",
+ "test": 0.8574316226582439,
+ "n_train_rows": 407,
+ "redr": {
+  "r_before": 407,
+  "r_after": 407,
+  "redr": 0.0
+ }
+}

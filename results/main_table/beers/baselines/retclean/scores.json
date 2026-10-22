@@ -1,0 +1,17 @@
+{
+  "dataset": "beers",
+  "method": "RetClean",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.35281837160751567,
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 1442,
+  "n_test": 479,
+  "table_rows": 1446,
+  "gt_cells": 6507,
+  "gt_pct": 27.0,
+  "redr": {
+    "redr": 0.5594744121715076
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "main_table/breast_cancer/baselines/holoclean",
+  "dataset": "breast_cancer",
+  "role": "baselines",
+  "method": "HoloClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 7689,
+  "scoring": {
+    "model": "lr",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "2e389ebbcaf45b6bca8e5fd5f66c745bcfdb079b5114b717b1de77bdc3f30e61",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table breast_cancer:holoclean:results/main_table/breast_cancer/baselines/holoclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "bike",
+  "method": "ReplaceAll",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.9983737704690058,
+  "all_models": {
+    "lr": 0.9983737704690058,
+    "lasso": 0.9993297926534608
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 10427,
+  "table_rows": 17379,
+  "gt_cells": 166832,
+  "gt_pct": 59.997698371597906
+}

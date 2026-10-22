@@ -1,0 +1,34 @@
+{
+  "id": "main_table/soilmoisture/baselines/horizon",
+  "dataset": "soilmoisture",
+  "role": "baselines",
+  "method": "Horizon",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 87591,
+  "scoring": {
+    "model": "gb",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "45648fb45d8fa93f96aefa8152657287825d7848563cfc570ae4b97359510b20",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soilmoisture:horizon:results/main_table/soilmoisture/baselines/horizon/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,14 @@
+Running CtxPipe with dirty file: data/har/dirty_index.csv
+Task name: har_ctxpipe
+Model tag: ctx_50000
+
+CtxPipe output saved to: har_ctxpipe_cleaned.csv
+Pipeline info saved to: har_ctxpipe_pipeline_info.txt
+
+CtxPipe Results:
+AI Sequence: ['ImputerNumMode', 'ImputerCatMode', 'LabelEncoder', 'VarianceThreshold', 'PowerTransformer', 'RandomTreesEmbedding']
+ML Score: -1.0000
+Execution Time: 14.35 seconds
+
+CtxPipe finished successfully!
+Results saved to: har_ctxpipe

@@ -1,0 +1,5 @@
+{
+  "dataset": "adult",
+  "method": "BoostClean",
+  "seconds": 5.92
+}

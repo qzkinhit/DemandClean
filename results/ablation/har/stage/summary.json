@@ -1,0 +1,20 @@
+{
+  "dataset": "har",
+  "variant": "stage",
+  "task": "clustering",
+  "n_episodes": 300,
+  "data_shape": [
+    42000,
+    3
+  ],
+  "cleaned_shape": [
+    21487,
+    3
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 0,
+    "delete": 20513,
+    "replace_nearby": 0
+  }
+}

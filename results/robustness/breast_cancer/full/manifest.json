@@ -1,0 +1,55 @@
+{
+  "dataset": "breast_cancer",
+  "experiment": "robustness",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "b2c03ee82eb73a7a356ebd72586383ffc6cf30dfd4de18f39c2b1219b1921f07"
+  },
+  "checkpoint": "results/robustness/models/breast_cancer",
+  "rules": "results/robustness/breast_cancer/full/rules.txt",
+  "command": "python scripts/run_demandclean.py --config results/robustness/breast_cancer/full/config.yaml --variant full --seed 0 --rules results/robustness/breast_cancer/full/rules.txt --checkpoint results/robustness/models/breast_cancer --out results/runs/robustness_breast_cancer_full",
+  "score_command": "python evaluation/paper_score.py results/robustness/breast_cancer/full",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "0ec79de1dd6a268313111f8a28ce3b1333f25efc805bac95386ea50b3eb15e7e"
+    },
+    "rules_sha256": "eec2c359002ba732f00279a052944eb2a890356a2bdc4a6e9664ec070a84622b",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "360609aa5947b5d180bfe4e6b2109e7748fa521d1ffb02fe8f7a73137009d236",
+      "agent_stage2.pt": "44338e6b4628a6d241edd88e80e13991126681c146baa2ddb75e55ba5f21af19"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 59.2
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json",
+    "rules.txt"
+  ],
+  "condition": "full",
+  "rule_draw": null
+}

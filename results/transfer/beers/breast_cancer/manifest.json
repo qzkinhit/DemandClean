@@ -1,0 +1,54 @@
+{
+  "dataset": "breast_cancer",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "b2c03ee82eb73a7a356ebd72586383ffc6cf30dfd4de18f39c2b1219b1921f07"
+  },
+  "checkpoint": "results/robustness/models/beers",
+  "rules": "results/transfer/rules/breast_cancer.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/beers/breast_cancer/config.yaml --variant full --seed 0 --rules results/transfer/rules/breast_cancer.txt --checkpoint results/robustness/models/beers --out results/runs/transfer_breast_cancer_beers",
+  "score_command": "python evaluation/paper_score.py results/transfer/beers/breast_cancer",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "0cbc53ac91d1e7b58cff69697d1ed5897b708a0e994054fbdee05a167da15228"
+    },
+    "rules_sha256": "eec2c359002ba732f00279a052944eb2a890356a2bdc4a6e9664ec070a84622b",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "8bb680da3b7e53b0436a46f98f265361e69d06e0b4d2eddf3d256de3d5bde1cb",
+      "agent_stage2.pt": "26dffbe38ffa00f15198595fdca641682c8bd96699ab626152e9abe7d7ed5063"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 64.75
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "beers",
+  "target_dataset": "breast_cancer"
+}

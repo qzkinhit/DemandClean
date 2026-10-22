@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "bike",
+    "model": "lr",
+    "metric": "r2",
+    "test": 0.8618687391924611,
+    "n_train_rows": 10427,
+    "method": "Horizon",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "bike",
+    "model": "lasso",
+    "metric": "r2",
+    "test": 0.8595689467057946,
+    "n_train_rows": 10427,
+    "method": "Horizon",
+    "encoding": "train_fitted"
+  }
+]

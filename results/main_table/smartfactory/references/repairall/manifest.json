@@ -1,0 +1,32 @@
+{
+  "id": "main_table/smartfactory/references/repairall",
+  "dataset": "smartfactory",
+  "role": "references",
+  "method": "RepairAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 269553,
+  "gt_pct": 60.0,
+  "gt_denominator": 472900,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "d728d10867265c2fbef98ae39ab73615157cf62a9fa44e4b12de8bd3dd48d2f5",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table smartfactory:repairall:results/main_table/smartfactory/references/repairall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

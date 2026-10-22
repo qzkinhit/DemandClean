@@ -1,0 +1,90 @@
+======================================================================
+DemandClean
+======================================================================
+Datasets: ['smartfactory']
+Variant: full
+Episodes: 300
+Verbose: False
+Split: 60/20/20 train/validation/test, reward on the clean validation split
+======================================================================
+
+######################################################################
+# Dataset: smartfactory
+######################################################################
+Seed: 0
+
+  60/20/20 split: train=14187, val=4729, test=4729
+  training split written to a CSV file for RAHA
+  Dataset: smartfactory
+  Dirty:   (14187, 18)
+  Features: 18, label: labels
+  Categorical cols: (none)
+  LE fit: dirty only (14187 rows)
+  SS fit: dirty only (14187 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(14187, 18), X_clean_train=(14187, 18), X_clean_val=(4729, 18), X_clean_test=(4729, 18)
+
+======================================================================
+Method: DemandClean
+Dataset: smartfactory | task: classification | reward model: random_forest
+Detector: hybrid | agent: dueling_two_stage | inference: offline
+Episodes: 300
+======================================================================
+
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+
+[Step 2] training (300 episodes)...
+  RAHA detected: 1587 cells
+  Precision=0.9950  Recall=0.5147  F1=0.6784
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 670 cells
+  Precision=0.9075  Recall=0.4841  F1=0.6314
+  RAHA labelled rows: 20 (labeling_budget=20)
+  model saved: model/agent.pt
+  [time] Step 2 (train): 9683.62s
+
+[Step 3] inference (offline)...
+  repair plan: 271 ground-truth values requested
+  ground-truth repairs: 271
+  operations: {'no_op': 610, 'gt_repair': 271, 'delete': 2743, 've_replace': 770}
+  cleaned data saved: cleaned.csv
+  encoded data saved: cleaned_encoded.npz
+  [time] Step 3 (infer): 154.31s
+
+[Step 4] detection accuracy...
+  [time] Step 4 (detector eval): 1.21s
+
+[Step 9] downstream evaluation...
+  [downstream] encoded cleaned training split
+  train=11452 rows, test=4729 rows (clean test split)
+RF - Accuracy: 0.9687
+LR - Accuracy: 0.7615
+SVM - Accuracy: 0.7657
+KNN - Accuracy: 0.8061
+DT - Accuracy: 0.9490
+GB - Accuracy: 0.7966
+  [time] Step 9 (downstream eval): 235.99s
+
+[Step 10] ground-truth cells...
+  calibration seed set: 40 cells
+  ground-truth repairs: 271 cells
+  total: 311 / 255366 cells of the training split = 0.1218%
+  [time] Step 10 (cost summary): 0.00s
+
+  Step timing
+  Step 1  init            |      0.00s
+  Step 2  train           |   9683.62s
+  Step 3  infer           |    154.31s
+  Step 4  detector eval   |      1.21s
+  Step 9  downstream eval |    235.99s
+  Step 10 cost summary    |      0.00s
+  total                    | 10178.07s
+  plots                    | 3.48s
+  net                      | 10174.59s
+
+  DemandClean finished, net time 10174.59s
+
+======================================================================
+All done. Total time: 10179.16s
+======================================================================

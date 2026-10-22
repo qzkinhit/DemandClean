@@ -1,0 +1,32 @@
+{
+  "id": "main_table/hospitals/baselines/lopster",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "Lopster",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 20000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "f6a30bfcd8dbdccacdf844b2a9b74a849503fbd96592b604cc353aad169faa3d",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "execution_mode": "input_passthrough",
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:lopster:results/main_table/hospitals/baselines/lopster/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

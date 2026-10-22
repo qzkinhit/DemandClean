@@ -1,0 +1,77 @@
+{
+  "dataset": "adult",
+  "method": "DIANA",
+  "upstream": {
+    "repository": "https://github.com/camillasancricca/diana-repo",
+    "commit": "88e9b54161453893b93c679939206b420a472e1a"
+  },
+  "plan": {
+    "first_dimension": "accuracy",
+    "completion": {
+      "age": "impute_standard",
+      "workclass": "impute_standard",
+      "fnlwgt": "impute_standard",
+      "education": "impute_standard",
+      "educational_num": "impute_standard",
+      "marital_status": "impute_standard",
+      "occupation": "impute_standard",
+      "relationship": "impute_standard",
+      "race": "impute_standard",
+      "gender": "impute_standard",
+      "capital_gain": "impute_standard",
+      "capital_loss": "impute_standard",
+      "hours_per_week": "impute_standard",
+      "native_country": "impute_standard"
+    },
+    "accuracy": {
+      "age": "KNN",
+      "workclass": "KNN",
+      "fnlwgt": "ZSB",
+      "education": "KNN",
+      "educational_num": "KNN",
+      "marital_status": "KNN",
+      "occupation": "KNN",
+      "relationship": "KNN",
+      "race": "IQR",
+      "gender": "KNN",
+      "capital_gain": "ISO",
+      "capital_loss": "ISO",
+      "hours_per_week": "KNN",
+      "native_country": "IQR"
+    },
+    "feature_order": [
+      "age",
+      "workclass",
+      "fnlwgt",
+      "education",
+      "educational_num",
+      "marital_status",
+      "occupation",
+      "relationship",
+      "race",
+      "gender",
+      "capital_gain",
+      "capital_loss",
+      "hours_per_week",
+      "native_country"
+    ],
+    "model": "RandomForest"
+  },
+  "adaptations": [
+    "canonical dirty-train-fitted numeric representation; target labels unchanged",
+    "official KB model recommendations and official per-column impute/outlier functions",
+    "dataset feature order fixed to canonical feature order; no factorial permutation search from fixed seven-column demo",
+    "ordered-count optimization of entropy/density preserves original formulas",
+    "Python3.11/NumPy2/sklearn1.5.2 for native RF missing-value support; canonical final scorer remains sklearn1.3.2"
+  ],
+  "test_features_check": "stored test features equal the canonical clean test encoding",
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diana/diana_run.py, then diana_rescore.py"
+}

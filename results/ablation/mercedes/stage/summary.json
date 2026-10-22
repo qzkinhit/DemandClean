@@ -1,0 +1,20 @@
+{
+  "dataset": "mercedes",
+  "variant": "stage",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    2525,
+    376
+  ],
+  "cleaned_shape": [
+    2236,
+    376
+  ],
+  "operations": {
+    "no_action": 9507,
+    "repair_value": 46314,
+    "delete": 289,
+    "replace_nearby": 82206
+  }
+}

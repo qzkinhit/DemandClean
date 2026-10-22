@@ -1,0 +1,20 @@
+{
+  "id": "budget/smartfactory/lopster_dcbudget",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 1026,
+  "seconds": 279.4,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "98adc860792d3b4d5a00cb56bdc37e30c4ad5ee140a56c4776ae76bd938f23d0"
+    }
+  }
+}

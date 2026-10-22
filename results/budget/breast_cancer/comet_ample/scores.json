@@ -1,0 +1,13 @@
+{
+ "dataset": "breast_cancer",
+ "method": "Comet (ample GT)",
+ "model": "lr",
+ "metric": "accuracy",
+ "test": 0.9785714285714285,
+ "n_train_rows": 419,
+ "redr": {
+  "r_before": 248,
+  "r_after": 121,
+  "redr": 0.5120967741935484
+ }
+}

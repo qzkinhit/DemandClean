@@ -1,0 +1,20 @@
+{
+  "dataset": "bike",
+  "variant": "stage",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    10427,
+    15
+  ],
+  "cleaned_shape": [
+    10351,
+    15
+  ],
+  "operations": {
+    "no_action": 9197,
+    "repair_value": 4951,
+    "delete": 76,
+    "replace_nearby": 12831
+  }
+}

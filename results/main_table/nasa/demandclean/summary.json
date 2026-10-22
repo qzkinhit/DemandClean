@@ -1,0 +1,60 @@
+{
+  "run_id": "main_table/nasa/demandclean",
+  "dataset": "nasa",
+  "variant": "full",
+  "task": "regression",
+  "n_episodes": 200,
+  "data_shape": [
+    901,
+    5
+  ],
+  "cleaned_shape": [
+    901,
+    5
+  ],
+  "operations": {
+    "no_op": 0,
+    "gt_repair": 464,
+    "delete": 0,
+    "ve_replace": 4
+  },
+  "ground_truth_cells": {
+    "seed_set": 120,
+    "repairs": 464,
+    "total": 584
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.946058091286307,
+      "recall": 1.0,
+      "f1": 0.9722814498933902,
+      "tp": 456,
+      "fp": 26,
+      "fn": 0,
+      "gt_count": 456,
+      "det_count": 482
+    }
+  },
+  "time_seconds": {
+    "training": null,
+    "inference": 82.5,
+    "detection_evaluation": 0.02,
+    "net_total": 94.63
+  },
+  "training_run": {
+    "arguments": {
+      "n_episodes": 200,
+      "max_repair_ratio": 1.0,
+      "reward_model_type": "random_forest",
+      "repair_lambda": 0.0001
+    },
+    "time_seconds": {
+      "training": 305.38,
+      "net_total": 354.3
+    }
+  },
+  "calibration": {
+    "labeled_rows": 20,
+    "non_index_columns": 6
+  }
+}

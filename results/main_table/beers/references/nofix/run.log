@@ -1,0 +1,12 @@
+Run started at 2026-10-17 00:16:37
+DoNothing baseline (no cleaning)
+dirty table: data/beers/dirty_index.csv (training rows)
+clean table: data/beers/clean_index.csv (training rows)
+task: beers_donothing
+output data saved: beers_donothing_cleaned.csv
+run time: 0.03 s
+status: success
+ground-truth cost: 0 (fully automatic, no operation)
+
+results saved to: beers_donothing
+log file: beers_donothing.log

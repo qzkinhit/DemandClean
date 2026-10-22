@@ -1,0 +1,16 @@
+{
+  "dataset": "soccer",
+  "method": "DeleteAll",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 0.8557964184731386,
+  "all_models": {
+    "dt": 0.8557964184731386
+  },
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 5465,
+  "table_rows": 5465,
+  "gt_cells": 63660,
+  "gt_pct": 60.0
+}

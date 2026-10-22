@@ -1,0 +1,37 @@
+# Console output of the checkpoint-inference run; no training took place.
+
+DemandClean unified runner
+Datasets: ['bike']
+Enabled versions: ['dueling_two_stage']
+Episodes: 200
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Inference-only mode: ON (skip training, load existing model)
+Seed: 0
+  60/20/20 split: train=10427, val=3476, test=3476
+  Dataset: bike
+  Dirty:   (10427, 15)
+  Features: 15, label: cnt
+  Categorical cols: (none)
+  LE fit: dirty only (10427 rows)
+  SS fit: dirty only (10427 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(10427, 15), X_clean_train=(10427, 15), X_clean_val=(3476, 15), X_clean_test=(3476, 15)
+Version: dueling_two_stage
+Dataset: bike | task: regression | model: random_forest
+Detector: auto | Agent: dueling_two_stage | inference: single_phase
+Episodes: 200 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+Agent loaded: ./model/dueling_two_stage_agent.pt
+[Step 2] training skipped (inference_only); loaded model: ./model/dueling_two_stage_agent.pt
+[Step 3] inference (mode: single_phase)...
+[config0901] inference-only detector built as in fit(): rules_path=results/robustness/bike/remove25/draw_0/rules.txt, disable_raha=False
+  ground truth used: 1963
+  action counts: {'no_action': 1242, 'repair_value': 1963, 'delete': 465, 'replace_nearby': 22817}
+  encoded version saved: ./data/dueling_two_stage_cleaned_encoded.npz
+  [time] Step 3 (infer): 4398.61s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.98s
+  Version dueling_two_stage done! elapsed: 4681.45s
+All done! total: 4682.09s

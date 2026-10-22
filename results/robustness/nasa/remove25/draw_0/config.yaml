@@ -1,0 +1,17 @@
+dataset: nasa
+source: REIN
+task: regression
+label_col: sound_pressure_level
+categorical_cols: []
+downstream_model: lr
+metric: r2
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 9018
+training:
+  n_episodes: 200
+  repair_lambda: 0.03
+  max_repair_ratio: 1.0
+  max_truth_budget: null
+  reward_model_type: random_forest

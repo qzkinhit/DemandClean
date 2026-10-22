@@ -1,0 +1,41 @@
+{
+  "dataset": "nasa",
+  "run": "results/main_table/nasa/demandclean",
+  "model": "lr",
+  "v_empty": -0.0010500071884296247,
+  "v_full": 0.53261379079381,
+  "run_score": 0.53261379079381,
+  "full_equals_run": true,
+  "phi": {
+    "gt": 0.5336637979822396,
+    "ve": 0.0,
+    "del": 0.0
+  },
+  "phi_hat": {
+    "noop": 0.0,
+    "gt": 1.0,
+    "ve": 0.0,
+    "del": 0.0
+  },
+  "coalitions": {
+    "none": -0.0010500071884296247,
+    "gt": 0.53261379079381,
+    "ve": -0.0010500071884296247,
+    "del": -0.0010500071884296247,
+    "gt+ve": 0.53261379079381,
+    "del+gt": 0.53261379079381,
+    "del+ve": -0.0010500071884296247,
+    "del+gt+ve": 0.53261379079381
+  },
+  "outcome_cells": {
+    "gt": 459,
+    "ve": 0,
+    "del_rows": 0
+  },
+  "operation_counts": {
+    "noop": 0,
+    "gt": 464,
+    "del": 0,
+    "ve": 4
+  }
+}

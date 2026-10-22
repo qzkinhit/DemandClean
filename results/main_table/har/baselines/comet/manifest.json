@@ -1,0 +1,32 @@
+{
+  "id": "main_table/har/baselines/comet",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "Comet",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 9000,
+  "gt_pct": 3.2142857142857144,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "e1f0e435708bcfccad006d317d05a428e9aae627e678da4a11525fd7cd262129",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:comet:results/main_table/har/baselines/comet/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

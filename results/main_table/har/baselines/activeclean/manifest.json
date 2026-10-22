@@ -1,0 +1,33 @@
+{
+  "id": "main_table/har/baselines/activeclean",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "ActiveClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 2000,
+  "gt_pct": 0.7142857142857143,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "43a174d16b48ee84c6eb588480ea6eb2b6fdec311e6ed03ed047efb1e10bb957",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:activeclean:results/main_table/har/baselines/activeclean/cleaned.csv.gz",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

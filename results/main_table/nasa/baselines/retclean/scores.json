@@ -1,0 +1,17 @@
+{
+  "dataset": "nasa",
+  "method": "RetClean",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.5145156853792983,
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 901,
+  "n_test": 301,
+  "table_rows": 901,
+  "gt_cells": 2700,
+  "gt_pct": 29.940119760479043,
+  "redr": {
+    "redr": 0.3420479302832244
+  }
+}

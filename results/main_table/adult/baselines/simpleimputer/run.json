@@ -1,0 +1,5 @@
+{
+  "dataset": "adult",
+  "method": "SimpleImputer",
+  "seconds": 1.51
+}

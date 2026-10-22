@@ -1,0 +1,9 @@
+# =============================================================================
+# Dataset: mercedes (Mercedes-Benz Greener Manufacturing)
+# =============================================================================
+# 4,209 rows x 378 cols; regression (y)
+# Errors: binary-column flips + categorical empties; label is error-free
+# =============================================================================
+
+[DOMAIN]
+X3: ENUM {a, b, c, d, e, f, g}

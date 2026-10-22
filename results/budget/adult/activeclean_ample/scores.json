@@ -1,0 +1,13 @@
+{
+ "dataset": "adult",
+ "method": "ActiveClean (ample GT)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.8537313432835821,
+ "n_train_rows": 27133,
+ "redr": {
+  "r_before": 1030,
+  "r_after": 887,
+  "redr": 0.13883495145631067
+ }
+}

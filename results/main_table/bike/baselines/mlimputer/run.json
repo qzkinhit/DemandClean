@@ -1,0 +1,5 @@
+{
+  "dataset": "bike",
+  "method": "MLImputer",
+  "seconds": 0.73
+}

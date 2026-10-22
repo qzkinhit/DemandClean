@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "adult",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.8564953012714207,
+    "n_train_rows": 27133,
+    "method": "ReplaceAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "adult",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.8684355997788834,
+    "n_train_rows": 27133,
+    "method": "ReplaceAll",
+    "encoding": "train_fitted"
+  }
+]

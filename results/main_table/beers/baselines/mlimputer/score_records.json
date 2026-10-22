@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "beers",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.325678496868476,
+    "n_train_rows": 1446,
+    "method": "MLImputer",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "beers",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.2985386221294363,
+    "n_train_rows": 1446,
+    "method": "MLImputer",
+    "encoding": "train_fitted"
+  }
+]

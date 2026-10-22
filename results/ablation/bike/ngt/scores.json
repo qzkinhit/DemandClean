@@ -1,0 +1,16 @@
+{
+  "dataset": "bike",
+  "variant": "ngt",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.9988385863062482,
+  "tol_rel": 0.991744510720451,
+  "references": {
+    "NoFix": 0.8593161889715127,
+    "RepairAll": 1.0
+  },
+  "n_train_rows": 10051,
+  "n_test": 3476,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "142cf9da1868d7cc5597508c7fc251bfb282251fb196e4b2529eb357ed4ddf1f"
+}

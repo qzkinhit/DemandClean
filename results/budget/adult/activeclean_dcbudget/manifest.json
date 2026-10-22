@@ -1,0 +1,20 @@
+{
+  "id": "budget/adult/activeclean_dcbudget",
+  "dataset": "adult",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 900,
+  "seconds": 18.304,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "4eac397b38582f7468e5653a435bc98b47c280cd621ce64104522602cb9ac55f"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "main_table/breast_cancer/baselines/saga",
+  "dataset": "breast_cancer",
+  "role": "baselines",
+  "method": "SAGA",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 7689,
+  "scoring": {
+    "model": "lr",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "47f6048f6020c00f0ec588bf2b98ff02af47197004e4c6e8b697b0b9e75f0546",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included",
+    "execution_log_format": "excerpt of the recorded SystemDS log; parameter and timing lines only"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table breast_cancer:saga:results/main_table/breast_cancer/baselines/saga/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

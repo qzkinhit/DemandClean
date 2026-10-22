@@ -1,0 +1,18 @@
+dataset: bike
+source: REIN
+task: regression
+label_col: cnt
+categorical_cols: []
+downstream_model: lr
+metric: r2
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 278064
+training:
+  n_episodes: 200
+  max_repair_ratio: 1.0
+  repair_lambda: 0.0001
+evaluation:
+  unseen_categories: nan
+second_model: lasso

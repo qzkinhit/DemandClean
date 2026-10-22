@@ -1,0 +1,5 @@
+{
+  "dataset": "flights",
+  "method": "DeleteAll",
+  "seconds": null
+}

@@ -1,0 +1,14 @@
+Run started at 2026-10-17 01:29:03
+RepairAll baseline (every error replaced by its clean value)
+dirty table: data/bike/dirty_index.csv (training rows)
+clean table: data/bike/clean_index.csv (training rows)
+task: bike_repairall
+output data saved: bike_repairall_cleaned.csv
+input rows: 10427
+repaired cells: 113428
+run time: 5.66 s
+status: success
+ground-truth cost: 113428
+
+results saved to: bike_repairall
+log file: bike_repairall.log

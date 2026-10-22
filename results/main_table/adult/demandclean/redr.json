@@ -1,0 +1,11 @@
+{
+ "dataset": "adult",
+ "method": "demandclean",
+ "role": "demandclean",
+ "table": "results/main_table/adult/demandclean/cleaned.csv",
+ "scope_rows": 27133,
+ "kept_rows": 26214,
+ "r_before": 1030,
+ "r_after": 950,
+ "redr": 0.07766990291262135
+}

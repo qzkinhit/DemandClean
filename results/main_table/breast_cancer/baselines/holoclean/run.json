@@ -1,0 +1,5 @@
+{
+  "dataset": "breast_cancer",
+  "method": "HoloClean",
+  "seconds": 44.15
+}

@@ -1,0 +1,34 @@
+{
+  "id": "main_table/soilmoisture/baselines/boostclean",
+  "dataset": "soilmoisture",
+  "role": "baselines",
+  "method": "BoostClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 87591,
+  "scoring": {
+    "model": "gb",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "74f301dbe72e1bfafc567cfdc0684f64e1ddc1f81ffe9fc41c5c6a3e9e57dee0",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soilmoisture:boostclean:results/main_table/soilmoisture/baselines/boostclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

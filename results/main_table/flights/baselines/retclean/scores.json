@@ -1,0 +1,14 @@
+{
+  "dataset": "flights",
+  "method": "RetClean",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 0.9978991596638656,
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 1425,
+  "n_test": 476,
+  "table_rows": 1425,
+  "gt_cells": 4984,
+  "gt_pct": 29.966329966329965
+}

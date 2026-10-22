@@ -1,0 +1,21 @@
+{
+  "id": "budget/flights/retclean_dcbudget",
+  "dataset": "flights",
+  "role": "budget",
+  "method": "RetClean (lower GT level)",
+  "ground_truth_cells": 273,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "8b57d3c64769953a7612d52c029b8a298bd9cc3edfc043e0268a92e74fe48703"
+    }
+  }
+}

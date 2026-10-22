@@ -1,0 +1,5 @@
+[20:55:10] INFO:   Clean base selection (5-fold CV, weighted by the row retention rate):
+[20:55:10] INFO:     DeleteFix: 193 rows, CV=0.9846, weight=0.679, weighted=0.6682
+[20:55:10] INFO:     VE-Fill:   419 rows, CV=0.9570, weight=1.000, weighted=0.9570
+[20:55:10] INFO:     -> selected VE-Fill (419 rows)
+[20:58:12] INFO: Model saved: model/agent.pt

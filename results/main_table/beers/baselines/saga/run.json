@@ -1,0 +1,67 @@
+{
+  "dataset": "beers",
+  "task": "classification",
+  "search_task": "classification",
+  "n_train": 1446,
+  "n_train_used": 1446,
+  "n_val": 482,
+  "n_test": 482,
+  "gt_cells": 0,
+  "secs": 9702.8,
+  "search_secs": 9560.3,
+  "eval_hp": [
+    0.0,
+    10.0,
+    0.001
+  ],
+  "export": {
+    "rows_in": 1446,
+    "rows_out": 1446,
+    "rows_deleted": 0,
+    "synthetic_dropped": 0,
+    "steps": [
+      {
+        "op": "imputeByFd",
+        "action": "applied"
+      },
+      {
+        "op": "scale",
+        "action": "affine recorded"
+      },
+      {
+        "op": "imputeByMean",
+        "action": "applied"
+      },
+      {
+        "op": "dummycoding",
+        "action": "skipped encoder"
+      }
+    ]
+  },
+  "config": {
+    "topk": 3,
+    "rv": 20,
+    "max_iter": 10,
+    "sample": 1.0,
+    "expectedIncrease": 10.0,
+    "seed": 42,
+    "cv": false,
+    "eval_maxi": 100,
+    "eval_maxii": 20,
+    "enablePruning": true,
+    "eval_func": "evalClassification",
+    "xmx": "8g",
+    "threads": 1,
+    "cluster_k": 2,
+    "sil_n": 3000,
+    "parse_units": true
+  },
+  "method": "SAGA",
+  "pipeline": [
+    "imputeByFd",
+    "scale",
+    "imputeByMean",
+    "dummycoding"
+  ],
+  "implementation": "Apache SystemDS 3.2.0; SAGA adapter described in baselines/THIRD_PARTY.md"
+}

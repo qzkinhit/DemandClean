@@ -1,0 +1,34 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local runs and generated output
+/results/runs/
+/output/
+/outputs/
+/figures/output/
+/tmp/
+/temp/
+/cache/
+/rescore_*.err
+/rescore_*.jsonl
+
+# Local editor and operating-system files
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local provider credentials
+.env
+.env.*
+!.env.example

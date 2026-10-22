@@ -1,0 +1,20 @@
+{
+  "dataset": "breast_cancer",
+  "variant": "nd",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    419,
+    9
+  ],
+  "cleaned_shape": [
+    393,
+    9
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 92,
+    "delete": 26,
+    "replace_nearby": 204
+  }
+}

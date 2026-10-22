@@ -1,0 +1,20 @@
+{
+  "id": "budget/beers/activeclean_ample",
+  "dataset": "beers",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 5000,
+  "seconds": 7.696,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "44635dee67c7a8ec52071f96e77b1151c74cdb2701112571710d233c3e6d8bca"
+    }
+  }
+}

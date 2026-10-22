@@ -1,0 +1,47 @@
+Run started at 2026-10-18 14:09:55
+Lopster data cleaning
+dataset: beers
+data path: Data_lopdc
+task: beers_lopster_dcbudget
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: beers
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (42, 11) -> (42, 10)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (1446, 11) -> (1446, 10)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: beers
+run time: 22.03 s
+status: success
+ground-truth cost: 42 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 1446
+  input rows: 1446
+  index column restored
+  final column order: ['index', 'id', 'beer_name', 'style', 'ounces', 'abv', 'ibu', 'brewery_id', 'brewery_name', 'city', 'state']
+  saved to: cleaned.csv
+  final rows: 1446
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: beers_lopster_dcbudget

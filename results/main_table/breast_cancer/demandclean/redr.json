@@ -1,0 +1,11 @@
+{
+ "dataset": "breast_cancer",
+ "method": "demandclean",
+ "role": "demandclean",
+ "table": "results/main_table/breast_cancer/demandclean/cleaned.csv",
+ "scope_rows": 419,
+ "kept_rows": 317,
+ "r_before": 248,
+ "r_after": 122,
+ "redr": 0.5080645161290323
+}

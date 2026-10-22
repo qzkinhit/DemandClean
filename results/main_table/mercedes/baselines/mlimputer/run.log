@@ -1,0 +1,13 @@
+MLImputer data cleaning (mice)
+dirty table: data/mercedes/dirty_index.csv
+clean table: data/mercedes/clean_index.csv
+task: mercedes_mlimputer
+imputation method: mice
+repaired data saved: mercedes_mlimputer_cleaned.csv
+run time: 410.65 s
+status: success
+filled cells: 1679
+ground-truth cost: 0 (fully automatic)
+
+results saved to: mercedes_mlimputer
+log file: mercedes_mlimputer.log

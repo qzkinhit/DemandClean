@@ -1,0 +1,33 @@
+{
+  "id": "main_table/nasa/baselines/activeclean",
+  "dataset": "nasa",
+  "role": "baselines",
+  "method": "ActiveClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 2700,
+  "gt_pct": 29.940119760479043,
+  "gt_denominator": 10521,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "684cfd78233d13a33cc403517462b701a24e17ac50b6013ae5fc306f90cc0ec1",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table nasa:activeclean:results/main_table/nasa/baselines/activeclean/cleaned.csv.gz",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

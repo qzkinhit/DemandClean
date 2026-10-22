@@ -1,0 +1,8 @@
+{
+  "dataset": "har",
+  "method": "Lopster",
+  "seconds": 162.55,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant"
+  ]
+}

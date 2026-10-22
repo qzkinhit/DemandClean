@@ -1,0 +1,37 @@
+# Console output of the checkpoint-inference run; no training took place.
+
+DemandClean unified runner
+Datasets: ['mercedes']
+Enabled versions: ['dueling_two_stage']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Inference-only mode: ON (skip training, load existing model)
+Seed: 0
+  60/20/20 split: train=2525, val=842, test=842
+  Dataset: mercedes
+  Dirty:   (2525, 376)
+  Features: 376, label: y
+  Categorical cols: {'X4', 'X0', 'X2', 'X8', 'X6', 'X3', 'X1', 'X5'}
+  LE fit: dirty only (2525 rows)
+  SS fit: dirty only (2525 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(2525, 376), X_clean_train=(2525, 376), X_clean_val=(842, 376), X_clean_test=(842, 376)
+Version: dueling_two_stage
+Dataset: mercedes | task: regression | model: ridge
+Detector: auto | Agent: dueling_two_stage | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+Agent loaded: ./model/dueling_two_stage_agent.pt
+[Step 2] training skipped (inference_only); loaded model: ./model/dueling_two_stage_agent.pt
+[Step 3] inference (mode: single_phase)...
+[config0901] inference-only detector built as in fit(): rules_path=results/robustness/mercedes/remove25/draw_1/rules.txt, disable_raha=False
+  ground truth used: 24795
+  action counts: {'no_action': 123096, 'repair_value': 24795, 'delete': 0, 'replace_nearby': 6126}
+  encoded version saved: ./data/dueling_two_stage_cleaned_encoded.npz
+  [time] Step 3 (infer): 17515.25s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 6.51s
+  Version dueling_two_stage done! elapsed: 20827.24s
+All done! total: 20834.32s

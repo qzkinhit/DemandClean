@@ -1,0 +1,9 @@
+{
+  "dataset": "beers",
+  "method": "Lopster",
+  "seconds": 22.03,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant",
+    "preserve the input target column"
+  ]
+}

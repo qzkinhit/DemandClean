@@ -1,0 +1,29 @@
+{
+  "dataset": "soccer",
+  "variant": "full",
+  "model": "dt",
+  "metric": "accuracy",
+  "nearest": true,
+  "test": 1.0,
+  "n_train_rows": 6366,
+  "n_test": 2122,
+  "gt_cells": 0,
+  "gt_repairs": 0,
+  "gt_seed_set": 0,
+  "gt_pct": 0.0,
+  "model_scores": {
+    "dt": 1.0,
+    "lr": 1.0
+  },
+  "references": {
+    "NoFix": 0.9015080113100848,
+    "RepairAll": 1.0
+  },
+  "scikit_learn": "1.3.2",
+  "tol_rel": 1.0,
+  "redr": {
+    "r_before": 901,
+    "r_after": 0,
+    "redr": 1.0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "flights",
+  "method": "ActiveClean",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 1.0,
+  "all_models": {
+    "dt": 1.0
+  },
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 1425,
+  "n_test": 476,
+  "table_rows": 1425,
+  "gt_cells": 3500,
+  "gt_pct": 21.043771043771045
+}

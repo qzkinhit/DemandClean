@@ -1,0 +1,32 @@
+{
+  "dataset": "adult",
+  "model": "rf",
+  "reads_clean_training_rows": false,
+  "v_empty": 0.8518518518518519,
+  "v_full": 0.8537313432835821,
+  "run_score": 0.8537313432835821,
+  "full_equals_run": true,
+  "phi": {
+    "write": -0.00033167495854058426,
+    "del": 0.002211166390270858
+  },
+  "phi_hat": {
+    "write": -0.1304,
+    "del": 0.8696
+  },
+  "coalitions": {
+    "none": 0.8518518518518519,
+    "write": 0.8514096185737977,
+    "del": 0.8539524599226092,
+    "write+del": 0.8537313432835821
+  },
+  "cells": {
+    "write": 2,
+    "del_rows": 919
+  },
+  "run": "results/main_table/adult/demandclean",
+  "provenance": {
+    "encoded_sha256": "08d300328de6e0c42562a35a20aa345147f4be45b97cb82e6f13be84fc3d474c",
+    "ordered_index_format": "Decimal-normalized index values, one per line in output order."
+  }
+}

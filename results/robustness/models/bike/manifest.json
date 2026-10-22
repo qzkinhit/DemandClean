@@ -1,0 +1,9 @@
+{
+  "source_dataset": "bike",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "610d92c8b3432783d9b849b76f7fe690fa71c866994ec140eb58a3dc422f62c4",
+    "agent_stage1.pt": "9a1b8a7c585a06b0fd3d81e34fd8f2228159d10bd7712c6f92b3e94733e65cbe"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

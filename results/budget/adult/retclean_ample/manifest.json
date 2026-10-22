@@ -1,0 +1,21 @@
+{
+  "id": "budget/adult/retclean_ample",
+  "dataset": "adult",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 0,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "f2b094f7623feff7f64534c4a910e341baf028d98ef8f07413640106de213525"
+    }
+  }
+}

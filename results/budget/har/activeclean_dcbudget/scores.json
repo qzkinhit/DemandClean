@@ -1,0 +1,13 @@
+{
+ "dataset": "har",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "agglomerative",
+ "metric": "silhouette",
+ "test": 0.499406464455287,
+ "n_train_rows": 40368,
+ "redr": {
+  "r_before": 19388,
+  "r_after": 19315,
+  "redr": 0.0037652155972766658
+ }
+}

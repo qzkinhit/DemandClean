@@ -1,0 +1,31 @@
+{
+  "id": "main_table/soilmoisture/baselines/diffprep",
+  "dataset": "soilmoisture",
+  "role": "baselines",
+  "method": "DiffPrep",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 86912,
+  "scoring": {
+    "model": "gb",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "9b62aa3fde8d4f3a0b375650b8459e30614bec9f5adf023db186ca33bec3d626",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soilmoisture:diffprep:results/main_table/soilmoisture/baselines/diffprep/cleaned_encoded.npz",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json"
+  ]
+}

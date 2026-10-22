@@ -1,0 +1,17 @@
+dataset: smartfactory
+source: REIN
+task: classification
+label_col: labels
+categorical_cols: []
+downstream_model: rf
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: offline
+total_cells: 449255
+training:
+  n_episodes: 300
+evaluation:
+  unseen_categories: nan
+second_model: gb
+seed: 0

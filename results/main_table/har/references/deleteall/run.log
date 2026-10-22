@@ -1,0 +1,16 @@
+Run started at 2026-10-17 00:53:00
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: har_deleteall
+deletion mode: drop_feature_errors
+output data saved: har_deleteall_cleaned.csv
+input rows: 42000
+kept rows: 23352
+deleted rows: 18648
+run time: 6.32 s
+status: success
+ground-truth cost: 18648
+
+results saved to: har_deleteall
+log file: har_deleteall.log

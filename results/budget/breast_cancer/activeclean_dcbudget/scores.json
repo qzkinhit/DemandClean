@@ -1,0 +1,13 @@
+{
+ "dataset": "breast_cancer",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "lr",
+ "metric": "accuracy",
+ "test": 0.9571428571428572,
+ "n_train_rows": 419,
+ "redr": {
+  "r_before": 248,
+  "r_after": 233,
+  "redr": 0.06048387096774194
+ }
+}

@@ -1,0 +1,48 @@
+{
+  "run_id": "main_table/har/demandclean",
+  "dataset": "har",
+  "variant": "full",
+  "task": "clustering",
+  "n_episodes": 300,
+  "data_shape": [
+    42000,
+    3
+  ],
+  "cleaned_shape": [
+    21487,
+    3
+  ],
+  "operations": {
+    "no_op": 0,
+    "gt_repair": 0,
+    "delete": 20513,
+    "ve_replace": 0
+  },
+  "ground_truth_cells": {
+    "seed_set": 320,
+    "repairs": 0,
+    "total": 320
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.8582924983068404,
+      "recall": 0.9667489342607135,
+      "f1": 0.9092981049255056,
+      "tp": 21544,
+      "fp": 3557,
+      "fn": 741,
+      "gt_count": 22285,
+      "det_count": 25101
+    }
+  },
+  "time_seconds": {
+    "training": 80202.4,
+    "inference": 534.63,
+    "detection_evaluation": 0.83,
+    "net_total": 81194.02
+  },
+  "calibration": {
+    "labeled_rows": 80,
+    "non_index_columns": 4
+  }
+}

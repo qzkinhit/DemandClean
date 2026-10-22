@@ -1,0 +1,20 @@
+{
+  "dataset": "nasa",
+  "variant": "ngt",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    901,
+    5
+  ],
+  "cleaned_shape": [
+    503,
+    5
+  ],
+  "operations": {
+    "no_action": 50,
+    "repair_value": 0,
+    "delete": 398,
+    "replace_nearby": 4
+  }
+}

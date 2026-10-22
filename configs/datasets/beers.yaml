@@ -1,0 +1,20 @@
+dataset: beers
+source: REIN
+task: classification
+label_col: style
+categorical_cols:
+- beer_name
+- brewery_name
+- city
+- state
+downstream_model: rf
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 24100
+training:
+  n_episodes: 300
+evaluation:
+  unseen_categories: nan
+second_model: gb

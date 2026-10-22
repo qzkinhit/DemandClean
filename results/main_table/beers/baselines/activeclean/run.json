@@ -1,0 +1,69 @@
+{
+  "status": "ok",
+  "n_train": 1446,
+  "n_val": 482,
+  "n_test": 482,
+  "gt_cells": 5000,
+  "rows_cleaned": 500,
+  "cells_per_record_without_index": 10,
+  "budget_cells": 5000,
+  "budget_rows": 500,
+  "batch_size": 50,
+  "iterations": 11,
+  "model": "linear_svm_hinge",
+  "model_regularisation": {
+    "C": 0.1,
+    "lam": 0.006934812760055478
+  },
+  "seed": 42,
+  "task": "classification",
+  "label_col": "style",
+  "label_source": "dirty",
+  "train_labels_replaced_by_protocol": 0,
+  "python": "3.8.20",
+  "finished": "2026-10-18 13:52:50",
+  "secs": 7.696,
+  "wall_secs": 7.748,
+  "step_constant": 1.0,
+  "output_iteration": 0,
+  "dataset": "beers",
+  "method": "ActiveClean",
+  "configuration": {
+    "feature_cols": [
+      "beer_name",
+      "ounces",
+      "abv",
+      "ibu",
+      "brewery_id",
+      "brewery_name",
+      "city",
+      "state"
+    ],
+    "categorical_cols": [
+      "beer_name",
+      "brewery_name",
+      "city",
+      "state"
+    ],
+    "clock_cols": [],
+    "label_col": "style",
+    "task": "classification",
+    "budget_rows": 500,
+    "batch_size": 50,
+    "seed": 42,
+    "uniform_mix": 0.1,
+    "detector_min_per_class": 5,
+    "detector_margin": 1.0,
+    "detector_rare_class": 3,
+    "max_categories": 100,
+    "min_category_count": 2,
+    "z_clip": 10.0,
+    "svm_max_iter": 20000,
+    "step_constant": 1.0,
+    "model_regularisation": {
+      "C": 0.1,
+      "lam": 0.006934812760055478
+    }
+  },
+  "implementation": "ActiveClean adaptation described in baselines/THIRD_PARTY.md"
+}

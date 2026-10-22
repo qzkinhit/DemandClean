@@ -1,0 +1,48 @@
+{
+  "run_id": "main_table/soccer/demandclean",
+  "dataset": "soccer",
+  "variant": "full",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    6366,
+    9
+  ],
+  "cleaned_shape": [
+    6366,
+    9
+  ],
+  "operations": {
+    "no_op": 0,
+    "gt_repair": 0,
+    "delete": 0,
+    "ve_replace": 901
+  },
+  "ground_truth_cells": {
+    "seed_set": 0,
+    "repairs": 0,
+    "total": 0
+  },
+  "detection": {
+    "overall": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 901,
+      "fp": 0,
+      "fn": 0,
+      "gt_count": 901,
+      "det_count": 901
+    }
+  },
+  "time_seconds": {
+    "training": 919.63,
+    "inference": 77.54,
+    "detection_evaluation": 0.1,
+    "net_total": 1176.07
+  },
+  "calibration": {
+    "labeled_rows": 0,
+    "non_index_columns": 10
+  }
+}

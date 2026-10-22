@@ -1,0 +1,11 @@
+{
+ "dataset": "beers",
+ "method": "demandclean",
+ "role": "demandclean",
+ "table": "results/main_table/beers/demandclean/cleaned.csv",
+ "scope_rows": 1446,
+ "kept_rows": 1446,
+ "r_before": 1446,
+ "r_after": 793,
+ "redr": 0.4515905947441217
+}

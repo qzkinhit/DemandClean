@@ -1,0 +1,13 @@
+{
+ "dataset": "soilmoisture",
+ "method": "ActiveClean (ample GT)",
+ "model": "gb",
+ "metric": "r2",
+ "test": 0.9374068561720665,
+ "n_train_rows": 407,
+ "redr": {
+  "r_before": 407,
+  "r_after": 204,
+  "redr": 0.4987714987714988
+ }
+}

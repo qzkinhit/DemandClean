@@ -1,0 +1,2803 @@
+{
+  "rule": "Clean cells read on the training rows, including detector calibration and repairs; the denominator is the full-table cell count, excluding the row identifier.",
+  "denominators": {
+    "adult": 678330,
+    "beers": 24100,
+    "breast_cancer": 6990,
+    "smartfactory": 449255,
+    "bike": 278064,
+    "mercedes": 1586793,
+    "nasa": 9018,
+    "soilmoisture": 86912,
+    "har": 280000,
+    "flights": 16632,
+    "soccer": 106100,
+    "hospitals": 19000
+  },
+  "records": [
+    {
+      "dataset": "adult",
+      "method": "NoFix",
+      "run": "results/main_table/adult/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "DeleteAll",
+      "run": "results/main_table/adult/references/deleteall",
+      "gt_cells": 406995,
+      "gt_pct": 59.99955773738446,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "ReplaceAll",
+      "run": "results/main_table/adult/references/replaceall",
+      "gt_cells": 406995,
+      "gt_pct": 59.99955773738446,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "RepairAll",
+      "run": "results/main_table/adult/references/repairall",
+      "gt_cells": 406995,
+      "gt_pct": 59.99955773738446,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "HoloClean",
+      "run": "results/main_table/adult/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "Horizon",
+      "run": "results/main_table/adult/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "Raha+Baran",
+      "run": "results/main_table/adult/baselines/raha_baran",
+      "gt_cells": 300,
+      "gt_pct": 0.04422626155411083,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "UniClean",
+      "run": "results/main_table/adult/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "Lopster",
+      "run": "results/main_table/adult/baselines/lopster",
+      "gt_cells": 900,
+      "gt_pct": 0.1326787846623325,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "ActiveClean",
+      "run": "results/main_table/adult/baselines/activeclean",
+      "gt_cells": 7500,
+      "gt_pct": 1.1056565388527708,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "BoostClean",
+      "run": "results/main_table/adult/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "SAGA",
+      "run": "results/main_table/adult/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "DiffPrep",
+      "run": "results/main_table/adult/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "Comet",
+      "run": "results/main_table/adult/baselines/comet",
+      "gt_cells": 379862,
+      "gt_pct": 55.999587221558826,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "CtxPipe",
+      "run": "results/main_table/adult/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "MLImputer",
+      "run": "results/main_table/adult/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "SimpleImputer",
+      "run": "results/main_table/adult/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "LLM",
+      "run": "results/main_table/adult/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "DIANA",
+      "run": "results/main_table/adult/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "Learn2Clean",
+      "run": "results/main_table/adult/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "RetClean",
+      "run": "results/main_table/adult/baselines/retclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "DAGPipe",
+      "run": "results/main_table/adult/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "adult",
+      "method": "DC",
+      "run": "results/main_table/adult/demandclean",
+      "gt_cells": 900,
+      "gt_pct": 0.1326787846623325,
+      "denominator": 678330,
+      "manifest": "results/main_table/adult/demandclean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "NoFix",
+      "run": "results/main_table/beers/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "DeleteAll",
+      "run": "results/main_table/beers/references/deleteall",
+      "gt_cells": 14460,
+      "gt_pct": 60.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "ReplaceAll",
+      "run": "results/main_table/beers/references/replaceall",
+      "gt_cells": 14460,
+      "gt_pct": 60.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "RepairAll",
+      "run": "results/main_table/beers/references/repairall",
+      "gt_cells": 14460,
+      "gt_pct": 60.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "HoloClean",
+      "run": "results/main_table/beers/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "Horizon",
+      "run": "results/main_table/beers/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "Raha+Baran",
+      "run": "results/main_table/beers/baselines/raha_baran",
+      "gt_cells": 200,
+      "gt_pct": 0.8298755186721992,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "UniClean",
+      "run": "results/main_table/beers/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "Lopster",
+      "run": "results/main_table/beers/baselines/lopster",
+      "gt_cells": 420,
+      "gt_pct": 1.7427385892116183,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "ActiveClean",
+      "run": "results/main_table/beers/baselines/activeclean",
+      "gt_cells": 5000,
+      "gt_pct": 20.74688796680498,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "BoostClean",
+      "run": "results/main_table/beers/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "SAGA",
+      "run": "results/main_table/beers/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "DiffPrep",
+      "run": "results/main_table/beers/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "Comet",
+      "run": "results/main_table/beers/baselines/comet",
+      "gt_cells": 11568,
+      "gt_pct": 48.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "CtxPipe",
+      "run": "results/main_table/beers/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "MLImputer",
+      "run": "results/main_table/beers/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "SimpleImputer",
+      "run": "results/main_table/beers/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "LLM",
+      "run": "results/main_table/beers/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "DIANA",
+      "run": "results/main_table/beers/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "Learn2Clean",
+      "run": "results/main_table/beers/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "RetClean",
+      "run": "results/main_table/beers/baselines/retclean",
+      "gt_cells": 6507,
+      "gt_pct": 27.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "DAGPipe",
+      "run": "results/main_table/beers/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "beers",
+      "method": "DC",
+      "run": "results/main_table/beers/demandclean",
+      "gt_cells": 428,
+      "gt_pct": 1.7759336099585061,
+      "denominator": 24100,
+      "manifest": "results/main_table/beers/demandclean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "NoFix",
+      "run": "results/main_table/breast_cancer/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "DeleteAll",
+      "run": "results/main_table/breast_cancer/references/deleteall",
+      "gt_cells": 4190,
+      "gt_pct": 59.94277539341917,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "ReplaceAll",
+      "run": "results/main_table/breast_cancer/references/replaceall",
+      "gt_cells": 4190,
+      "gt_pct": 59.94277539341917,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "RepairAll",
+      "run": "results/main_table/breast_cancer/references/repairall",
+      "gt_cells": 4190,
+      "gt_pct": 59.94277539341917,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "HoloClean",
+      "run": "results/main_table/breast_cancer/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "Horizon",
+      "run": "results/main_table/breast_cancer/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "Raha+Baran",
+      "run": "results/main_table/breast_cancer/baselines/raha_baran",
+      "gt_cells": 200,
+      "gt_pct": 2.8612303290414878,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "UniClean",
+      "run": "results/main_table/breast_cancer/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "Lopster",
+      "run": "results/main_table/breast_cancer/baselines/lopster",
+      "gt_cells": 200,
+      "gt_pct": 2.8612303290414878,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "ActiveClean",
+      "run": "results/main_table/breast_cancer/baselines/activeclean",
+      "gt_cells": 2090,
+      "gt_pct": 29.89985693848355,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "BoostClean",
+      "run": "results/main_table/breast_cancer/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "SAGA",
+      "run": "results/main_table/breast_cancer/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "DiffPrep",
+      "run": "results/main_table/breast_cancer/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "Comet",
+      "run": "results/main_table/breast_cancer/baselines/comet",
+      "gt_cells": 3771,
+      "gt_pct": 53.94849785407725,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "CtxPipe",
+      "run": "results/main_table/breast_cancer/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "MLImputer",
+      "run": "results/main_table/breast_cancer/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "SimpleImputer",
+      "run": "results/main_table/breast_cancer/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "LLM",
+      "run": "results/main_table/breast_cancer/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "DIANA",
+      "run": "results/main_table/breast_cancer/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "Learn2Clean",
+      "run": "results/main_table/breast_cancer/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "RetClean",
+      "run": "results/main_table/breast_cancer/baselines/retclean",
+      "gt_cells": 2090,
+      "gt_pct": 29.89985693848355,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "DAGPipe",
+      "run": "results/main_table/breast_cancer/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "DC",
+      "run": "results/main_table/breast_cancer/demandclean",
+      "gt_cells": 205,
+      "gt_pct": 2.932761087267525,
+      "denominator": 6990,
+      "manifest": "results/main_table/breast_cancer/demandclean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "NoFix",
+      "run": "results/main_table/smartfactory/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "DeleteAll",
+      "run": "results/main_table/smartfactory/references/deleteall",
+      "gt_cells": 269553,
+      "gt_pct": 60.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "ReplaceAll",
+      "run": "results/main_table/smartfactory/references/replaceall",
+      "gt_cells": 269553,
+      "gt_pct": 60.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "RepairAll",
+      "run": "results/main_table/smartfactory/references/repairall",
+      "gt_cells": 269553,
+      "gt_pct": 60.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "HoloClean",
+      "run": "results/main_table/smartfactory/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "Horizon",
+      "run": "results/main_table/smartfactory/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "Raha+Baran",
+      "run": "results/main_table/smartfactory/baselines/raha_baran",
+      "gt_cells": 380,
+      "gt_pct": 0.08458447874814971,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "UniClean",
+      "run": "results/main_table/smartfactory/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "Lopster",
+      "run": "results/main_table/smartfactory/baselines/lopster",
+      "gt_cells": 1026,
+      "gt_pct": 0.22837809262000422,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "ActiveClean",
+      "run": "results/main_table/smartfactory/baselines/activeclean",
+      "gt_cells": 9500,
+      "gt_pct": 2.114611968703743,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "BoostClean",
+      "run": "results/main_table/smartfactory/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "SAGA",
+      "run": "results/main_table/smartfactory/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "DiffPrep",
+      "run": "results/main_table/smartfactory/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "Comet",
+      "run": "results/main_table/smartfactory/baselines/comet",
+      "gt_cells": 255366,
+      "gt_pct": 56.8421052631579,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "CtxPipe",
+      "run": "results/main_table/smartfactory/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "MLImputer",
+      "run": "results/main_table/smartfactory/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "SimpleImputer",
+      "run": "results/main_table/smartfactory/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "LLM",
+      "run": "results/main_table/smartfactory/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "DIANA",
+      "run": "results/main_table/smartfactory/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "Learn2Clean",
+      "run": "results/main_table/smartfactory/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "RetClean",
+      "run": "results/main_table/smartfactory/baselines/retclean",
+      "gt_cells": 134767,
+      "gt_pct": 29.997885388031296,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "DAGPipe",
+      "run": "results/main_table/smartfactory/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "smartfactory",
+      "method": "DC",
+      "run": "results/main_table/smartfactory/demandclean",
+      "gt_cells": 1031,
+      "gt_pct": 0.22949104628774303,
+      "denominator": 449255,
+      "manifest": "results/main_table/smartfactory/demandclean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "NoFix",
+      "run": "results/main_table/bike/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "DeleteAll",
+      "run": "results/main_table/bike/references/deleteall",
+      "gt_cells": 166832,
+      "gt_pct": 59.997698371597906,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "ReplaceAll",
+      "run": "results/main_table/bike/references/replaceall",
+      "gt_cells": 166832,
+      "gt_pct": 59.997698371597906,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "RepairAll",
+      "run": "results/main_table/bike/references/repairall",
+      "gt_cells": 166832,
+      "gt_pct": 59.997698371597906,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "HoloClean",
+      "run": "results/main_table/bike/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "Horizon",
+      "run": "results/main_table/bike/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "Raha+Baran",
+      "run": "results/main_table/bike/baselines/raha_baran",
+      "gt_cells": 320,
+      "gt_pct": 0.1150814201047241,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "UniClean",
+      "run": "results/main_table/bike/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "Lopster",
+      "run": "results/main_table/bike/baselines/lopster",
+      "gt_cells": 2720,
+      "gt_pct": 0.9781920708901548,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "ActiveClean",
+      "run": "results/main_table/bike/baselines/activeclean",
+      "gt_cells": 8000,
+      "gt_pct": 2.8770355026181025,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "BoostClean",
+      "run": "results/main_table/bike/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "SAGA",
+      "run": "results/main_table/bike/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "DiffPrep",
+      "run": "results/main_table/bike/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "Comet",
+      "run": "results/main_table/bike/baselines/comet",
+      "gt_cells": 156405,
+      "gt_pct": 56.247842223373034,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "CtxPipe",
+      "run": "results/main_table/bike/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "MLImputer",
+      "run": "results/main_table/bike/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "SimpleImputer",
+      "run": "results/main_table/bike/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "LLM",
+      "run": "results/main_table/bike/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "DIANA",
+      "run": "results/main_table/bike/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "Learn2Clean",
+      "run": "results/main_table/bike/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "RetClean",
+      "run": "results/main_table/bike/baselines/retclean",
+      "gt_cells": 83408,
+      "gt_pct": 29.995972150296335,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "DAGPipe",
+      "run": "results/main_table/bike/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "bike",
+      "method": "DC",
+      "run": "results/main_table/bike/demandclean",
+      "gt_cells": 2729,
+      "gt_pct": 0.9814287358306002,
+      "denominator": 278064,
+      "manifest": "results/main_table/bike/demandclean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "NoFix",
+      "run": "results/main_table/mercedes/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "DeleteAll",
+      "run": "results/main_table/mercedes/references/deleteall",
+      "gt_cells": 951925,
+      "gt_pct": 59.99049655500119,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "ReplaceAll",
+      "run": "results/main_table/mercedes/references/replaceall",
+      "gt_cells": 951925,
+      "gt_pct": 59.99049655500119,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "RepairAll",
+      "run": "results/main_table/mercedes/references/repairall",
+      "gt_cells": 951925,
+      "gt_pct": 59.99049655500119,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "HoloClean",
+      "run": "results/main_table/mercedes/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "Horizon",
+      "run": "results/main_table/mercedes/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "Raha+Baran",
+      "run": "results/main_table/mercedes/baselines/raha_baran",
+      "gt_cells": 7540,
+      "gt_pct": 0.4751722499406035,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "UniClean",
+      "run": "results/main_table/mercedes/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "Lopster",
+      "run": "results/main_table/mercedes/baselines/lopster",
+      "gt_cells": 32045,
+      "gt_pct": 2.019482062247565,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "ActiveClean",
+      "run": "results/main_table/mercedes/baselines/activeclean",
+      "gt_cells": 188500,
+      "gt_pct": 11.879306248515087,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "BoostClean",
+      "run": "results/main_table/mercedes/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "SAGA",
+      "run": "results/main_table/mercedes/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "DiffPrep",
+      "run": "results/main_table/mercedes/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "Comet",
+      "run": "results/main_table/mercedes/baselines/comet",
+      "gt_cells": 949400,
+      "gt_pct": 59.831370569444154,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "CtxPipe",
+      "run": "results/main_table/mercedes/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "MLImputer",
+      "run": "results/main_table/mercedes/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "SimpleImputer",
+      "run": "results/main_table/mercedes/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "LLM",
+      "run": "results/main_table/mercedes/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "DIANA",
+      "run": "results/main_table/mercedes/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "Learn2Clean",
+      "run": "results/main_table/mercedes/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "RetClean",
+      "run": "results/main_table/mercedes/baselines/retclean",
+      "gt_cells": 475774,
+      "gt_pct": 29.98336897125208,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "DAGPipe",
+      "run": "results/main_table/mercedes/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "mercedes",
+      "method": "DC",
+      "run": "results/main_table/mercedes/demandclean",
+      "gt_cells": 32391,
+      "gt_pct": 2.0412870487833006,
+      "denominator": 1586793,
+      "manifest": "results/main_table/mercedes/demandclean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "NoFix",
+      "run": "results/main_table/nasa/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "DeleteAll",
+      "run": "results/main_table/nasa/references/deleteall",
+      "gt_cells": 5406,
+      "gt_pct": 59.94677312042582,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "ReplaceAll",
+      "run": "results/main_table/nasa/references/replaceall",
+      "gt_cells": 5406,
+      "gt_pct": 59.94677312042582,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "RepairAll",
+      "run": "results/main_table/nasa/references/repairall",
+      "gt_cells": 5406,
+      "gt_pct": 59.94677312042582,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "HoloClean",
+      "run": "results/main_table/nasa/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "Horizon",
+      "run": "results/main_table/nasa/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "Raha+Baran",
+      "run": "results/main_table/nasa/baselines/raha_baran",
+      "gt_cells": 120,
+      "gt_pct": 1.3306719893546242,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "UniClean",
+      "run": "results/main_table/nasa/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "Lopster",
+      "run": "results/main_table/nasa/baselines/lopster",
+      "gt_cells": 582,
+      "gt_pct": 6.453759148369927,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "ActiveClean",
+      "run": "results/main_table/nasa/baselines/activeclean",
+      "gt_cells": 2700,
+      "gt_pct": 29.940119760479043,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "BoostClean",
+      "run": "results/main_table/nasa/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "SAGA",
+      "run": "results/main_table/nasa/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "DiffPrep",
+      "run": "results/main_table/nasa/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "Comet",
+      "run": "results/main_table/nasa/baselines/comet",
+      "gt_cells": 4505,
+      "gt_pct": 49.95564426702151,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "CtxPipe",
+      "run": "results/main_table/nasa/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "MLImputer",
+      "run": "results/main_table/nasa/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "SimpleImputer",
+      "run": "results/main_table/nasa/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "LLM",
+      "run": "results/main_table/nasa/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "DIANA",
+      "run": "results/main_table/nasa/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "Learn2Clean",
+      "run": "results/main_table/nasa/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "RetClean",
+      "run": "results/main_table/nasa/baselines/retclean",
+      "gt_cells": 2700,
+      "gt_pct": 29.940119760479043,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "DAGPipe",
+      "run": "results/main_table/nasa/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "nasa",
+      "method": "DC",
+      "run": "results/main_table/nasa/demandclean",
+      "gt_cells": 584,
+      "gt_pct": 6.475937014859171,
+      "denominator": 9018,
+      "manifest": "results/main_table/nasa/demandclean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "NoFix",
+      "run": "results/main_table/soilmoisture/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "DeleteAll",
+      "run": "results/main_table/soilmoisture/references/deleteall",
+      "gt_cells": 52096,
+      "gt_pct": 59.941089837997055,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "ReplaceAll",
+      "run": "results/main_table/soilmoisture/references/replaceall",
+      "gt_cells": 52096,
+      "gt_pct": 59.941089837997055,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "RepairAll",
+      "run": "results/main_table/soilmoisture/references/repairall",
+      "gt_cells": 52096,
+      "gt_pct": 59.941089837997055,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "HoloClean",
+      "run": "results/main_table/soilmoisture/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "Horizon",
+      "run": "results/main_table/soilmoisture/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "Raha+Baran",
+      "run": "results/main_table/soilmoisture/baselines/raha_baran",
+      "gt_cells": 2560,
+      "gt_pct": 2.9455081001472756,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "UniClean",
+      "run": "results/main_table/soilmoisture/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "Lopster",
+      "run": "results/main_table/soilmoisture/baselines/lopster",
+      "gt_cells": 2560,
+      "gt_pct": 2.9455081001472756,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "ActiveClean",
+      "run": "results/main_table/soilmoisture/baselines/activeclean",
+      "gt_cells": 25984,
+      "gt_pct": 29.896907216494846,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "BoostClean",
+      "run": "results/main_table/soilmoisture/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "SAGA",
+      "run": "results/main_table/soilmoisture/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "DiffPrep",
+      "run": "results/main_table/soilmoisture/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "Comet",
+      "run": "results/main_table/soilmoisture/baselines/comet",
+      "gt_cells": 51689,
+      "gt_pct": 59.4728000736377,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "CtxPipe",
+      "run": "results/main_table/soilmoisture/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "MLImputer",
+      "run": "results/main_table/soilmoisture/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "SimpleImputer",
+      "run": "results/main_table/soilmoisture/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "LLM",
+      "run": "results/main_table/soilmoisture/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "DIANA",
+      "run": "results/main_table/soilmoisture/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "Learn2Clean",
+      "run": "results/main_table/soilmoisture/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "RetClean",
+      "run": "results/main_table/soilmoisture/baselines/retclean",
+      "gt_cells": 25984,
+      "gt_pct": 29.896907216494846,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "DAGPipe",
+      "run": "results/main_table/soilmoisture/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "soilmoisture",
+      "method": "DC",
+      "run": "results/main_table/soilmoisture/demandclean",
+      "gt_cells": 2560,
+      "gt_pct": 2.9455081001472756,
+      "denominator": 86912,
+      "manifest": "results/main_table/soilmoisture/demandclean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "NoFix",
+      "run": "results/main_table/har/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "DeleteAll",
+      "run": "results/main_table/har/references/deleteall",
+      "gt_cells": 168000,
+      "gt_pct": 60.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "ReplaceAll",
+      "run": "results/main_table/har/references/replaceall",
+      "gt_cells": 168000,
+      "gt_pct": 60.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "RepairAll",
+      "run": "results/main_table/har/references/repairall",
+      "gt_cells": 168000,
+      "gt_pct": 60.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "HoloClean",
+      "run": "results/main_table/har/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "Horizon",
+      "run": "results/main_table/har/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "Raha+Baran",
+      "run": "results/main_table/har/baselines/raha_baran",
+      "gt_cells": 80,
+      "gt_pct": 0.02857142857142857,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "UniClean",
+      "run": "results/main_table/har/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "Lopster",
+      "run": "results/main_table/har/baselines/lopster",
+      "gt_cells": 320,
+      "gt_pct": 0.11428571428571428,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "ActiveClean",
+      "run": "results/main_table/har/baselines/activeclean",
+      "gt_cells": 2000,
+      "gt_pct": 0.7142857142857143,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "BoostClean",
+      "run": "results/main_table/har/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "SAGA",
+      "run": "results/main_table/har/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "DiffPrep",
+      "run": "results/main_table/har/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "Comet",
+      "run": "results/main_table/har/baselines/comet",
+      "gt_cells": 9000,
+      "gt_pct": 3.2142857142857144,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "CtxPipe",
+      "run": "results/main_table/har/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "MLImputer",
+      "run": "results/main_table/har/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "SimpleImputer",
+      "run": "results/main_table/har/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "LLM",
+      "run": "results/main_table/har/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "DIANA",
+      "run": "results/main_table/har/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "Learn2Clean",
+      "run": "results/main_table/har/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "RetClean",
+      "run": "results/main_table/har/baselines/retclean",
+      "gt_cells": 84000,
+      "gt_pct": 30.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "DAGPipe",
+      "run": "results/main_table/har/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "har",
+      "method": "DC",
+      "run": "results/main_table/har/demandclean",
+      "gt_cells": 320,
+      "gt_pct": 0.11428571428571428,
+      "denominator": 280000,
+      "manifest": "results/main_table/har/demandclean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "NoFix",
+      "run": "results/main_table/flights/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "DeleteAll",
+      "run": "results/main_table/flights/references/deleteall",
+      "gt_cells": 9975,
+      "gt_pct": 59.974747474747474,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "ReplaceAll",
+      "run": "results/main_table/flights/references/replaceall",
+      "gt_cells": 9975,
+      "gt_pct": 59.974747474747474,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "RepairAll",
+      "run": "results/main_table/flights/references/repairall",
+      "gt_cells": 9975,
+      "gt_pct": 59.974747474747474,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "HoloClean",
+      "run": "results/main_table/flights/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "Horizon",
+      "run": "results/main_table/flights/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "Raha+Baran",
+      "run": "results/main_table/flights/baselines/raha_baran",
+      "gt_cells": 140,
+      "gt_pct": 0.8417508417508418,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "UniClean",
+      "run": "results/main_table/flights/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "Lopster",
+      "run": "results/main_table/flights/baselines/lopster",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "ActiveClean",
+      "run": "results/main_table/flights/baselines/activeclean",
+      "gt_cells": 3500,
+      "gt_pct": 21.043771043771045,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "BoostClean",
+      "run": "results/main_table/flights/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "SAGA",
+      "run": "results/main_table/flights/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "DiffPrep",
+      "run": "results/main_table/flights/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "Comet",
+      "run": "results/main_table/flights/baselines/comet",
+      "gt_cells": 8550,
+      "gt_pct": 51.40692640692641,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "CtxPipe",
+      "run": "results/main_table/flights/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "MLImputer",
+      "run": "results/main_table/flights/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "SimpleImputer",
+      "run": "results/main_table/flights/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "LLM",
+      "run": "results/main_table/flights/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "DIANA",
+      "run": "results/main_table/flights/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "Learn2Clean",
+      "run": "results/main_table/flights/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "RetClean",
+      "run": "results/main_table/flights/baselines/retclean",
+      "gt_cells": 4984,
+      "gt_pct": 29.966329966329965,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "DAGPipe",
+      "run": "results/main_table/flights/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "flights",
+      "method": "DC",
+      "run": "results/main_table/flights/demandclean",
+      "gt_cells": 4,
+      "gt_pct": 0.02405002405002405,
+      "denominator": 16632,
+      "manifest": "results/main_table/flights/demandclean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "NoFix",
+      "run": "results/main_table/soccer/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "DeleteAll",
+      "run": "results/main_table/soccer/references/deleteall",
+      "gt_cells": 63660,
+      "gt_pct": 60.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "ReplaceAll",
+      "run": "results/main_table/soccer/references/replaceall",
+      "gt_cells": 63660,
+      "gt_pct": 60.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "RepairAll",
+      "run": "results/main_table/soccer/references/repairall",
+      "gt_cells": 63660,
+      "gt_pct": 60.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "HoloClean",
+      "run": "results/main_table/soccer/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "Horizon",
+      "run": "results/main_table/soccer/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "Raha+Baran",
+      "run": "results/main_table/soccer/baselines/raha_baran",
+      "gt_cells": 200,
+      "gt_pct": 0.1885014137606032,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "UniClean",
+      "run": "results/main_table/soccer/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "Lopster",
+      "run": "results/main_table/soccer/baselines/lopster",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "ActiveClean",
+      "run": "results/main_table/soccer/baselines/activeclean",
+      "gt_cells": 5000,
+      "gt_pct": 4.71253534401508,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "BoostClean",
+      "run": "results/main_table/soccer/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "SAGA",
+      "run": "results/main_table/soccer/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "DiffPrep",
+      "run": "results/main_table/soccer/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "Comet",
+      "run": "results/main_table/soccer/baselines/comet",
+      "gt_cells": 57294,
+      "gt_pct": 54.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "CtxPipe",
+      "run": "results/main_table/soccer/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "MLImputer",
+      "run": "results/main_table/soccer/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "SimpleImputer",
+      "run": "results/main_table/soccer/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "LLM",
+      "run": "results/main_table/soccer/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "DIANA",
+      "run": "results/main_table/soccer/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "Learn2Clean",
+      "run": "results/main_table/soccer/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "RetClean",
+      "run": "results/main_table/soccer/baselines/retclean",
+      "gt_cells": 31830,
+      "gt_pct": 30.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "DAGPipe",
+      "run": "results/main_table/soccer/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "soccer",
+      "method": "DC",
+      "run": "results/main_table/soccer/demandclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 106100,
+      "manifest": "results/main_table/soccer/demandclean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "NoFix",
+      "run": "results/main_table/hospitals/references/nofix",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/references/nofix/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "DeleteAll",
+      "run": "results/main_table/hospitals/references/deleteall",
+      "gt_cells": 11400,
+      "gt_pct": 60.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/references/deleteall/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "ReplaceAll",
+      "run": "results/main_table/hospitals/references/replaceall",
+      "gt_cells": 11400,
+      "gt_pct": 60.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/references/replaceall/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "RepairAll",
+      "run": "results/main_table/hospitals/references/repairall",
+      "gt_cells": 11400,
+      "gt_pct": 60.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/references/repairall/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "HoloClean",
+      "run": "results/main_table/hospitals/baselines/holoclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/holoclean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "Horizon",
+      "run": "results/main_table/hospitals/baselines/horizon",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/horizon/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "Raha+Baran",
+      "run": "results/main_table/hospitals/baselines/raha_baran",
+      "gt_cells": 380,
+      "gt_pct": 2.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/raha_baran/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "UniClean",
+      "run": "results/main_table/hospitals/baselines/uniclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/uniclean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "Lopster",
+      "run": "results/main_table/hospitals/baselines/lopster",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/lopster/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "ActiveClean",
+      "run": "results/main_table/hospitals/baselines/activeclean",
+      "gt_cells": 5700,
+      "gt_pct": 30.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/activeclean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "BoostClean",
+      "run": "results/main_table/hospitals/baselines/boostclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/boostclean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "SAGA",
+      "run": "results/main_table/hospitals/baselines/saga",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/saga/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "DiffPrep",
+      "run": "results/main_table/hospitals/baselines/diffprep",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/diffprep/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "Comet",
+      "run": "results/main_table/hospitals/baselines/comet",
+      "gt_cells": 10800,
+      "gt_pct": 56.8421052631579,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/comet/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "CtxPipe",
+      "run": "results/main_table/hospitals/baselines/ctxpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/ctxpipe/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "MLImputer",
+      "run": "results/main_table/hospitals/baselines/mlimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/mlimputer/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "SimpleImputer",
+      "run": "results/main_table/hospitals/baselines/simpleimputer",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/simpleimputer/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "LLM",
+      "run": "results/main_table/hospitals/baselines/llm",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/llm/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "DIANA",
+      "run": "results/main_table/hospitals/baselines/diana",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/diana/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "Learn2Clean",
+      "run": "results/main_table/hospitals/baselines/learn2clean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/learn2clean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "RetClean",
+      "run": "results/main_table/hospitals/baselines/retclean",
+      "gt_cells": 5700,
+      "gt_pct": 30.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/retclean/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "DAGPipe",
+      "run": "results/main_table/hospitals/baselines/dagpipe",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/baselines/dagpipe/manifest.json"
+    },
+    {
+      "dataset": "hospitals",
+      "method": "DC",
+      "run": "results/main_table/hospitals/demandclean",
+      "gt_cells": 0,
+      "gt_pct": 0.0,
+      "denominator": 19000,
+      "manifest": "results/main_table/hospitals/demandclean/manifest.json"
+    }
+  ],
+  "adult": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.99955773738446,
+    "ReplaceAll": 59.99955773738446,
+    "RepairAll": 59.99955773738446,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.04422626155411083,
+    "UniClean": 0.0,
+    "Lopster": 0.1326787846623325,
+    "ActiveClean": 1.1056565388527708,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 55.999587221558826,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 0.0,
+    "DAGPipe": 0.0,
+    "DC": 0.1326787846623325
+  },
+  "beers": {
+    "NoFix": 0.0,
+    "DeleteAll": 60.0,
+    "ReplaceAll": 60.0,
+    "RepairAll": 60.0,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.8298755186721992,
+    "UniClean": 0.0,
+    "Lopster": 1.7427385892116183,
+    "ActiveClean": 20.74688796680498,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 48.0,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 27.0,
+    "DAGPipe": 0.0,
+    "DC": 1.7759336099585061
+  },
+  "breast_cancer": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.94277539341917,
+    "ReplaceAll": 59.94277539341917,
+    "RepairAll": 59.94277539341917,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 2.8612303290414878,
+    "UniClean": 0.0,
+    "Lopster": 2.8612303290414878,
+    "ActiveClean": 29.89985693848355,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 53.94849785407725,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.89985693848355,
+    "DAGPipe": 0.0,
+    "DC": 2.932761087267525
+  },
+  "smartfactory": {
+    "NoFix": 0.0,
+    "DeleteAll": 60.0,
+    "ReplaceAll": 60.0,
+    "RepairAll": 60.0,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.08458447874814971,
+    "UniClean": 0.0,
+    "Lopster": 0.22837809262000422,
+    "ActiveClean": 2.114611968703743,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 56.8421052631579,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.997885388031296,
+    "DAGPipe": 0.0,
+    "DC": 0.22949104628774303
+  },
+  "bike": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.997698371597906,
+    "ReplaceAll": 59.997698371597906,
+    "RepairAll": 59.997698371597906,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.1150814201047241,
+    "UniClean": 0.0,
+    "Lopster": 0.9781920708901548,
+    "ActiveClean": 2.8770355026181025,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 56.247842223373034,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.995972150296335,
+    "DAGPipe": 0.0,
+    "DC": 0.9814287358306002
+  },
+  "mercedes": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.99049655500119,
+    "ReplaceAll": 59.99049655500119,
+    "RepairAll": 59.99049655500119,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.4751722499406035,
+    "UniClean": 0.0,
+    "Lopster": 2.019482062247565,
+    "ActiveClean": 11.879306248515087,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 59.831370569444154,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.98336897125208,
+    "DAGPipe": 0.0,
+    "DC": 2.0412870487833006
+  },
+  "nasa": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.94677312042582,
+    "ReplaceAll": 59.94677312042582,
+    "RepairAll": 59.94677312042582,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 1.3306719893546242,
+    "UniClean": 0.0,
+    "Lopster": 6.453759148369927,
+    "ActiveClean": 29.940119760479043,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 49.95564426702151,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.940119760479043,
+    "DAGPipe": 0.0,
+    "DC": 6.475937014859171
+  },
+  "soilmoisture": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.941089837997055,
+    "ReplaceAll": 59.941089837997055,
+    "RepairAll": 59.941089837997055,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 2.9455081001472756,
+    "UniClean": 0.0,
+    "Lopster": 2.9455081001472756,
+    "ActiveClean": 29.896907216494846,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 59.4728000736377,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.896907216494846,
+    "DAGPipe": 0.0,
+    "DC": 2.9455081001472756
+  },
+  "har": {
+    "NoFix": 0.0,
+    "DeleteAll": 60.0,
+    "ReplaceAll": 60.0,
+    "RepairAll": 60.0,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.02857142857142857,
+    "UniClean": 0.0,
+    "Lopster": 0.11428571428571428,
+    "ActiveClean": 0.7142857142857143,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 3.2142857142857144,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 30.0,
+    "DAGPipe": 0.0,
+    "DC": 0.11428571428571428
+  },
+  "flights": {
+    "NoFix": 0.0,
+    "DeleteAll": 59.974747474747474,
+    "ReplaceAll": 59.974747474747474,
+    "RepairAll": 59.974747474747474,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.8417508417508418,
+    "UniClean": 0.0,
+    "Lopster": 0.0,
+    "ActiveClean": 21.043771043771045,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 51.40692640692641,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 29.966329966329965,
+    "DAGPipe": 0.0,
+    "DC": 0.02405002405002405
+  },
+  "soccer": {
+    "NoFix": 0.0,
+    "DeleteAll": 60.0,
+    "ReplaceAll": 60.0,
+    "RepairAll": 60.0,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 0.1885014137606032,
+    "UniClean": 0.0,
+    "Lopster": 0.0,
+    "ActiveClean": 4.71253534401508,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 54.0,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 30.0,
+    "DAGPipe": 0.0,
+    "DC": 0.0
+  },
+  "hospitals": {
+    "NoFix": 0.0,
+    "DeleteAll": 60.0,
+    "ReplaceAll": 60.0,
+    "RepairAll": 60.0,
+    "HoloClean": 0.0,
+    "Horizon": 0.0,
+    "Raha+Baran": 2.0,
+    "UniClean": 0.0,
+    "Lopster": 0.0,
+    "ActiveClean": 30.0,
+    "BoostClean": 0.0,
+    "SAGA": 0.0,
+    "DiffPrep": 0.0,
+    "Comet": 56.8421052631579,
+    "CtxPipe": 0.0,
+    "MLImputer": 0.0,
+    "SimpleImputer": 0.0,
+    "LLM": 0.0,
+    "DIANA": 0.0,
+    "Learn2Clean": 0.0,
+    "RetClean": 30.0,
+    "DAGPipe": 0.0,
+    "DC": 0.0
+  }
+}

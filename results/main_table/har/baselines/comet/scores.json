@@ -1,0 +1,21 @@
+{
+  "dataset": "har",
+  "method": "Comet",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.5195416385463819,
+  "all_models": {
+    "agglomerative": 0.5195416385463819,
+    "kmeans": 0.5290929748592549
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 40368,
+  "n_test": 13863,
+  "table_rows": 42000,
+  "gt_cells": 9000,
+  "gt_pct": 3.2142857142857144,
+  "redr": {
+    "redr": 0.056632968846709306
+  }
+}

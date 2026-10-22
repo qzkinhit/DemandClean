@@ -1,0 +1,13 @@
+SimpleImputer data cleaning (mean)
+dirty table: data/smartfactory/dirty_index.csv
+clean table: data/smartfactory/clean_index.csv
+task: smartfactory_simpleimputer
+fill strategy: mean
+repaired data saved: smartfactory_simpleimputer_cleaned.csv
+run time: 0.82 s
+status: success
+filled cells: 7093
+ground-truth cost: 0 (fully automatic)
+
+results saved to: smartfactory_simpleimputer
+log file: smartfactory_simpleimputer.log

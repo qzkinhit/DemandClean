@@ -1,0 +1,31 @@
+{
+  "id": "main_table/nasa/baselines/dagpipe",
+  "dataset": "nasa",
+  "role": "baselines",
+  "method": "DAGPipe",
+  "status": "final",
+  "artifact": "transformed.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 9018,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "transformed_features",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "bbf3b7f34c078f1ed9ff741992875b2ddc5bb3861b681998895e12e361dfca79",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table nasa:dagpipe:results/main_table/nasa/baselines/dagpipe/transformed.npz",
+  "seed": 0,
+  "files": [
+    "manifest.json",
+    "run.json",
+    "scores.json",
+    "transformed.npz"
+  ]
+}

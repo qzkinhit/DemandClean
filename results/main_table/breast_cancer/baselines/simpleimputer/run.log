@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:10:24
+SimpleImputer data cleaning (mean)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: breast_cancer_simpleimputer
+fill strategy: mean
+repaired data saved: breast_cancer_simpleimputer_cleaned.csv
+run time: 0.18 s
+status: success
+filled cells: 140
+ground-truth cost: 0 (fully automatic)
+
+results saved to: breast_cancer_simpleimputer
+log file: breast_cancer_simpleimputer.log

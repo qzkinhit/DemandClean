@@ -1,0 +1,16 @@
+Run started at 2026-10-17 00:10:02
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: breast_cancer_deleteall
+deletion mode: drop_feature_errors
+output data saved: breast_cancer_deleteall_cleaned.csv
+input rows: 419
+kept rows: 84
+deleted rows: 335
+run time: 0.20 s
+status: success
+ground-truth cost: 335
+
+results saved to: breast_cancer_deleteall
+log file: breast_cancer_deleteall.log

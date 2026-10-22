@@ -1,0 +1,20 @@
+{
+  "id": "budget/soilmoisture/activeclean_dcbudget",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 2560,
+  "seconds": 2.997,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "708560c2b6c5fbe721ff69ca14374f173f490f96db6809a5684477a10dec70ea"
+    }
+  }
+}

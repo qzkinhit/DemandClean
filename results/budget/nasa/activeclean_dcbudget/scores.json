@@ -1,0 +1,13 @@
+{
+ "dataset": "nasa",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "lr",
+ "metric": "r2",
+ "test": -0.0011924064708719317,
+ "n_train_rows": 901,
+ "redr": {
+  "r_before": 459,
+  "r_after": 392,
+  "redr": 0.14596949891067537
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "bike",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.999885756673778,
+  "tol_rel": 0.9991879426254747,
+  "references": {
+    "NoFix": 0.8593161889715127,
+    "RepairAll": 1.0
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.9403729771774393,
+  "n_train_rows": 9896,
+  "n_test": 3476,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "5c677fb8d023783acb63d250a8325584f5d3dd02a82320950089a303e8771c44"
+}

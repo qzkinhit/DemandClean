@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "beers",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.33820459290187893,
+    "n_train_rows": 1442,
+    "method": "BoostClean",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "beers",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.31106471816283926,
+    "n_train_rows": 1442,
+    "method": "BoostClean",
+    "encoding": "train_fitted"
+  }
+]

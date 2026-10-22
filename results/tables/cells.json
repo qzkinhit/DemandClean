@@ -1,0 +1,1820 @@
+{
+  "adult|NoFix": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/references/nofix"
+  },
+  "adult|DeleteAll": {
+    "scores": {
+      "rf": 0.8560530679933664,
+      "gb": 0.8681039248203427
+    },
+    "source": "results/main_table/adult/references/deleteall"
+  },
+  "adult|ReplaceAll": {
+    "scores": {
+      "rf": 0.8564953012714207,
+      "gb": 0.8684355997788834
+    },
+    "source": "results/main_table/adult/references/replaceall"
+  },
+  "adult|RepairAll": {
+    "scores": {
+      "rf": 0.8564953012714207,
+      "gb": 0.8684355997788834
+    },
+    "source": "results/main_table/adult/references/repairall"
+  },
+  "adult|HoloClean": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/holoclean"
+  },
+  "adult|Horizon": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/horizon"
+  },
+  "adult|Raha+Baran": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/raha_baran"
+  },
+  "adult|UniClean": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/uniclean"
+  },
+  "adult|Lopster": {
+    "scores": {
+      "rf": 0.8049751243781095,
+      "gb": 0.7784411276948591
+    },
+    "source": "results/main_table/adult/baselines/lopster"
+  },
+  "adult|ActiveClean": {
+    "scores": {
+      "rf": 0.8537313432835821,
+      "gb": 0.8677722498618021
+    },
+    "source": "results/main_table/adult/baselines/activeclean"
+  },
+  "adult|BoostClean": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/boostclean"
+  },
+  "adult|SAGA": {
+    "scores": {
+      "rf": 0.8453289110005527,
+      "gb": 0.862244333886125
+    },
+    "source": "results/main_table/adult/baselines/saga"
+  },
+  "adult|DiffPrep": {
+    "scores": {
+      "rf": 0.8111663902708679
+    },
+    "source": "results/main_table/adult/baselines/diffprep"
+  },
+  "adult|Comet": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/comet"
+  },
+  "adult|CtxPipe": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/ctxpipe"
+  },
+  "adult|MLImputer": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/mlimputer"
+  },
+  "adult|SimpleImputer": {
+    "scores": {
+      "rf": 0.8518518518518519,
+      "gb": 0.8694306246545053
+    },
+    "source": "results/main_table/adult/baselines/simpleimputer"
+  },
+  "adult|LLM": {
+    "scores": {
+      "rf": 0.8524046434494196,
+      "gb": 0.8684355997788834
+    },
+    "source": "results/main_table/adult/baselines/llm"
+  },
+  "adult|DIANA": {
+    "scores": {
+      "rf": 0.8348258706467662
+    },
+    "source": "results/main_table/adult/baselines/diana"
+  },
+  "adult|Learn2Clean": {
+    "scores": {
+      "rf": 0.8521835268103924
+    },
+    "source": "results/main_table/adult/baselines/learn2clean"
+  },
+  "adult|RetClean": {
+    "scores": {
+      "rf": 0.8518518518518519
+    },
+    "source": "results/main_table/adult/baselines/retclean"
+  },
+  "adult|DAGPipe": {
+    "scores": {
+      "rf": 0.8501934770591487
+    },
+    "source": "results/main_table/adult/baselines/dagpipe"
+  },
+  "adult|DC": {
+    "scores": {
+      "rf": 0.8537313432835821,
+      "gb": 0.8683250414593698
+    },
+    "source": "results/main_table/adult/demandclean"
+  },
+  "beers|NoFix": {
+    "scores": {
+      "rf": 0.31524008350730687,
+      "gb": 0.29436325678496866
+    },
+    "source": "results/main_table/beers/references/nofix"
+  },
+  "beers|DeleteAll": {
+    "scores": {
+      "rf": 0.3068893528183716,
+      "gb": 0.25260960334029225
+    },
+    "source": "results/main_table/beers/references/deleteall"
+  },
+  "beers|ReplaceAll": {
+    "scores": {
+      "rf": 0.3298538622129436,
+      "gb": 0.10647181628392484
+    },
+    "source": "results/main_table/beers/references/replaceall"
+  },
+  "beers|RepairAll": {
+    "scores": {
+      "rf": 0.35490605427974947,
+      "gb": 0.34029227557411273
+    },
+    "source": "results/main_table/beers/references/repairall"
+  },
+  "beers|HoloClean": {
+    "scores": {
+      "rf": 0.3235908141962422,
+      "gb": 0.2964509394572025
+    },
+    "source": "results/main_table/beers/baselines/holoclean"
+  },
+  "beers|Horizon": {
+    "scores": {
+      "rf": 0.33402922755741127,
+      "gb": 0.29436325678496866
+    },
+    "source": "results/main_table/beers/baselines/horizon"
+  },
+  "beers|Raha+Baran": {
+    "scores": {
+      "rf": 0.33194154488517746,
+      "gb": 0.1022964509394572
+    },
+    "source": "results/main_table/beers/baselines/raha_baran"
+  },
+  "beers|UniClean": {
+    "scores": {
+      "rf": 0.348643006263048,
+      "gb": 0.3298538622129436
+    },
+    "source": "results/main_table/beers/baselines/uniclean"
+  },
+  "beers|Lopster": {
+    "scores": {
+      "rf": 0.11064718162839249,
+      "gb": 0.012526096033402923
+    },
+    "source": "results/main_table/beers/baselines/lopster"
+  },
+  "beers|ActiveClean": {
+    "scores": {
+      "rf": 0.34029227557411273,
+      "gb": 0.2839248434237996
+    },
+    "source": "results/main_table/beers/baselines/activeclean"
+  },
+  "beers|BoostClean": {
+    "scores": {
+      "rf": 0.33820459290187893,
+      "gb": 0.31106471816283926
+    },
+    "source": "results/main_table/beers/baselines/boostclean"
+  },
+  "beers|SAGA": {
+    "scores": {
+      "rf": 0.3444676409185804,
+      "gb": 0.325678496868476
+    },
+    "source": "results/main_table/beers/baselines/saga"
+  },
+  "beers|DiffPrep": {
+    "scores": {
+      "rf": 0.3277661795407098
+    },
+    "source": "results/main_table/beers/baselines/diffprep"
+  },
+  "beers|Comet": {
+    "scores": {
+      "rf": 0.3444676409185804,
+      "gb": 0.27348643006263046
+    },
+    "source": "results/main_table/beers/baselines/comet"
+  },
+  "beers|CtxPipe": {
+    "scores": {
+      "rf": 0.3277661795407098,
+      "gb": 0.302713987473904
+    },
+    "source": "results/main_table/beers/baselines/ctxpipe"
+  },
+  "beers|MLImputer": {
+    "scores": {
+      "rf": 0.325678496868476,
+      "gb": 0.2985386221294363
+    },
+    "source": "results/main_table/beers/baselines/mlimputer"
+  },
+  "beers|SimpleImputer": {
+    "scores": {
+      "rf": 0.31524008350730687,
+      "gb": 0.29018789144050106
+    },
+    "source": "results/main_table/beers/baselines/simpleimputer"
+  },
+  "beers|LLM": {
+    "scores": {
+      "rf": 0.33820459290187893,
+      "gb": 0.31941544885177453
+    },
+    "source": "results/main_table/beers/baselines/llm"
+  },
+  "beers|DIANA": {
+    "scores": {
+      "rf": 0.2985386221294363
+    },
+    "source": "results/main_table/beers/baselines/diana"
+  },
+  "beers|Learn2Clean": {
+    "scores": {
+      "rf": 0.33611691022964507
+    },
+    "source": "results/main_table/beers/baselines/learn2clean"
+  },
+  "beers|RetClean": {
+    "scores": {
+      "rf": 0.35281837160751567
+    },
+    "source": "results/main_table/beers/baselines/retclean"
+  },
+  "beers|DAGPipe": {
+    "scores": {
+      "rf": 0.302713987473904
+    },
+    "source": "results/main_table/beers/baselines/dagpipe"
+  },
+  "beers|DC": {
+    "scores": {
+      "rf": 0.36116910229645094,
+      "gb": 0.3068893528183716
+    },
+    "source": "results/main_table/beers/demandclean"
+  },
+  "breast_cancer|NoFix": {
+    "scores": {
+      "lr": 0.9571428571428572,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/references/nofix"
+  },
+  "breast_cancer|DeleteAll": {
+    "scores": {
+      "lr": 0.9714285714285714,
+      "gb": 0.95
+    },
+    "source": "results/main_table/breast_cancer/references/deleteall"
+  },
+  "breast_cancer|ReplaceAll": {
+    "scores": {
+      "lr": 0.9857142857142858,
+      "gb": 0.9785714285714285
+    },
+    "source": "results/main_table/breast_cancer/references/replaceall"
+  },
+  "breast_cancer|RepairAll": {
+    "scores": {
+      "lr": 0.9857142857142858,
+      "gb": 0.9857142857142858
+    },
+    "source": "results/main_table/breast_cancer/references/repairall"
+  },
+  "breast_cancer|HoloClean": {
+    "scores": {
+      "lr": 0.9571428571428572,
+      "gb": 1.0
+    },
+    "source": "results/main_table/breast_cancer/baselines/holoclean"
+  },
+  "breast_cancer|Horizon": {
+    "scores": {
+      "lr": 0.9642857142857143,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/baselines/horizon"
+  },
+  "breast_cancer|Raha+Baran": {
+    "scores": {
+      "lr": 0.9642857142857143,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/baselines/raha_baran"
+  },
+  "breast_cancer|UniClean": {
+    "scores": {
+      "lr": 0.9571428571428572,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/baselines/uniclean"
+  },
+  "breast_cancer|Lopster": {
+    "scores": {
+      "lr": 0.9642857142857143,
+      "gb": 0.95
+    },
+    "source": "results/main_table/breast_cancer/baselines/lopster"
+  },
+  "breast_cancer|ActiveClean": {
+    "scores": {
+      "lr": 0.9857142857142858,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/baselines/activeclean"
+  },
+  "breast_cancer|BoostClean": {
+    "scores": {
+      "lr": 0.9714285714285714,
+      "gb": 1.0
+    },
+    "source": "results/main_table/breast_cancer/baselines/boostclean"
+  },
+  "breast_cancer|SAGA": {
+    "scores": {
+      "lr": 0.9571428571428572,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/baselines/saga"
+  },
+  "breast_cancer|DiffPrep": {
+    "scores": {
+      "lr": 0.9785714285714285
+    },
+    "source": "results/main_table/breast_cancer/baselines/diffprep"
+  },
+  "breast_cancer|Comet": {
+    "scores": {
+      "lr": 0.9785714285714285,
+      "gb": 0.9857142857142858
+    },
+    "source": "results/main_table/breast_cancer/baselines/comet"
+  },
+  "breast_cancer|CtxPipe": {
+    "scores": {
+      "lr": 0.9642857142857143,
+      "gb": 0.9928571428571429
+    },
+    "source": "results/main_table/breast_cancer/baselines/ctxpipe"
+  },
+  "breast_cancer|MLImputer": {
+    "scores": {
+      "lr": 0.9571428571428572,
+      "gb": 0.9857142857142858
+    },
+    "source": "results/main_table/breast_cancer/baselines/mlimputer"
+  },
+  "breast_cancer|SimpleImputer": {
+    "scores": {
+      "lr": 0.9642857142857143,
+      "gb": 1.0
+    },
+    "source": "results/main_table/breast_cancer/baselines/simpleimputer"
+  },
+  "breast_cancer|LLM": {
+    "scores": {
+      "lr": 0.9857142857142858,
+      "gb": 1.0
+    },
+    "source": "results/main_table/breast_cancer/baselines/llm"
+  },
+  "breast_cancer|DIANA": {
+    "scores": {
+      "lr": 0.9785714285714285
+    },
+    "source": "results/main_table/breast_cancer/baselines/diana"
+  },
+  "breast_cancer|Learn2Clean": {
+    "scores": {
+      "lr": 0.9571428571428572
+    },
+    "source": "results/main_table/breast_cancer/baselines/learn2clean"
+  },
+  "breast_cancer|RetClean": {
+    "scores": {
+      "lr": 0.9857142857142858
+    },
+    "source": "results/main_table/breast_cancer/baselines/retclean"
+  },
+  "breast_cancer|DAGPipe": {
+    "scores": {
+      "lr": 0.2785714285714286
+    },
+    "source": "results/main_table/breast_cancer/baselines/dagpipe"
+  },
+  "breast_cancer|DC": {
+    "scores": {
+      "lr": 0.9928571428571429,
+      "gb": 0.9785714285714285
+    },
+    "source": "results/main_table/breast_cancer/demandclean"
+  },
+  "smartfactory|NoFix": {
+    "scores": {
+      "rf": 0.9617255233664622,
+      "gb": 0.7974201733981814
+    },
+    "source": "results/main_table/smartfactory/references/nofix"
+  },
+  "smartfactory|DeleteAll": {
+    "scores": {
+      "rf": 0.8456333262846267,
+      "gb": 0.7879044195390146
+    },
+    "source": "results/main_table/smartfactory/references/deleteall"
+  },
+  "smartfactory|ReplaceAll": {
+    "scores": {
+      "rf": 0.9617255233664622,
+      "gb": 0.7974201733981814
+    },
+    "source": "results/main_table/smartfactory/references/replaceall"
+  },
+  "smartfactory|RepairAll": {
+    "scores": {
+      "rf": 0.9663776696976105,
+      "gb": 0.7972087122013111
+    },
+    "source": "results/main_table/smartfactory/references/repairall"
+  },
+  "smartfactory|HoloClean": {
+    "scores": {
+      "rf": 0.9657432861069993,
+      "gb": 0.8014379361387185
+    },
+    "source": "results/main_table/smartfactory/baselines/holoclean"
+  },
+  "smartfactory|Horizon": {
+    "scores": {
+      "rf": 0.8263903573694227,
+      "gb": 0.7783886656798478
+    },
+    "source": "results/main_table/smartfactory/baselines/horizon"
+  },
+  "smartfactory|Raha+Baran": {
+    "scores": {
+      "rf": 0.962148445760203,
+      "gb": 0.7912877986889406
+    },
+    "source": "results/main_table/smartfactory/baselines/raha_baran"
+  },
+  "smartfactory|UniClean": {
+    "scores": {
+      "rf": 0.9577077606259251,
+      "gb": 0.8024952421230704
+    },
+    "source": "results/main_table/smartfactory/baselines/uniclean"
+  },
+  "smartfactory|Lopster": {
+    "scores": {
+      "rf": 0.7024740960033834,
+      "gb": 0.5893423556777332
+    },
+    "source": "results/main_table/smartfactory/baselines/lopster"
+  },
+  "smartfactory|ActiveClean": {
+    "scores": {
+      "rf": 0.9634172129414252,
+      "gb": 0.7974201733981814
+    },
+    "source": "results/main_table/smartfactory/baselines/activeclean"
+  },
+  "smartfactory|BoostClean": {
+    "scores": {
+      "rf": 0.9623599069570734,
+      "gb": 0.7974201733981814
+    },
+    "source": "results/main_table/smartfactory/baselines/boostclean"
+  },
+  "smartfactory|SAGA": {
+    "scores": {
+      "rf": 0.9634172129414252,
+      "gb": 0.8003806301543667
+    },
+    "source": "results/main_table/smartfactory/baselines/saga"
+  },
+  "smartfactory|DiffPrep": {
+    "scores": {
+      "rf": 0.6813279763163459
+    },
+    "source": "results/main_table/smartfactory/baselines/diffprep"
+  },
+  "smartfactory|Comet": {
+    "scores": {
+      "rf": 0.9663776696976105,
+      "gb": 0.7972087122013111
+    },
+    "source": "results/main_table/smartfactory/baselines/comet"
+  },
+  "smartfactory|CtxPipe": {
+    "scores": {
+      "rf": 0.9617255233664622,
+      "gb": 0.7974201733981814
+    },
+    "source": "results/main_table/smartfactory/baselines/ctxpipe"
+  },
+  "smartfactory|MLImputer": {
+    "scores": {
+      "rf": 0.9610911397758511,
+      "gb": 0.8001691689574963
+    },
+    "source": "results/main_table/smartfactory/baselines/mlimputer"
+  },
+  "smartfactory|SimpleImputer": {
+    "scores": {
+      "rf": 0.9642630577289067,
+      "gb": 0.7980545569887926
+    },
+    "source": "results/main_table/smartfactory/baselines/simpleimputer"
+  },
+  "smartfactory|LLM": {
+    "scores": {
+      "rf": 0.9659547473038698,
+      "gb": 0.7976316345950518
+    },
+    "source": "results/main_table/smartfactory/baselines/llm"
+  },
+  "smartfactory|DIANA": {
+    "scores": {
+      "rf": 0.8934235567773313
+    },
+    "source": "results/main_table/smartfactory/baselines/diana"
+  },
+  "smartfactory|Learn2Clean": {
+    "scores": {
+      "rf": 0.967223514485092
+    },
+    "source": "results/main_table/smartfactory/baselines/learn2clean"
+  },
+  "smartfactory|RetClean": {
+    "scores": {
+      "rf": 0.9617255233664622
+    },
+    "source": "results/main_table/smartfactory/baselines/retclean"
+  },
+  "smartfactory|DAGPipe": {
+    "scores": {
+      "rf": 0.9589765278071474
+    },
+    "source": "results/main_table/smartfactory/baselines/dagpipe"
+  },
+  "smartfactory|DC": {
+    "scores": {
+      "rf": 0.9687037428631846,
+      "gb": 0.7965743286107
+    },
+    "source": "results/main_table/smartfactory/demandclean"
+  },
+  "bike|NoFix": {
+    "scores": {
+      "lr": 0.8593161889715127,
+      "lasso": 0.8573288710118977
+    },
+    "source": "results/main_table/bike/references/nofix"
+  },
+  "bike|DeleteAll": {
+    "scores": {
+      "lr": 0.8654339993328286,
+      "lasso": 0.86332933962845
+    },
+    "source": "results/main_table/bike/references/deleteall"
+  },
+  "bike|ReplaceAll": {
+    "scores": {
+      "lr": 0.9983737704690058,
+      "lasso": 0.9993297926534608
+    },
+    "source": "results/main_table/bike/references/replaceall"
+  },
+  "bike|RepairAll": {
+    "scores": {
+      "lr": 1.0,
+      "lasso": 0.9999264511630295
+    },
+    "source": "results/main_table/bike/references/repairall"
+  },
+  "bike|HoloClean": {
+    "scores": {
+      "lr": 0.8594724303031553,
+      "lasso": 0.8575115530782715
+    },
+    "source": "results/main_table/bike/baselines/holoclean"
+  },
+  "bike|Horizon": {
+    "scores": {
+      "lr": 0.8618687391924611,
+      "lasso": 0.8595689467057946
+    },
+    "source": "results/main_table/bike/baselines/horizon"
+  },
+  "bike|Raha+Baran": {
+    "scores": {
+      "lr": 0.8614750435992977,
+      "lasso": 0.8598913175020635
+    },
+    "source": "results/main_table/bike/baselines/raha_baran"
+  },
+  "bike|UniClean": {
+    "scores": {
+      "lr": 0.8609526749717225,
+      "lasso": 0.8588199120347697
+    },
+    "source": "results/main_table/bike/baselines/uniclean"
+  },
+  "bike|Lopster": {
+    "scores": {
+      "lr": 0.9549539178928137,
+      "lasso": 0.9724666559768457
+    },
+    "source": "results/main_table/bike/baselines/lopster"
+  },
+  "bike|ActiveClean": {
+    "scores": {
+      "lr": 0.9428863438058618,
+      "lasso": 0.9417731646157994
+    },
+    "source": "results/main_table/bike/baselines/activeclean"
+  },
+  "bike|BoostClean": {
+    "scores": {
+      "lr": 0.8621108436676576,
+      "lasso": 0.8601571567758012
+    },
+    "source": "results/main_table/bike/baselines/boostclean"
+  },
+  "bike|SAGA": {
+    "scores": {
+      "lr": 0.9829554499667883,
+      "lasso": 0.9833162197201718
+    },
+    "source": "results/main_table/bike/baselines/saga"
+  },
+  "bike|DiffPrep": {
+    "scores": {
+      "lr": 0.93098817429652
+    },
+    "source": "results/main_table/bike/baselines/diffprep"
+  },
+  "bike|Comet": {
+    "scores": {
+      "lr": 1.0,
+      "lasso": 0.9999265180510272
+    },
+    "source": "results/main_table/bike/baselines/comet"
+  },
+  "bike|CtxPipe": {
+    "scores": {
+      "lr": 0.8593161889715127,
+      "lasso": 0.8573288710118977
+    },
+    "source": "results/main_table/bike/baselines/ctxpipe"
+  },
+  "bike|MLImputer": {
+    "scores": {
+      "lr": 0.8593161889715127,
+      "lasso": 0.8573288710118977
+    },
+    "source": "results/main_table/bike/baselines/mlimputer"
+  },
+  "bike|SimpleImputer": {
+    "scores": {
+      "lr": 0.8593161889715127,
+      "lasso": 0.8573288710118977
+    },
+    "source": "results/main_table/bike/baselines/simpleimputer"
+  },
+  "bike|LLM": {
+    "scores": {
+      "lr": 0.9366779285701483,
+      "lasso": 0.9359235829858412
+    },
+    "source": "results/main_table/bike/baselines/llm"
+  },
+  "bike|DIANA": {
+    "scores": {
+      "lr": 0.8984880382723844
+    },
+    "source": "results/main_table/bike/baselines/diana"
+  },
+  "bike|Learn2Clean": {
+    "scores": {
+      "lr": 0.8742575211127438
+    },
+    "source": "results/main_table/bike/baselines/learn2clean"
+  },
+  "bike|RetClean": {
+    "scores": {
+      "lr": 0.9821589322436265
+    },
+    "source": "results/main_table/bike/baselines/retclean"
+  },
+  "bike|DAGPipe": {
+    "scores": {
+      "lr": 0.8732025813146668
+    },
+    "source": "results/main_table/bike/baselines/dagpipe"
+  },
+  "bike|DC": {
+    "scores": {
+      "lr": 0.9999166180439714,
+      "lasso": 0.999934478956814
+    },
+    "source": "results/main_table/bike/demandclean"
+  },
+  "mercedes|NoFix": {
+    "scores": {
+      "rf": 0.3599827689119728,
+      "ridge": 0.34975635084334944
+    },
+    "source": "results/main_table/mercedes/references/nofix"
+  },
+  "mercedes|DeleteAll": {
+    "scores": {
+      "rf": 0.3588157111173125,
+      "ridge": 0.13859016605852303
+    },
+    "source": "results/main_table/mercedes/references/deleteall"
+  },
+  "mercedes|ReplaceAll": {
+    "scores": {
+      "rf": 0.4078006524220701,
+      "ridge": 0.3566482342431757
+    },
+    "source": "results/main_table/mercedes/references/replaceall"
+  },
+  "mercedes|RepairAll": {
+    "scores": {
+      "rf": 0.3936883946813713,
+      "ridge": 0.4108666572536225
+    },
+    "source": "results/main_table/mercedes/references/repairall"
+  },
+  "mercedes|HoloClean": {
+    "scores": {
+      "rf": 0.3599827689119728,
+      "ridge": 0.34975635084334944
+    },
+    "source": "results/main_table/mercedes/baselines/holoclean"
+  },
+  "mercedes|Horizon": {
+    "scores": {
+      "rf": 0.3599827689119728,
+      "ridge": 0.34975635084334944
+    },
+    "source": "results/main_table/mercedes/baselines/horizon"
+  },
+  "mercedes|Raha+Baran": {
+    "scores": {
+      "rf": 0.3987858516041476,
+      "ridge": 0.25137808830220376
+    },
+    "source": "results/main_table/mercedes/baselines/raha_baran"
+  },
+  "mercedes|UniClean": {
+    "scores": {
+      "rf": 0.35925390901731,
+      "ridge": 0.3500646415209121
+    },
+    "source": "results/main_table/mercedes/baselines/uniclean"
+  },
+  "mercedes|Lopster": {
+    "scores": {
+      "rf": 0.401252232868754,
+      "ridge": 0.2733703881764683
+    },
+    "source": "results/main_table/mercedes/baselines/lopster"
+  },
+  "mercedes|ActiveClean": {
+    "scores": {
+      "rf": 0.36792564027994357,
+      "ridge": 0.36268061035116805
+    },
+    "source": "results/main_table/mercedes/baselines/activeclean"
+  },
+  "mercedes|BoostClean": {
+    "scores": {
+      "rf": 0.365257218288377,
+      "ridge": 0.34976121593561893
+    },
+    "source": "results/main_table/mercedes/baselines/boostclean"
+  },
+  "mercedes|SAGA": {
+    "scores": {
+      "rf": 0.3543369893181243,
+      "ridge": 0.37160015029952764
+    },
+    "source": "results/main_table/mercedes/baselines/saga"
+  },
+  "mercedes|DiffPrep": {
+    "scores": {
+      "rf": 0.06690860980516078
+    },
+    "source": "results/main_table/mercedes/baselines/diffprep"
+  },
+  "mercedes|Comet": {
+    "scores": {
+      "rf": 0.3633303733414759,
+      "ridge": 0.422938850844481
+    },
+    "source": "results/main_table/mercedes/baselines/comet"
+  },
+  "mercedes|CtxPipe": {
+    "scores": {
+      "rf": 0.3588751362102812,
+      "ridge": 0.3497494473910395
+    },
+    "source": "results/main_table/mercedes/baselines/ctxpipe"
+  },
+  "mercedes|MLImputer": {
+    "scores": {
+      "rf": 0.36024870066985093,
+      "ridge": 0.3489094790176651
+    },
+    "source": "results/main_table/mercedes/baselines/mlimputer"
+  },
+  "mercedes|SimpleImputer": {
+    "scores": {
+      "rf": 0.3594915675926572,
+      "ridge": 0.34975751953702494
+    },
+    "source": "results/main_table/mercedes/baselines/simpleimputer"
+  },
+  "mercedes|LLM": {
+    "scores": {
+      "rf": 0.36019964682736183,
+      "ridge": 0.34949600086419863
+    },
+    "source": "results/main_table/mercedes/baselines/llm"
+  },
+  "mercedes|DIANA": {
+    "scores": {
+      "rf": 0.40150048474277644
+    },
+    "source": "results/main_table/mercedes/baselines/diana"
+  },
+  "mercedes|Learn2Clean": {
+    "scores": {
+      "rf": 0.36046557114617783
+    },
+    "source": "results/main_table/mercedes/baselines/learn2clean"
+  },
+  "mercedes|RetClean": {
+    "scores": {
+      "rf": 0.3581993445229875
+    },
+    "source": "results/main_table/mercedes/baselines/retclean"
+  },
+  "mercedes|DAGPipe": {
+    "scores": {
+      "rf": 0.3592067277840507
+    },
+    "source": "results/main_table/mercedes/baselines/dagpipe"
+  },
+  "mercedes|DC": {
+    "scores": {
+      "rf": 0.42835799763840754,
+      "ridge": 0.35846574716411106
+    },
+    "source": "results/main_table/mercedes/demandclean"
+  },
+  "nasa|NoFix": {
+    "scores": {
+      "lr": -0.0010500071884296247,
+      "rf": 0.6237630590001768
+    },
+    "source": "results/main_table/nasa/references/nofix"
+  },
+  "nasa|DeleteAll": {
+    "scores": {
+      "lr": 0.5282147188221062,
+      "rf": 0.34637388481393927
+    },
+    "source": "results/main_table/nasa/references/deleteall"
+  },
+  "nasa|ReplaceAll": {
+    "scores": {
+      "lr": 0.5226497137227577,
+      "rf": 0.5843825560548492
+    },
+    "source": "results/main_table/nasa/references/replaceall"
+  },
+  "nasa|RepairAll": {
+    "scores": {
+      "lr": 0.5319902929476962,
+      "rf": 0.680036678206931
+    },
+    "source": "results/main_table/nasa/references/repairall"
+  },
+  "nasa|HoloClean": {
+    "scores": {
+      "lr": -0.0010546131413793347,
+      "rf": 0.6305122322937173
+    },
+    "source": "results/main_table/nasa/baselines/holoclean"
+  },
+  "nasa|Horizon": {
+    "scores": {
+      "lr": 0.0627110207158813,
+      "rf": 0.6541245027408715
+    },
+    "source": "results/main_table/nasa/baselines/horizon"
+  },
+  "nasa|Raha+Baran": {
+    "scores": {
+      "lr": -0.001049142967104233,
+      "rf": 0.6244393373117296
+    },
+    "source": "results/main_table/nasa/baselines/raha_baran"
+  },
+  "nasa|UniClean": {
+    "scores": {
+      "lr": 0.17193114242671814,
+      "rf": 0.6253063671825149
+    },
+    "source": "results/main_table/nasa/baselines/uniclean"
+  },
+  "nasa|Lopster": {
+    "scores": {
+      "lr": 0.16393488782140486,
+      "rf": 0.16325599163501525
+    },
+    "source": "results/main_table/nasa/baselines/lopster"
+  },
+  "nasa|ActiveClean": {
+    "scores": {
+      "lr": -0.0002964210232276887,
+      "rf": 0.6516908861906778
+    },
+    "source": "results/main_table/nasa/baselines/activeclean"
+  },
+  "nasa|BoostClean": {
+    "scores": {
+      "lr": 0.010693945096320046,
+      "rf": 0.6104901135380565
+    },
+    "source": "results/main_table/nasa/baselines/boostclean"
+  },
+  "nasa|SAGA": {
+    "scores": {
+      "lr": 0.43496159161413217,
+      "rf": 0.5999137185431644
+    },
+    "source": "results/main_table/nasa/baselines/saga"
+  },
+  "nasa|DiffPrep": {
+    "scores": {
+      "lr": 0.007825726548561174
+    },
+    "source": "results/main_table/nasa/baselines/diffprep"
+  },
+  "nasa|Comet": {
+    "scores": {
+      "lr": 0.38959593807421367,
+      "rf": 0.6756961994152152
+    },
+    "source": "results/main_table/nasa/baselines/comet"
+  },
+  "nasa|CtxPipe": {
+    "scores": {
+      "lr": -0.0010548155568521622,
+      "rf": 0.6356870385540322
+    },
+    "source": "results/main_table/nasa/baselines/ctxpipe"
+  },
+  "nasa|MLImputer": {
+    "scores": {
+      "lr": -0.001052661982920311,
+      "rf": 0.6252286253142076
+    },
+    "source": "results/main_table/nasa/baselines/mlimputer"
+  },
+  "nasa|SimpleImputer": {
+    "scores": {
+      "lr": -0.0010548155568521622,
+      "rf": 0.6356870385540322
+    },
+    "source": "results/main_table/nasa/baselines/simpleimputer"
+  },
+  "nasa|LLM": {
+    "scores": {
+      "lr": 0.0584702039300129,
+      "rf": 0.6765628160544779
+    },
+    "source": "results/main_table/nasa/baselines/llm"
+  },
+  "nasa|DIANA": {
+    "scores": {
+      "lr": 0.0012840235059736749
+    },
+    "source": "results/main_table/nasa/baselines/diana"
+  },
+  "nasa|Learn2Clean": {
+    "scores": {
+      "lr": -0.004380200882176943
+    },
+    "source": "results/main_table/nasa/baselines/learn2clean"
+  },
+  "nasa|RetClean": {
+    "scores": {
+      "lr": 0.5145156853792983
+    },
+    "source": "results/main_table/nasa/baselines/retclean"
+  },
+  "nasa|DAGPipe": {
+    "scores": {
+      "lr": 0.00027459306692756424
+    },
+    "source": "results/main_table/nasa/baselines/dagpipe"
+  },
+  "nasa|DC": {
+    "scores": {
+      "lr": 0.53261379079381,
+      "rf": 0.680036678206931
+    },
+    "source": "results/main_table/nasa/demandclean"
+  },
+  "soilmoisture|NoFix": {
+    "scores": {
+      "gb": 0.8559105942583121,
+      "rf": 0.8878546507988782
+    },
+    "source": "results/main_table/soilmoisture/references/nofix"
+  },
+  "soilmoisture|DeleteAll": {
+    "scores": {
+      "gb": 0.7486100698879461,
+      "rf": 0.7074103793206693
+    },
+    "source": "results/main_table/soilmoisture/references/deleteall"
+  },
+  "soilmoisture|ReplaceAll": {
+    "scores": {
+      "gb": 0.9202106247455096,
+      "rf": 0.9264367248434918
+    },
+    "source": "results/main_table/soilmoisture/references/replaceall"
+  },
+  "soilmoisture|RepairAll": {
+    "scores": {
+      "gb": 0.9577373328763495,
+      "rf": 0.9488883984532931
+    },
+    "source": "results/main_table/soilmoisture/references/repairall"
+  },
+  "soilmoisture|HoloClean": {
+    "scores": {
+      "gb": 0.8657301596600767,
+      "rf": 0.8875687636097576
+    },
+    "source": "results/main_table/soilmoisture/baselines/holoclean"
+  },
+  "soilmoisture|Horizon": {
+    "scores": {
+      "gb": 0.7901345753003461,
+      "rf": 0.7989004343862057
+    },
+    "source": "results/main_table/soilmoisture/baselines/horizon"
+  },
+  "soilmoisture|Raha+Baran": {
+    "scores": {
+      "gb": 0.8661183344224234,
+      "rf": 0.8937868847552746
+    },
+    "source": "results/main_table/soilmoisture/baselines/raha_baran"
+  },
+  "soilmoisture|UniClean": {
+    "scores": {
+      "gb": 0.8559105942583121,
+      "rf": 0.8878546507988782
+    },
+    "source": "results/main_table/soilmoisture/baselines/uniclean"
+  },
+  "soilmoisture|Lopster": {
+    "scores": {
+      "gb": 0.8676400245287765,
+      "rf": 0.8904972160238089
+    },
+    "source": "results/main_table/soilmoisture/baselines/lopster"
+  },
+  "soilmoisture|ActiveClean": {
+    "scores": {
+      "gb": 0.9374068561720665,
+      "rf": 0.9342700004715463
+    },
+    "source": "results/main_table/soilmoisture/baselines/activeclean"
+  },
+  "soilmoisture|BoostClean": {
+    "scores": {
+      "gb": 0.8570045364607886,
+      "rf": 0.8894991467489102
+    },
+    "source": "results/main_table/soilmoisture/baselines/boostclean"
+  },
+  "soilmoisture|SAGA": {
+    "scores": {
+      "gb": 0.5746140869286118,
+      "rf": 0.8890104543395604
+    },
+    "source": "results/main_table/soilmoisture/baselines/saga"
+  },
+  "soilmoisture|DiffPrep": {
+    "scores": {
+      "gb": 0.8537684731174078
+    },
+    "source": "results/main_table/soilmoisture/baselines/diffprep"
+  },
+  "soilmoisture|Comet": {
+    "scores": {
+      "gb": 0.8574316226582439,
+      "rf": 0.8446061961462191
+    },
+    "source": "results/main_table/soilmoisture/baselines/comet"
+  },
+  "soilmoisture|CtxPipe": {
+    "scores": {
+      "gb": 0.8559105942583121,
+      "rf": 0.8878546507988782
+    },
+    "source": "results/main_table/soilmoisture/baselines/ctxpipe"
+  },
+  "soilmoisture|MLImputer": {
+    "scores": {
+      "gb": 0.8625995525891814,
+      "rf": 0.8920783021264945
+    },
+    "source": "results/main_table/soilmoisture/baselines/mlimputer"
+  },
+  "soilmoisture|SimpleImputer": {
+    "scores": {
+      "gb": 0.8643167727834496,
+      "rf": 0.8885907760274774
+    },
+    "source": "results/main_table/soilmoisture/baselines/simpleimputer"
+  },
+  "soilmoisture|LLM": {
+    "scores": {
+      "gb": 0.8523903755215336,
+      "rf": 0.8915613008452496
+    },
+    "source": "results/main_table/soilmoisture/baselines/llm"
+  },
+  "soilmoisture|DIANA": {
+    "scores": {
+      "gb": 0.8760013076488142
+    },
+    "source": "results/main_table/soilmoisture/baselines/diana"
+  },
+  "soilmoisture|Learn2Clean": {
+    "scores": {
+      "gb": 0.8588244898497999
+    },
+    "source": "results/main_table/soilmoisture/baselines/learn2clean"
+  },
+  "soilmoisture|RetClean": {
+    "scores": {
+      "gb": 0.913126747671862
+    },
+    "source": "results/main_table/soilmoisture/baselines/retclean"
+  },
+  "soilmoisture|DAGPipe": {
+    "scores": {
+      "gb": 0.8615898885182599
+    },
+    "source": "results/main_table/soilmoisture/baselines/dagpipe"
+  },
+  "soilmoisture|DC": {
+    "scores": {
+      "gb": 0.9401252396850616,
+      "rf": 0.9342604104867429
+    },
+    "source": "results/main_table/soilmoisture/demandclean"
+  },
+  "har|NoFix": {
+    "scores": {
+      "agglomerative": 0.5004163878039727,
+      "kmeans": 0.509544946049568
+    },
+    "source": "results/main_table/har/references/nofix"
+  },
+  "har|DeleteAll": {
+    "scores": {
+      "agglomerative": 0.9076036180771995,
+      "kmeans": 0.9076036180771995
+    },
+    "source": "results/main_table/har/references/deleteall"
+  },
+  "har|ReplaceAll": {
+    "scores": {
+      "agglomerative": 0.7018173884900339,
+      "kmeans": 0.7024769365805398
+    },
+    "source": "results/main_table/har/references/replaceall"
+  },
+  "har|RepairAll": {
+    "scores": {
+      "agglomerative": 0.9098102483381258,
+      "kmeans": 0.9098102483381258
+    },
+    "source": "results/main_table/har/references/repairall"
+  },
+  "har|HoloClean": {
+    "scores": {
+      "agglomerative": 0.5169659323437445,
+      "kmeans": 0.5320315476874408
+    },
+    "source": "results/main_table/har/baselines/holoclean"
+  },
+  "har|Horizon": {
+    "scores": {
+      "agglomerative": 0.6110648702426784,
+      "kmeans": 0.6188468881808489
+    },
+    "source": "results/main_table/har/baselines/horizon"
+  },
+  "har|Raha+Baran": {
+    "scores": {
+      "agglomerative": 0.5014398756653825,
+      "kmeans": 0.5155936968545558
+    },
+    "source": "results/main_table/har/baselines/raha_baran"
+  },
+  "har|UniClean": {
+    "scores": {
+      "agglomerative": 0.5026690424966946,
+      "kmeans": 0.5095451312726428
+    },
+    "source": "results/main_table/har/baselines/uniclean"
+  },
+  "har|Lopster": {
+    "scores": {
+      "agglomerative": 0.7466625446918559,
+      "kmeans": 0.7528105945402889
+    },
+    "source": "results/main_table/har/baselines/lopster"
+  },
+  "har|ActiveClean": {
+    "scores": {
+      "agglomerative": 0.5060340907930873,
+      "kmeans": 0.5194442981556902
+    },
+    "source": "results/main_table/har/baselines/activeclean"
+  },
+  "har|BoostClean": {
+    "scores": {
+      "agglomerative": 0.5004163878039727,
+      "kmeans": 0.509544946049568
+    },
+    "source": "results/main_table/har/baselines/boostclean"
+  },
+  "har|SAGA": {
+    "scores": {
+      "agglomerative": 0.7719108484755876,
+      "kmeans": 0.7719108484755876
+    },
+    "source": "results/main_table/har/baselines/saga"
+  },
+  "har|DiffPrep": {
+    "scores": {
+      "agglomerative": 0.602151040546402
+    },
+    "source": "results/main_table/har/baselines/diffprep"
+  },
+  "har|Comet": {
+    "scores": {
+      "agglomerative": 0.5195416385463819,
+      "kmeans": 0.5290929748592549
+    },
+    "source": "results/main_table/har/baselines/comet"
+  },
+  "har|CtxPipe": {
+    "scores": {
+      "agglomerative": 0.48899701209897384,
+      "kmeans": 0.5034362801621078
+    },
+    "source": "results/main_table/har/baselines/ctxpipe"
+  },
+  "har|MLImputer": {
+    "scores": {
+      "agglomerative": 0.5100868251947188,
+      "kmeans": 0.5268735125295239
+    },
+    "source": "results/main_table/har/baselines/mlimputer"
+  },
+  "har|SimpleImputer": {
+    "scores": {
+      "agglomerative": 0.4896049480818045,
+      "kmeans": 0.4981909310756704
+    },
+    "source": "results/main_table/har/baselines/simpleimputer"
+  },
+  "har|LLM": {
+    "scores": {
+      "agglomerative": 0.5032378148864768,
+      "kmeans": 0.5128474316835337
+    },
+    "source": "results/main_table/har/baselines/llm"
+  },
+  "har|DIANA": {
+    "scores": {
+      "agglomerative": 0.6009781646230326
+    },
+    "source": "results/main_table/har/baselines/diana"
+  },
+  "har|Learn2Clean": {
+    "scores": {
+      "agglomerative": 0.6392477420576169
+    },
+    "source": "results/main_table/har/baselines/learn2clean"
+  },
+  "har|RetClean": {
+    "scores": {
+      "agglomerative": 0.8024657937493608
+    },
+    "source": "results/main_table/har/baselines/retclean"
+  },
+  "har|DAGPipe": {
+    "scores": {
+      "agglomerative": 0.4996440559625355
+    },
+    "source": "results/main_table/har/baselines/dagpipe"
+  },
+  "har|DC": {
+    "scores": {
+      "agglomerative": 0.8992418921570298,
+      "kmeans": 0.8999438977796004
+    },
+    "source": "results/main_table/har/demandclean"
+  },
+  "flights|NoFix": {
+    "scores": {
+      "dt": 0.9411764705882353
+    },
+    "source": "results/main_table/flights/references/nofix"
+  },
+  "flights|DeleteAll": {
+    "scores": {
+      "dt": 0.8340336134453782
+    },
+    "source": "results/main_table/flights/references/deleteall"
+  },
+  "flights|ReplaceAll": {
+    "scores": {
+      "dt": 0.9915966386554622
+    },
+    "source": "results/main_table/flights/references/replaceall"
+  },
+  "flights|RepairAll": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/flights/references/repairall"
+  },
+  "flights|HoloClean": {
+    "scores": {
+      "dt": 0.9831932773109243
+    },
+    "source": "results/main_table/flights/baselines/holoclean"
+  },
+  "flights|Horizon": {
+    "scores": {
+      "dt": 0.8172268907563025
+    },
+    "source": "results/main_table/flights/baselines/horizon"
+  },
+  "flights|Raha+Baran": {
+    "scores": {
+      "dt": 0.9411764705882353
+    },
+    "source": "results/main_table/flights/baselines/raha_baran"
+  },
+  "flights|UniClean": {
+    "scores": {
+      "dt": 0.9243697478991597
+    },
+    "source": "results/main_table/flights/baselines/uniclean"
+  },
+  "flights|Lopster": {
+    "scores": {
+      "dt": 0.9411764705882353
+    },
+    "source": "results/main_table/flights/baselines/lopster"
+  },
+  "flights|ActiveClean": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/flights/baselines/activeclean"
+  },
+  "flights|BoostClean": {
+    "scores": {
+      "dt": 0.8949579831932774
+    },
+    "source": "results/main_table/flights/baselines/boostclean"
+  },
+  "flights|SAGA": {
+    "scores": {
+      "dt": 0.9348739495798319
+    },
+    "source": "results/main_table/flights/baselines/saga"
+  },
+  "flights|DiffPrep": {
+    "scores": {
+      "dt": 0.8613445378151261
+    },
+    "source": "results/main_table/flights/baselines/diffprep"
+  },
+  "flights|Comet": {
+    "scores": {
+      "dt": 0.9705882352941176
+    },
+    "source": "results/main_table/flights/baselines/comet"
+  },
+  "flights|CtxPipe": {
+    "scores": {
+      "dt": 0.930672268907563
+    },
+    "source": "results/main_table/flights/baselines/ctxpipe"
+  },
+  "flights|MLImputer": {
+    "scores": {
+      "dt": 0.9558823529411765
+    },
+    "source": "results/main_table/flights/baselines/mlimputer"
+  },
+  "flights|SimpleImputer": {
+    "scores": {
+      "dt": 0.930672268907563
+    },
+    "source": "results/main_table/flights/baselines/simpleimputer"
+  },
+  "flights|LLM": {
+    "scores": {
+      "dt": 0.9411764705882353
+    },
+    "source": "results/main_table/flights/baselines/llm"
+  },
+  "flights|DIANA": {
+    "scores": {
+      "dt": 0.930672268907563
+    },
+    "source": "results/main_table/flights/baselines/diana"
+  },
+  "flights|Learn2Clean": {
+    "scores": {
+      "dt": 0.9621848739495799
+    },
+    "source": "results/main_table/flights/baselines/learn2clean"
+  },
+  "flights|RetClean": {
+    "scores": {
+      "dt": 0.9978991596638656
+    },
+    "source": "results/main_table/flights/baselines/retclean"
+  },
+  "flights|DAGPipe": {
+    "scores": {
+      "dt": 0.9411764705882353
+    },
+    "source": "results/main_table/flights/baselines/dagpipe"
+  },
+  "flights|DC": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/flights/demandclean"
+  },
+  "soccer|NoFix": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/references/nofix"
+  },
+  "soccer|DeleteAll": {
+    "scores": {
+      "dt": 0.8557964184731386
+    },
+    "source": "results/main_table/soccer/references/deleteall"
+  },
+  "soccer|ReplaceAll": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/references/replaceall"
+  },
+  "soccer|RepairAll": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/references/repairall"
+  },
+  "soccer|HoloClean": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/holoclean"
+  },
+  "soccer|Horizon": {
+    "scores": {
+      "dt": 0.9081055607917059
+    },
+    "source": "results/main_table/soccer/baselines/horizon"
+  },
+  "soccer|Raha+Baran": {
+    "scores": {
+      "dt": 0.9519321394910462
+    },
+    "source": "results/main_table/soccer/baselines/raha_baran"
+  },
+  "soccer|UniClean": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/baselines/uniclean"
+  },
+  "soccer|Lopster": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/lopster"
+  },
+  "soccer|ActiveClean": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/baselines/activeclean"
+  },
+  "soccer|BoostClean": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/boostclean"
+  },
+  "soccer|SAGA": {
+    "scores": {
+      "dt": 0.793119698397738
+    },
+    "source": "results/main_table/soccer/baselines/saga"
+  },
+  "soccer|DiffPrep": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/diffprep"
+  },
+  "soccer|Comet": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/baselines/comet"
+  },
+  "soccer|CtxPipe": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/ctxpipe"
+  },
+  "soccer|MLImputer": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/mlimputer"
+  },
+  "soccer|SimpleImputer": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/simpleimputer"
+  },
+  "soccer|LLM": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/llm"
+  },
+  "soccer|DIANA": {
+    "scores": {
+      "dt": 0.9015080113100848
+    },
+    "source": "results/main_table/soccer/baselines/diana"
+  },
+  "soccer|Learn2Clean": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/baselines/learn2clean"
+  },
+  "soccer|RetClean": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/baselines/retclean"
+  },
+  "soccer|DAGPipe": {
+    "scores": {
+      "dt": 0.9519321394910462
+    },
+    "source": "results/main_table/soccer/baselines/dagpipe"
+  },
+  "soccer|DC": {
+    "scores": {
+      "dt": 1.0
+    },
+    "source": "results/main_table/soccer/demandclean"
+  },
+  "hospitals|NoFix": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/references/nofix"
+  },
+  "hospitals|DeleteAll": {
+    "scores": {
+      "rf": 0.995
+    },
+    "source": "results/main_table/hospitals/references/deleteall"
+  },
+  "hospitals|ReplaceAll": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/references/replaceall"
+  },
+  "hospitals|RepairAll": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/references/repairall"
+  },
+  "hospitals|HoloClean": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/holoclean"
+  },
+  "hospitals|Horizon": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/horizon"
+  },
+  "hospitals|Raha+Baran": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/raha_baran"
+  },
+  "hospitals|UniClean": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/uniclean"
+  },
+  "hospitals|Lopster": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/lopster"
+  },
+  "hospitals|ActiveClean": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/activeclean"
+  },
+  "hospitals|BoostClean": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/boostclean"
+  },
+  "hospitals|SAGA": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/saga"
+  },
+  "hospitals|DiffPrep": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/diffprep"
+  },
+  "hospitals|Comet": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/comet"
+  },
+  "hospitals|CtxPipe": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/ctxpipe"
+  },
+  "hospitals|MLImputer": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/mlimputer"
+  },
+  "hospitals|SimpleImputer": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/simpleimputer"
+  },
+  "hospitals|LLM": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/llm"
+  },
+  "hospitals|DIANA": {
+    "scores": {
+      "rf": 0.985
+    },
+    "source": "results/main_table/hospitals/baselines/diana"
+  },
+  "hospitals|Learn2Clean": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/learn2clean"
+  },
+  "hospitals|RetClean": {
+    "scores": {
+      "rf": 0.995
+    },
+    "source": "results/main_table/hospitals/baselines/retclean"
+  },
+  "hospitals|DAGPipe": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/baselines/dagpipe"
+  },
+  "hospitals|DC": {
+    "scores": {
+      "rf": 1.0
+    },
+    "source": "results/main_table/hospitals/demandclean"
+  }
+}

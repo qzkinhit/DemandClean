@@ -1,0 +1,17 @@
+{
+  "dataset": "mercedes",
+  "method": "RepairAll",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.3936883946813713,
+  "all_models": {
+    "rf": 0.3936883946813713,
+    "ridge": 0.4108666572536225
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2525,
+  "table_rows": 2525,
+  "gt_cells": 951925,
+  "gt_pct": 59.99049655500119
+}

@@ -1,0 +1,105 @@
+{
+  "dataset": "nasa",
+  "method": "DiffPrep",
+  "upstream": {
+    "repository": "https://github.com/chu-data-lab/DiffPrep",
+    "commit": "6499edf",
+    "adapter": "baselines/Methods/DiffPrep/diffprep_api.py"
+  },
+  "selected_learning_rate": 0.1,
+  "pipeline": {
+    "feature_names": [
+      "f0",
+      "f1",
+      "f2",
+      "f3",
+      "f4"
+    ],
+    "per_feature": {
+      "f0": {
+        "missing_value_imputation": [
+          "mean",
+          0.7984
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.9111
+        ]
+      },
+      "f1": {
+        "missing_value_imputation": [
+          "mean",
+          0.8451
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.8934
+        ]
+      },
+      "f2": {
+        "missing_value_imputation": [
+          "mean",
+          0.8064
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.9251
+        ]
+      },
+      "f3": {
+        "missing_value_imputation": [
+          "mode",
+          0.4669
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.1682
+        ]
+      },
+      "f4": {
+        "missing_value_imputation": [
+          "mode",
+          0.3463
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.163
+        ]
+      }
+    },
+    "summary": {
+      "cleaning_outliers": {
+        "identity": 2,
+        "ZS_4": 1,
+        "MAD_3": 2
+      },
+      "missing_value_imputation": {
+        "mean": 3,
+        "mode": 2
+      }
+    }
+  },
+  "deviations": [
+    "split supplied by the benchmark (60/20/20, seed 42, train rows dirty, val/test rows clean) instead of the upstream random split",
+    "remove_large_cat and remove_all_na computed on training rows only (upstream: all rows)",
+    "test rows not passed to init_parameters; imputation step presence decided on train+val; test cache filled after the search",
+    "no per-epoch test evaluation (upstream only records it, selection unchanged); best epoch snapshot also stores the fitted transformation functions",
+    "label encoder fitted on train+val labels (upstream: all labels)",
+    "regression extension (not in the paper): linear head with 1 output, MSELoss on standardized target, R^2 replaces accuracy in early stopping",
+    "gradient clipping wired up (upstream declares grad_clip but never uses it): end-model gradient L2 norm clipped to 1.0 before every SGD step incl. the virtual step, pipeline-probability gradient clipped to the same norm before every Adam step",
+    "non-finite entries of the pipeline-probability gradient set to 0 before the Adam step",
+    "search space restricted to missing-value imputation and outlier cleaning",
+    "input: dirty training matrix in the canonical encoding with missing cells kept",
+    "soft pipeline output of the training rows exported without input clamp; test split untouched"
+  ],
+  "stabilization": true,
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diffprep/diffprep_clean.py (run per learning rate, finalize)"
+}

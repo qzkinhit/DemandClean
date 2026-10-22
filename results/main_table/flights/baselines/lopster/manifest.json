@@ -1,0 +1,32 @@
+{
+  "id": "main_table/flights/baselines/lopster",
+  "dataset": "flights",
+  "role": "baselines",
+  "method": "Lopster",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 19008,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "d2ced1bf48e83e9ea0709b1f4659a6165d5366b5809f141c1d0b7c8341d3a1fc",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "execution_mode": "input_passthrough",
+  "evaluation_command": "python evaluation/rescore_tables.py --table flights:lopster:results/main_table/flights/baselines/lopster/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

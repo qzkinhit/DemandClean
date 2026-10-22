@@ -1,0 +1,47 @@
+Run started at 2026-10-18 19:55:23
+Lopster data cleaning
+dataset: har
+data path: Data_lopdc
+task: har_lopster_dcbudget
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: har
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (80, 5) -> (80, 4)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (42000, 5) -> (42000, 4)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: har
+run time: 162.55 s
+status: success
+ground-truth cost: 80 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 42000
+  input rows: 42000
+  index column restored
+  final column order: ['index', 'x', 'y', 'z', 'gt']
+  saved to: cleaned.csv
+  final rows: 42000
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: har_lopster_dcbudget

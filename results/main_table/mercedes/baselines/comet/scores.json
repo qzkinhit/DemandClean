@@ -1,0 +1,21 @@
+{
+  "dataset": "mercedes",
+  "method": "Comet",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.3633303733414759,
+  "all_models": {
+    "rf": 0.3633303733414759,
+    "ridge": 0.422938850844481
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2525,
+  "n_test": 842,
+  "table_rows": 2525,
+  "gt_cells": 949400,
+  "gt_pct": 59.831370569444154,
+  "redr": {
+    "redr": 0.0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "mercedes",
+  "method": "Raha+Baran",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.3987858516041476,
+  "all_models": {
+    "rf": 0.3987858516041476,
+    "ridge": 0.25137808830220376
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2525,
+  "table_rows": 2525,
+  "gt_cells": 7540,
+  "gt_pct": 0.4751722499406035,
+  "redr": {
+    "redr": 0.0
+  }
+}

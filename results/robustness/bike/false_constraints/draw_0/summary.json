@@ -1,0 +1,33 @@
+{
+  "dataset": "bike",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "regression",
+  "n_episodes": 200,
+  "data_shape": [
+    10427,
+    15
+  ],
+  "cleaned_shape": [
+    10403,
+    15
+  ],
+  "operations": {
+    "no_action": 1214,
+    "repair_value": 17024,
+    "delete": 24,
+    "replace_nearby": 79743
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.2682441150473946,
+      "recall": 0.9957008711392692,
+      "f1": 0.4226305764090087,
+      "tp": 26403,
+      "fp": 72026,
+      "fn": 114,
+      "gt_count": 26517,
+      "det_count": 98429
+    }
+  }
+}

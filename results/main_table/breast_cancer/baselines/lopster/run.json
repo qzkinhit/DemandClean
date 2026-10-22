@@ -1,0 +1,9 @@
+{
+  "dataset": "breast_cancer",
+  "method": "Lopster",
+  "seconds": 26.0,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant",
+    "preserve the input target column"
+  ]
+}

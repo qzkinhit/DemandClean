@@ -1,0 +1,20 @@
+{
+  "id": "budget/bike/comet_dcbudget",
+  "dataset": "bike",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 156405,
+  "seconds": 185.09,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "e50f192f4162e1dd4364f1c251dd34b2c34c25110ebece5ebb0d948199742cbf"
+    }
+  }
+}

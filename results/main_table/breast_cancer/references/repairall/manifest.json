@@ -1,0 +1,32 @@
+{
+  "id": "main_table/breast_cancer/references/repairall",
+  "dataset": "breast_cancer",
+  "role": "references",
+  "method": "RepairAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 4190,
+  "gt_pct": 59.94277539341917,
+  "gt_denominator": 7689,
+  "scoring": {
+    "model": "lr",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "6de11e975027c559c7324ee91b17e4ee145b48f5c887f1e49d0c0dda84c53cf9",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table breast_cancer:repairall:results/main_table/breast_cancer/references/repairall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

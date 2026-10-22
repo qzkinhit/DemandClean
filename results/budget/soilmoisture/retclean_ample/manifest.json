@@ -1,0 +1,21 @@
+{
+  "id": "budget/soilmoisture/retclean_ample",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 25984,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "bd77e647216e8a8ff8c36e388ee1ccd865acbe6954b0bab2bbc42fcf7188a067"
+    }
+  }
+}

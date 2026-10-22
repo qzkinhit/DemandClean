@@ -1,0 +1,19 @@
+{
+  "ProviderNumber": 18,
+  "HospitalName": 16,
+  "Address1": 16,
+  "Address2": 600,
+  "Address3": 600,
+  "City": 15,
+  "State": 18,
+  "ZipCode": 14,
+  "CountyName": 19,
+  "PhoneNumber": 18,
+  "HospitalOwner": 15,
+  "EmergencyService": 17,
+  "MeasureCode": 18,
+  "MeasureName": 16,
+  "Score": 95,
+  "Sample": 29,
+  "Stateavg": 21
+}

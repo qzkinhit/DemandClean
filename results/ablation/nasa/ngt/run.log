@@ -1,0 +1,36 @@
+# Console output of the run.
+
+DemandClean unified runner
+Datasets: ['nasa']
+Enabled versions: ['dueling_two_stage']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Seed: 0
+  60/20/20 split: train=901, val=301, test=301
+  Dataset: nasa
+  Dirty:   (901, 5)
+  Features: 5, label: sound_pressure_level
+  Categorical cols: (none)
+  LE fit: dirty only (901 rows)
+  SS fit: dirty only (901 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(901, 5), X_clean_train=(901, 5), X_clean_val=(301, 5), X_clean_test=(301, 5)
+Version: dueling_two_stage
+Dataset: nasa | task: regression | model: ridge
+Detector: auto | Agent: dueling_two_stage | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+[Step 2] training (300 episodes)...
+  model saved: ./model/dueling_two_stage_agent.pt
+  [time] Step 2 (train): 431.53s
+[Step 3] inference (mode: single_phase)...
+  ground truth used: 0
+  action counts: {'no_action': 50, 'repair_value': 0, 'delete': 398, 'replace_nearby': 4}
+  encoded version saved: ./data/dueling_two_stage_cleaned_encoded.npz
+  [time] Step 3 (infer): 1.79s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.02s
+  Version dueling_two_stage done! elapsed: 461.89s
+All done! total: 465.59s

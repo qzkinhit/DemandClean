@@ -1,0 +1,31 @@
+{
+  "id": "main_table/beers/baselines/diana",
+  "dataset": "beers",
+  "role": "baselines",
+  "method": "DIANA",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 24100,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "578140e7450ae91cb6fcd1ef8094887c2900c0986c0353d158541abdba55fa79",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table beers:diana:results/main_table/beers/baselines/diana/cleaned_encoded.npz",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json"
+  ]
+}

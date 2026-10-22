@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "har",
+    "model": "kmeans",
+    "metric": "silhouette",
+    "test": 0.7528105945402889,
+    "n_train_rows": 42000,
+    "n_test": 13863,
+    "rows": 42000,
+    "sklearn": "1.3.2",
+    "method": "Lopster",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "har",
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "test": 0.7466625446918559,
+    "n_train_rows": 42000,
+    "n_test": 13863,
+    "rows": 42000,
+    "sklearn": "1.3.2",
+    "method": "Lopster",
+    "encoding": "train_fitted"
+  }
+]

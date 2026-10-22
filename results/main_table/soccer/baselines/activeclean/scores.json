@@ -1,0 +1,17 @@
+{
+  "dataset": "soccer",
+  "method": "ActiveClean",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 1.0,
+  "all_models": {
+    "dt": 1.0
+  },
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 6366,
+  "n_test": 2122,
+  "table_rows": 6366,
+  "gt_cells": 5000,
+  "gt_pct": 4.71253534401508
+}

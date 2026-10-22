@@ -1,0 +1,13 @@
+{
+ "dataset": "breast_cancer",
+ "method": "ActiveClean (ample GT)",
+ "model": "lr",
+ "metric": "accuracy",
+ "test": 0.9857142857142858,
+ "n_train_rows": 419,
+ "redr": {
+  "r_before": 248,
+  "r_after": 102,
+  "redr": 0.5887096774193549
+ }
+}

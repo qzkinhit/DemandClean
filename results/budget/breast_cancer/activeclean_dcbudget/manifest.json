@@ -1,0 +1,20 @@
+{
+  "id": "budget/breast_cancer/activeclean_dcbudget",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 200,
+  "seconds": 0.342,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "7e677e118605a1653e0a75f6dabdb2f88921073b95ae68b8096dff4f3cdece22"
+    }
+  }
+}

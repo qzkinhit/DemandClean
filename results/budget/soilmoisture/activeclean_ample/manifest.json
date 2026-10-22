@@ -1,0 +1,20 @@
+{
+  "id": "budget/soilmoisture/activeclean_ample",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 25984,
+  "seconds": 1.444,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "e58973ffd087c806b17f0898987353b5c959c878e6b8729e82e572c5e7b519f9"
+    }
+  }
+}

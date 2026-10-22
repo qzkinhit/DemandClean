@@ -1,0 +1,47 @@
+Run started at 2026-10-18 13:49:18
+Lopster data cleaning
+dataset: smartfactory
+data path: Data_lop50
+task: smartfactory_lopster_ample
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: smartfactory
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (7093, 20) -> (7093, 19)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (14187, 20) -> (14187, 19)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: smartfactory
+run time: 599.45 s
+status: success
+ground-truth cost: 7093 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 14187
+  input rows: 14187
+  index column restored
+  final column order: ['index', 'i_w_blo_weg', 'o_w_blo_power', 'o_w_blo_voltage', 'i_w_bhl_weg', 'o_w_bhl_power', 'o_w_bhl_voltage', 'i_w_bhr_weg', 'o_w_bhr_power', 'o_w_bhr_voltage', 'i_w_bru_weg', 'o_w_bru_power', 'o_w_bru_voltage', 'i_w_hr_weg', 'o_w_hr_power', 'o_w_hr_voltage', 'i_w_hl_weg', 'o_w_hl_power', 'o_w_hl_voltage', 'labels']
+  saved to: cleaned.csv
+  final rows: 14187
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: smartfactory_lopster_ample

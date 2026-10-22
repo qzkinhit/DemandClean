@@ -1,0 +1,16 @@
+Run started at 2026-10-17 00:16:42
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: beers_deleteall
+deletion mode: drop_feature_errors
+output data saved: beers_deleteall_cleaned.csv
+input rows: 1446
+kept rows: 290
+deleted rows: 1156
+run time: 0.63 s
+status: success
+ground-truth cost: 1156
+
+results saved to: beers_deleteall
+log file: beers_deleteall.log

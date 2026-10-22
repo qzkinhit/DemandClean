@@ -1,0 +1,21 @@
+{
+  "dataset": "bike",
+  "method": "ActiveClean",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.9428863438058618,
+  "all_models": {
+    "lr": 0.9428863438058618,
+    "lasso": 0.9417731646157994
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 10427,
+  "n_test": 3476,
+  "table_rows": 10427,
+  "gt_cells": 8000,
+  "gt_pct": 2.8770355026181025,
+  "redr": {
+    "redr": 0.04847946287519747
+  }
+}

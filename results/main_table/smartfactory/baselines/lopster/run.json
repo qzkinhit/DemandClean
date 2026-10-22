@@ -1,0 +1,8 @@
+{
+  "dataset": "smartfactory",
+  "method": "Lopster",
+  "seconds": 279.4,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant"
+  ]
+}

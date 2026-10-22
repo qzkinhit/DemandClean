@@ -1,0 +1,13 @@
+{
+ "dataset": "beers",
+ "method": "Lopster (ample GT)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.1732776617954071,
+ "n_train_rows": 1442,
+ "redr": {
+  "r_before": 1446,
+  "r_after": 1446,
+  "redr": 0.0
+ }
+}

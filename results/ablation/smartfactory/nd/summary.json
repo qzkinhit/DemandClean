@@ -1,0 +1,20 @@
+{
+  "dataset": "smartfactory",
+  "variant": "nd",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    14187,
+    18
+  ],
+  "cleaned_shape": [
+    14187,
+    18
+  ],
+  "operations": {
+    "no_action": 4322,
+    "repair_value": 2,
+    "delete": 0,
+    "replace_nearby": 0
+  }
+}

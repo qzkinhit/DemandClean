@@ -1,0 +1,5 @@
+{
+  "dataset": "adult",
+  "method": "MLImputer",
+  "seconds": 2.67
+}

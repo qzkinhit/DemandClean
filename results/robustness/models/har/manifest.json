@@ -1,0 +1,9 @@
+{
+  "source_dataset": "har",
+  "purpose": "Checkpoint used for the reported inference experiments.",
+  "files": {
+    "agent_stage2.pt": "7310278088266eb45185174804414bef6539b6df221f9552fcc8564ef1b3dfac",
+    "agent_stage1.pt": "c96aa2d0b1c07e9d08868d5971bfad3caa43507674569a4960d6958fc2a0f4c4"
+  },
+  "seed_scope": "Seeds in the run manifests control inference and detector calibration."
+}

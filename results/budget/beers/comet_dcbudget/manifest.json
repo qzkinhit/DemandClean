@@ -1,0 +1,20 @@
+{
+  "id": "budget/beers/comet_dcbudget",
+  "dataset": "beers",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 11568,
+  "seconds": 1880.39,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "b4080a877e974f81e7ff3d541818e44d3e66d2b32e213757d720aeaa13f81a35"
+    }
+  }
+}

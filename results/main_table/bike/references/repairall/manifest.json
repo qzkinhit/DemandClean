@@ -1,0 +1,32 @@
+{
+  "id": "main_table/bike/references/repairall",
+  "dataset": "bike",
+  "role": "references",
+  "method": "RepairAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 166832,
+  "gt_pct": 59.997698371597906,
+  "gt_denominator": 295443,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "6c8c8b85aa5ff108004074156e0917222727eae7ad7098dace84f4f0de2e9cd6",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table bike:repairall:results/main_table/bike/references/repairall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

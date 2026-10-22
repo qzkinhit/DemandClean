@@ -1,0 +1,22 @@
+{
+  "id": "main_table/soccer/baselines/llm",
+  "dataset": "soccer",
+  "role": "baselines",
+  "method": "LLM",
+  "ground_truth_cells": 0,
+  "files": [
+    "cleaned.csv.gz",
+    "scores.json"
+  ],
+  "model": "claude-opus-4-8",
+  "replay_command": "python baselines/runners/run_llm.py --dataset soccer --check",
+  "records": "results/llm/records/soccer.jsonl.gz",
+  "input_files": 1,
+  "cost": "results/llm/llm_cost.json",
+  "provenance": {
+    "table": "Final saved indexed CSV, gzip compressed without changing its contents",
+    "csv_sha256": "0850ab2c2119f9fdb1f2c64d79d135b12b1b9996ca1f4a2dea9d7495ba6b38d4",
+    "log": "The task-specific requests, Read records, structured responses and token usage are in the records file",
+    "reported_model_scores_source_sha256": "e16de9d317f7e09a6b71298551bb42885e48242a29c82e1ee639631f131a0611"
+  }
+}

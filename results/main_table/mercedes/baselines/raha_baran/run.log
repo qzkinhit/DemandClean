@@ -1,0 +1,36 @@
+Baran/Raha data cleaning
+dirty table: data/mercedes/dirty_index.csv
+clean table: data/mercedes/clean_index.csv
+task: mercedes_raha_baran
+labeling budget: 20
+column split threshold: 30
+process limit: 12
+columns (378) exceed the threshold (30), column splitting enabled
+high-dimensional table: 378 columns, processed in subsets
+split into 13 subsets of at most 30 columns
+temporary directory: baran_split_mercedes_raha_baran_wf2nm7sw
+  split 0: 30 columns (X0...X32)
+  split 1: 30 columns (X33...X62)
+  split 2: 30 columns (X63...X93)
+  split 3: 30 columns (X94...X124)
+  split 4: 30 columns (X125...X155)
+  split 5: 30 columns (X156...X185)
+  split 6: 30 columns (X186...X217)
+  split 7: 30 columns (X218...X247)
+  split 8: 30 columns (X248...X277)
+  split 9: 30 columns (X278...X308)
+  split 10: 30 columns (X309...X338)
+  split 11: 30 columns (X339...X368)
+  split 12: 17 columns (X369...y)
+merging the results of all subsets...
+merged result saved: mercedes_raha_baran_cleaned.csv
+temporary directory removed: baran_split_mercedes_raha_baran_wf2nm7sw
+run time: 37965.92 s
+status: success
+number of subsets: 13
+detected cells in total: 1548914
+repaired cells in total: 1519840
+labeling budget: 20
+ground-truth cost: 260 (Type 3: iterative interaction)
+
+results saved to: mercedes_raha_baran

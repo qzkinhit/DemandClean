@@ -1,0 +1,33 @@
+{
+  "dataset": "beers",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    1446,
+    8
+  ],
+  "cleaned_shape": [
+    1446,
+    8
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 225,
+    "delete": 0,
+    "replace_nearby": 2368
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.9992404101785036,
+      "recall": 0.9817164179104477,
+      "f1": 0.9904009034443817,
+      "tp": 2631,
+      "fp": 2,
+      "fn": 49,
+      "gt_count": 2680,
+      "det_count": 2633
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "har",
+  "variant": "full",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "nearest": false,
+  "test": 0.8992418921570298,
+  "n_train_rows": 21484,
+  "n_test": 13863,
+  "gt_cells": 320,
+  "gt_repairs": 0,
+  "gt_seed_set": 320,
+  "gt_pct": 0.1143,
+  "model_scores": {
+    "agglomerative": 0.8992418921570298,
+    "kmeans": 0.8999438977796004
+  },
+  "references": {
+    "NoFix": 0.5004163878039727,
+    "RepairAll": 0.9098102483381258
+  },
+  "scikit_learn": "1.3.2",
+  "tol_rel": 0.9741853574274243,
+  "redr": {
+    "r_before": 19388,
+    "r_after": 751,
+    "redr": 0.9612646998143182
+  }
+}

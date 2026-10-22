@@ -1,0 +1,11 @@
+{
+ "dataset": "nasa",
+ "method": "demandclean",
+ "role": "demandclean",
+ "table": "results/main_table/nasa/demandclean/cleaned.csv",
+ "scope_rows": 901,
+ "kept_rows": 901,
+ "r_before": 459,
+ "r_after": 24,
+ "redr": 0.9477124183006536
+}

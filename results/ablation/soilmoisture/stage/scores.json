@@ -1,0 +1,16 @@
+{
+  "dataset": "soilmoisture",
+  "variant": "stage",
+  "model": "gb",
+  "metric": "r2",
+  "test": 0.9397641731810153,
+  "tol_rel": 0.8234927295201572,
+  "references": {
+    "NoFix": 0.8559105942583121,
+    "RepairAll": 0.9577373328763495
+  },
+  "n_train_rows": 407,
+  "n_test": 136,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "c73571f3b48136b590f403fba3e618634b1df18b471e89e0b2e132a1dce1f1cc"
+}

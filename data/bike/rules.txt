@@ -1,0 +1,30 @@
+[DOMAIN]
+dteday: FLOAT [359399.0, 368880.0]
+season: INT [1, 4]
+yr: INT [0, 1]
+mnth: INT [1, 12]
+hr: INT [0, 23]
+holiday: INT [0, 1]
+weekday: INT [0, 6]
+workingday: INT [0, 1]
+weathersit: INT [1, 4]
+temp: FLOAT [0.02, 1.0]
+atemp: FLOAT [0.0, 1.0]
+hum: FLOAT [0.0, 1.0]
+windspeed: FLOAT [0.0, 0.8507]
+casual: INT [0, 367]
+registered: INT [0, 886]
+cnt: INT [1, 977]
+
+[FD]
+
+[DC]
+t1&EQ(t1.holiday, 1)&NEQ(t1.workingday, 0)&MARK(t1.workingday)
+t1&EQ(t1.weekday, 0)&NEQ(t1.workingday, 0)&MARK(t1.workingday)
+t1&EQ(t1.weekday, 6)&NEQ(t1.workingday, 0)&MARK(t1.workingday)
+t1&EQ(t1.season, 2)&LT(t1.mnth, 3)&MARK(t1.mnth)
+t1&EQ(t1.season, 2)&GT(t1.mnth, 6)&MARK(t1.mnth)
+t1&EQ(t1.season, 3)&LT(t1.mnth, 6)&MARK(t1.mnth)
+t1&EQ(t1.season, 3)&GT(t1.mnth, 9)&MARK(t1.mnth)
+t1&EQ(t1.season, 4)&LT(t1.mnth, 9)&MARK(t1.mnth)
+t1&EQ(t1.season, 1)&GT(t1.mnth, 3)&LT(t1.mnth, 12)&MARK(t1.mnth)

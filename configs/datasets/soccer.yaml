@@ -1,0 +1,25 @@
+dataset: soccer
+source: UniClean
+task: classification
+label_col: manager
+categorical_cols:
+- birthplace
+- city
+- name
+- position
+- stadium
+- surname
+- team
+downstream_model: dt
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 106100
+training:
+  n_episodes: 300
+  max_truth_budget: 0
+  raha_detector: false
+evaluation:
+  unseen_categories: nearest
+second_model: lr

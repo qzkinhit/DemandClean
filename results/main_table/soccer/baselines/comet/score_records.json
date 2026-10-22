@@ -1,0 +1,14 @@
+[
+  {
+    "dataset": "soccer",
+    "model": "dt",
+    "metric": "accuracy",
+    "test": 1.0,
+    "n_train_rows": 6366,
+    "n_test": 2122,
+    "rows": 6366,
+    "sklearn": "1.3.2",
+    "method": "Comet",
+    "encoding": "nearest"
+  }
+]

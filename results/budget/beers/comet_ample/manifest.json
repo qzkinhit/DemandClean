@@ -1,0 +1,20 @@
+{
+  "id": "budget/beers/comet_ample",
+  "dataset": "beers",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 11568,
+  "seconds": 4352.4,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "a1e2db0f596d58b25e589e28c254acd9635c02712247ea3bfb78882876cbe1be"
+    }
+  }
+}

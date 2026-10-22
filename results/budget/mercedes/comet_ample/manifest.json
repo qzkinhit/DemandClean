@@ -1,0 +1,20 @@
+{
+  "id": "budget/mercedes/comet_ample",
+  "dataset": "mercedes",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 949400,
+  "seconds": 26532.46,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "34c87eb800146293b1d31991fd221110e10c358f3df39e46b72e31b087850924"
+    }
+  }
+}

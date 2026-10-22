@@ -1,0 +1,33 @@
+{
+  "dataset": "smartfactory",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    14187,
+    18
+  ],
+  "cleaned_shape": [
+    10556,
+    18
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 0,
+    "delete": 3631,
+    "replace_nearby": 123720
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.03268848418872232,
+      "recall": 1.0,
+      "f1": 0.06330754082999641,
+      "tp": 4324,
+      "fp": 127955,
+      "fn": 0,
+      "gt_count": 4324,
+      "det_count": 132279
+    }
+  }
+}

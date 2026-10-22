@@ -1,0 +1,54 @@
+# =============================================================================
+# Dataset: bike (Bike Sharing Demand)
+# =============================================================================
+# 17,379 rows x 17 cols; regression (cnt)
+# Errors: out-of-domain values + float injection + in-domain substitution; label is error-free
+# Note: categorical columns use INT ranges instead of ENUM to avoid float/string-matching pitfalls
+# =============================================================================
+
+[DOMAIN]
+dteday: FLOAT [360347.1, 367931.9]
+season: INT [2, 3]
+yr: INT [1, 0]
+mnth: INT [3, 10]
+hr: INT [3, 20]
+holiday: INT [1, 0]
+weekday: INT [1, 5]
+workingday: INT [1, 0]
+weathersit: INT [2, 3]
+temp: FLOAT [0.11800000000000001, 0.902]
+atemp: FLOAT [0.1, 0.9]
+hum: FLOAT [0.1, 0.9]
+windspeed: FLOAT [0.08507, 0.76563]
+casual: INT [37, 330]
+registered: INT [89, 797]
+cnt: INT [99, 879]
+
+[FD]
+registered => atemp
+registered => workingday
+# mnth => season has been removed: FD majority voting is unreliable when both columns
+# are heavily perturbed. Use DC rules below to encode the mnth<->season mapping precisely.
+
+[DC]
+# === holiday + workingday mutual-exclusion constraint (P=0.968) ===
+# When holiday=1, workingday must be 0
+t1&EQ(t1.holiday, 1)&NEQ(t1.workingday, 0)&MARK(t1.workingday)
+# === weekday vs. workingday constraint (P=1.000) ===
+# On weekends (weekday=0 or 6), workingday must be 0
+t1&EQ(t1.weekday, 0)&NEQ(t1.workingday, 0)&MARK(t1.workingday)
+t1&EQ(t1.weekday, 6)&NEQ(t1.workingday, 0)&MARK(t1.workingday)
+# === season -> mnth mapping (P=0.979, R=0.948, 6282 TP) ===
+# Direction: use season to validate mnth (94.8% of in-domain mnth errors have a correct season)
+# Note: the reverse direction mnth -> season is unreliable (both columns perturbed, P=0.093)
+# Clean mapping: s1={1,2,3,12}, s2={3,4,5,6}, s3={6,7,8,9}, s4={9,10,11,12}
+# season=2 (summer): valid mnth range 3-6
+t1&EQ(t1.season, 2)&LT(t1.mnth, 3)&MARK(t1.mnth)
+t1&EQ(t1.season, 2)&GT(t1.mnth, 6)&MARK(t1.mnth)
+# season=3 (fall): valid mnth range 6-9
+t1&EQ(t1.season, 3)&LT(t1.mnth, 6)&MARK(t1.mnth)
+t1&EQ(t1.season, 3)&GT(t1.mnth, 9)&MARK(t1.mnth)
+# season=4 (winter): valid mnth range 9-12
+t1&EQ(t1.season, 4)&LT(t1.mnth, 9)&MARK(t1.mnth)
+# season=1 (spring): valid mnth in {1,2,3,12}, i.e., invalid in 4-11
+t1&EQ(t1.season, 1)&GT(t1.mnth, 3)&LT(t1.mnth, 12)&MARK(t1.mnth)

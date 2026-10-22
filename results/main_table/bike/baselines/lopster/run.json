@@ -1,0 +1,8 @@
+{
+  "dataset": "bike",
+  "method": "Lopster",
+  "seconds": 169.21,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant"
+  ]
+}

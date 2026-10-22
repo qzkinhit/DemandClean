@@ -1,0 +1,20 @@
+{
+  "id": "budget/mercedes/lopster_ample",
+  "dataset": "mercedes",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 475774,
+  "seconds": 7487.61,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "a22e7c8ef439c68c75bda81189e3c35ce95e89632bc3f54e4a414284e4efff68"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "smartfactory",
+  "variant": "full",
+  "model": "rf",
+  "metric": "accuracy",
+  "nearest": false,
+  "test": 0.9687037428631846,
+  "n_train_rows": 11452,
+  "n_test": 4729,
+  "gt_cells": 1031,
+  "gt_repairs": 271,
+  "gt_seed_set": 760,
+  "gt_pct": 0.2295,
+  "model_scores": {
+    "rf": 0.9687037428631846,
+    "gb": 0.7965743286107
+  },
+  "references": {
+    "NoFix": 0.9617255233664622,
+    "RepairAll": 0.9663776696976105
+  },
+  "scikit_learn": "1.3.2",
+  "tol_rel": 1.499999999999988,
+  "redr": {
+    "r_before": 4324,
+    "r_after": 642,
+    "redr": 0.8515263644773358
+  }
+}

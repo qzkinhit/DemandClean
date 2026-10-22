@@ -1,0 +1,13 @@
+{
+ "dataset": "har",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "agglomerative",
+ "metric": "silhouette",
+ "test": 0.7466625446918559,
+ "n_train_rows": 42000,
+ "redr": {
+  "r_before": 19388,
+  "r_after": 42000,
+  "redr": -1.1662884258304105
+ }
+}

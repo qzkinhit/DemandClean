@@ -1,0 +1,21 @@
+# =============================================================================
+# Dataset: smartfactory (Industrial Smart Factory)
+# =============================================================================
+# 23,645 rows x 20 cols (including index and labels)
+# Task: classification (label column: labels, binary {0, 1})
+# Errors: pure missing values (30% of rows, one column "empty" per such row); label is error-free
+#
+# Detection strategy: NaN detection alone covers 100% of errors; RAHA is optional
+# =============================================================================
+
+[DOMAIN]
+i_w_blo_weg: INT [-316, 739]
+o_w_blo_power: INT [0, 34818]
+o_w_bhl_voltage: INT [-22, 66]
+i_w_bhr_weg: INT [-1322, 621]
+o_w_hr_voltage: INT [0, 543]
+i_w_hl_weg: INT [-1083, 101]
+labels: ENUM {0, 1}
+
+# FDs removed: the original 12 weg=>power/voltage FDs had 33-73% violation rates on clean data.
+# A pure-missing-value dataset does not need FDs for detection.

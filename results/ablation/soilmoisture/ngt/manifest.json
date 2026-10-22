@@ -1,0 +1,80 @@
+{
+  "dataset": "soilmoisture",
+  "method": "DemandClean",
+  "variant": "ngt",
+  "seed": 0,
+  "status": "complete",
+  "command": "python scripts/run_demandclean.py --config results/ablation/soilmoisture/ngt/config.yaml --variant ngt --seed 0",
+  "score_command": "python evaluation/paper_score.py results/ablation/soilmoisture/ngt",
+  "configuration": {
+    "config": "config.yaml",
+    "variant_definitions": "configs/variants.yaml",
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "reward_model": "ridge",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": 0,
+      "reward_model_type": "ridge"
+    },
+    "agent_parameters": {
+      "state_size": 10,
+      "gamma": 0.95,
+      "epsilon_start": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay": 0.995,
+      "learning_rate": 0.0005,
+      "batch_size": 64,
+      "memory_size": 10000,
+      "target_update_freq": 5,
+      "missing_rate_range": [
+        0.02,
+        0.08
+      ],
+      "semantic_rate_range": [
+        0.05,
+        0.15
+      ],
+      "syntactic_rate_range": [
+        0.1,
+        0.25
+      ],
+      "label_rate_range": [
+        0.0,
+        0.05
+      ],
+      "auto_select_base": true,
+      "base_cv_folds": 5
+    },
+    "reward_model_kwargs": {},
+    "eval_sample_ratio": 1.0
+  },
+  "start_time": "2026-10-17T02:03:21+08:00",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "3a10fca0aad5a7f53a11790851bb09693db54948ad2d49450b1c4a57d4a8610a",
+      "model/agent_stage1.pt": "72ace4382a0c7eb5d5003c3c25825d8de6e1f0b115ab3ace968f7a09caca5fae",
+      "model/agent_stage2.pt": "dd57cc3a0a15b59c8254e8a9bfc85d5638cee4358aa1b5227b0a2cee9aa1b19f"
+    },
+    "log": "console output of the run",
+    "checkpoint": "Original checkpoint bytes, renamed by removing the source version prefix. The runner logs a common agent.pt stem; a two-stage agent writes agent_stage1.pt and agent_stage2.pt.",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "history_episodes": 300,
+    "queue_completion_record_present": true
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ]
+}

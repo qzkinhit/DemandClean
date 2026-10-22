@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:16:51
+SimpleImputer data cleaning (mean)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: beers_simpleimputer
+fill strategy: mean
+repaired data saved: beers_simpleimputer_cleaned.csv
+run time: 0.22 s
+status: success
+filled cells: 725
+ground-truth cost: 0 (fully automatic)
+
+results saved to: beers_simpleimputer
+log file: beers_simpleimputer.log

@@ -1,0 +1,13 @@
+{
+ "dataset": "har",
+ "method": "Lopster (ample GT)",
+ "model": "agglomerative",
+ "metric": "silhouette",
+ "test": 0.8660451477544387,
+ "n_train_rows": 42000,
+ "redr": {
+  "r_before": 19388,
+  "r_after": 37135,
+  "redr": -0.9153600165050547
+ }
+}

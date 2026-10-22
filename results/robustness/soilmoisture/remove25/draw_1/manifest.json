@@ -1,0 +1,55 @@
+{
+  "dataset": "soilmoisture",
+  "experiment": "robustness",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": 0,
+      "reward_model_type": "ridge"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "1f0d759556b9f040adf7c71578e6f270d10946c2e413240b7599c03b49505dda"
+  },
+  "checkpoint": "results/robustness/models/soilmoisture",
+  "rules": "results/robustness/soilmoisture/remove25/draw_1/rules.txt",
+  "command": "python scripts/run_demandclean.py --config results/robustness/soilmoisture/remove25/draw_1/config.yaml --variant full --seed 0 --rules results/robustness/soilmoisture/remove25/draw_1/rules.txt --checkpoint results/robustness/models/soilmoisture --out results/runs/robustness_soilmoisture_remove25_draw1",
+  "score_command": "python evaluation/paper_score.py results/robustness/soilmoisture/remove25/draw_1",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "00ee208ddc73107c3c40af16818d7f50d2d0466de700055abbc5e6fdd8ec5836"
+    },
+    "rules_sha256": "ddb71dcab5a62d50e0944e7e43faf1b5ebe2f5b9dcbfd62b35ee3e822831ac0e",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "6bcfec3b5c46a7a377c9166dfba653d27e70a4e1ace067ed73ec74c74019797e",
+      "agent_stage2.pt": "baa1ba9c5224a5a7e4b3947b7c7485583a5fa6e0028832e9cc777ef113f845a6"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 259.93
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json",
+    "rules.txt"
+  ],
+  "condition": "remove25",
+  "rule_draw": 1
+}

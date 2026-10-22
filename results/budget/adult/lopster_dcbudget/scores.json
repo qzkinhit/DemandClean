@@ -1,0 +1,13 @@
+{
+ "dataset": "adult",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.8049751243781095,
+ "n_train_rows": 27133,
+ "redr": {
+  "r_before": 1030,
+  "r_after": 27133,
+  "redr": -25.342718446601943
+ }
+}

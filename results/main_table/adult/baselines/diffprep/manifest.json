@@ -1,0 +1,30 @@
+{
+  "id": "main_table/adult/baselines/diffprep",
+  "dataset": "adult",
+  "role": "baselines",
+  "method": "DiffPrep",
+  "status": "final",
+  "artifact": "cleaned_encoded.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 678330,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "cleaned_encoded",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "aa27dfdf9ea105d6af2f6e1404a786307e5334751ea50a47ca744cf9368750c0",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table adult:diffprep:results/main_table/adult/baselines/diffprep/cleaned_encoded.npz",
+  "files": [
+    "cleaned_encoded.npz",
+    "manifest.json",
+    "run.json",
+    "scores.json"
+  ]
+}

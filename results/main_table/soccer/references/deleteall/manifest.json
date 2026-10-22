@@ -1,0 +1,31 @@
+{
+  "id": "main_table/soccer/references/deleteall",
+  "dataset": "soccer",
+  "role": "references",
+  "method": "DeleteAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 63660,
+  "gt_pct": 60.0,
+  "gt_denominator": 116710,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "25460e452d028ab22155be732c3a1935389eed8792e83b15bef0a5e7a4400b2c",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soccer:deleteall:results/main_table/soccer/references/deleteall/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "run_id": "main_table/flights/demandclean",
+  "dataset": "flights",
+  "variant": "full",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    1425,
+    6
+  ],
+  "cleaned_shape": [
+    1425,
+    6
+  ],
+  "operations": {
+    "no_op": 152,
+    "gt_repair": 4,
+    "delete": 0,
+    "ve_replace": 1197
+  },
+  "ground_truth_cells": {
+    "seed_set": 0,
+    "repairs": 4,
+    "total": 4
+  },
+  "detection": {
+    "overall": {
+      "precision": 1.0,
+      "recall": 0.45463709677419356,
+      "f1": 0.6250866250866252,
+      "tp": 1353,
+      "fp": 0,
+      "fn": 1623,
+      "gt_count": 2976,
+      "det_count": 1353
+    }
+  },
+  "time_seconds": {
+    "detection": 0.0,
+    "training": 1044.8,
+    "inference": 15.93,
+    "total": 1071.37
+  },
+  "calibration": {
+    "labeled_rows": 0,
+    "non_index_columns": 7
+  }
+}

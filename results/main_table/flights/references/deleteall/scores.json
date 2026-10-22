@@ -1,0 +1,16 @@
+{
+  "dataset": "flights",
+  "method": "DeleteAll",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 0.8340336134453782,
+  "all_models": {
+    "dt": 0.8340336134453782
+  },
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 277,
+  "table_rows": 277,
+  "gt_cells": 9975,
+  "gt_pct": 59.974747474747474
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "two_player_operation_attribution",
+  "datasets": 12,
+  "implementation": "evaluation/attribution_operation.py",
+  "mapping": {
+    "attr_op.py": "results/attribution_operation/attr_op.py",
+    "attr_op_all.sh": "results/attribution_operation/attr_op_all.sh",
+    "rows.jsonl": "results/attribution_operation/rows.jsonl"
+  },
+  "canonical_results": [
+    "results/main_table/breast_cancer/demandclean/attribution_operation.json",
+    "results/main_table/beers/demandclean/attribution_operation.json",
+    "results/main_table/nasa/demandclean/attribution_operation.json",
+    "results/main_table/soilmoisture/demandclean/attribution_operation.json",
+    "results/main_table/bike/demandclean/attribution_operation.json",
+    "results/main_table/mercedes/demandclean/attribution_operation.json",
+    "results/main_table/smartfactory/demandclean/attribution_operation.json",
+    "results/main_table/adult/demandclean/attribution_operation.json",
+    "results/main_table/flights/demandclean/attribution_operation.json",
+    "results/main_table/soccer/demandclean/attribution_operation.json",
+    "results/main_table/hospitals/demandclean/attribution_operation.json",
+    "results/main_table/har/demandclean/attribution_operation.json"
+  ],
+  "verification": {
+    "source_completed": true,
+    "full_coalition_matches_run": true,
+    "encoded_inputs_match": true,
+    "ordered_output_indices_match": true
+  },
+  "adaptation": "The entry points use repository-relative run directories and share the attribution implementation in evaluation/attribution_operation.py.",
+  "files": [
+    "rows.jsonl",
+    "attr_op.py",
+    "attr_op_all.sh"
+  ]
+}

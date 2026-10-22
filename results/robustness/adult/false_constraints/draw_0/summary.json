@@ -1,0 +1,33 @@
+{
+  "dataset": "adult",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    27133,
+    14
+  ],
+  "cleaned_shape": [
+    22653,
+    14
+  ],
+  "operations": {
+    "no_action": 29452,
+    "repair_value": 522,
+    "delete": 4480,
+    "replace_nearby": 27016
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 65581,
+      "fn": 1030,
+      "gt_count": 1030,
+      "det_count": 65581
+    }
+  }
+}

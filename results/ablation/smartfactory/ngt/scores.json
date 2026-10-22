@@ -1,0 +1,16 @@
+{
+  "dataset": "smartfactory",
+  "variant": "ngt",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.965531824910129,
+  "tol_rel": 0.8181818181818182,
+  "references": {
+    "NoFix": 0.9617255233664622,
+    "RepairAll": 0.9663776696976105
+  },
+  "n_train_rows": 14185,
+  "n_test": 4729,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "3965f0487e558187ec332d8b3691e69445f93f2d7bb8e7d94b661a8453c38a7c"
+}

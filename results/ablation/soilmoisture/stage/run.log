@@ -1,0 +1,36 @@
+# Console output of the run.
+
+DemandClean unified runner
+Datasets: ['soilmoisture']
+Enabled versions: ['v10_auto_duelingflat_single']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Seed: 0
+  60/20/20 split: train=407, val=136, test=136
+  Dataset: soilmoisture
+  Dirty:   (407, 127)
+  Features: 127, label: soil_moisture
+  Categorical cols: (none)
+  LE fit: dirty only (407 rows)
+  SS fit: dirty only (407 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(407, 127), X_clean_train=(407, 127), X_clean_val=(136, 127), X_clean_test=(136, 127)
+Version: v10_auto_duelingflat_single
+Dataset: soilmoisture | task: regression | model: ridge
+Detector: auto | Agent: dueling_single | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.01s
+[Step 2] training (300 episodes)...
+  model saved: ./model/v10_auto_duelingflat_single_agent.pt
+  [time] Step 2 (train): 723.17s
+[Step 3] inference (mode: single_phase)...
+  ground truth used: 3824
+  action counts: {'no_action': 36, 'repair_value': 3824, 'delete': 0, 'replace_nearby': 11243}
+  encoded version saved: ./data/v10_auto_duelingflat_single_cleaned_encoded.npz
+  [time] Step 3 (infer): 85.24s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.38s
+  Version v10_auto_duelingflat_single done! elapsed: 1021.23s
+All done! total: 1026.58s

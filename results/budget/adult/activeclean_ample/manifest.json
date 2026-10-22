@@ -1,0 +1,20 @@
+{
+  "id": "budget/adult/activeclean_ample",
+  "dataset": "adult",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 7500,
+  "seconds": 8.264,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "92f8bfc38818e8aede8817ae71f325c199124387c83f0936921a162d71cba930"
+    }
+  }
+}

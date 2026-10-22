@@ -1,0 +1,5 @@
+{
+  "dataset": "breast_cancer",
+  "method": "MLImputer",
+  "seconds": 0.3
+}

@@ -1,0 +1,11 @@
+# rules derived from the dirty table of nasa only
+
+[DOMAIN]
+frequency: INT [0, 42204058]
+angle: FLOAT [0, 6660]
+chord_length: FLOAT [0.0254, 330088]
+velocity: FLOAT [31.7, 9698.04]
+thickness: FLOAT [0.000400682, 8.63859e+07]
+sound_pressure_level: FLOAT [106.593, 138.681]
+
+[FD]

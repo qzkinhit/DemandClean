@@ -1,0 +1,11 @@
+[
+  {
+    "dataset": "flights",
+    "model": "dt",
+    "metric": "accuracy",
+    "test": 0.8172268907563025,
+    "n_train_rows": 1425,
+    "method": "Horizon",
+    "encoding": "nearest"
+  }
+]

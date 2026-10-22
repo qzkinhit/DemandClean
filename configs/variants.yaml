@@ -1,0 +1,35 @@
+# Variants of DemandClean (--variant of scripts/run_demandclean.py).
+#
+# The four ablation variants are the configurations of the runs in Figure 5 of the paper.
+# Each entry names the architecture and inference mode of the released variant.
+# A variant without an `inference` field uses the inference mode of the dataset configuration.
+
+full:
+  name: DemandClean
+  detector: hybrid             # hybrid error detection with a calibration seed set
+  agent: dueling_two_stage     # two-stage dueling double DQN
+
+ngt:
+  name: DemandClean-NGT
+  detector: hybrid
+  agent: dueling_two_stage
+  training:
+    max_truth_budget: 0        # no ground-truth repair
+
+nd:
+  name: DemandClean-ND
+  detector: oracle             # oracle detection instead of hybrid detection
+  agent: dueling_two_stage
+  inference: online
+
+arch:
+  name: DemandClean-Arch
+  detector: hybrid
+  agent: two_stage             # two stages with plain DQN heads
+  inference: online
+
+stage:
+  name: DemandClean-Stage
+  detector: hybrid
+  agent: dueling_single        # one dueling head over the four operations
+  inference: online

@@ -1,0 +1,5 @@
+[2026-06-14 11:22:54,349] INFO - demandclean:   Clean base selection (5-fold CV, weighted by the row retention rate):
+[2026-06-14 11:22:54,349] INFO - demandclean:     DeleteFix: 120 rows, CV=0.9917, weight=0.447, weighted=0.4435
+[2026-06-14 11:22:54,349] INFO - demandclean:     VE-Fill:   600 rows, CV=0.9983, weight=1.000, weighted=0.9983
+[2026-06-14 11:22:54,349] INFO - demandclean:     -> selected VE-Fill (600 rows)
+[2026-06-14 11:24:43,212] INFO - demandclean: Model saved: model/agent.pt

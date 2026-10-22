@@ -1,0 +1,61 @@
+{
+  "status": "ok",
+  "n_train": 901,
+  "n_val": 301,
+  "n_test": 301,
+  "gt_cells": 2700,
+  "rows_cleaned": 450,
+  "cells_per_record_without_index": 6,
+  "budget_cells": 2700,
+  "budget_rows": 450,
+  "batch_size": 50,
+  "iterations": 10,
+  "model": "linear_regression",
+  "model_regularisation": {
+    "alpha": 10.0,
+    "lam": 0.011098779134295227
+  },
+  "seed": 42,
+  "task": "regression",
+  "label_col": "sound_pressure_level",
+  "label_source": "dirty",
+  "train_labels_replaced_by_protocol": 0,
+  "python": "3.8.20",
+  "finished": "2026-10-18 13:48:14",
+  "secs": 0.745,
+  "wall_secs": 0.768,
+  "step_constant": 3.0,
+  "output_iteration": 10,
+  "dataset": "nasa",
+  "method": "ActiveClean",
+  "configuration": {
+    "feature_cols": [
+      "frequency",
+      "angle",
+      "chord_length",
+      "velocity",
+      "thickness"
+    ],
+    "categorical_cols": [],
+    "clock_cols": [],
+    "label_col": "sound_pressure_level",
+    "task": "regression",
+    "budget_rows": 450,
+    "batch_size": 50,
+    "seed": 42,
+    "uniform_mix": 0.1,
+    "detector_min_per_class": 5,
+    "detector_margin": 1.0,
+    "detector_rare_class": 3,
+    "max_categories": 100,
+    "min_category_count": 2,
+    "z_clip": 10.0,
+    "svm_max_iter": 20000,
+    "step_constant": 3.0,
+    "model_regularisation": {
+      "alpha": 10.0,
+      "lam": 0.011098779134295227
+    }
+  },
+  "implementation": "ActiveClean adaptation described in baselines/THIRD_PARTY.md"
+}

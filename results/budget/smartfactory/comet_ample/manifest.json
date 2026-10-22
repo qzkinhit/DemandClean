@@ -1,0 +1,20 @@
+{
+  "id": "budget/smartfactory/comet_ample",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 255366,
+  "seconds": 19819.94,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "26f4464ecfb712c57dbbbc604a04267065ee229b7a0f417de09f17f0f433e125"
+    }
+  }
+}

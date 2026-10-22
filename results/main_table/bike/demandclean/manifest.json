@@ -1,0 +1,75 @@
+{
+  "run_id": "main_table/bike/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "bike",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/bike.yaml --variant full",
+  "arguments": {
+    "n_episodes": 200,
+    "max_repair_ratio": 1.0,
+    "repair_lambda": 0.0001
+  },
+  "seed": null,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 200,
+      "max_repair_ratio": 1.0,
+      "repair_lambda": 0.0001
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-04-14T01:15:01+08:00",
+  "end_time": "2026-04-14T06:31:37+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true,
+      "policy_equals_policy_written_by_log": true
+    },
+    "artifact_sha256": {
+      "cleaned.csv": "d67380f44de0a955169e74507358d18625ebe5fc4935eabb0d73a360d2be2489",
+      "cleaned_encoded.npz": "8812749b1b5af68d00f201dc579df32abd05e77a0cba48f0d7d9b05e71a8c957",
+      "model/agent_stage1.pt": "7e3d5cdeef5c64c131b4a489688a5d0a3ebbbca18b7fd9da2425f8f94f0068ea",
+      "model/agent_stage2.pt": "3ebda9e388ef0ffd86750cfe6047d35af546e7e5c34ddb103d96ca3532eb892d"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "ground_truth_cells": 2729,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/bike/demandclean",
+    "checkpoint": "results/main_table/bike/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

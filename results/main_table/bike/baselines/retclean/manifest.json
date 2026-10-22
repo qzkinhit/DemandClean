@@ -1,0 +1,33 @@
+{
+  "id": "main_table/bike/baselines/retclean",
+  "dataset": "bike",
+  "role": "baselines",
+  "method": "RetClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 83408,
+  "gt_pct": 29.995972150296335,
+  "gt_denominator": 278064,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "a29914c164c9e2cc7cffebacbfd2179862faf4fb8b78bc0fb1b416a5f3580cfc",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table bike:retclean:results/main_table/bike/baselines/retclean/cleaned.csv.gz",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ]
+}

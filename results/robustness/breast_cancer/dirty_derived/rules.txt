@@ -1,0 +1,15 @@
+# rules derived from the dirty table of breast_cancer only
+
+[DOMAIN]
+Clump Thickness: INT [1, 88]
+Uniformity of Cell Size: INT [1, 54]
+Uniformity of Cell Shape: INT [1, 25]
+Marginal Adhesion: INT [1, 11]
+Single Epithelial Cell Size: INT [1, 22]
+Bare Nuclei: INT [1, 43]
+Bland Chromatin: INT [1, 69]
+Normal Nucleoli: INT [1, 33]
+Mitoses: INT [1, 11]
+class: INT [2, 4]
+
+[FD]

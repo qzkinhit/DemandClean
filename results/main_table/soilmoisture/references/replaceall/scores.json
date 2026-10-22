@@ -1,0 +1,17 @@
+{
+  "dataset": "soilmoisture",
+  "method": "ReplaceAll",
+  "model": "gb",
+  "metric": "r2",
+  "test": 0.9202106247455096,
+  "all_models": {
+    "gb": 0.9202106247455096,
+    "rf": 0.9264367248434918
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 407,
+  "table_rows": 679,
+  "gt_cells": 52096,
+  "gt_pct": 59.941089837997055
+}

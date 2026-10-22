@@ -1,0 +1,5 @@
+{
+  "dataset": "soilmoisture",
+  "method": "SimpleImputer",
+  "seconds": 1.1
+}

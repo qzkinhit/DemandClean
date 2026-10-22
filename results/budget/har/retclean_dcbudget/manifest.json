@@ -1,0 +1,21 @@
+{
+  "id": "budget/har/retclean_dcbudget",
+  "dataset": "har",
+  "role": "budget",
+  "method": "RetClean (lower GT level)",
+  "ground_truth_cells": 4620,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "ebabb2b54b90e06ab7edf2bb352d3152f1322124540e3a6be8558824ffcc90da"
+    }
+  }
+}

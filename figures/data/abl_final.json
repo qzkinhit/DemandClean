@@ -1,0 +1,458 @@
+{
+  "figure": 5,
+  "dataset_order": [
+    "beers",
+    "breast_cancer",
+    "smartfactory",
+    "bike",
+    "mercedes",
+    "nasa",
+    "soilmoisture",
+    "har"
+  ],
+  "variant_order": [
+    "full",
+    "ngt",
+    "nd",
+    "arch",
+    "stage"
+  ],
+  "datasets": {
+    "beers": {
+      "model": "rf",
+      "metric": "accuracy",
+      "config": "configs/datasets/beers.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.36116910229645094,
+          "tol_rel": 1.1578947368421053,
+          "result": "results/main_table/beers/demandclean/scores.json",
+          "manifest": "results/main_table/beers/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.34237995824634654,
+          "tol_rel": 0.6842105263157894,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/beers/ngt/scores.json",
+          "manifest": "results/ablation/beers/ngt/manifest.json",
+          "config": "results/ablation/beers/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.3569937369519833,
+          "tol_rel": 1.052631578947368,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/beers/nd/scores.json",
+          "manifest": "results/ablation/beers/nd/manifest.json",
+          "config": "results/ablation/beers/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.33820459290187893,
+          "tol_rel": 0.5789473684210533,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/beers/arch/scores.json",
+          "manifest": "results/ablation/beers/arch/manifest.json",
+          "config": "results/ablation/beers/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.33402922755741127,
+          "tol_rel": 0.473684210526316,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/beers/stage/scores.json",
+          "manifest": "results/ablation/beers/stage/manifest.json",
+          "config": "results/ablation/beers/stage/config.yaml"
+        }
+      }
+    },
+    "breast_cancer": {
+      "model": "lr",
+      "metric": "accuracy",
+      "config": "configs/datasets/breast_cancer.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.9928571428571429,
+          "tol_rel": 1.2499999999999991,
+          "result": "results/main_table/breast_cancer/demandclean/scores.json",
+          "manifest": "results/main_table/breast_cancer/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.9857142857142858,
+          "tol_rel": 1.0,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/breast_cancer/ngt/scores.json",
+          "manifest": "results/ablation/breast_cancer/ngt/manifest.json",
+          "config": "results/ablation/breast_cancer/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.9857142857142858,
+          "tol_rel": 1.0,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/breast_cancer/nd/scores.json",
+          "manifest": "results/ablation/breast_cancer/nd/manifest.json",
+          "config": "results/ablation/breast_cancer/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.9857142857142858,
+          "tol_rel": 1.0,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/breast_cancer/arch/scores.json",
+          "manifest": "results/ablation/breast_cancer/arch/manifest.json",
+          "config": "results/ablation/breast_cancer/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.9857142857142858,
+          "tol_rel": 1.0,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/breast_cancer/stage/scores.json",
+          "manifest": "results/ablation/breast_cancer/stage/manifest.json",
+          "config": "results/ablation/breast_cancer/stage/config.yaml"
+        }
+      }
+    },
+    "smartfactory": {
+      "model": "rf",
+      "metric": "accuracy",
+      "config": "configs/datasets/smartfactory.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.9687037428631846,
+          "tol_rel": 1.499999999999988,
+          "result": "results/main_table/smartfactory/demandclean/scores.json",
+          "manifest": "results/main_table/smartfactory/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.965531824910129,
+          "tol_rel": 0.8181818181818182,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/smartfactory/ngt/scores.json",
+          "manifest": "results/ablation/smartfactory/ngt/manifest.json",
+          "config": "results/ablation/smartfactory/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.9657432861069993,
+          "tol_rel": 0.8636363636363517,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/smartfactory/nd/scores.json",
+          "manifest": "results/ablation/smartfactory/nd/manifest.json",
+          "config": "results/ablation/smartfactory/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.967223514485092,
+          "tol_rel": 1.1818181818181819,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/smartfactory/arch/scores.json",
+          "manifest": "results/ablation/smartfactory/arch/manifest.json",
+          "config": "results/ablation/smartfactory/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.9670120532882216,
+          "tol_rel": 1.1363636363636245,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/smartfactory/stage/scores.json",
+          "manifest": "results/ablation/smartfactory/stage/manifest.json",
+          "config": "results/ablation/smartfactory/stage/config.yaml"
+        }
+      }
+    },
+    "bike": {
+      "model": "lr",
+      "metric": "r2",
+      "config": "configs/datasets/bike.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.9999166180439714,
+          "tol_rel": 0.9994073095161479,
+          "result": "results/main_table/bike/demandclean/scores.json",
+          "manifest": "results/main_table/bike/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.9988385863062482,
+          "tol_rel": 0.991744510720451,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/bike/ngt/scores.json",
+          "manifest": "results/ablation/bike/ngt/manifest.json",
+          "config": "results/ablation/bike/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.9933150314530776,
+          "tol_rel": 0.9524823183417408,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/bike/nd/scores.json",
+          "manifest": "results/ablation/bike/nd/manifest.json",
+          "config": "results/ablation/bike/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.9998423207859919,
+          "tol_rel": 0.9988791943233882,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/bike/arch/scores.json",
+          "manifest": "results/ablation/bike/arch/manifest.json",
+          "config": "results/ablation/bike/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.9999182354697692,
+          "tol_rel": 0.9994188064025773,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/bike/stage/scores.json",
+          "manifest": "results/ablation/bike/stage/manifest.json",
+          "config": "results/ablation/bike/stage/config.yaml"
+        }
+      }
+    },
+    "mercedes": {
+      "model": "rf",
+      "metric": "r2",
+      "config": "configs/datasets/mercedes.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.42835799763840754,
+          "tol_rel": 2.028599889948133,
+          "result": "results/main_table/mercedes/demandclean/scores.json",
+          "manifest": "results/main_table/mercedes/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.35236689156926193,
+          "tol_rel": -0.22595270578317947,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/mercedes/ngt/scores.json",
+          "manifest": "results/ablation/mercedes/ngt/manifest.json",
+          "config": "results/ablation/mercedes/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.36704153896808334,
+          "tol_rel": 0.20942409152715516,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/mercedes/nd/scores.json",
+          "manifest": "results/ablation/mercedes/nd/manifest.json",
+          "config": "results/ablation/mercedes/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.41523744869515866,
+          "tol_rel": 1.639331076693786,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/mercedes/arch/scores.json",
+          "manifest": "results/ablation/mercedes/arch/manifest.json",
+          "config": "results/ablation/mercedes/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.4209406878450601,
+          "tol_rel": 1.8085384128495043,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/mercedes/stage/scores.json",
+          "manifest": "results/ablation/mercedes/stage/manifest.json",
+          "config": "results/ablation/mercedes/stage/config.yaml"
+        }
+      }
+    },
+    "nasa": {
+      "model": "lr",
+      "metric": "r2",
+      "config": "configs/datasets/nasa.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.53261379079381,
+          "tol_rel": 1.001172009817433,
+          "result": "results/main_table/nasa/demandclean/scores.json",
+          "manifest": "results/main_table/nasa/demandclean/manifest.json",
+          "references": {
+            "NoFix": 0.0,
+            "RepairAll": 0.5319902929476962
+          }
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.1329386105202236,
+          "tol_rel": 0.2513667684684173,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/nasa/ngt/scores.json",
+          "manifest": "results/ablation/nasa/ngt/manifest.json",
+          "config": "results/ablation/nasa/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.10468297321631936,
+          "tol_rel": 0.19835832370975948,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/nasa/nd/scores.json",
+          "manifest": "results/ablation/nasa/nd/manifest.json",
+          "config": "results/ablation/nasa/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.3820076175007351,
+          "tol_rel": 0.7186278872185479,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/nasa/arch/scores.json",
+          "manifest": "results/ablation/nasa/arch/manifest.json",
+          "config": "results/ablation/nasa/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.10979582581045899,
+          "tol_rel": 0.20795019245370608,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/nasa/stage/scores.json",
+          "manifest": "results/ablation/nasa/stage/manifest.json",
+          "config": "results/ablation/nasa/stage/config.yaml"
+        }
+      }
+    },
+    "soilmoisture": {
+      "model": "gb",
+      "metric": "r2",
+      "config": "configs/datasets/soilmoisture.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.9401252396850616,
+          "tol_rel": 0.8270386204025179,
+          "result": "results/main_table/soilmoisture/demandclean/scores.json",
+          "manifest": "results/main_table/soilmoisture/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.9401252396850616,
+          "tol_rel": 0.8270386204025179,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/soilmoisture/ngt/scores.json",
+          "manifest": "results/ablation/soilmoisture/ngt/manifest.json",
+          "config": "results/ablation/soilmoisture/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.8272882329260717,
+          "tol_rel": -0.28108885466327066,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/soilmoisture/nd/scores.json",
+          "manifest": "results/ablation/soilmoisture/nd/manifest.json",
+          "config": "results/ablation/soilmoisture/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.9390390622364867,
+          "tol_rel": 0.8163717026231982,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/soilmoisture/arch/scores.json",
+          "manifest": "results/ablation/soilmoisture/arch/manifest.json",
+          "config": "results/ablation/soilmoisture/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.9397641731810153,
+          "tol_rel": 0.8234927295201572,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/soilmoisture/stage/scores.json",
+          "manifest": "results/ablation/soilmoisture/stage/manifest.json",
+          "config": "results/ablation/soilmoisture/stage/config.yaml"
+        }
+      }
+    },
+    "har": {
+      "model": "agglomerative",
+      "metric": "silhouette",
+      "config": "configs/datasets/har.yaml",
+      "variants": {
+        "full": {
+          "label": "DemandClean",
+          "score": 0.8992418921570298,
+          "tol_rel": 0.9741853574274243,
+          "result": "results/main_table/har/demandclean/scores.json",
+          "manifest": "results/main_table/har/demandclean/manifest.json"
+        },
+        "ngt": {
+          "label": "DemandClean-NGT",
+          "score": 0.8393095582258662,
+          "tol_rel": 0.8277925076348861,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/har/ngt/scores.json",
+          "manifest": "results/ablation/har/ngt/manifest.json",
+          "config": "results/ablation/har/ngt/config.yaml"
+        },
+        "nd": {
+          "label": "DemandClean-ND",
+          "score": 0.8512635657095998,
+          "tol_rel": 0.8569917913469983,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/har/nd/scores.json",
+          "manifest": "results/ablation/har/nd/manifest.json",
+          "config": "results/ablation/har/nd/config.yaml"
+        },
+        "arch": {
+          "label": "DemandClean-Arch",
+          "score": 0.8684283317187245,
+          "tol_rel": 0.8989190591050665,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/har/arch/scores.json",
+          "manifest": "results/ablation/har/arch/manifest.json",
+          "config": "results/ablation/har/arch/config.yaml"
+        },
+        "stage": {
+          "label": "DemandClean-Stage",
+          "score": 0.8992418921570298,
+          "tol_rel": 0.9741853574274243,
+          "seed": 0,
+          "variant_config": "configs/variants.yaml",
+          "result": "results/ablation/har/stage/scores.json",
+          "manifest": "results/ablation/har/stage/manifest.json",
+          "config": "results/ablation/har/stage/config.yaml"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "run_id": "main_table/adult/demandclean",
+  "dataset": "adult",
+  "variant": "full",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    27133,
+    14
+  ],
+  "cleaned_shape": [
+    26214,
+    14
+  ],
+  "operations": {
+    "no_op": 958,
+    "gt_repair": 0,
+    "delete": 919,
+    "ve_replace": 0
+  },
+  "ground_truth_cells": {
+    "seed_set": 900,
+    "repairs": 0,
+    "total": 900
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.16648936170212766,
+      "recall": 0.30388349514563107,
+      "f1": 0.21512027491408933,
+      "tp": 313,
+      "fp": 1567,
+      "fn": 717,
+      "gt_count": 1030,
+      "det_count": 1880
+    }
+  },
+  "time_seconds": {
+    "training": 47864.01,
+    "inference": 242.07,
+    "detection_evaluation": 2.14,
+    "net_total": 48733.5
+  },
+  "calibration": {
+    "labeled_rows": 60,
+    "non_index_columns": 15
+  }
+}

@@ -1,0 +1,557 @@
+{
+ "dataset": "beers",
+ "method": "comet",
+ "paper": "Comet, Mohammed/Naumann/Harmouch, EDBT 2025",
+ "budget_mode": "cost_units",
+ "cost_budget": 50.0,
+ "gt_budget": null,
+ "cost_model": "constant",
+ "n_train": 1446,
+ "n_val": 482,
+ "n_test": 482,
+ "n_features": 8,
+ "model": "rf",
+ "metric": "macro_f1",
+ "task": "classification",
+ "labels": "dirty",
+ "label_diff_train": 6,
+ "comet_rows": 1446,
+ "n_clusters": null,
+ "deviations": [
+  "split, encoder and validation set given by the benchmark (reeval_unified.split_idx, preprocess_data fitted on the dirty training split), not the paper's own split",
+  "utility model rf with the common evaluator's hyperparameters (downstream model of the main table: rf), not the paper's model list",
+  "error types of the real dirty cells are assigned by classify_errors (missing, scaling by 10^k, Gaussian noise otherwise, categorical shift), the paper injects known error types",
+  "Estimator posterior in closed form instead of NUTS sampling (same Gaussian posterior)"
+ ],
+ "step_fraction": 0.01,
+ "step_cells": 15,
+ "select_positives": true,
+ "dirty_feature_cells_train": 2028,
+ "dirty_cells_by_type": {
+  "MissingValues": 1956,
+  "GaussianNoise": 1,
+  "CategoricalShift": 71
+ },
+ "dirty_cells_by_pair": {
+  "ounces/MissingValues": 1445,
+  "abv/MissingValues": 440,
+  "brewery_id/GaussianNoise": 1,
+  "city/CategoricalShift": 71,
+  "state/MissingValues": 71
+ },
+ "gt_cells": 728,
+ "gt_cells_applied": 712,
+ "gt_cells_reverted_never_applied": 16,
+ "cleaned_cells_by_pair": {
+  "ounces/MissingValues": 480,
+  "city/CategoricalShift": 71,
+  "state/MissingValues": 71,
+  "abv/MissingValues": 90
+ },
+ "cost_used": 50,
+ "iterations": 48,
+ "attempts": 59,
+ "applied_steps": 48,
+ "step_modes": {
+  "improved": 6,
+  "fallback_history": 24,
+  "fallback_best_attempt": 18
+ },
+ "stop_reason": "budget exhausted",
+ "val_score_initial": 0.13057831620263,
+ "val_score_final": 0.1244201667319933,
+ "val_report_final": {
+  "macro_f1": 0.1244201667319933,
+  "accuracy": 0.31742738589211617
+ },
+ "secs_comet": 4293.97,
+ "secs": 4352.4,
+ "steps": [
+  {
+   "iteration": 1,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.13057831620263,
+   "f1_after": 0.12661726533718762
+  },
+  {
+   "iteration": 2,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12661726533718762,
+   "f1_after": 0.12849882328607337
+  },
+  {
+   "iteration": 3,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12849882328607337,
+   "f1_after": 0.12498583815503644
+  },
+  {
+   "iteration": 4,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12498583815503644,
+   "f1_after": 0.14007738455759733
+  },
+  {
+   "iteration": 5,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.14007738455759733,
+   "f1_after": 0.13197328467738592
+  },
+  {
+   "iteration": 6,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.13197328467738592,
+   "f1_after": 0.1388296291713472
+  },
+  {
+   "iteration": 7,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.1388296291713472,
+   "f1_after": 0.13522367051756867
+  },
+  {
+   "iteration": 8,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.13522367051756867,
+   "f1_after": 0.14082320040517474
+  },
+  {
+   "iteration": 9,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.14082320040517474,
+   "f1_after": 0.1325093596093795
+  },
+  {
+   "iteration": 10,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.1325093596093795,
+   "f1_after": 0.123533460458941
+  },
+  {
+   "iteration": 11,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.123533460458941,
+   "f1_after": 0.12749776171376384
+  },
+  {
+   "iteration": 12,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12749776171376384,
+   "f1_after": 0.12168454099032758
+  },
+  {
+   "iteration": 13,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12168454099032758,
+   "f1_after": 0.11931876277221083
+  },
+  {
+   "iteration": 14,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11931876277221083,
+   "f1_after": 0.12475704035549388
+  },
+  {
+   "iteration": 15,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "improved",
+   "f1_before": 0.12475704035549388,
+   "f1_after": 0.12638021819617629
+  },
+  {
+   "iteration": 16,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12638021819617629,
+   "f1_after": 0.12439724325335276
+  },
+  {
+   "iteration": 17,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12439724325335276,
+   "f1_after": 0.12365555716539382
+  },
+  {
+   "iteration": 18,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12365555716539382,
+   "f1_after": 0.11410053359293422
+  },
+  {
+   "iteration": 19,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11410053359293422,
+   "f1_after": 0.11748866432468393
+  },
+  {
+   "iteration": 20,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11748866432468393,
+   "f1_after": 0.11236826989450352
+  },
+  {
+   "iteration": 21,
+   "pair": "city/CategoricalShift",
+   "feature": "city",
+   "error_type": "CategoricalShift",
+   "cells": 11,
+   "mode": "fallback_history",
+   "f1_before": 0.11236826989450352,
+   "f1_after": 0.11993928504429985
+  },
+  {
+   "iteration": 22,
+   "pair": "abv/MissingValues",
+   "feature": "abv",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11993928504429985,
+   "f1_after": 0.12487298675193892
+  },
+  {
+   "iteration": 23,
+   "pair": "abv/MissingValues",
+   "feature": "abv",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12487298675193892,
+   "f1_after": 0.1238325306669563
+  },
+  {
+   "iteration": 24,
+   "pair": "abv/MissingValues",
+   "feature": "abv",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.1238325306669563,
+   "f1_after": 0.13353157334153154
+  },
+  {
+   "iteration": 25,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.13353157334153154,
+   "f1_after": 0.13241373092751735
+  },
+  {
+   "iteration": 26,
+   "pair": "state/MissingValues",
+   "feature": "state",
+   "error_type": "MissingValues",
+   "cells": 11,
+   "mode": "improved",
+   "f1_before": 0.13241373092751735,
+   "f1_after": 0.1330314471578118
+  },
+  {
+   "iteration": 27,
+   "pair": "abv/MissingValues",
+   "feature": "abv",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.1330314471578118,
+   "f1_after": 0.1257256151545321
+  },
+  {
+   "iteration": 28,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.1257256151545321,
+   "f1_after": 0.1315618319867919
+  },
+  {
+   "iteration": 29,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.1315618319867919,
+   "f1_after": 0.12806896498946188
+  },
+  {
+   "iteration": 30,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12806896498946188,
+   "f1_after": 0.1343375666631686
+  },
+  {
+   "iteration": 31,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.1343375666631686,
+   "f1_after": 0.12233677122032295
+  },
+  {
+   "iteration": 32,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12233677122032295,
+   "f1_after": 0.12739356700002016
+  },
+  {
+   "iteration": 33,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "improved",
+   "f1_before": 0.12739356700002016,
+   "f1_after": 0.12912974666096957
+  },
+  {
+   "iteration": 34,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12912974666096957,
+   "f1_after": 0.11962360899427577
+  },
+  {
+   "iteration": 35,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11962360899427577,
+   "f1_after": 0.12228011396425971
+  },
+  {
+   "iteration": 36,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12228011396425971,
+   "f1_after": 0.12222119263246113
+  },
+  {
+   "iteration": 37,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12222119263246113,
+   "f1_after": 0.13126993009884355
+  },
+  {
+   "iteration": 38,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.13126993009884355,
+   "f1_after": 0.12443380335066039
+  },
+  {
+   "iteration": 39,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "improved",
+   "f1_before": 0.12443380335066039,
+   "f1_after": 0.12635158869028482
+  },
+  {
+   "iteration": 40,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12635158869028482,
+   "f1_after": 0.12158807836702101
+  },
+  {
+   "iteration": 41,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12158807836702101,
+   "f1_after": 0.12273647815268843
+  },
+  {
+   "iteration": 42,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.12273647815268843,
+   "f1_after": 0.11735399220459342
+  },
+  {
+   "iteration": 43,
+   "pair": "abv/MissingValues",
+   "feature": "abv",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_history",
+   "f1_before": 0.11735399220459342,
+   "f1_after": 0.13299690769442726
+  },
+  {
+   "iteration": 44,
+   "pair": "abv/MissingValues",
+   "feature": "abv",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.13299690769442726,
+   "f1_after": 0.12648960915998472
+  },
+  {
+   "iteration": 45,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "improved",
+   "f1_before": 0.12648960915998472,
+   "f1_after": 0.12879000364079676
+  },
+  {
+   "iteration": 46,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "improved",
+   "f1_before": 0.12879000364079676,
+   "f1_after": 0.13144882753516715
+  },
+  {
+   "iteration": 47,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.13144882753516715,
+   "f1_after": 0.12531962084687348
+  },
+  {
+   "iteration": 48,
+   "pair": "ounces/MissingValues",
+   "feature": "ounces",
+   "error_type": "MissingValues",
+   "cells": 15,
+   "mode": "fallback_best_attempt",
+   "f1_before": 0.12531962084687348,
+   "f1_after": 0.1244201667319933
+  }
+ ],
+ "command": "python baselines/runners/run_comet.py --dataset beers --method_name comet --n_jobs 1 --cost_budget 50 --labels dirty --project_root . --output_root results/runs/baselines --records_path results/runs/baselines/records.jsonl",
+ "python": "3.8.20",
+ "numpy": "1.24.3",
+ "pandas": "2.0.3",
+ "sklearn": "1.3.2",
+ "finished": "2026-10-17T10:34:31"
+}

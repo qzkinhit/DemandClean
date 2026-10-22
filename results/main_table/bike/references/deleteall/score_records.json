@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "bike",
+    "model": "lr",
+    "metric": "r2",
+    "test": 0.8654339993328286,
+    "n_train_rows": 2086,
+    "method": "DeleteAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "bike",
+    "model": "lasso",
+    "metric": "r2",
+    "test": 0.86332933962845,
+    "n_train_rows": 2086,
+    "method": "DeleteAll",
+    "encoding": "train_fitted"
+  }
+]

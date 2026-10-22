@@ -1,0 +1,20 @@
+{
+  "id": "budget/bike/comet_ample",
+  "dataset": "bike",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 156405,
+  "seconds": 328.64,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "25b7430a3048d3564e34a7efec450bf7916d9de4566d8aea26f79e171cf00ca3"
+    }
+  }
+}

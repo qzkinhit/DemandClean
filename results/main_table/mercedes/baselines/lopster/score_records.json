@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "mercedes",
+    "model": "rf",
+    "metric": "r2",
+    "test": 0.401252232868754,
+    "n_train_rows": 2525,
+    "n_test": 842,
+    "rows": 2525,
+    "sklearn": "1.3.2",
+    "method": "Lopster",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "mercedes",
+    "model": "ridge",
+    "metric": "r2",
+    "test": 0.2733703881764683,
+    "n_train_rows": 2525,
+    "n_test": 842,
+    "rows": 2525,
+    "sklearn": "1.3.2",
+    "method": "Lopster",
+    "encoding": "train_fitted"
+  }
+]

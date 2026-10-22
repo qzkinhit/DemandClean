@@ -1,0 +1,14 @@
+Run started at 2026-10-17 01:07:09
+SimpleImputer data cleaning (mean)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: mercedes_simpleimputer
+fill strategy: mean
+repaired data saved: mercedes_simpleimputer_cleaned.csv
+run time: 9.41 s
+status: success
+filled cells: 978
+ground-truth cost: 0 (fully automatic)
+
+results saved to: mercedes_simpleimputer
+log file: mercedes_simpleimputer.log

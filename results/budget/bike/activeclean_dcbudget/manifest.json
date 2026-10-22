@@ -1,0 +1,20 @@
+{
+  "id": "budget/bike/activeclean_dcbudget",
+  "dataset": "bike",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 2720,
+  "seconds": 1.046,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "5a9335fb544987aa1dea41fd6aeca17afda742dc52e931689256c03bc8268d49"
+    }
+  }
+}

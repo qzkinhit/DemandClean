@@ -1,0 +1,13 @@
+{
+ "dataset": "smartfactory",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.9617255233664622,
+ "n_train_rows": 14187,
+ "redr": {
+  "r_before": 4324,
+  "r_after": 4307,
+  "redr": 0.00393154486586494
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "smartfactory",
+  "method": "ActiveClean",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.9634172129414252,
+  "all_models": {
+    "rf": 0.9634172129414252,
+    "gb": 0.7974201733981814
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 14187,
+  "n_test": 4729,
+  "table_rows": 14187,
+  "gt_cells": 9500,
+  "gt_pct": 2.114611968703743,
+  "redr": {
+    "redr": 0.03538390379278446
+  }
+}

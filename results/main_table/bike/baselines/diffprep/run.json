@@ -1,0 +1,215 @@
+{
+  "dataset": "bike",
+  "method": "DiffPrep",
+  "upstream": {
+    "repository": "https://github.com/chu-data-lab/DiffPrep",
+    "commit": "6499edf",
+    "adapter": "baselines/Methods/DiffPrep/diffprep_api.py"
+  },
+  "selected_learning_rate": 0.1,
+  "pipeline": {
+    "feature_names": [
+      "f0",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f11",
+      "f12",
+      "f13",
+      "f14"
+    ],
+    "per_feature": {
+      "f0": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "ZS_3",
+          0.2202
+        ]
+      },
+      "f1": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.3341
+        ]
+      },
+      "f2": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.2396
+        ]
+      },
+      "f3": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.6285
+        ]
+      },
+      "f4": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.8499
+        ]
+      },
+      "f5": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.3327
+        ]
+      },
+      "f6": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.9775
+        ]
+      },
+      "f7": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.2695
+        ]
+      },
+      "f8": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.2886
+        ]
+      },
+      "f9": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9719
+        ]
+      },
+      "f10": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "IQR_1",
+          0.2223
+        ]
+      },
+      "f11": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.5159
+        ]
+      },
+      "f12": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.5366
+        ]
+      },
+      "f13": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.9611
+        ]
+      },
+      "f14": {
+        "missing_value_imputation": [
+          "num_mv_identity",
+          1.0
+        ],
+        "cleaning_outliers": [
+          "ZS_4",
+          0.9488
+        ]
+      }
+    },
+    "summary": {
+      "cleaning_outliers": {
+        "ZS_3": 1,
+        "MAD_2": 7,
+        "MAD_3": 2,
+        "identity": 3,
+        "IQR_1": 1,
+        "ZS_4": 1
+      },
+      "missing_value_imputation": {
+        "num_mv_identity": 15
+      }
+    }
+  },
+  "deviations": [
+    "split supplied by the benchmark (60/20/20, seed 42, train rows dirty, val/test rows clean) instead of the upstream random split",
+    "remove_large_cat and remove_all_na computed on training rows only (upstream: all rows)",
+    "test rows not passed to init_parameters; imputation step presence decided on train+val; test cache filled after the search",
+    "no per-epoch test evaluation (upstream only records it, selection unchanged); best epoch snapshot also stores the fitted transformation functions",
+    "label encoder fitted on train+val labels (upstream: all labels)",
+    "regression extension (not in the paper): linear head with 1 output, MSELoss on standardized target, R^2 replaces accuracy in early stopping",
+    "search space restricted to missing-value imputation and outlier cleaning",
+    "input: dirty training matrix in the canonical encoding with missing cells kept",
+    "soft pipeline output of the training rows exported without input clamp; test split untouched"
+  ],
+  "stabilization": false,
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diffprep/diffprep_clean.py (run per learning rate, finalize)"
+}

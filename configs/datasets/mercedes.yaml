@@ -1,0 +1,24 @@
+dataset: mercedes
+source: REIN
+task: regression
+label_col: y
+categorical_cols:
+- X0
+- X1
+- X2
+- X3
+- X4
+- X5
+- X6
+- X8
+downstream_model: rf
+metric: r2
+reward_model: ridge
+split: train_val_test
+inference: online
+total_cells: 1586793
+training:
+  n_episodes: 300
+evaluation:
+  unseen_categories: nan
+second_model: ridge

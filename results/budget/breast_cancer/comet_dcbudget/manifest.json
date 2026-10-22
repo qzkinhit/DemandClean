@@ -1,0 +1,20 @@
+{
+  "id": "budget/breast_cancer/comet_dcbudget",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 3771,
+  "seconds": 27.83,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "33db1944ad58c99a89bdd75cb2f2f00fc0f6d50aec2cb30cce84fdea0fb20ee7"
+    }
+  }
+}

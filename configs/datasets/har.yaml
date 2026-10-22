@@ -1,0 +1,18 @@
+dataset: har
+source: REIN
+task: clustering
+label_col: gt
+categorical_cols: []
+downstream_model: agglomerative
+metric: silhouette
+reward_model: kmeans
+split: train_val_test
+inference: online
+total_cells: 280000
+training:
+  n_episodes: 300
+  repair_lambda: 0.1
+evaluation:
+  unseen_categories: nan
+second_model: kmeans
+seed: 0

@@ -1,0 +1,21 @@
+{
+  "dataset": "har",
+  "method": "Lopster",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.7466625446918559,
+  "all_models": {
+    "agglomerative": 0.7466625446918559,
+    "kmeans": 0.7528105945402889
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 42000,
+  "n_test": 13863,
+  "table_rows": 42000,
+  "gt_cells": 320,
+  "gt_pct": 0.11428571428571428,
+  "redr": {
+    "redr": -1.1662884258304105
+  }
+}

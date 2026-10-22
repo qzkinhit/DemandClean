@@ -1,0 +1,33 @@
+{
+  "id": "main_table/hospitals/baselines/saga",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "SAGA",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 20000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "9d1207757fd9457e4fd214b716af951863cb7e4106a2b94d9d1f69e1934b5cb4",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included",
+    "execution_log_format": "excerpt of the recorded SystemDS log; parameter and timing lines only"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:saga:results/main_table/hospitals/baselines/saga/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

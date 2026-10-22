@@ -1,0 +1,5 @@
+{
+  "dataset": "breast_cancer",
+  "method": "RepairAll",
+  "seconds": 0.16
+}

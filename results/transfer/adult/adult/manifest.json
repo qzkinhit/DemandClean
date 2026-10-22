@@ -1,0 +1,54 @@
+{
+  "dataset": "adult",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "d509da4aaa5905f1830f8e52e68d1eb712bd24fcb8e412cea797538f0064095b"
+  },
+  "checkpoint": "results/robustness/models/adult",
+  "rules": "results/transfer/rules/adult.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/adult/adult/config.yaml --variant full --seed 0 --rules results/transfer/rules/adult.txt --checkpoint results/robustness/models/adult --out results/runs/transfer_adult_adult",
+  "score_command": "python evaluation/paper_score.py results/transfer/adult/adult",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "61df02624d5224a8c3c2ca0a054b0cafd8816e8ebaf071194f2f2c30d5a91678"
+    },
+    "rules_sha256": "e4fa9a05aceab3ca9378f6fa387e077c653ac2402ead6b0afb8998cbe1f4bc10",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "969eefbd6eef49a341b30cc11caf9ffb9ffd8a14c02f32f12533fbe53253042d",
+      "agent_stage2.pt": "18738794c95121d7f1e6839cec92c547d0ea1971810c80537c6eabbe42f1ad85"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 4011.55
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "adult",
+  "target_dataset": "adult"
+}

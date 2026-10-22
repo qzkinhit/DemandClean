@@ -1,0 +1,16 @@
+Run started at 2026-10-17 00:22:46
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: soilmoisture_deleteall
+deletion mode: drop_feature_errors
+output data saved: soilmoisture_deleteall_cleaned.csv
+input rows: 407
+kept rows: 82
+deleted rows: 325
+run time: 2.75 s
+status: success
+ground-truth cost: 325
+
+results saved to: soilmoisture_deleteall
+log file: soilmoisture_deleteall.log

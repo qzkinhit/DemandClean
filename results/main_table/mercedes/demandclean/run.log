@@ -1,0 +1,144 @@
+======================================================================
+DemandClean
+======================================================================
+Datasets: ['mercedes']
+Variant: full
+Episodes: 300
+Verbose: False
+Split: 60/20/20 train/validation/test, reward on the clean validation split
+======================================================================
+
+######################################################################
+# Dataset: mercedes
+######################################################################
+
+  60/20/20 split: train=2525, val=842, test=842
+  training split written to a CSV file for RAHA
+  Dataset: mercedes
+  Dirty:   (2525, 376)
+  Features: 376, label: y
+  Categorical cols: {'X1', 'X5', 'X0', 'X6', 'X2', 'X3', 'X8', 'X4'}
+  LE fit: dirty only (2525 rows)
+  SS fit: dirty only (2525 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(2525, 376), X_clean_train=(2525, 376), X_clean_val=(842, 376), X_clean_test=(842, 376)
+
+======================================================================
+Method: DemandClean
+Dataset: mercedes | task: regression | reward model: ridge
+Detector: hybrid | agent: dueling_two_stage | inference: online
+Episodes: 300
+======================================================================
+
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+
+[Step 2] training (300 episodes)...
+  RAHA detected: 4975 cells
+  Precision=1.0000  Recall=0.9952  F1=0.9976
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10279 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10057 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10187 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 9782 cells
+  Precision=1.0000  Recall=0.9999  F1=0.9999
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 9660 cells
+  Precision=1.0000  Recall=0.9992  F1=0.9996
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10081 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10056 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10212 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10283 cells
+  Precision=1.0000  Recall=0.9994  F1=0.9997
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 9973 cells
+  Precision=1.0000  Recall=0.9995  F1=0.9997
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 9116 cells
+  Precision=1.0000  Recall=0.9997  F1=0.9998
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10085 cells
+  Precision=1.0000  Recall=0.9996  F1=0.9998
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 9527 cells
+  Precision=1.0000  Recall=0.9990  F1=0.9995
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 8083 cells
+  Precision=1.0000  Recall=0.9989  F1=0.9994
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10230 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 9143 cells
+  Precision=1.0000  Recall=0.9987  F1=0.9993
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 10098 cells
+  Precision=1.0000  Recall=1.0000  F1=1.0000
+  RAHA labelled rows: 20 (labeling_budget=20)
+  RAHA detected: 8668 cells
+  Precision=0.9999  Recall=0.9993  F1=0.9996
+  RAHA labelled rows: 20 (labeling_budget=20)
+  model saved: model/agent.pt
+  [time] Step 2 (train): 8025.77s
+
+[Step 3] inference (online)...
+  ground-truth repairs: 24851
+  operations: {'no_op': 123298, 'gt_repair': 24851, 'delete': 0, 've_replace': 5638}
+  cleaned data saved: cleaned.csv
+  encoded data saved: cleaned_encoded.npz
+  [time] Step 3 (infer): 497.01s
+
+[Step 4] detection accuracy...
+  [time] Step 4 (detector eval): 1.30s
+
+[Step 9] downstream evaluation...
+Cleaning precision: 0.32300266652992154, recall: 0.2790477456224873, F1: 0.29942066010059776
+  [downstream] encoded cleaned training split
+  train=2525 rows, test=842 rows (clean test split)
+RF - R2: 0.4284
+LR - R2: 0.3586
+RIDGE - R2: 0.3587
+LASSO - R2: 0.2891
+KNN - R2: 0.2370
+GB - R2: 0.4462
+  [time] Step 9 (downstream eval): 759.59s
+
+[Step 10] ground-truth cells...
+  calibration seed set: 380 cells
+  ground-truth repairs: 24851 cells
+  total: 25231 / 949400 cells of the training split = 2.6576%
+  [time] Step 10 (cost summary): 0.00s
+
+--------------------------------------------------
+  Step timing
+--------------------------------------------------
+  Step 1  init            |      0.00s
+  Step 2  train           |   8025.77s
+  Step 3  infer           |    497.01s
+  Step 4  detector eval   |      1.30s
+  Step 9  downstream eval |    759.59s
+  Step 10 cost summary    |      0.00s
+--------------------------------------------------
+  total                    | 13632.15s
+  attribution and plots    | 3286.68s
+  net                      | 10345.47s
+--------------------------------------------------
+
+  DemandClean finished, net time 10345.47s
+
+======================================================================
+All done. Total time: 13633.93s
+======================================================================

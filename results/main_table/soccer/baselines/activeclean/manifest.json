@@ -1,0 +1,32 @@
+{
+  "id": "main_table/soccer/baselines/activeclean",
+  "dataset": "soccer",
+  "role": "baselines",
+  "method": "ActiveClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 5000,
+  "gt_pct": 4.71253534401508,
+  "gt_denominator": 116710,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "57e86b3459ab58dad5403cc66e45fe91ca20d75a0f1aa93d98d7fad6790f556c",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table soccer:activeclean:results/main_table/soccer/baselines/activeclean/cleaned.csv.gz --nearest",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

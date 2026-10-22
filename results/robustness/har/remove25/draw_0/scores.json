@@ -1,0 +1,20 @@
+{
+  "dataset": "har",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.9027970354257714,
+  "tol_rel": 0.9828692767810342,
+  "references": {
+    "NoFix": 0.5004163878039727,
+    "RepairAll": 0.9098102483381258
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.9092981049255056,
+  "n_train_rows": 23093,
+  "n_test": 13863,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "e4c700a92cc61ee801a0ba4bf2422fda2470ad2eb0def427129ff66cebbe25ec"
+}

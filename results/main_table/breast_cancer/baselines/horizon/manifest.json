@@ -1,0 +1,34 @@
+{
+  "id": "main_table/breast_cancer/baselines/horizon",
+  "dataset": "breast_cancer",
+  "role": "baselines",
+  "method": "Horizon",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 7689,
+  "scoring": {
+    "model": "lr",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "95a8c79fe509eef82d8c9f290d208fd92d1437f41445d49e180cca41f6557bab",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table breast_cancer:horizon:results/main_table/breast_cancer/baselines/horizon/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

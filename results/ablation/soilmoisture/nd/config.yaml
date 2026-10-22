@@ -1,0 +1,17 @@
+dataset: soilmoisture
+source: REIN
+task: regression
+label_col: soil_moisture
+categorical_cols: []
+downstream_model: gb
+metric: r2
+reward_model: ridge
+split: train_val_test
+inference: online
+total_cells: 86912
+training:
+  n_episodes: 300
+  repair_lambda: 0.03
+  max_repair_ratio: 0.3
+  max_truth_budget: null
+  reward_model_type: ridge

@@ -1,0 +1,11 @@
+{
+  "dataset": "mercedes",
+  "method": "RetClean (ample GT)",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.3581993445229875,
+  "nearest": false,
+  "n_train_rows": 2525,
+  "gt_cells": 475774,
+  "gt_pct": 29.98336897125208
+}

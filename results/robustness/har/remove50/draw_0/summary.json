@@ -1,0 +1,33 @@
+{
+  "dataset": "har",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "clustering",
+  "n_episodes": 400,
+  "data_shape": [
+    42000,
+    3
+  ],
+  "cleaned_shape": [
+    23258,
+    3
+  ],
+  "operations": {
+    "no_action": 0,
+    "repair_value": 1613,
+    "delete": 22632,
+    "replace_nearby": 0
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.8520932150958961,
+      "recall": 0.9270361229526587,
+      "f1": 0.8879862454330539,
+      "tp": 20659,
+      "fp": 3586,
+      "fn": 1626,
+      "gt_count": 22285,
+      "det_count": 24245
+    }
+  }
+}

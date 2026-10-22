@@ -1,0 +1,20 @@
+{
+  "id": "budget/soilmoisture/lopster_ample",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 25984,
+  "seconds": 412.39,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "c190026cb483bf79c2dc9ffa1f3668bdb510dc0862b22cf70e352c55545acda4"
+    }
+  }
+}

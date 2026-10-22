@@ -1,0 +1,20 @@
+{
+  "id": "budget/breast_cancer/comet_ample",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 3771,
+  "seconds": 202.37,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "10f7b5ac7dae4fc4138b06aee975b9404c18ae63556ff1f16a676675ab029ea4"
+    }
+  }
+}

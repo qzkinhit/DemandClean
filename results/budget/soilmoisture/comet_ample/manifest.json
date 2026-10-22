@@ -1,0 +1,20 @@
+{
+  "id": "budget/soilmoisture/comet_ample",
+  "dataset": "soilmoisture",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 51689,
+  "seconds": 1663.12,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "51edc39ebb7ad0bc71a117dc683311f417969310eba3b74393bb873fb619e26a"
+    }
+  }
+}

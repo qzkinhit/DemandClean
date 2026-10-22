@@ -1,0 +1,31 @@
+{
+  "id": "main_table/hospitals/baselines/mlimputer",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "MLImputer",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 20000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "3f3aac24fa57304c7617d1c18974aa0bec7ab259293a74dde597977235f27634",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:mlimputer:results/main_table/hospitals/baselines/mlimputer/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

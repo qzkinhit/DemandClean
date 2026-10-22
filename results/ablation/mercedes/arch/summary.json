@@ -1,0 +1,20 @@
+{
+  "dataset": "mercedes",
+  "variant": "arch",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    2525,
+    376
+  ],
+  "cleaned_shape": [
+    2101,
+    376
+  ],
+  "operations": {
+    "no_action": 17383,
+    "repair_value": 1074,
+    "delete": 424,
+    "replace_nearby": 132662
+  }
+}

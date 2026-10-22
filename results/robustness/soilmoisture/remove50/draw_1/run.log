@@ -1,0 +1,37 @@
+# Console output of the checkpoint-inference run; no training took place.
+
+DemandClean unified runner
+Datasets: ['soilmoisture']
+Enabled versions: ['dueling_two_stage']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Inference-only mode: ON (skip training, load existing model)
+Seed: 0
+  60/20/20 split: train=407, val=136, test=136
+  Dataset: soilmoisture
+  Dirty:   (407, 127)
+  Features: 127, label: soil_moisture
+  Categorical cols: (none)
+  LE fit: dirty only (407 rows)
+  SS fit: dirty only (407 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(407, 127), X_clean_train=(407, 127), X_clean_val=(136, 127), X_clean_test=(136, 127)
+Version: dueling_two_stage
+Dataset: soilmoisture | task: regression | model: ridge
+Detector: auto | Agent: dueling_two_stage | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+Agent loaded: ./model/dueling_two_stage_agent.pt
+[Step 2] training skipped (inference_only); loaded model: ./model/dueling_two_stage_agent.pt
+[Step 3] inference (mode: single_phase)...
+[config0901] inference-only detector built as in fit(): rules_path=results/robustness/soilmoisture/remove50/draw_1/rules.txt, disable_raha=False
+  ground truth used: 0
+  action counts: {'no_action': 115, 'repair_value': 0, 'delete': 0, 'replace_nearby': 13570}
+  encoded version saved: ./data/dueling_two_stage_cleaned_encoded.npz
+  [time] Step 3 (infer): 219.05s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.17s
+  Version dueling_two_stage done! elapsed: 339.65s
+All done! total: 340.08s

@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "nasa",
+    "model": "rf",
+    "metric": "r2",
+    "test": 0.34637388481393927,
+    "n_train_rows": 278,
+    "method": "DeleteAll",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "nasa",
+    "model": "lr",
+    "metric": "r2",
+    "test": 0.5282147188221062,
+    "n_train_rows": 278,
+    "method": "DeleteAll",
+    "encoding": "train_fitted"
+  }
+]

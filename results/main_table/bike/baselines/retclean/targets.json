@@ -1,0 +1,17 @@
+{
+  "dteday": 413,
+  "season": 4378,
+  "yr": 411,
+  "mnth": 372,
+  "hr": 352,
+  "holiday": 4494,
+  "weekday": 356,
+  "workingday": 437,
+  "weathersit": 295,
+  "temp": 303,
+  "atemp": 225,
+  "hum": 259,
+  "windspeed": 211,
+  "casual": 251,
+  "registered": 278
+}

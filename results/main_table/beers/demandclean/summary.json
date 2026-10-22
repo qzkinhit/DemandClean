@@ -1,0 +1,48 @@
+{
+  "run_id": "main_table/beers/demandclean",
+  "dataset": "beers",
+  "variant": "full",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    1446,
+    8
+  ],
+  "cleaned_shape": [
+    1446,
+    8
+  ],
+  "operations": {
+    "no_op": 0,
+    "gt_repair": 228,
+    "delete": 0,
+    "ve_replace": 2445
+  },
+  "ground_truth_cells": {
+    "seed_set": 200,
+    "repairs": 228,
+    "total": 428
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.9826568265682657,
+      "recall": 0.9936567164179104,
+      "f1": 0.9881261595547309,
+      "tp": 2663,
+      "fp": 47,
+      "fn": 17,
+      "gt_count": 2680,
+      "det_count": 2710
+    }
+  },
+  "time_seconds": {
+    "training": 93.38,
+    "inference": 10.52,
+    "detection_evaluation": 0.01,
+    "net_total": 162.45
+  },
+  "calibration": {
+    "labeled_rows": 20,
+    "non_index_columns": 10
+  }
+}

@@ -1,0 +1,47 @@
+Run started at 2026-10-18 13:49:18
+Lopster data cleaning
+dataset: nasa
+data path: Data_lop50
+task: nasa_lopster_ample
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: nasa
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (450, 7) -> (450, 6)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (901, 7) -> (901, 6)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: nasa
+run time: 26.32 s
+status: success
+ground-truth cost: 450 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 901
+  input rows: 901
+  index column restored
+  final column order: ['index', 'frequency', 'angle', 'chord_length', 'velocity', 'thickness', 'sound_pressure_level']
+  saved to: cleaned.csv
+  final rows: 901
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: nasa_lopster_ample

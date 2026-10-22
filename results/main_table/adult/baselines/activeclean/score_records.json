@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "adult",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.8537313432835821,
+    "n_train_rows": 27133,
+    "n_test": 9045,
+    "rows": 27133,
+    "sklearn": "1.3.2",
+    "method": "ActiveClean",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "adult",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.8677722498618021,
+    "n_train_rows": 27133,
+    "n_test": 9045,
+    "rows": 27133,
+    "sklearn": "1.3.2",
+    "method": "ActiveClean",
+    "encoding": "train_fitted"
+  }
+]

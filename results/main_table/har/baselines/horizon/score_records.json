@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "har",
+    "model": "kmeans",
+    "metric": "silhouette",
+    "test": 0.6188468881808489,
+    "n_train_rows": 40368,
+    "method": "Horizon",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "har",
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "test": 0.6110648702426784,
+    "n_train_rows": 40368,
+    "method": "Horizon",
+    "encoding": "train_fitted"
+  }
+]

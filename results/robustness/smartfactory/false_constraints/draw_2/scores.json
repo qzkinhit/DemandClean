@@ -1,0 +1,20 @@
+{
+  "dataset": "smartfactory",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.8342144216536266,
+  "tol_rel": -1.0,
+  "references": {
+    "NoFix": 0.9617255233664622,
+    "RepairAll": 0.9663776696976105
+  },
+  "tolerance_display_range": [
+    -1,
+    2.5
+  ],
+  "detection_f1": 0.06441857173717103,
+  "n_train_rows": 9302,
+  "n_test": 4729,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "87fc008be395b9c3799c5625f3a5b25a19617e406d62360d851546583b6f0c5c"
+}

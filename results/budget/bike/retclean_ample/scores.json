@@ -1,0 +1,11 @@
+{
+  "dataset": "bike",
+  "method": "RetClean (ample GT)",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.9821589322436265,
+  "nearest": false,
+  "n_train_rows": 10427,
+  "gt_cells": 83408,
+  "gt_pct": 29.995972150296335
+}

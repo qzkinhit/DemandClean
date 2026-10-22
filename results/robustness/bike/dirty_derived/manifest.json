@@ -1,0 +1,55 @@
+{
+  "dataset": "bike",
+  "experiment": "robustness",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 200,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 1.0,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "15a2f5a93ace644891a721832f28bfa1b42e869141c52946dc810fe6db803957"
+  },
+  "checkpoint": "results/robustness/models/bike",
+  "rules": "results/robustness/bike/dirty_derived/rules.txt",
+  "command": "python scripts/run_demandclean.py --config results/robustness/bike/dirty_derived/config.yaml --variant full --seed 0 --rules results/robustness/bike/dirty_derived/rules.txt --checkpoint results/robustness/models/bike --out results/runs/robustness_bike_dirty_derived",
+  "score_command": "python evaluation/paper_score.py results/robustness/bike/dirty_derived",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "8b60fa9a0cde376ee3a668d1c3f2b86b7b0b0ed7ffbcd3d2f03879b2266c7f4f"
+    },
+    "rules_sha256": "987193755e84671a8abe8a25ba89b048dce34613925bdf7432e2042d7f61a604",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "9a1b8a7c585a06b0fd3d81e34fd8f2228159d10bd7712c6f92b3e94733e65cbe",
+      "agent_stage2.pt": "610d92c8b3432783d9b849b76f7fe690fa71c866994ec140eb58a3dc422f62c4"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 6057.51
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json",
+    "rules.txt"
+  ],
+  "condition": "dirty_derived",
+  "rule_draw": null
+}

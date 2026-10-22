@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:17:26
+MLImputer data cleaning (mice)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: beers_mlimputer
+imputation method: mice
+repaired data saved: beers_mlimputer_cleaned.csv
+run time: 0.41 s
+status: success
+filled cells: 725
+ground-truth cost: 0 (fully automatic)
+
+results saved to: beers_mlimputer
+log file: beers_mlimputer.log

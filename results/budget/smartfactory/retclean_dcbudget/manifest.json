@@ -1,0 +1,21 @@
+{
+  "id": "budget/smartfactory/retclean_dcbudget",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "RetClean (lower GT level)",
+  "ground_truth_cells": 7410,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "91f25cb6f1be8f1a760f262f10795daa879ffa0824b47c0f2cbef11df53fa2d4"
+    }
+  }
+}

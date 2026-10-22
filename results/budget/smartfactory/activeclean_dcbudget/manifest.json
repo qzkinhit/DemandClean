@@ -1,0 +1,20 @@
+{
+  "id": "budget/smartfactory/activeclean_dcbudget",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 1026,
+  "seconds": 12.33,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "1550681970715110a979d1acd7e0cd8db687b31e7c96126a2469db9fecab3160"
+    }
+  }
+}

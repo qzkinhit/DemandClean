@@ -1,0 +1,13 @@
+{
+ "dataset": "soilmoisture",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "gb",
+ "metric": "r2",
+ "test": 0.871609289360118,
+ "n_train_rows": 407,
+ "redr": {
+  "r_before": 407,
+  "r_after": 387,
+  "redr": 0.04914004914004914
+ }
+}

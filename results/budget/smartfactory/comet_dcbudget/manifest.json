@@ -1,0 +1,20 @@
+{
+  "id": "budget/smartfactory/comet_dcbudget",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "Comet (GT budget of DemandClean)",
+  "ground_truth_cells": 255366,
+  "seconds": 3363.59,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "99a9b2209bab4774287f3989c085fb27f3bb648fb99f6b063e44c8abdcf389d2"
+    }
+  }
+}

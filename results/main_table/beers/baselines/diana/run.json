@@ -1,0 +1,62 @@
+{
+  "dataset": "beers",
+  "method": "DIANA",
+  "upstream": {
+    "repository": "https://github.com/camillasancricca/diana-repo",
+    "commit": "88e9b54161453893b93c679939206b420a472e1a"
+  },
+  "all_missing_columns_standard_imputed": [
+    "ounces"
+  ],
+  "plan": {
+    "first_dimension": "accuracy",
+    "completion": {
+      "beer_name": "impute_standard",
+      "abv": "impute_standard",
+      "ibu": "impute_standard",
+      "brewery_id": "impute_standard",
+      "brewery_name": "impute_standard",
+      "city": "impute_standard",
+      "state": "impute_standard"
+    },
+    "accuracy": {
+      "beer_name": "ZSB",
+      "abv": "ISO",
+      "ibu": "ZSB",
+      "brewery_id": "KNN",
+      "brewery_name": "KNN",
+      "city": "KNN",
+      "state": "KNN"
+    },
+    "feature_order": [
+      "beer_name",
+      "abv",
+      "ibu",
+      "brewery_id",
+      "brewery_name",
+      "city",
+      "state"
+    ],
+    "model": "RandomForest",
+    "all_missing_standard_imputed": [
+      "ounces"
+    ]
+  },
+  "adaptations": [
+    "canonical dirty-train-fitted numeric representation; target labels unchanged",
+    "official KB model recommendations and official per-column impute/outlier functions",
+    "dataset feature order fixed to canonical feature order; no factorial permutation search from fixed seven-column demo",
+    "ordered-count optimization of entropy/density preserves original formulas",
+    "Python3.11/NumPy2/sklearn1.5.2 for native RF missing-value support; canonical final scorer remains sklearn1.3.2"
+  ],
+  "test_features_check": "stored test features equal the canonical clean test encoding",
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diana/diana_run.py, then diana_rescore.py"
+}

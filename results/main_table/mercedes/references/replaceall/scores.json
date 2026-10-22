@@ -1,0 +1,17 @@
+{
+  "dataset": "mercedes",
+  "method": "ReplaceAll",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.4078006524220701,
+  "all_models": {
+    "rf": 0.4078006524220701,
+    "ridge": 0.3566482342431757
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 2525,
+  "table_rows": 4209,
+  "gt_cells": 951925,
+  "gt_pct": 59.99049655500119
+}

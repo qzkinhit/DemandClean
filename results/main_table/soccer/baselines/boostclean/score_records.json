@@ -1,0 +1,11 @@
+[
+  {
+    "dataset": "soccer",
+    "model": "dt",
+    "metric": "accuracy",
+    "test": 0.9015080113100848,
+    "n_train_rows": 6366,
+    "method": "BoostClean",
+    "encoding": "nearest"
+  }
+]

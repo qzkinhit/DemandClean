@@ -1,0 +1,5 @@
+{
+  "dataset": "breast_cancer",
+  "method": "BoostClean",
+  "seconds": 5.78
+}

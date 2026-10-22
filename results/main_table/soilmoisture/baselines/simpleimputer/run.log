@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:23:44
+SimpleImputer data cleaning (mean)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: soilmoisture_simpleimputer
+fill strategy: mean
+repaired data saved: soilmoisture_simpleimputer_cleaned.csv
+run time: 1.10 s
+status: success
+filled cells: 121
+ground-truth cost: 0 (fully automatic)
+
+results saved to: soilmoisture_simpleimputer
+log file: soilmoisture_simpleimputer.log

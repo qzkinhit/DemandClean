@@ -1,0 +1,225 @@
+{
+  "dataset": "hospitals",
+  "method": "DiffPrep",
+  "upstream": {
+    "repository": "https://github.com/chu-data-lab/DiffPrep",
+    "commit": "6499edf",
+    "adapter": "baselines/Methods/DiffPrep/diffprep_api.py"
+  },
+  "selected_learning_rate": 0.1,
+  "pipeline": {
+    "feature_names": [
+      "f0",
+      "f1",
+      "f2",
+      "f5",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f11",
+      "f12",
+      "f13",
+      "f14",
+      "f15",
+      "f16",
+      "f17"
+    ],
+    "per_feature": {
+      "f0": {
+        "missing_value_imputation": [
+          "mean",
+          0.4727
+        ],
+        "cleaning_outliers": [
+          "ZS_2",
+          0.8326
+        ]
+      },
+      "f1": {
+        "missing_value_imputation": [
+          "mode",
+          0.4327
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9991
+        ]
+      },
+      "f2": {
+        "missing_value_imputation": [
+          "mean",
+          0.4516
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5741
+        ]
+      },
+      "f5": {
+        "missing_value_imputation": [
+          "mean",
+          0.5037
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9992
+        ]
+      },
+      "f6": {
+        "missing_value_imputation": [
+          "mean",
+          0.5076
+        ],
+        "cleaning_outliers": [
+          "ZS_2",
+          0.136
+        ]
+      },
+      "f7": {
+        "missing_value_imputation": [
+          "mean",
+          0.4424
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9887
+        ]
+      },
+      "f8": {
+        "missing_value_imputation": [
+          "mean",
+          0.4911
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.573
+        ]
+      },
+      "f9": {
+        "missing_value_imputation": [
+          "mean",
+          0.521
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5617
+        ]
+      },
+      "f10": {
+        "missing_value_imputation": [
+          "mean",
+          0.4989
+        ],
+        "cleaning_outliers": [
+          "ZS_3",
+          0.7996
+        ]
+      },
+      "f11": {
+        "missing_value_imputation": [
+          "mean",
+          0.5129
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5427
+        ]
+      },
+      "f12": {
+        "missing_value_imputation": [
+          "mean",
+          0.4995
+        ],
+        "cleaning_outliers": [
+          "MAD_3",
+          0.164
+        ]
+      },
+      "f13": {
+        "missing_value_imputation": [
+          "mode",
+          0.6749
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5127
+        ]
+      },
+      "f14": {
+        "missing_value_imputation": [
+          "mean",
+          0.4472
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.5218
+        ]
+      },
+      "f15": {
+        "missing_value_imputation": [
+          "mode",
+          0.9665
+        ],
+        "cleaning_outliers": [
+          "identity",
+          0.222
+        ]
+      },
+      "f16": {
+        "missing_value_imputation": [
+          "mode",
+          0.9999
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.9994
+        ]
+      },
+      "f17": {
+        "missing_value_imputation": [
+          "mean",
+          0.3907
+        ],
+        "cleaning_outliers": [
+          "MAD_2",
+          0.6738
+        ]
+      }
+    },
+    "summary": {
+      "cleaning_outliers": {
+        "ZS_2": 2,
+        "MAD_2": 5,
+        "identity": 7,
+        "ZS_3": 1,
+        "MAD_3": 1
+      },
+      "missing_value_imputation": {
+        "mean": 12,
+        "mode": 4
+      }
+    }
+  },
+  "deviations": [
+    "split supplied by the benchmark (60/20/20, seed 42, train rows dirty, val/test rows clean) instead of the upstream random split",
+    "remove_large_cat and remove_all_na computed on training rows only (upstream: all rows)",
+    "test rows not passed to init_parameters; imputation step presence decided on train+val; test cache filled after the search",
+    "no per-epoch test evaluation (upstream only records it, selection unchanged); best epoch snapshot also stores the fitted transformation functions",
+    "label encoder fitted on train+val labels (upstream: all labels)",
+    "search space restricted to missing-value imputation and outlier cleaning",
+    "input: dirty training matrix in the canonical encoding with missing cells kept",
+    "soft pipeline output of the training rows exported without input clamp; test split untouched"
+  ],
+  "stabilization": false,
+  "representation": "cleaned_encoded",
+  "split_seed": 42,
+  "train_fraction": 0.6,
+  "val_fraction": 0.2,
+  "test_fraction": 0.2,
+  "train_labels": "dirty",
+  "test_used_for_selection": false,
+  "gt_cells": 0,
+  "runner": "baselines/runners/run_diffprep/diffprep_clean.py (run per learning rate, finalize)"
+}

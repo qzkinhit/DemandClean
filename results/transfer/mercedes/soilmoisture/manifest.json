@@ -1,0 +1,54 @@
+{
+  "dataset": "soilmoisture",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": 0,
+      "reward_model_type": "ridge"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "1f0d759556b9f040adf7c71578e6f270d10946c2e413240b7599c03b49505dda"
+  },
+  "checkpoint": "results/robustness/models/mercedes",
+  "rules": "results/transfer/rules/soilmoisture.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/mercedes/soilmoisture/config.yaml --variant full --seed 0 --rules results/transfer/rules/soilmoisture.txt --checkpoint results/robustness/models/mercedes --out results/runs/transfer_soilmoisture_mercedes",
+  "score_command": "python evaluation/paper_score.py results/transfer/mercedes/soilmoisture",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "5110e05e440146191f5e96cc4a4ef3d5ccb4da8a8570a8fe1a55cae7c70e41f5"
+    },
+    "rules_sha256": "6c7b2fc94ca6cf9278d25b7f01dc2d8eb283b611c6ac624cd8b0fc2ea79b8d64",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "ba6f511799105c3a113f24bc18378ffc85303562c1854622f9f904b4508600e0",
+      "agent_stage2.pt": "b88268f9e435fd93c94140fb2840a3f6df010e5c96e52c71ab796cb5530a9ad5"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 203.71
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "mercedes",
+  "target_dataset": "soilmoisture"
+}

@@ -1,0 +1,36 @@
+dataset: hospitals
+source: UniClean
+task: classification
+label_col: Condition
+categorical_cols:
+- Address1
+- Address2
+- Address3
+- City
+- CountyName
+- EmergencyService
+- HospitalName
+- HospitalOwner
+- HospitalType
+- MeasureCode
+- MeasureName
+- PhoneNumber
+- ProviderNumber
+- Sample
+- Score
+- State
+- Stateavg
+- ZipCode
+downstream_model: rf
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 19000
+training:
+  n_episodes: 300
+  max_truth_budget: 0
+  raha_detector: false
+evaluation:
+  unseen_categories: nearest
+second_model: dt

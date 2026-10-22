@@ -1,0 +1,11 @@
+{
+  "dataset": "beers",
+  "method": "RetClean (lower GT level)",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.302713987473904,
+  "nearest": false,
+  "n_train_rows": 1442,
+  "gt_cells": 432,
+  "gt_pct": 1.7925311203319503
+}

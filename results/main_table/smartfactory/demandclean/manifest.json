@@ -1,0 +1,71 @@
+{
+  "run_id": "main_table/smartfactory/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "smartfactory",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/smartfactory.yaml --variant full --seed 0",
+  "arguments": {
+    "n_episodes": 300
+  },
+  "seed": 0,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "offline",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300
+    },
+    "evaluation": {
+      "unseen_categories": "nan"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-10-16T18:04:36+08:00",
+  "end_time": "2026-10-16T20:54:15+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true,
+      "policy_equals_policy_written_by_log": true
+    },
+    "artifact_sha256": {
+      "cleaned.csv": "ce74049996f0e61a2257692c233a9fb96bec1ad3a43f7cd9c983fdabc26d4faf",
+      "cleaned_encoded.npz": "3fd56be0ba658ebc5d1e70c0e056b8e97e940524c42f5a49bd75fbb234eeb740",
+      "model/agent_stage1.pt": "aad391252d11978350f87d028d692e5a224eefa88b7839b9b5f38f8cd0abd5c1",
+      "model/agent_stage2.pt": "66c2c14e013a0e1cb41c6e5bb6014cf91ff67d6849fa58607e8f294ca20ab533"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "ground_truth_cells": 1031,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/smartfactory/demandclean",
+    "checkpoint": "results/main_table/smartfactory/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "dataset": "beers",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "48ce84f5ca2d3c4974063ef4e32ba7f9032c3a68791b2a1b1e35ff6da701566f"
+  },
+  "checkpoint": "results/robustness/models/adult",
+  "rules": "results/transfer/rules/beers.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/adult/beers/config.yaml --variant full --seed 0 --rules results/transfer/rules/beers.txt --checkpoint results/robustness/models/adult --out results/runs/transfer_beers_adult",
+  "score_command": "python evaluation/paper_score.py results/transfer/adult/beers",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "c614829de9effd73ec3439bce282cec82b52819a27ab6fe62f46135e8c1144f8"
+    },
+    "rules_sha256": "ace6e0a512e22277c245ea8ffe45806ccebb0fd4b8164b949f5743397d1f3e35",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "969eefbd6eef49a341b30cc11caf9ffb9ffd8a14c02f32f12533fbe53253042d",
+      "agent_stage2.pt": "18738794c95121d7f1e6839cec92c547d0ea1971810c80537c6eabbe42f1ad85"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 189.16
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "adult",
+  "target_dataset": "beers"
+}

@@ -1,0 +1,85 @@
+# =============================================================================
+# Dataset: breast_cancer (Wisconsin Breast Cancer)
+# =============================================================================
+# 699 rows x 11 cols; classification (class: {2, 4})
+# class=2 (benign), class=4 (malignant)
+# All feature columns have a valid integer range of [1, 10]
+# =============================================================================
+
+[REGEX]
+# Doubled single-digit (e.g., "33", "55")
+ALL_FEATURES: ^(\d)\1$
+# Contains letters (e.g., "1a0", "a10")
+ALL_FEATURES: [a-zA-Z]
+# Three or more digits
+ALL_FEATURES: ^\d{3,}$
+
+[DOMAIN]
+Clump Thickness: INT [2, 9]
+Uniformity of Cell Size: INT [2, 9]
+Uniformity of Cell Shape: INT [2, 9]
+Marginal Adhesion: INT [2, 9]
+Single Epithelial Cell Size: INT [2, 9]
+Bare Nuclei: INT [2, 9]
+Bland Chromatin: INT [2, 9]
+Normal Nucleoli: INT [2, 9]
+Mitoses: INT [2, 9]
+class: ENUM {2, 4}
+
+[CFD]
+# ===================================================================
+# Direction A: malignant-looking features inside class=2 (benign) -> detect 4->2 flips
+# ===================================================================
+
+# Benign (class=2) isolated high-value anomaly: EXCESS >= 4 (lowered from 5 to 4 as a compromise,
+# still keeps false positives manageable)
+class=2, n_anomaly<=2 => Clump Thickness EXCESS >= 4 FROM_BASELINE 5
+class=2, n_anomaly<=2 => Uniformity of Cell Size EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Uniformity of Cell Shape EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Marginal Adhesion EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Single Epithelial Cell Size EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Bare Nuclei EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Bland Chromatin EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Normal Nucleoli EXCESS >= 4 FROM_BASELINE 3
+class=2, n_anomaly<=2 => Mitoses EXCESS >= 4 FROM_BASELINE 1
+
+# Benign with multi-column anomalies: multiple high-value columns together look even more malignant;
+# threshold relaxed to >= 3
+class=2, n_anomaly>=3 => Clump Thickness EXCESS >= 3 FROM_BASELINE 5
+class=2, n_anomaly>=3 => Uniformity of Cell Size EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Uniformity of Cell Shape EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Marginal Adhesion EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Single Epithelial Cell Size EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Bare Nuclei EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Bland Chromatin EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Normal Nucleoli EXCESS >= 3 FROM_BASELINE 3
+class=2, n_anomaly>=3 => Mitoses EXCESS >= 3 FROM_BASELINE 1
+
+# ===================================================================
+# Direction B: benign-looking features inside class=4 (malignant) -> detect 2->4 flips
+# ===================================================================
+
+# Malignant (class=4) with very low values on key discriminative columns -> likely a label flip
+class=4, n_anomaly<=2 => Clump Thickness DEFICIT >= 2 FROM_BASELINE 4
+class=4, n_anomaly<=2 => Uniformity of Cell Size DEFICIT >= 2 FROM_BASELINE 3
+class=4, n_anomaly<=2 => Uniformity of Cell Shape DEFICIT >= 2 FROM_BASELINE 3
+class=4, n_anomaly<=2 => Bland Chromatin DEFICIT >= 2 FROM_BASELINE 3
+
+[DC]
+# Feature-inconsistency check (Cell Size and Cell Shape are highly correlated — difference > 4 is anomalous)
+t1&GT(ABS(t1.Uniformity of Cell Size - t1.Uniformity of Cell Shape), 4)
+
+# Extreme malignant features inside class=2 (benign) — high-precision DC rules
+t1&EQ(t1.class, 2)&GTE(t1.Bare Nuclei, 8)&MARK(t1.class)
+t1&EQ(t1.class, 2)&GTE(t1.Mitoses, 5)&MARK(t1.class)
+t1&EQ(t1.class, 2)&GTE(t1.Uniformity of Cell Size, 7)&MARK(t1.class)
+t1&EQ(t1.class, 2)&GTE(t1.Clump Thickness, 8)&GTE(t1.Bare Nuclei, 5)&MARK(t1.class)
+
+# Extreme benign features inside class=4 (malignant) — high-precision DC rules
+t1&EQ(t1.class, 4)&LTE(t1.Uniformity of Cell Size, 2)&LTE(t1.Bare Nuclei, 2)&MARK(t1.class)
+t1&EQ(t1.class, 4)&LTE(t1.Uniformity of Cell Size, 2)&LTE(t1.Uniformity of Cell Shape, 2)&MARK(t1.class)
+t1&EQ(t1.class, 4)&LTE(t1.Clump Thickness, 3)&LTE(t1.Bare Nuclei, 3)&LTE(t1.Bland Chromatin, 3)&MARK(t1.class)
+
+[FD]
+Bare Nuclei => Single Epithelial Cell Size
+Bare Nuclei => class

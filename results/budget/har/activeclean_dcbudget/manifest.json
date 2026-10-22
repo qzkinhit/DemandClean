@@ -1,0 +1,20 @@
+{
+  "id": "budget/har/activeclean_dcbudget",
+  "dataset": "har",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 320,
+  "seconds": 1.878,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "586ec30db3515ced62ec0e7285ff2e23fbfa4151b824234936df99a71fdd6d38"
+    }
+  }
+}

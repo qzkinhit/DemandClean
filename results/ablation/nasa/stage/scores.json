@@ -1,0 +1,16 @@
+{
+  "dataset": "nasa",
+  "variant": "stage",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.10979582581045899,
+  "tol_rel": 0.20795019245370608,
+  "references": {
+    "NoFix": -0.0010500071884296247,
+    "RepairAll": 0.5319902929476962
+  },
+  "n_train_rows": 763,
+  "n_test": 301,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "8a302d5db32c7187179bc50d974381746baffd58a071ba7b073e93cee7a0291d"
+}

@@ -1,0 +1,48 @@
+{
+  "table": "rule_library_robustness",
+  "observations": 126,
+  "rows": [
+    {
+      "condition": "full",
+      "datasets": 9,
+      "draws_per_dataset": 1,
+      "detection_f1": 0.8387345445052254,
+      "tol_rel": 0.825686868198905
+    },
+    {
+      "condition": "remove25",
+      "datasets": 9,
+      "draws_per_dataset": 3,
+      "detection_f1": 0.839139555232163,
+      "tol_rel": 0.7833365208416118
+    },
+    {
+      "condition": "remove50",
+      "datasets": 9,
+      "draws_per_dataset": 3,
+      "detection_f1": 0.8241192288222872,
+      "tol_rel": 0.6998199568490371
+    },
+    {
+      "condition": "remove75",
+      "datasets": 9,
+      "draws_per_dataset": 3,
+      "detection_f1": 0.8020733406698175,
+      "tol_rel": 0.6418462186798821
+    },
+    {
+      "condition": "false_constraints",
+      "datasets": 9,
+      "draws_per_dataset": 3,
+      "detection_f1": 0.45898610685683144,
+      "tol_rel": 0.3106569367044617
+    },
+    {
+      "condition": "dirty_derived",
+      "datasets": 9,
+      "draws_per_dataset": 1,
+      "detection_f1": 0.7194850060569922,
+      "tol_rel": 0.4819509718278377
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "dataset": "smartfactory",
+  "method": "MLImputer",
+  "seconds": 4.34
+}

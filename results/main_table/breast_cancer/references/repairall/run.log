@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:09:59
+RepairAll baseline (every error replaced by its clean value)
+dirty table: data/breast_cancer/dirty_index.csv (training rows)
+clean table: data/breast_cancer/clean_index.csv (training rows)
+task: breast_cancer_repairall
+output data saved: breast_cancer_repairall_cleaned.csv
+input rows: 419
+repaired cells: 2250
+run time: 0.16 s
+status: success
+ground-truth cost: 2250
+
+results saved to: breast_cancer_repairall
+log file: breast_cancer_repairall.log

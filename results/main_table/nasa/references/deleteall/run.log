@@ -1,0 +1,16 @@
+Run started at 2026-10-17 00:13:50
+DeleteAll Baseline (drop_feature_errors)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: nasa_deleteall
+deletion mode: drop_feature_errors
+output data saved: nasa_deleteall_cleaned.csv
+input rows: 901
+kept rows: 278
+deleted rows: 623
+run time: 0.25 s
+status: success
+ground-truth cost: 623
+
+results saved to: nasa_deleteall
+log file: nasa_deleteall.log

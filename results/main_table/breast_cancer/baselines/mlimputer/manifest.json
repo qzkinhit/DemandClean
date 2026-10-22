@@ -1,0 +1,33 @@
+{
+  "id": "main_table/breast_cancer/baselines/mlimputer",
+  "dataset": "breast_cancer",
+  "role": "baselines",
+  "method": "MLImputer",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 7689,
+  "scoring": {
+    "model": "lr",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "e261d2afed0914a273a0e64fd9c760d1d9dad1bcc50472e255079fb5810c5fbe",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table breast_cancer:mlimputer:results/main_table/breast_cancer/baselines/mlimputer/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

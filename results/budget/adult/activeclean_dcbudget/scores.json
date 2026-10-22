@@ -1,0 +1,13 @@
+{
+ "dataset": "adult",
+ "method": "ActiveClean (GT budget of DemandClean)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.8507462686567164,
+ "n_train_rows": 27133,
+ "redr": {
+  "r_before": 1030,
+  "r_after": 1023,
+  "redr": 0.006796116504854369
+ }
+}

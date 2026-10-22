@@ -1,0 +1,20 @@
+{
+  "dataset": "bike",
+  "variant": "ngt",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    10427,
+    15
+  ],
+  "cleaned_shape": [
+    10051,
+    15
+  ],
+  "operations": {
+    "no_action": 740,
+    "repair_value": 0,
+    "delete": 376,
+    "replace_nearby": 25898
+  }
+}

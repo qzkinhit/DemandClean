@@ -1,0 +1,32 @@
+{
+  "id": "main_table/mercedes/baselines/comet",
+  "dataset": "mercedes",
+  "role": "baselines",
+  "method": "Comet",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 949400,
+  "gt_pct": 59.831370569444154,
+  "gt_denominator": 1590402,
+  "scoring": {
+    "model": "rf",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "34c87eb800146293b1d31991fd221110e10c358f3df39e46b72e31b087850924",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table mercedes:comet:results/main_table/mercedes/baselines/comet/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,26 @@
+# rules derived from the dirty table of bike only
+
+[DOMAIN]
+dteday: INT [340032, 386454]
+season: FLOAT [-144.968, 167.93]
+yr: FLOAT [-1.97992, 3.24848]
+mnth: FLOAT [-17.4301, 24.0938]
+hr: FLOAT [-22.932, 45.1868]
+holiday: FLOAT [-138.672, 185.708]
+weekday: FLOAT [-8.04402, 14.2285]
+workingday: FLOAT [-1.87577, 3.19713]
+weathersit: FLOAT [-1.72685, 4.72324]
+temp: FLOAT [-0.575323, 1.5152]
+atemp: FLOAT [-0.408764, 1.31957]
+hum: FLOAT [-0.3414, 1.65816]
+windspeed: FLOAT [-0.452701, 0.809828]
+casual: FLOAT [-212.978, 333.132]
+registered: FLOAT [-609.357, 996.1]
+cnt: INT [1, 836]
+
+[FD]
+dteday => yr
+dteday => mnth
+dteday => weekday
+weekday => workingday
+dteday => workingday

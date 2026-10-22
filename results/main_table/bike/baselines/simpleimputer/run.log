@@ -1,0 +1,14 @@
+Run started at 2026-10-17 01:29:11
+SimpleImputer data cleaning (mean)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: bike_simpleimputer
+fill strategy: mean
+repaired data saved: bike_simpleimputer_cleaned.csv
+run time: 0.41 s
+status: success
+filled cells: 0
+ground-truth cost: 0 (fully automatic)
+
+results saved to: bike_simpleimputer
+log file: bike_simpleimputer.log

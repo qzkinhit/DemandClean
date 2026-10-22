@@ -1,0 +1,32 @@
+{
+  "id": "main_table/nasa/references/deleteall",
+  "dataset": "nasa",
+  "role": "references",
+  "method": "DeleteAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 5406,
+  "gt_pct": 59.94677312042582,
+  "gt_denominator": 10521,
+  "scoring": {
+    "model": "lr",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "ef39c36f3df8bc5bdf85247befaa991c75afb6f6bbe6f7134226fcc402bde5c1",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table nasa:deleteall:results/main_table/nasa/references/deleteall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

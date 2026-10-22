@@ -1,0 +1,21 @@
+# =============================================================================
+# Dataset: mercedes (Mercedes-Benz Greener Manufacturing)
+# =============================================================================
+# 4,209 rows x 378 cols; regression (y)
+# Errors: binary-column flips + categorical empties; label is error-free
+# =============================================================================
+
+[DOMAIN]
+X0: ENUM {a, aa, ab, ac, ad, af, ai, aj, ak, al, am, ao, ap, aq, as, at, au, aw, ax, ay, az, b, ba, bc, c, d, e, f, g, h, i, j, k, l, m, n, o, q, r, s, t, u, v, w, x, y, z}
+X1: ENUM {a, aa, ab, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, y, z}
+X2: ENUM {a, aa, ac, ae, af, ag, ah, ai, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ay, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, x, y, z}
+X3: ENUM {a, b, c, d, e, f, g}
+X4: ENUM {a, b, c, d}
+X5: ENUM {aa, ab, ac, ad, ae, af, ag, ah, c, d, f, g, h, i, j, k, l, m, n, o, p, q, r, s, u, v, w, x, y}
+X6: ENUM {a, b, c, d, e, f, g, h, i, j, k, l}
+X8: ENUM {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y}
+y: FLOAT [91.431, 245.999]
+
+[FD]
+X276 => X229
+X301 => X86

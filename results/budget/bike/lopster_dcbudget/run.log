@@ -1,0 +1,47 @@
+Run started at 2026-10-18 14:09:55
+Lopster data cleaning
+dataset: bike
+data path: Data_lopdc
+task: bike_lopster_dcbudget
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: bike
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (170, 17) -> (170, 16)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (10427, 17) -> (10427, 16)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: bike
+run time: 169.21 s
+status: success
+ground-truth cost: 170 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 10427
+  input rows: 10427
+  index column restored
+  final column order: ['index', 'dteday', 'season', 'yr', 'mnth', 'hr', 'holiday', 'weekday', 'workingday', 'weathersit', 'temp', 'atemp', 'hum', 'windspeed', 'casual', 'registered', 'cnt']
+  saved to: cleaned.csv
+  final rows: 10427
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: bike_lopster_dcbudget

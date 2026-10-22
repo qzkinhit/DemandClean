@@ -1,0 +1,32 @@
+{
+  "dataset": "smartfactory",
+  "model": "rf",
+  "reads_clean_training_rows": false,
+  "v_empty": 0.9617255233664622,
+  "v_full": 0.9687037428631846,
+  "run_score": 0.9687037428631846,
+  "full_equals_run": true,
+  "phi": {
+    "write": 0.006343835906111206,
+    "del": 0.0006343835906111872
+  },
+  "phi_hat": {
+    "write": 0.9091,
+    "del": 0.0909
+  },
+  "coalitions": {
+    "none": 0.9617255233664622,
+    "write": 0.9653203637132586,
+    "del": 0.9596109113977586,
+    "write+del": 0.9687037428631846
+  },
+  "cells": {
+    "write": 1589,
+    "del_rows": 2735
+  },
+  "run": "results/main_table/smartfactory/demandclean",
+  "provenance": {
+    "encoded_sha256": "3fd56be0ba658ebc5d1e70c0e056b8e97e940524c42f5a49bd75fbb234eeb740",
+    "ordered_index_format": "Decimal-normalized index values, one per line in output order."
+  }
+}

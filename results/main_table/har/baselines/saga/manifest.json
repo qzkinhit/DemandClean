@@ -1,0 +1,34 @@
+{
+  "id": "main_table/har/baselines/saga",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "SAGA",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 350000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "7522cd44e557fe45551f807b3ecb6d1fbdb05e87bcbdc94626c03bc30d162f78",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included",
+    "execution_log_format": "excerpt of the recorded SystemDS log; parameter and timing lines only"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:saga:results/main_table/har/baselines/saga/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

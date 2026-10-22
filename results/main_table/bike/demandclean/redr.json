@@ -1,0 +1,11 @@
+{
+ "dataset": "bike",
+ "method": "demandclean",
+ "role": "demandclean",
+ "table": "results/main_table/bike/demandclean/cleaned.csv",
+ "scope_rows": 10427,
+ "kept_rows": 10051,
+ "r_before": 10128,
+ "r_after": 9327,
+ "redr": 0.07908767772511849
+}

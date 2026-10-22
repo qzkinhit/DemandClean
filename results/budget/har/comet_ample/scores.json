@@ -1,0 +1,13 @@
+{
+ "dataset": "har",
+ "method": "Comet (ample GT)",
+ "model": "agglomerative",
+ "metric": "silhouette",
+ "test": 0.5195416385463819,
+ "n_train_rows": 40368,
+ "redr": {
+  "r_before": 19388,
+  "r_after": 18290,
+  "redr": 0.056632968846709306
+ }
+}

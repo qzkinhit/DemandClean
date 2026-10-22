@@ -1,0 +1,33 @@
+{
+  "dataset": "smartfactory",
+  "variant": "full",
+  "experiment": "transfer",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    14187,
+    18
+  ],
+  "cleaned_shape": [
+    13981,
+    18
+  ],
+  "operations": {
+    "no_action": 61,
+    "repair_value": 8,
+    "delete": 206,
+    "replace_nearby": 4430
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.9151322751322751,
+      "recall": 1.0,
+      "f1": 0.9556857111283015,
+      "tp": 4324,
+      "fp": 401,
+      "fn": 0,
+      "gt_count": 4324,
+      "det_count": 4725
+    }
+  }
+}

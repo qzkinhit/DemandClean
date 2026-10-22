@@ -1,0 +1,33 @@
+{
+  "id": "main_table/breast_cancer/baselines/retclean",
+  "dataset": "breast_cancer",
+  "role": "baselines",
+  "method": "RetClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 2090,
+  "gt_pct": 29.89985693848355,
+  "gt_denominator": 6990,
+  "scoring": {
+    "model": "lr",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "448fc75081df1d0c3a8d25f618422f82e206915884ab33af78109a00ebc91325",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table breast_cancer:retclean:results/main_table/breast_cancer/baselines/retclean/cleaned.csv.gz",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ]
+}

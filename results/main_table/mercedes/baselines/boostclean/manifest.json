@@ -1,0 +1,34 @@
+{
+  "id": "main_table/mercedes/baselines/boostclean",
+  "dataset": "mercedes",
+  "role": "baselines",
+  "method": "BoostClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 1590402,
+  "scoring": {
+    "model": "rf",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "fe280e01cdcc07d65faff4fe400bd417f7d890860f3f5edd8df151f8cf3685cf",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table mercedes:boostclean:results/main_table/mercedes/baselines/boostclean/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

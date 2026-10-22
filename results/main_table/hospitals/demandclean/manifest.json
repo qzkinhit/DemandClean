@@ -1,0 +1,77 @@
+{
+  "run_id": "main_table/hospitals/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "hospitals",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/hospitals.yaml --variant full --unseen-categories nearest",
+  "arguments": {
+    "n_episodes": 300,
+    "max_truth_budget": 0,
+    "raha_detector": false
+  },
+  "seed": null,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300,
+      "max_truth_budget": 0,
+      "raha_detector": false
+    },
+    "evaluation": {
+      "unseen_categories": "nearest"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-06-14T11:22:52+08:00",
+  "end_time": "2026-06-14T11:25:10+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true
+    },
+    "cleaned_csv": "rebuilt from cleaned_encoded.npz by evaluation/redecode_npz.py",
+    "artifact_sha256": {
+      "cleaned.csv": "8885d72569dbc5acaf4219b924ee7b11b596857167837ef08a14d39cfa8e3afb",
+      "cleaned_encoded.npz": "b9ee5bf9e8fef77bcd096bb43b31fc1967fc395d082b71f8151f0ebe7daf34bd",
+      "model/agent_stage1.pt": "4fbd5db6e121720a4243d1768707ef86dfaf26fb20c1b2cebbe7e085b632112d",
+      "model/agent_stage2.pt": "3d782e33a0c1d65fa9b47f5e8f8f0f7f3c7d0a3b3ede3051cdc7429e053c7765"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "notes": "the run encoded categories of the clean test rows that are absent from the dirty training split by edit distance (nearest known category), so it is scored with --nearest. The run exported no cleaned_original.csv, cleaned.csv is decoded from cleaned_encoded.npz and its rows are matched to the dirty training rows by a monotone alignment of the encoded cells",
+  "scoring": "scored with evaluation/paper_score.py --nearest, the encoding of the categories of the run",
+  "ground_truth_cells": 0,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/hospitals/demandclean",
+    "checkpoint": "results/main_table/hospitals/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

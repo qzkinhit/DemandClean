@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:53:15
+MLImputer data cleaning (mice)
+dirty table: dirty_index.csv
+clean table: clean_index.csv
+task: har_mlimputer
+imputation method: mice
+repaired data saved: har_mlimputer_cleaned.csv
+run time: 2.03 s
+status: success
+filled cells: 5439
+ground-truth cost: 0 (fully automatic)
+
+results saved to: har_mlimputer
+log file: har_mlimputer.log

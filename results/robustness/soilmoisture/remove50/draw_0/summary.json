@@ -1,0 +1,33 @@
+{
+  "dataset": "soilmoisture",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "regression",
+  "n_episodes": 300,
+  "data_shape": [
+    407,
+    127
+  ],
+  "cleaned_shape": [
+    407,
+    127
+  ],
+  "operations": {
+    "no_action": 95,
+    "repair_value": 0,
+    "delete": 0,
+    "replace_nearby": 13433
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.6035060582624387,
+      "recall": 0.7447823873759226,
+      "f1": 0.666742616274102,
+      "tp": 11705,
+      "fp": 7690,
+      "fn": 4011,
+      "gt_count": 15716,
+      "det_count": 19395
+    }
+  }
+}

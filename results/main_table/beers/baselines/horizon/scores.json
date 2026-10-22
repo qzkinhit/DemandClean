@@ -1,0 +1,20 @@
+{
+  "dataset": "beers",
+  "method": "Horizon",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.33402922755741127,
+  "all_models": {
+    "rf": 0.33402922755741127,
+    "gb": 0.29436325678496866
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 1442,
+  "table_rows": 1446,
+  "gt_cells": 0,
+  "gt_pct": 0.0,
+  "redr": {
+    "redr": 0.0
+  }
+}

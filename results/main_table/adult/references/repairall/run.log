@@ -1,0 +1,14 @@
+Run started at 2026-10-17 00:31:42
+RepairAll baseline (every error replaced by its clean value)
+dirty table: data/adult/dirty_index.csv (training rows)
+clean table: data/adult/clean_index.csv (training rows)
+task: adult_repairall
+output data saved: adult_repairall_cleaned.csv
+input rows: 27133
+repaired cells: 1030
+run time: 14.51 s
+status: success
+ground-truth cost: 1030
+
+results saved to: adult_repairall
+log file: adult_repairall.log

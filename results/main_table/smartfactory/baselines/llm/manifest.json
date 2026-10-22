@@ -1,0 +1,22 @@
+{
+  "id": "main_table/smartfactory/baselines/llm",
+  "dataset": "smartfactory",
+  "role": "baselines",
+  "method": "LLM",
+  "ground_truth_cells": 0,
+  "files": [
+    "cleaned.csv.gz",
+    "scores.json"
+  ],
+  "model": "claude-opus-4-8",
+  "replay_command": "python baselines/runners/run_llm.py --dataset smartfactory --check",
+  "records": "results/llm/records/smartfactory.jsonl.gz",
+  "input_files": 19,
+  "cost": "results/llm/llm_cost.json",
+  "provenance": {
+    "table": "Final saved indexed CSV, gzip compressed without changing its contents",
+    "csv_sha256": "c0a634abe8fff13d2ad93220633c40a3dd83b0716bb3fb9c43332f3917b16579",
+    "log": "The task-specific requests, Read records, structured responses and token usage are in the records file",
+    "reported_model_scores_source_sha256": "e16de9d317f7e09a6b71298551bb42885e48242a29c82e1ee639631f131a0611"
+  }
+}

@@ -1,0 +1,13 @@
+{
+ "dataset": "mercedes",
+ "method": "Lopster (GT budget of DemandClean)",
+ "model": "rf",
+ "metric": "r2",
+ "test": 0.401252232868754,
+ "n_train_rows": 2525,
+ "redr": {
+  "r_before": 2525,
+  "r_after": 2525,
+  "redr": 0.0
+ }
+}

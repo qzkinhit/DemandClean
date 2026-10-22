@@ -1,0 +1,11 @@
+[
+  {
+    "dataset": "soccer",
+    "model": "dt",
+    "metric": "accuracy",
+    "test": 0.8557964184731386,
+    "n_train_rows": 5465,
+    "method": "DeleteAll",
+    "encoding": "nearest"
+  }
+]

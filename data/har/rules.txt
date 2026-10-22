@@ -1,0 +1,8 @@
+[DOMAIN]
+x: FLOAT [-7.1662292, 0.80682373]
+y: FLOAT [-1.7565765, 1.1665192]
+z: FLOAT [6.651184, 10.551422]
+gt: ENUM {sit, stand}
+
+[FD]
+gt => z

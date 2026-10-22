@@ -1,0 +1,82 @@
+{
+  "dataset": "har",
+  "method": "DemandClean",
+  "variant": "arch",
+  "seed": 0,
+  "status": "complete",
+  "command": "python scripts/run_demandclean.py --config results/ablation/har/arch/config.yaml --variant arch --seed 0",
+  "score_command": "python evaluation/paper_score.py results/ablation/har/arch",
+  "configuration": {
+    "config": "config.yaml",
+    "variant_definitions": "configs/variants.yaml",
+    "detector": "hybrid",
+    "agent": "two_stage",
+    "inference": "online",
+    "reward_model": "kmeans",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "kmeans"
+    },
+    "agent_parameters": {
+      "state_size": 10,
+      "gamma": 0.95,
+      "epsilon_start": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay": 0.995,
+      "learning_rate": 0.0005,
+      "batch_size": 64,
+      "memory_size": 10000,
+      "target_update_freq": 5,
+      "missing_rate_range": [
+        0.02,
+        0.08
+      ],
+      "semantic_rate_range": [
+        0.05,
+        0.15
+      ],
+      "syntactic_rate_range": [
+        0.1,
+        0.25
+      ],
+      "label_rate_range": [
+        0.0,
+        0.05
+      ],
+      "auto_select_base": true,
+      "base_cv_folds": 5
+    },
+    "reward_model_kwargs": {
+      "n_init": 3
+    },
+    "eval_sample_ratio": 1.0
+  },
+  "start_time": "2026-10-16T18:06:50+08:00",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "041e8078d98af47ba88a82041ac103fd23664c3f58cd6ccd1a3af7e43439f16a",
+      "model/agent_stage1.pt": "7a675c54b0308d6365fa372e00d03945e887784be85f91018af90168976492bd",
+      "model/agent_stage2.pt": "28d9991464cda5a6f5f54b605c9072c30711177c058da6cbec00821495212329"
+    },
+    "log": "console output of the run",
+    "checkpoint": "Original checkpoint bytes, renamed by removing the source version prefix. The runner logs a common agent.pt stem; a two-stage agent writes agent_stage1.pt and agent_stage2.pt.",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "history_episodes": 300,
+    "queue_completion_record_present": true
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ]
+}

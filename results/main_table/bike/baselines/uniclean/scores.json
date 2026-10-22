@@ -1,0 +1,20 @@
+{
+  "dataset": "bike",
+  "method": "UniClean",
+  "model": "lr",
+  "metric": "r2",
+  "test": 0.8609526749717225,
+  "all_models": {
+    "lr": 0.8609526749717225,
+    "lasso": 0.8588199120347697
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 10427,
+  "table_rows": 10427,
+  "gt_cells": 0,
+  "gt_pct": 0.0,
+  "redr": {
+    "redr": -0.011354660347551343
+  }
+}

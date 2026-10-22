@@ -1,0 +1,211 @@
+{
+  "blocks": {
+    "classification": [
+      "adult",
+      "beers",
+      "breast_cancer",
+      "smartfactory"
+    ],
+    "regression": [
+      "bike",
+      "mercedes",
+      "nasa",
+      "soilmoisture"
+    ]
+  },
+  "protocol": "Each source checkpoint is deployed on every target of the same task type without retraining.",
+  "runs": [
+    {
+      "dataset": "mercedes",
+      "run": "results/transfer/bike/mercedes",
+      "source_dataset": "bike",
+      "target_dataset": "mercedes"
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/transfer/mercedes/mercedes",
+      "source_dataset": "mercedes",
+      "target_dataset": "mercedes"
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/transfer/nasa/mercedes",
+      "source_dataset": "nasa",
+      "target_dataset": "mercedes"
+    },
+    {
+      "dataset": "mercedes",
+      "run": "results/transfer/soilmoisture/mercedes",
+      "source_dataset": "soilmoisture",
+      "target_dataset": "mercedes"
+    },
+    {
+      "dataset": "adult",
+      "run": "results/transfer/adult/adult",
+      "source_dataset": "adult",
+      "target_dataset": "adult"
+    },
+    {
+      "dataset": "adult",
+      "run": "results/transfer/beers/adult",
+      "source_dataset": "beers",
+      "target_dataset": "adult"
+    },
+    {
+      "dataset": "adult",
+      "run": "results/transfer/breast_cancer/adult",
+      "source_dataset": "breast_cancer",
+      "target_dataset": "adult"
+    },
+    {
+      "dataset": "adult",
+      "run": "results/transfer/smartfactory/adult",
+      "source_dataset": "smartfactory",
+      "target_dataset": "adult"
+    },
+    {
+      "dataset": "beers",
+      "run": "results/transfer/adult/beers",
+      "source_dataset": "adult",
+      "target_dataset": "beers"
+    },
+    {
+      "dataset": "beers",
+      "run": "results/transfer/beers/beers",
+      "source_dataset": "beers",
+      "target_dataset": "beers"
+    },
+    {
+      "dataset": "beers",
+      "run": "results/transfer/breast_cancer/beers",
+      "source_dataset": "breast_cancer",
+      "target_dataset": "beers"
+    },
+    {
+      "dataset": "beers",
+      "run": "results/transfer/smartfactory/beers",
+      "source_dataset": "smartfactory",
+      "target_dataset": "beers"
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/transfer/adult/breast_cancer",
+      "source_dataset": "adult",
+      "target_dataset": "breast_cancer"
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/transfer/beers/breast_cancer",
+      "source_dataset": "beers",
+      "target_dataset": "breast_cancer"
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/transfer/breast_cancer/breast_cancer",
+      "source_dataset": "breast_cancer",
+      "target_dataset": "breast_cancer"
+    },
+    {
+      "dataset": "breast_cancer",
+      "run": "results/transfer/smartfactory/breast_cancer",
+      "source_dataset": "smartfactory",
+      "target_dataset": "breast_cancer"
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/transfer/bike/nasa",
+      "source_dataset": "bike",
+      "target_dataset": "nasa"
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/transfer/mercedes/nasa",
+      "source_dataset": "mercedes",
+      "target_dataset": "nasa"
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/transfer/nasa/nasa",
+      "source_dataset": "nasa",
+      "target_dataset": "nasa"
+    },
+    {
+      "dataset": "nasa",
+      "run": "results/transfer/soilmoisture/nasa",
+      "source_dataset": "soilmoisture",
+      "target_dataset": "nasa"
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/transfer/adult/smartfactory",
+      "source_dataset": "adult",
+      "target_dataset": "smartfactory"
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/transfer/beers/smartfactory",
+      "source_dataset": "beers",
+      "target_dataset": "smartfactory"
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/transfer/breast_cancer/smartfactory",
+      "source_dataset": "breast_cancer",
+      "target_dataset": "smartfactory"
+    },
+    {
+      "dataset": "smartfactory",
+      "run": "results/transfer/smartfactory/smartfactory",
+      "source_dataset": "smartfactory",
+      "target_dataset": "smartfactory"
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/transfer/mercedes/soilmoisture",
+      "source_dataset": "mercedes",
+      "target_dataset": "soilmoisture"
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/transfer/nasa/soilmoisture",
+      "source_dataset": "nasa",
+      "target_dataset": "soilmoisture"
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/transfer/soilmoisture/soilmoisture",
+      "source_dataset": "soilmoisture",
+      "target_dataset": "soilmoisture"
+    },
+    {
+      "dataset": "bike",
+      "run": "results/transfer/bike/bike",
+      "source_dataset": "bike",
+      "target_dataset": "bike"
+    },
+    {
+      "dataset": "bike",
+      "run": "results/transfer/mercedes/bike",
+      "source_dataset": "mercedes",
+      "target_dataset": "bike"
+    },
+    {
+      "dataset": "bike",
+      "run": "results/transfer/nasa/bike",
+      "source_dataset": "nasa",
+      "target_dataset": "bike"
+    },
+    {
+      "dataset": "bike",
+      "run": "results/transfer/soilmoisture/bike",
+      "source_dataset": "soilmoisture",
+      "target_dataset": "bike"
+    },
+    {
+      "dataset": "soilmoisture",
+      "run": "results/transfer/bike/soilmoisture",
+      "source_dataset": "bike",
+      "target_dataset": "soilmoisture"
+    }
+  ]
+}

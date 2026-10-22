@@ -1,0 +1,13 @@
+{
+ "dataset": "har",
+ "method": "ActiveClean (ample GT)",
+ "model": "agglomerative",
+ "metric": "silhouette",
+ "test": 0.5060340907930873,
+ "n_train_rows": 40368,
+ "redr": {
+  "r_before": 19388,
+  "r_after": 18928,
+  "redr": 0.023726016092428307
+ }
+}

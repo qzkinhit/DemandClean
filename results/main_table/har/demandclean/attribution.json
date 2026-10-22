@@ -1,0 +1,41 @@
+{
+ "dataset": "har",
+ "run": "results/main_table/har/demandclean",
+ "model": "agglomerative",
+ "v_empty": 0.5004163878039727,
+ "v_full": 0.8992418921570298,
+ "run_score": 0.8992418921570298,
+ "full_equals_run": true,
+ "phi": {
+  "gt": 0.004374614244319341,
+  "ve": 0.0,
+  "del": 0.3944508901087378
+ },
+ "phi_hat": {
+  "noop": 0.0,
+  "gt": 0.011,
+  "ve": 0.0,
+  "del": 0.989
+ },
+ "coalitions": {
+  "none": 0.5004163878039727,
+  "gt": 0.5073181314567454,
+  "ve": 0.5004163878039727,
+  "del": 0.8973944073211638,
+  "gt+ve": 0.5073181314567454,
+  "del+gt": 0.8992418921570298,
+  "del+ve": 0.8973944073211638,
+  "del+gt+ve": 0.8992418921570298
+ },
+ "outcome_cells": {
+  "gt": 53,
+  "ve": 0,
+  "del_rows": 20513
+ },
+ "operation_counts": {
+  "noop": 0,
+  "gt": 0,
+  "del": 20513,
+  "ve": 0
+ }
+}

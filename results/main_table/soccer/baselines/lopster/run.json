@@ -1,0 +1,10 @@
+{
+  "dataset": "soccer",
+  "method": "Lopster",
+  "mode": "input_passthrough",
+  "ground_truth_cells": 0,
+  "configuration": {
+    "clean_training_records": 0
+  },
+  "output": "cleaned.csv.gz"
+}

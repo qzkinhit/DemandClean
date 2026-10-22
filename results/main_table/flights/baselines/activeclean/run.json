@@ -1,0 +1,74 @@
+{
+  "status": "ok",
+  "n_train": 1425,
+  "n_val": 475,
+  "n_test": 476,
+  "gt_cells": 3500,
+  "rows_cleaned": 500,
+  "cells_per_record_without_index": 7,
+  "budget_cells": 3500,
+  "budget_rows": 500,
+  "batch_size": 50,
+  "iterations": 11,
+  "model": "linear_svm_hinge",
+  "model_regularisation": {
+    "C": 0.1,
+    "lam": 0.007017543859649123
+  },
+  "seed": 42,
+  "task": "classification",
+  "label_col": "arrival_delay_bucket",
+  "label_source": "dirty",
+  "train_labels_replaced_by_protocol": 0,
+  "python": "3.8.20",
+  "finished": "2026-10-18 13:52:43",
+  "secs": 0.898,
+  "wall_secs": 0.943,
+  "step_constant": 1.0,
+  "output_iteration": 11,
+  "dataset": "flights",
+  "method": "ActiveClean",
+  "configuration": {
+    "feature_cols": [
+      "src",
+      "flight",
+      "sched_dep_time",
+      "act_dep_time",
+      "sched_arr_time",
+      "act_arr_time"
+    ],
+    "categorical_cols": [
+      "act_arr_time",
+      "act_dep_time",
+      "flight",
+      "sched_arr_time",
+      "sched_dep_time",
+      "src"
+    ],
+    "clock_cols": [
+      "act_arr_time",
+      "act_dep_time",
+      "sched_arr_time",
+      "sched_dep_time"
+    ],
+    "label_col": "arrival_delay_bucket",
+    "task": "classification",
+    "budget_rows": 500,
+    "batch_size": 50,
+    "seed": 42,
+    "uniform_mix": 0.1,
+    "detector_min_per_class": 5,
+    "detector_margin": 1.0,
+    "detector_rare_class": 3,
+    "max_categories": 100,
+    "min_category_count": 2,
+    "z_clip": 10.0,
+    "svm_max_iter": 20000,
+    "step_constant": 1.0,
+    "model_regularisation": {
+      "C": 0.1,
+      "lam": 0.007017543859649123
+    }
+  },
+  "implementation": "ActiveClean adaptation described in baselines/THIRD_PARTY.md"
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "breast_cancer",
+  "model": "lr",
+  "reads_clean_training_rows": false,
+  "v_empty": 0.9571428571428572,
+  "v_full": 0.9928571428571429,
+  "run_score": 0.9928571428571429,
+  "full_equals_run": true,
+  "phi": {
+    "write": 0.021428571428571408,
+    "del": 0.01428571428571429
+  },
+  "phi_hat": {
+    "write": 0.6,
+    "del": 0.4
+  },
+  "coalitions": {
+    "none": 0.9571428571428572,
+    "write": 0.9714285714285714,
+    "del": 0.9642857142857143,
+    "write+del": 0.9928571428571429
+  },
+  "cells": {
+    "write": 148,
+    "del_rows": 102
+  },
+  "run": "results/main_table/breast_cancer/demandclean",
+  "provenance": {
+    "encoded_sha256": "2dfd820b1b4424ba1ee439dd0aff584996447761acd104f9b92c4935d0c00bf0",
+    "ordered_index_format": "Decimal-normalized index values, one per line in output order."
+  }
+}

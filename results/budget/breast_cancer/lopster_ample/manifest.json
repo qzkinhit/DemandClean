@@ -1,0 +1,20 @@
+{
+  "id": "budget/breast_cancer/lopster_ample",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 2090,
+  "seconds": 17.97,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "9e45276de78851a0f6b46b77938bbd0fb6c14e6dfd14cc4b3606350a4faad673"
+    }
+  }
+}

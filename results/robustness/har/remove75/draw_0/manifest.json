@@ -1,0 +1,55 @@
+{
+  "dataset": "har",
+  "experiment": "robustness",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 400,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "kmeans"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "c43d4986b6b6eaf64b09365e1e30375d07634f9d71b0830773e17ef6ec19964c"
+  },
+  "checkpoint": "results/robustness/models/har",
+  "rules": "results/robustness/har/remove75/draw_0/rules.txt",
+  "command": "python scripts/run_demandclean.py --config results/robustness/har/remove75/draw_0/config.yaml --variant full --seed 0 --rules results/robustness/har/remove75/draw_0/rules.txt --checkpoint results/robustness/models/har --out results/runs/robustness_har_remove75_draw0",
+  "score_command": "python evaluation/paper_score.py results/robustness/har/remove75/draw_0",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "590b62c3895c966f3728adb4585174b35950402ea5fee5a7a3d3db919e12278e"
+    },
+    "rules_sha256": "15e1c0cf948d7c20493f92e5cfa7d22016d2e8e2a431a07189556cbbf8e7f495",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "c96aa2d0b1c07e9d08868d5971bfad3caa43507674569a4960d6958fc2a0f4c4",
+      "agent_stage2.pt": "7310278088266eb45185174804414bef6539b6df221f9552fcc8564ef1b3dfac"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 978.47
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json",
+    "rules.txt"
+  ],
+  "condition": "remove75",
+  "rule_draw": 0
+}

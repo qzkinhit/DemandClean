@@ -1,0 +1,21 @@
+{
+  "id": "budget/mercedes/retclean_ample",
+  "dataset": "mercedes",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 475774,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "84fb565a17482ddea268df8479e2a0d5cac6bd6d1d7ce80cd452ec16e354b150"
+    }
+  }
+}

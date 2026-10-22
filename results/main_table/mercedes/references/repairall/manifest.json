@@ -1,0 +1,32 @@
+{
+  "id": "main_table/mercedes/references/repairall",
+  "dataset": "mercedes",
+  "role": "references",
+  "method": "RepairAll",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 951925,
+  "gt_pct": 59.99049655500119,
+  "gt_denominator": 1590402,
+  "scoring": {
+    "model": "rf",
+    "metric": "r2",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "1875875d5392db0c236c4c5d519a8901207cac879782332c5831aac838dd6c40",
+    "scores": "recorded evaluation of this output",
+    "score_records": "the first, second and gb model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table mercedes:repairall:results/main_table/mercedes/references/repairall/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "dataset": "nasa",
+  "method": "DemandClean",
+  "variant": "arch",
+  "seed": 0,
+  "status": "complete",
+  "command": "python scripts/run_demandclean.py --config results/ablation/nasa/arch/config.yaml --variant arch --seed 0",
+  "score_command": "python evaluation/paper_score.py results/ablation/nasa/arch",
+  "configuration": {
+    "config": "config.yaml",
+    "variant_definitions": "configs/variants.yaml",
+    "detector": "hybrid",
+    "agent": "two_stage",
+    "inference": "online",
+    "reward_model": "ridge",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "ridge"
+    },
+    "agent_parameters": {
+      "state_size": 10,
+      "gamma": 0.95,
+      "epsilon_start": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay": 0.995,
+      "learning_rate": 0.0005,
+      "batch_size": 64,
+      "memory_size": 10000,
+      "target_update_freq": 5,
+      "missing_rate_range": [
+        0.02,
+        0.08
+      ],
+      "semantic_rate_range": [
+        0.05,
+        0.15
+      ],
+      "syntactic_rate_range": [
+        0.1,
+        0.25
+      ],
+      "label_rate_range": [
+        0.0,
+        0.05
+      ],
+      "auto_select_base": true,
+      "base_cv_folds": 5
+    },
+    "reward_model_kwargs": {},
+    "eval_sample_ratio": 1.0
+  },
+  "start_time": "2026-10-17T04:11:24+08:00",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "98f446f274113828e055f33c6a074a90c8593e0ed6a422a67a1c6158808fee0a",
+      "model/agent_stage1.pt": "38e8b7b21742463e95ef3689099c2db3b99d9bc0a2bba73f694922ab55e3ed2b",
+      "model/agent_stage2.pt": "dd5cab495891d75909d0a37ea6c50f1c2354ca7da898b62873a9a5e953464ec0"
+    },
+    "log": "console output of the run",
+    "checkpoint": "Original checkpoint bytes, renamed by removing the source version prefix. The runner logs a common agent.pt stem; a two-stage agent writes agent_stage1.pt and agent_stage2.pt.",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "history_episodes": 300,
+    "queue_completion_record_present": true
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ]
+}

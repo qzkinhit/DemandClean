@@ -1,0 +1,20 @@
+{
+  "id": "budget/har/comet_ample",
+  "dataset": "har",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 9000,
+  "seconds": 1713.78,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "e1f0e435708bcfccad006d317d05a428e9aae627e678da4a11525fd7cd262129"
+    }
+  }
+}

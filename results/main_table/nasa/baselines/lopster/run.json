@@ -1,0 +1,8 @@
+{
+  "dataset": "nasa",
+  "method": "Lopster",
+  "seconds": 21.97,
+  "postprocessing": [
+    "restore dirty input values in output columns reduced to a constant"
+  ]
+}

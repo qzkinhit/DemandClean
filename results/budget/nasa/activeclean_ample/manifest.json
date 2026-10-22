@@ -1,0 +1,20 @@
+{
+  "id": "budget/nasa/activeclean_ample",
+  "dataset": "nasa",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 2700,
+  "seconds": 0.745,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "684cfd78233d13a33cc403517462b701a24e17ac50b6013ae5fc306f90cc0ec1"
+    }
+  }
+}

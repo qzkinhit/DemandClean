@@ -1,0 +1,92 @@
+======================================================================
+DemandClean
+======================================================================
+Datasets: ['beers']
+Variant: full
+Episodes: 300
+Verbose: False
+Split: 60/20/20 train/validation/test, reward on the clean validation split
+======================================================================
+
+######################################################################
+# Dataset: beers
+######################################################################
+
+  60/20/20 split: train=1446, val=482, test=482
+  training split written to a CSV file for RAHA
+  Dataset: beers
+  Dirty:   (1446, 8)
+  Features: 8, label: style
+  Categorical cols: {'brewery_name', 'beer_name', 'state', 'city'}
+  LE fit: dirty only (1446 rows)
+  SS fit: dirty only (1446 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(1446, 8), X_clean_train=(1446, 8), X_clean_val=(482, 8), X_clean_test=(482, 8)
+
+======================================================================
+Method: DemandClean
+Dataset: beers | task: classification | reward model: random_forest
+Detector: hybrid | agent: dueling_two_stage | inference: online
+Episodes: 300
+======================================================================
+
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+
+[Step 2] training (300 episodes)...
+  RAHA detected: 1907 cells
+  Precision=0.9895  Recall=0.9296  F1=0.9586
+  RAHA labelled rows: 20 (labeling_budget=20)
+  model saved: model/agent.pt
+  [time] Step 2 (train): 93.38s
+
+[Step 3] inference (online)...
+  [time] dc.detect_errors(): 0.0001s
+  ground-truth repairs: 228
+  operations: {'no_op': 0, 'gt_repair': 228, 'delete': 0, 've_replace': 2445}
+  [time] dc.clean(): 10.4825s
+  cleaned data saved: cleaned.csv
+  encoded data saved: cleaned_encoded.npz
+  [time] Step 3 (infer): 10.52s
+
+[Step 4] detection accuracy...
+  [time] Step 4 (detector eval): 0.01s
+
+[Step 9] downstream evaluation...
+Cleaning precision: 0.1930593390974772, recall: 0.8029556650246306, F1: 0.3112766160290934
+  [downstream] encoded cleaned training split
+  train=1442 rows, test=479 rows (clean test split)
+RF - Accuracy: 0.3612
+LR - Accuracy: 0.2317
+SVM - Accuracy: 0.1858
+KNN - Accuracy: 0.1795
+DT - Accuracy: 0.2463
+GB - Accuracy: 0.3069
+  [time] Step 9 (downstream eval): 30.44s
+
+[Step 10] ground-truth cells...
+  calibration seed set: 20 cells
+  ground-truth repairs: 228 cells
+  total: 248 / 11568 cells of the training split = 2.1438%
+  [time] Step 10 (cost summary): 0.00s
+
+--------------------------------------------------
+  Step timing
+--------------------------------------------------
+  Step 1  init            |      0.00s
+  Step 2  train           |     93.38s
+  Step 3  infer           |     10.52s
+  Step 4  detector eval   |      0.01s
+  Step 9  downstream eval |     30.44s
+  Step 10 cost summary    |      0.00s
+--------------------------------------------------
+  total                    | 214.61s
+  attribution and plots    | 52.16s
+  net                      | 162.45s
+--------------------------------------------------
+
+  DemandClean finished, net time 162.45s
+
+======================================================================
+All done. Total time: 215.93s
+======================================================================

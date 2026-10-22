@@ -1,0 +1,54 @@
+{
+  "dataset": "mercedes",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "ridge"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "8996d24fd713dda85789e6d31b9d810ffe4a11b3a7e4a4d4adb4f0ded30ccd4b"
+  },
+  "checkpoint": "results/robustness/models/nasa",
+  "rules": "results/transfer/rules/mercedes.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/nasa/mercedes/config.yaml --variant full --seed 0 --rules results/transfer/rules/mercedes.txt --checkpoint results/robustness/models/nasa --out results/runs/transfer_mercedes_nasa",
+  "score_command": "python evaluation/paper_score.py results/transfer/nasa/mercedes",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "a120144ad4320a5768feb03622c6e4e3890b30b430637813bcd18bede9c8b4b3"
+    },
+    "rules_sha256": "5d77a1198c9c26dbcaf6f76b0bd7f313014d3f3c88a857150b27c2539bff00f0",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "ccedf1213fa1353f93bb2b83c89ff7bdfd25b5a36d870b0fcf903116733a17a5",
+      "agent_stage2.pt": "cb068976f1cb56d7edc7729005b4d898552b2ba80c9d82249b8729c224e0a92d"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 18362.35
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "nasa",
+  "target_dataset": "mercedes"
+}

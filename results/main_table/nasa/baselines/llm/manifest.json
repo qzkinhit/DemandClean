@@ -1,0 +1,22 @@
+{
+  "id": "main_table/nasa/baselines/llm",
+  "dataset": "nasa",
+  "role": "baselines",
+  "method": "LLM",
+  "ground_truth_cells": 0,
+  "files": [
+    "cleaned.csv.gz",
+    "scores.json"
+  ],
+  "model": "claude-opus-4-8",
+  "replay_command": "python baselines/runners/run_llm.py --dataset nasa --check",
+  "records": "results/llm/records/nasa.jsonl.gz",
+  "input_files": 1,
+  "cost": "results/llm/llm_cost.json",
+  "provenance": {
+    "table": "Final saved indexed CSV, gzip compressed without changing its contents",
+    "csv_sha256": "4659da734cb4be1a8f86716b0e2e0abf6615fd02cbbaaae11c5a2e878a1ee8c5",
+    "log": "The task-specific requests, Read records, structured responses and token usage are in the records file",
+    "reported_model_scores_source_sha256": "e16de9d317f7e09a6b71298551bb42885e48242a29c82e1ee639631f131a0611"
+  }
+}

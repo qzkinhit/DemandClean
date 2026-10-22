@@ -1,0 +1,13 @@
+{
+ "dataset": "har",
+ "method": "Comet (GT budget of DemandClean)",
+ "model": "agglomerative",
+ "metric": "silhouette",
+ "test": 0.5037636938810179,
+ "n_train_rows": 40368,
+ "redr": {
+  "r_before": 19388,
+  "r_after": 19373,
+  "redr": 0.0007736744377965752
+ }
+}

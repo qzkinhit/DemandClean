@@ -1,0 +1,20 @@
+{
+  "id": "budget/nasa/activeclean_dcbudget",
+  "dataset": "nasa",
+  "role": "budget",
+  "method": "ActiveClean (GT budget of DemandClean)",
+  "ground_truth_cells": 582,
+  "seconds": 0.351,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "13de3a7cf72b1d09ddd65ea61536593b0d2b7babf73ee39f02c271ded8aff7d8"
+    }
+  }
+}

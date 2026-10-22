@@ -1,0 +1,17 @@
+{
+  "dataset": "har",
+  "method": "DeleteAll",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.9076036180771995,
+  "all_models": {
+    "agglomerative": 0.9076036180771995,
+    "kmeans": 0.9076036180771995
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 22396,
+  "table_rows": 23352,
+  "gt_cells": 168000,
+  "gt_pct": 60.0
+}

@@ -1,0 +1,32 @@
+{
+  "id": "main_table/flights/baselines/retclean",
+  "dataset": "flights",
+  "role": "baselines",
+  "method": "RetClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 4984,
+  "gt_pct": 29.966329966329965,
+  "gt_denominator": 16632,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "f6751ba0297938ab34961e57e0b7a56fa995cb3ac3864c3f4511f07e29456458",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table flights:retclean:results/main_table/flights/baselines/retclean/cleaned.csv.gz --nearest",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ]
+}

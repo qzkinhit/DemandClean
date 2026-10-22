@@ -1,0 +1,20 @@
+{
+  "id": "budget/nasa/lopster_dcbudget",
+  "dataset": "nasa",
+  "role": "budget",
+  "method": "Lopster (GT budget of DemandClean)",
+  "ground_truth_cells": 582,
+  "seconds": 21.97,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "b90c393e39f58c5675304ad380857a67ebab4a6405c4c180e074712a9f47612a"
+    }
+  }
+}

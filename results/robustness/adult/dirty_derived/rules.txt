@@ -1,0 +1,22 @@
+# rules derived from the dirty table of adult only
+
+[DOMAIN]
+age: INT [17, 76]
+workclass: ENUM {Private, Self-emp-not-inc, Local-gov, State-gov, Self-emp-inc, Federal-gov, Without-pay}
+fnlwgt: INT [24054, 589835]
+education: ENUM {HS-grad, Some-college, Bachelors, Masters, Assoc-voc, 11th, Assoc-acdm, 10th, 7th-8th, Prof-school, 9th, 12th, Doctorate, 5th-6th, 1st-4th, Preschool}
+educational_num: INT [2, 16]
+marital_status: ENUM {Married-civ-spouse, Never-married, Divorced, Separated, Widowed, Married-spouse-absent, Married-AF-spouse}
+occupation: ENUM {Craft-repair, Prof-specialty, Exec-managerial, Adm-clerical, Sales, Other-service, Machine-op-inspct, Transport-moving, Handlers-cleaners, Farming-fishing, Tech-support, Protective-serv, Priv-house-serv, Armed-Forces}
+relationship: ENUM {Husband, Not-in-family, Own-child, Unmarried, Wife, Other-relative}
+race: ENUM {White, Black, Asian-Pac-Islander, Amer-Indian-Eskimo, Other}
+gender: ENUM {Male, Female}
+capital_gain: INT [0, 99999]
+capital_loss: INT [0, 2258]
+hours_per_week: INT [6, 85]
+native_country: ENUM {United-States, Mexico, Philippines, Germany, Puerto-Rico, Canada, El-Salvador, India, Cuba, England, China, Jamaica, South, Italy, Dominican-Republic, Japan, Guatemala, Vietnam, Columbia, Poland, Haiti, Portugal, Iran, Taiwan, Greece, Nicaragua, Peru, Ecuador, France, Ireland, Thailand, Hong, Cambodia, Trinadad-Tobago, Yugoslavia, Outlying-US(Guam-USVI-etc), Laos, Scotland, Honduras, Hungary}
+income: INT [0, 1]
+
+[FD]
+education => educational_num
+educational_num => education

@@ -1,0 +1,32 @@
+{
+  "id": "main_table/smartfactory/references/nofix",
+  "dataset": "smartfactory",
+  "role": "references",
+  "method": "NoFix",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 472900,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "efcf62ddc794103c30719272c6a4385a62b8b792ad9dd99f7bc6b417c906e5ee",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table smartfactory:nofix:results/main_table/smartfactory/references/nofix/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

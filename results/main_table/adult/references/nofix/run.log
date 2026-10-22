@@ -1,0 +1,12 @@
+Run started at 2026-10-17 00:31:40
+DoNothing baseline (no cleaning)
+dirty table: data/adult/dirty_index.csv (training rows)
+clean table: data/adult/clean_index.csv (training rows)
+task: adult_donothing
+output data saved: adult_donothing_cleaned.csv
+run time: 0.31 s
+status: success
+ground-truth cost: 0 (fully automatic, no operation)
+
+results saved to: adult_donothing
+log file: adult_donothing.log

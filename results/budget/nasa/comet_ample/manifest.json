@@ -1,0 +1,20 @@
+{
+  "id": "budget/nasa/comet_ample",
+  "dataset": "nasa",
+  "role": "budget",
+  "method": "Comet (ample GT)",
+  "ground_truth_cells": 4505,
+  "seconds": 31.59,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "7f823bd9b115884d069d8a072808c1cf67f34a829ff8f652f22116e8e361aad2"
+    }
+  }
+}

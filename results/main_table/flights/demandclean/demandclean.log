@@ -1,0 +1,6 @@
+# Recorded console output of the run.
+[2026-10-18 02:39:07,319] INFO - demandclean:   Clean base selection (5-fold CV weighted by the fraction of rows kept):
+[2026-10-18 02:39:07,319] INFO - demandclean:     DeleteFix: 750 rows, CV=0.9333, weight=0.725, weighted=0.6771
+[2026-10-18 02:39:07,319] INFO - demandclean:     VE-Fill:   1425 rows, CV=0.9018, weight=1.000, weighted=0.9018
+[2026-10-18 02:39:07,320] INFO - demandclean:     -> chosen: VE-Fill (1425 rows)
+[2026-10-18 02:56:30,830] INFO - demandclean: Model saved: results/main_table/flights/demandclean/model/agent.pt

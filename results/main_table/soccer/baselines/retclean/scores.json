@@ -1,0 +1,14 @@
+{
+  "dataset": "soccer",
+  "method": "RetClean",
+  "model": "dt",
+  "metric": "accuracy",
+  "test": 1.0,
+  "nearest": true,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 6366,
+  "n_test": 2122,
+  "table_rows": 6366,
+  "gt_cells": 31830,
+  "gt_pct": 30.0
+}

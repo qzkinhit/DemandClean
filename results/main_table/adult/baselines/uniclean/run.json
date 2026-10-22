@@ -1,0 +1,5 @@
+{
+  "dataset": "adult",
+  "method": "UniClean",
+  "seconds": 68.0
+}

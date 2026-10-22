@@ -1,0 +1,40 @@
+# Recorded console output of the run.
+======================================================================
+DemandClean | dataset: flights | variant: full | seed: 0
+Task: classification | reward model: random_forest | detector: hybrid | agent: dueling_two_stage | inference: offline
+Episodes: 300 | training parameters: {'n_episodes': 300, 'raha_detector': False}
+======================================================================
+
+  60/20/20 split: train=1425, val=475, test=476
+  Dataset: flights
+  Dirty:   (1425, 6)
+  Features: 6, label: arrival_delay_bucket
+  Categorical cols: {'act_dep_time', 'sched_arr_time', 'act_arr_time', 'sched_dep_time', 'flight', 'src'}
+  LE fit: dirty only (1425 rows)
+  SS fit: dirty only (1425 rows)
+  FD rules: 0
+  encoded: X_dirty_train=(1425, 6), X_clean_train=(1425, 6), X_clean_val=(475, 6), X_clean_test=(476, 6)
+
+[Step 1] creating DemandClean instance...
+
+[Step 2] training (300 episodes)...
+[02:39:07] INFO:   Clean base selection (5-fold CV weighted by the fraction of rows kept):
+[02:39:07] INFO:     DeleteFix: 750 rows, CV=0.9333, weight=0.725, weighted=0.6771
+[02:39:07] INFO:     VE-Fill:   1425 rows, CV=0.9018, weight=1.000, weighted=0.9018
+[02:39:07] INFO:     -> chosen: VE-Fill (1425 rows)
+[02:56:30] INFO: Model saved: results/main_table/flights/demandclean/model/agent.pt
+  [time] training: 1044.80s
+
+[Step 3] inference (offline)...
+  repair plan: 4 ground-truth values requested
+  ground-truth repairs: 4
+  operations: {no_op: 152, gt_repair: 4, delete: 0, ve_replace: 1197}
+  [time] inference: 15.93s
+
+[Step 4] detection accuracy...
+  P_d=1.0000 R_d=0.4546 F1=0.6251
+
+[Step 5] ground-truth cells: seed set 0 + repairs 4 = 4
+  time: {'detection': 0.0, 'training': 1044.8, 'inference': 15.93, 'total': 1071.37}
+
+Done in 1071.4s. Output: results/main_table/flights/demandclean

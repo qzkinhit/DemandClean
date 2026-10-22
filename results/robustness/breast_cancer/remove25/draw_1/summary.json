@@ -1,0 +1,33 @@
+{
+  "dataset": "breast_cancer",
+  "variant": "full",
+  "experiment": "robustness",
+  "task": "classification",
+  "n_episodes": 300,
+  "data_shape": [
+    419,
+    9
+  ],
+  "cleaned_shape": [
+    343,
+    9
+  ],
+  "operations": {
+    "no_action": 23,
+    "repair_value": 32,
+    "delete": 76,
+    "replace_nearby": 157
+  },
+  "detection": {
+    "overall": {
+      "precision": 0.7485029940119761,
+      "recall": 0.7621951219512195,
+      "f1": 0.755287009063444,
+      "tp": 250,
+      "fp": 84,
+      "fn": 78,
+      "gt_count": 328,
+      "det_count": 334
+    }
+  }
+}

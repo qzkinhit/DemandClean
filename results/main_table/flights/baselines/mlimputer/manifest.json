@@ -1,0 +1,31 @@
+{
+  "id": "main_table/flights/baselines/mlimputer",
+  "dataset": "flights",
+  "role": "baselines",
+  "method": "MLImputer",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 19008,
+  "scoring": {
+    "model": "dt",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "618581c8754a4de1c9c3a04845ed2dcb04a72ca299b95379f5b451c714ecec1c",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table flights:mlimputer:results/main_table/flights/baselines/mlimputer/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "score_records.json",
+    "scores.json"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "mercedes",
+    "model": "rf",
+    "metric": "r2",
+    "test": 0.3987858516041476,
+    "n_train_rows": 2525,
+    "method": "Raha+Baran",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "mercedes",
+    "model": "ridge",
+    "metric": "r2",
+    "test": 0.25137808830220376,
+    "n_train_rows": 2525,
+    "method": "Raha+Baran",
+    "encoding": "train_fitted"
+  }
+]

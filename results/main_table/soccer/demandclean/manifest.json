@@ -1,0 +1,77 @@
+{
+  "run_id": "main_table/soccer/demandclean",
+  "status": "complete",
+  "method": "DemandClean",
+  "variant": "full",
+  "dataset": "soccer",
+  "command": "python scripts/run_demandclean.py --config configs/datasets/soccer.yaml --variant full --unseen-categories nearest",
+  "arguments": {
+    "n_episodes": 300,
+    "max_truth_budget": 0,
+    "raha_detector": false
+  },
+  "seed": null,
+  "configuration": {
+    "detector": "hybrid",
+    "agent": "dueling_two_stage",
+    "inference": "online",
+    "split": "train_val_test",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300,
+      "max_truth_budget": 0,
+      "raha_detector": false
+    },
+    "evaluation": {
+      "unseen_categories": "nearest"
+    }
+  },
+  "versions": {
+    "code": "this code base",
+    "packages": "not recorded in the run log"
+  },
+  "start_time": "2026-06-14T13:10:43+08:00",
+  "end_time": "2026-06-14T13:30:23+08:00",
+  "files": [
+    "attribution.json",
+    "attribution_operation.json",
+    "cleaned.csv",
+    "cleaned_encoded.npz",
+    "demandclean.log",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "redr.json",
+    "run.log",
+    "scores.json",
+    "stderr.log",
+    "summary.json"
+  ],
+  "provenance": {
+    "manifest": "synthesized from the run log header and the run report",
+    "log": "console output of the run",
+    "log_matches_artifacts": {
+      "ground_truth_repairs": true,
+      "operations": true
+    },
+    "cleaned_csv": "rebuilt from cleaned_encoded.npz by evaluation/redecode_npz.py",
+    "artifact_sha256": {
+      "cleaned.csv": "b37fe382d372e8746be5318132242f275e3a70f54bce64b9e5a24198ca6c0535",
+      "cleaned_encoded.npz": "4087b61bc83bcb0a89082aa7f00f4fa9cf69bacdc8990a053077365b4747c7d1",
+      "model/agent_stage1.pt": "479cfd8b677c58a12239e5bdca00d5371057abbf59cc56493bd1664a39a280a8",
+      "model/agent_stage2.pt": "096cb0a15efc02794dbd720c38464985fbe5ead5bdb8c4b381f0c06e61c2cca5"
+    },
+    "ground_truth_accounting": "All non-index values in labeled calibration records, plus policy GT repairs."
+  },
+  "notes": "the run encoded categories of the clean test rows that are absent from the dirty training split by edit distance (nearest known category), so it is scored with --nearest",
+  "scoring": "scored with evaluation/paper_score.py --nearest, the encoding of the categories of the run",
+  "ground_truth_cells": 0,
+  "reproduction": {
+    "evaluation": "python evaluation/paper_score.py results/main_table/soccer/demandclean",
+    "checkpoint": "results/main_table/soccer/demandclean/model",
+    "model_save_prefix": "model/agent.pt",
+    "model_files": [
+      "model/agent_stage1.pt",
+      "model/agent_stage2.pt"
+    ]
+  }
+}

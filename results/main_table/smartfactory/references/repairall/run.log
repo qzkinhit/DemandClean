@@ -1,0 +1,14 @@
+Run started at 2026-10-17 01:12:31
+RepairAll baseline (every error replaced by its clean value)
+dirty table: data/smartfactory/dirty_index.csv (training rows)
+clean table: data/smartfactory/clean_index.csv (training rows)
+task: smartfactory_repairall
+output data saved: smartfactory_repairall_cleaned.csv
+input rows: 14187
+repaired cells: 255366
+run time: 9.46 s
+status: success
+ground-truth cost: 255366
+
+results saved to: smartfactory_repairall
+log file: smartfactory_repairall.log

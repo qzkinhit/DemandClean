@@ -1,0 +1,83 @@
+{
+  "dataset": "bike",
+  "method": "DemandClean",
+  "variant": "arch",
+  "seed": 0,
+  "status": "complete",
+  "command": "python scripts/run_demandclean.py --config results/ablation/bike/arch/config.yaml --variant arch --seed 0",
+  "score_command": "python evaluation/paper_score.py results/ablation/bike/arch",
+  "configuration": {
+    "config": "config.yaml",
+    "variant_definitions": "configs/variants.yaml",
+    "detector": "hybrid",
+    "agent": "two_stage",
+    "inference": "online",
+    "reward_model": "random_forest",
+    "training": {
+      "n_episodes": 300,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 0.3,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "agent_parameters": {
+      "state_size": 10,
+      "gamma": 0.95,
+      "epsilon_start": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay": 0.995,
+      "learning_rate": 0.0005,
+      "batch_size": 64,
+      "memory_size": 10000,
+      "target_update_freq": 5,
+      "missing_rate_range": [
+        0.02,
+        0.08
+      ],
+      "semantic_rate_range": [
+        0.05,
+        0.15
+      ],
+      "syntactic_rate_range": [
+        0.1,
+        0.25
+      ],
+      "label_rate_range": [
+        0.0,
+        0.05
+      ],
+      "auto_select_base": true,
+      "base_cv_folds": 5
+    },
+    "reward_model_kwargs": {
+      "n_estimators": 10,
+      "max_depth": 8
+    },
+    "eval_sample_ratio": 1.0
+  },
+  "start_time": "2026-10-17T08:24:53+08:00",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "3383380fcda64b4670c57c54b4bbd5b648625de399b28ee58ddfe18af61a7531",
+      "model/agent_stage1.pt": "f3fd735b79bdde9eff800142ba6ee63d3afa14a7a9a0fcd355e67ca8b3fbcf03",
+      "model/agent_stage2.pt": "b0399d321e5998a70651b3fd0594e916b42f46d3ff91fb9c59000adbfc346a45"
+    },
+    "log": "console output of the run",
+    "checkpoint": "Original checkpoint bytes, renamed by removing the source version prefix. The runner logs a common agent.pt stem; a two-stage agent writes agent_stage1.pt and agent_stage2.pt.",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "history_episodes": 300,
+    "queue_completion_record_present": true
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "model/agent_stage1.pt",
+    "model/agent_stage2.pt",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ]
+}

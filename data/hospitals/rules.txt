@@ -1,0 +1,19 @@
+[DOMAIN]
+Condition: ENUM {children s asthma care, heart attack, heart failure, pneumonia, surgical infection prevention}
+EmergencyService: ENUM {no, yes}
+State: ENUM {ak, al}
+
+[FD]
+HospitalName => PhoneNumber
+HospitalName => ZipCode
+HospitalName => ProviderNumber
+MeasureCode => MeasureName
+MeasureCode => Stateavg
+ProviderNumber => HospitalName
+HospitalName => Address1
+HospitalName => HospitalOwner
+City => CountyName
+ZipCode => EmergencyService
+HospitalName => City
+MeasureName => MeasureCode
+HospitalName => State

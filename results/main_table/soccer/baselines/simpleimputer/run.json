@@ -1,0 +1,4 @@
+{
+  "dataset": "soccer",
+  "method": "SimpleImputer"
+}

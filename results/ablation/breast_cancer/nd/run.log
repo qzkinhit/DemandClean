@@ -1,0 +1,36 @@
+# Console output of the run.
+
+DemandClean unified runner
+Datasets: ['breast_cancer']
+Enabled versions: ['v1_oracle_dueling_single']
+Episodes: 300
+Verbose: False
+Oracle mode: ON (60/20/20 three-way split; disable with --no-oracle)
+Seed: 0
+  60/20/20 split: train=419, val=140, test=140
+  Dataset: breast_cancer
+  Dirty:   (419, 9)
+  Features: 9, label: class
+  Categorical cols: (none)
+  LE fit: dirty only (419 rows)
+  SS fit: dirty only (419 rows)
+  FD rules: 0
+  encoding done: X_dirty_train=(419, 9), X_clean_train=(419, 9), X_clean_val=(140, 9), X_clean_test=(140, 9)
+Version: v1_oracle_dueling_single
+Dataset: breast_cancer | task: classification | model: random_forest
+Detector: oracle | Agent: dueling_two_stage | inference: single_phase
+Episodes: 300 | output dir: .
+[Step 1] creating DemandClean instance...
+  [time] Step 1 (init): 0.00s
+[Step 2] training (300 episodes)...
+  model saved: ./model/v1_oracle_dueling_single_agent.pt
+  [time] Step 2 (train): 232.40s
+[Step 3] inference (mode: single_phase)...
+  ground truth used: 92
+  action counts: {'no_action': 0, 'repair_value': 92, 'delete': 26, 'replace_nearby': 204}
+  encoded version saved: ./data/v1_oracle_dueling_single_cleaned_encoded.npz
+  [time] Step 3 (infer): 12.92s
+[Step 4] detector accuracy evaluation...
+  [time] Step 4 (detector eval): 0.01s
+  Version v1_oracle_dueling_single done! elapsed: 251.70s
+All done! total: 253.65s

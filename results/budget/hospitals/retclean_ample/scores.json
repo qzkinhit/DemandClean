@@ -1,0 +1,11 @@
+{
+  "dataset": "hospitals",
+  "method": "RetClean (ample GT)",
+  "model": "rf",
+  "metric": "accuracy",
+  "test": 0.995,
+  "nearest": true,
+  "n_train_rows": 600,
+  "gt_cells": 5700,
+  "gt_pct": 30.0
+}

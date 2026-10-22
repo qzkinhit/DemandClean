@@ -1,0 +1,20 @@
+{
+  "dataset": "har",
+  "method": "Raha+Baran",
+  "model": "agglomerative",
+  "metric": "silhouette",
+  "test": 0.5014398756653825,
+  "all_models": {
+    "agglomerative": 0.5014398756653825,
+    "kmeans": 0.5155936968545558
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 40369,
+  "table_rows": 42000,
+  "gt_cells": 80,
+  "gt_pct": 0.02857142857142857,
+  "redr": {
+    "redr": 0.0005157829585310501
+  }
+}

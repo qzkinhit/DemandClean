@@ -1,0 +1,30 @@
+{
+  "dataset": "mercedes",
+  "variant": "full",
+  "model": "rf",
+  "metric": "r2",
+  "nearest": false,
+  "test": 0.42835799763840754,
+  "n_train_rows": 2525,
+  "n_test": 842,
+  "gt_cells": 32391,
+  "gt_repairs": 24851,
+  "gt_seed_set": 7540,
+  "gt_pct": 2.0413,
+  "model_scores": {
+    "rf": 0.42835799763840754,
+    "ridge": 0.35846574716411106,
+    "gb": 0.4462389674324171
+  },
+  "references": {
+    "NoFix": 0.3599827689119728,
+    "RepairAll": 0.3936883946813713
+  },
+  "scikit_learn": "1.3.2",
+  "tol_rel": 2.028599889948133,
+  "redr": {
+    "r_before": 2525,
+    "r_after": 2525,
+    "redr": 0.0
+  }
+}

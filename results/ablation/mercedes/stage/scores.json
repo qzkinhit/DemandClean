@@ -1,0 +1,16 @@
+{
+  "dataset": "mercedes",
+  "variant": "stage",
+  "model": "rf",
+  "metric": "r2",
+  "test": 0.4209406878450601,
+  "tol_rel": 1.8085384128495043,
+  "references": {
+    "NoFix": 0.3599827689119728,
+    "RepairAll": 0.3936883946813713
+  },
+  "n_train_rows": 2236,
+  "n_test": 842,
+  "artifact": "cleaned_encoded.npz",
+  "artifact_sha256": "4d504a04372164ee45d076fa69edac969bf8cc5ae64b97b590d54f5c16d6e047"
+}

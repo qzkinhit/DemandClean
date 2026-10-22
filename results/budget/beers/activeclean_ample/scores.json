@@ -1,0 +1,13 @@
+{
+ "dataset": "beers",
+ "method": "ActiveClean (ample GT)",
+ "model": "rf",
+ "metric": "accuracy",
+ "test": 0.34029227557411273,
+ "n_train_rows": 1441,
+ "redr": {
+  "r_before": 1446,
+  "r_after": 946,
+  "redr": 0.3457814661134163
+ }
+}

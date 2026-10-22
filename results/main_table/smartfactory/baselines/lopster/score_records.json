@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "smartfactory",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.7024740960033834,
+    "n_train_rows": 14187,
+    "n_test": 4729,
+    "rows": 14187,
+    "sklearn": "1.3.2",
+    "method": "Lopster",
+    "encoding": "train_fitted"
+  },
+  {
+    "dataset": "smartfactory",
+    "model": "gb",
+    "metric": "accuracy",
+    "test": 0.5893423556777332,
+    "n_train_rows": 14187,
+    "n_test": 4729,
+    "rows": 14187,
+    "sklearn": "1.3.2",
+    "method": "Lopster",
+    "encoding": "train_fitted"
+  }
+]

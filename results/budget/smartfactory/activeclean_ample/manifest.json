@@ -1,0 +1,20 @@
+{
+  "id": "budget/smartfactory/activeclean_ample",
+  "dataset": "smartfactory",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 9500,
+  "seconds": 10.682,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "7fd8bc972b48c01702c9e50a3d617895067ced54a76f2f2b3dc427026bcc53cf"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "budget/breast_cancer/retclean_dcbudget",
+  "dataset": "breast_cancer",
+  "role": "budget",
+  "method": "RetClean (lower GT level)",
+  "ground_truth_cells": 210,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "ffc77cd4bc3289b43d282cc8837cf3a8ee3c2a333ca5b9627f35b217b5bd1fcd"
+    }
+  }
+}

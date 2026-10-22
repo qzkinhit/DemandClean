@@ -1,0 +1,20 @@
+{
+  "id": "budget/bike/lopster_ample",
+  "dataset": "bike",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 83408,
+  "seconds": 354.56,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "e5e30b69be081364b23e56306f407516e1d84c16b88dd2c90ec303ccd331e565"
+    }
+  }
+}

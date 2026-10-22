@@ -1,0 +1,33 @@
+{
+  "id": "main_table/smartfactory/baselines/mlimputer",
+  "dataset": "smartfactory",
+  "role": "baselines",
+  "method": "MLImputer",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 472900,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "053a6ced22459b90a21a88759dca9f4a49e0b958164c8acf48e1510f1019619d",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table smartfactory:mlimputer:results/main_table/smartfactory/baselines/mlimputer/cleaned.csv.gz",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

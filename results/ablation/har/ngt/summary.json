@@ -1,0 +1,20 @@
+{
+  "dataset": "har",
+  "variant": "ngt",
+  "task": "clustering",
+  "n_episodes": 300,
+  "data_shape": [
+    42000,
+    3
+  ],
+  "cleaned_shape": [
+    40826,
+    3
+  ],
+  "operations": {
+    "no_action": 5,
+    "repair_value": 0,
+    "delete": 1174,
+    "replace_nearby": 21989
+  }
+}

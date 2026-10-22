@@ -1,0 +1,54 @@
+{
+  "dataset": "nasa",
+  "experiment": "transfer",
+  "status": "complete",
+  "seed": 0,
+  "seed_scope": "inference and detector calibration",
+  "mode": "checkpoint inference",
+  "configuration": {
+    "config": "config.yaml",
+    "variant": "full",
+    "agent": "dueling_two_stage",
+    "detector": "hybrid",
+    "inference": "online",
+    "training": {
+      "n_episodes": 200,
+      "repair_lambda": 0.03,
+      "max_repair_ratio": 1.0,
+      "max_truth_budget": null,
+      "reward_model_type": "random_forest"
+    },
+    "detector_initialization": "DemandClean._build_auto_detector: fit the detector on complete dirty rows before inference.",
+    "config_sha256": "0d9e7b946559055279933bcce0ce64e6ee764a1bc699890a3114c91b11e34160"
+  },
+  "checkpoint": "results/robustness/models/nasa",
+  "rules": "results/transfer/rules/nasa.txt",
+  "command": "python scripts/run_demandclean.py --config results/transfer/nasa/nasa/config.yaml --variant full --seed 0 --rules results/transfer/rules/nasa.txt --checkpoint results/robustness/models/nasa --out results/runs/transfer_nasa_nasa",
+  "score_command": "python evaluation/paper_score.py results/transfer/nasa/nasa",
+  "provenance": {
+    "artifact_sha256": {
+      "cleaned_encoded.npz": "aafaa80ceae2a5238ad083c5b00253a23993ebb9acfb806305ac5db521238537"
+    },
+    "rules_sha256": "7d1526c68e6c91b8bd8d0a6fc09062e50f7aabaf9565a65bc61b464f006866ee",
+    "checkpoint_sha256": {
+      "agent_stage1.pt": "ccedf1213fa1353f93bb2b83c89ff7bdfd25b5a36d870b0fcf903116733a17a5",
+      "agent_stage2.pt": "cb068976f1cb56d7edc7729005b4d898552b2ba80c9d82249b8729c224e0a92d"
+    },
+    "log": "console output of the run",
+    "scores": "recorded evaluation of this output"
+  },
+  "completion": {
+    "console_finished": true,
+    "training_seconds": 0.0,
+    "inference_seconds": 84.7
+  },
+  "files": [
+    "cleaned_encoded.npz",
+    "config.yaml",
+    "run.log",
+    "scores.json",
+    "summary.json"
+  ],
+  "source_dataset": "nasa",
+  "target_dataset": "nasa"
+}

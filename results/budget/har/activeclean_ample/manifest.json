@@ -1,0 +1,20 @@
+{
+  "id": "budget/har/activeclean_ample",
+  "dataset": "har",
+  "role": "budget",
+  "method": "ActiveClean (ample GT)",
+  "ground_truth_cells": 2000,
+  "seconds": 3.433,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "43a174d16b48ee84c6eb588480ea6eb2b6fdec311e6ed03ed047efb1e10bb957"
+    }
+  }
+}

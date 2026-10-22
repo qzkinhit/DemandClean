@@ -1,0 +1,11 @@
+[
+  {
+    "dataset": "hospitals",
+    "model": "rf",
+    "metric": "accuracy",
+    "test": 0.995,
+    "n_train_rows": 382,
+    "method": "DeleteAll",
+    "encoding": "nearest"
+  }
+]

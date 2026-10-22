@@ -1,0 +1,33 @@
+{
+  "id": "main_table/har/baselines/retclean",
+  "dataset": "har",
+  "role": "baselines",
+  "method": "RetClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 84000,
+  "gt_pct": 30.0,
+  "gt_denominator": 280000,
+  "scoring": {
+    "model": "agglomerative",
+    "metric": "silhouette",
+    "split_seed": 42,
+    "encoding": "train_fitted",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "a0dcc1ef5e3ee9044df012d83f55945734afe4482cdf86e5ff3dc1178c73a507",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table har:retclean:results/main_table/har/baselines/retclean/cleaned.csv.gz",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "redr.json",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ]
+}

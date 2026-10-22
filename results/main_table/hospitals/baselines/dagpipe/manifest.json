@@ -1,0 +1,31 @@
+{
+  "id": "main_table/hospitals/baselines/dagpipe",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "DAGPipe",
+  "status": "final",
+  "artifact": "transformed.npz",
+  "ground_truth_cells": 0,
+  "gt_pct": 0.0,
+  "gt_denominator": 19000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "transformed_features",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "artifact_sha256": "f692a18a4c30fdbcf5995d5b5ac53d55734110adde61e13269b5f88e4f0babce",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:dagpipe:results/main_table/hospitals/baselines/dagpipe/transformed.npz --nearest",
+  "seed": 0,
+  "files": [
+    "manifest.json",
+    "run.json",
+    "scores.json",
+    "transformed.npz"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "main_table/hospitals/baselines/retclean",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "RetClean",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 5700,
+  "gt_pct": 30.0,
+  "gt_denominator": 19000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "f93c5e39fda7ffdf6816c12890b51fd108c9d443f61a917f823863aea1e210ae",
+    "scores": "recorded evaluation of this output",
+    "reported_model": "first-choice model of the dataset"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:retclean:results/main_table/hospitals/baselines/retclean/cleaned.csv.gz --nearest",
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ]
+}

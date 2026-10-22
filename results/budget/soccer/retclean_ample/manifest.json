@@ -1,0 +1,21 @@
+{
+  "id": "budget/soccer/retclean_ample",
+  "dataset": "soccer",
+  "role": "budget",
+  "method": "RetClean (ample GT)",
+  "ground_truth_cells": 31830,
+  "seed": 42,
+  "files": [
+    "cleaned.csv.gz",
+    "run.json",
+    "scores.json",
+    "targets.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": null,
+    "sha256": {
+      "cleaned.csv.gz": "6be644f77b47eb4a78c4d0d76dc662f8b526a36164146ec5461e80c3e2671a42"
+    }
+  }
+}

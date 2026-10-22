@@ -1,0 +1,13 @@
+{
+ "dataset": "soilmoisture",
+ "method": "Lopster (ample GT)",
+ "model": "gb",
+ "metric": "r2",
+ "test": 0.8595539311570952,
+ "n_train_rows": 407,
+ "redr": {
+  "r_before": 407,
+  "r_after": 407,
+  "redr": 0.0
+ }
+}

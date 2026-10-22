@@ -1,0 +1,47 @@
+Run started at 2026-10-18 13:49:18
+Lopster data cleaning
+dataset: adult
+data path: Data_lop50
+task: adult_lopster_ample
+latent dimension: 120
+epochs: 100
+
+preparing the Lopster data format (written to the output directory, the input tables stay unchanged)...
+  source files: clean_index.csv, dirty_index.csv
+  Lopster data directory: adult
+
+writing the Lopster training data (without index):
+  - index column removed
+  - saved to: clean.csv
+  - shape: (13566, 16) -> (13566, 15)
+
+writing the Lopster cleaning data (without index):
+  - index column removed
+  - saved to: dirty01.csv
+  - shape: (27133, 16) -> (27133, 15)
+
+writing the evaluation data (with index, encoded):
+  - clean_encoded.csv: clean_encoded.csv
+  - dirty_encoded.csv: dirty_encoded.csv
+
+Lopster data prepared
+
+preprocessed data: adult
+run time: 857.63 s
+status: success
+ground-truth cost: 13566 rows (used to train the VAE)
+
+post-processing the Lopster output...
+  Lopster output rows: 27133
+  input rows: 27133
+  index column restored
+  final column order: ['index', 'age', 'workclass', 'fnlwgt', 'education', 'educational_num', 'marital_status', 'occupation', 'relationship', 'race', 'gender', 'capital_gain', 'capital_loss', 'hours_per_week', 'native_country', 'income']
+  saved to: cleaned.csv
+  final rows: 27133
+
+evaluation data encoded (same format as the output):
+  - dirty: dirty_encoded.csv
+  - cleaned: cleaned.csv
+  - clean: clean_encoded.csv
+
+results saved to: adult_lopster_ample

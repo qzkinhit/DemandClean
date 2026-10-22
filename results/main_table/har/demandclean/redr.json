@@ -1,0 +1,11 @@
+{
+ "dataset": "har",
+ "method": "demandclean",
+ "role": "demandclean",
+ "table": "results/main_table/har/demandclean/cleaned.csv",
+ "scope_rows": 42000,
+ "kept_rows": 21487,
+ "r_before": 19388,
+ "r_after": 751,
+ "redr": 0.9612646998143182
+}

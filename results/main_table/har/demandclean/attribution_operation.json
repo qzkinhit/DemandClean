@@ -1,0 +1,32 @@
+{
+  "dataset": "har",
+  "model": "agglomerative",
+  "reads_clean_training_rows": false,
+  "v_empty": 0.5004163878039727,
+  "v_full": 0.8992418921570298,
+  "run_score": 0.8992418921570298,
+  "full_equals_run": true,
+  "phi": {
+    "write": 0.004374614244319341,
+    "del": 0.39445089010873774
+  },
+  "phi_hat": {
+    "write": 0.011,
+    "del": 0.989
+  },
+  "coalitions": {
+    "none": 0.5004163878039727,
+    "write": 0.5073181314567454,
+    "del": 0.8973944073211638,
+    "write+del": 0.8992418921570298
+  },
+  "cells": {
+    "write": 53,
+    "del_rows": 20513
+  },
+  "run": "results/main_table/har/demandclean",
+  "provenance": {
+    "encoded_sha256": "184f40ad085ea9730e39a0ed8c10d4565dfd29c19a5e2fbcbefede8ac39ebe3f",
+    "ordered_index_format": "Decimal-normalized index values, one per line in output order."
+  }
+}

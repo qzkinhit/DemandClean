@@ -1,0 +1,20 @@
+{
+  "id": "budget/har/lopster_ample",
+  "dataset": "har",
+  "role": "budget",
+  "method": "Lopster (ample GT)",
+  "ground_truth_cells": 84000,
+  "seconds": 341.68,
+  "files": [
+    "cleaned.csv.gz",
+    "run.log",
+    "scores.json"
+  ],
+  "provenance": {
+    "table": "cleaned output of the run, compressed with gzip",
+    "log": "console output of the run",
+    "sha256": {
+      "cleaned.csv.gz": "fbc147520b55e46a1e9e80294b0a43cb6a76e8879013ce40e54457e6882e5885"
+    }
+  }
+}

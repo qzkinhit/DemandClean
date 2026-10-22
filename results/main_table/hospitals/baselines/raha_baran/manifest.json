@@ -1,0 +1,33 @@
+{
+  "id": "main_table/hospitals/baselines/raha_baran",
+  "dataset": "hospitals",
+  "role": "baselines",
+  "method": "Raha+Baran",
+  "status": "final",
+  "artifact": "cleaned.csv.gz",
+  "ground_truth_cells": 380,
+  "gt_pct": 2.0,
+  "gt_denominator": 20000,
+  "scoring": {
+    "model": "rf",
+    "metric": "accuracy",
+    "split_seed": 42,
+    "encoding": "nearest",
+    "scikit_learn": "1.3.2"
+  },
+  "provenance": {
+    "output_content_sha256": "162ef121a6a3b4f0a1dcfc71db7ee5c9327570b53128e742a90a1ebaa0530afd",
+    "execution_log_format": "translated excerpt; numerical parameters preserved",
+    "scores": "recorded evaluation of this output",
+    "score_records": "only the reported first and second model records are included"
+  },
+  "evaluation_command": "python evaluation/rescore_tables.py --table hospitals:raha_baran:results/main_table/hospitals/baselines/raha_baran/cleaned.csv.gz --nearest",
+  "files": [
+    "cleaned.csv.gz",
+    "manifest.json",
+    "run.json",
+    "run.log",
+    "score_records.json",
+    "scores.json"
+  ]
+}

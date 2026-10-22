@@ -1,0 +1,12 @@
+Run started at 2026-10-17 00:22:40
+DoNothing baseline (no cleaning)
+dirty table: data/soilmoisture/dirty_index.csv (training rows)
+clean table: data/soilmoisture/clean_index.csv (training rows)
+task: soilmoisture_donothing
+output data saved: soilmoisture_donothing_cleaned.csv
+run time: 0.13 s
+status: success
+ground-truth cost: 0 (fully automatic, no operation)
+
+results saved to: soilmoisture_donothing
+log file: soilmoisture_donothing.log

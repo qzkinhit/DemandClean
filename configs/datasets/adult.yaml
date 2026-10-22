@@ -1,0 +1,25 @@
+dataset: adult
+source: REIN
+task: classification
+label_col: income
+categorical_cols:
+- education
+- gender
+- marital_status
+- native_country
+- occupation
+- race
+- relationship
+- workclass
+downstream_model: rf
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: online
+total_cells: 678330
+training:
+  n_episodes: 300
+evaluation:
+  unseen_categories: nan
+second_model: gb
+seed: 0

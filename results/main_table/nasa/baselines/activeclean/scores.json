@@ -1,0 +1,21 @@
+{
+  "dataset": "nasa",
+  "method": "ActiveClean",
+  "model": "lr",
+  "metric": "r2",
+  "test": -0.0002964210232276887,
+  "all_models": {
+    "lr": -0.0002964210232276887,
+    "rf": 0.6516908861906778
+  },
+  "nearest": false,
+  "scikit_learn": "1.3.2",
+  "n_train_rows": 901,
+  "n_test": 301,
+  "table_rows": 901,
+  "gt_cells": 2700,
+  "gt_pct": 29.940119760479043,
+  "redr": {
+    "redr": 0.6296296296296297
+  }
+}

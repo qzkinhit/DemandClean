@@ -1,0 +1,5 @@
+{
+  "dataset": "beers",
+  "method": "DeleteAll",
+  "seconds": 0.63
+}

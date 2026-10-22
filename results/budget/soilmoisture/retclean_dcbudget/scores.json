@@ -1,0 +1,11 @@
+{
+  "dataset": "soilmoisture",
+  "method": "RetClean (lower GT level)",
+  "model": "gb",
+  "metric": "r2",
+  "test": 0.9042800094104357,
+  "nearest": false,
+  "n_train_rows": 407,
+  "gt_cells": 2560,
+  "gt_pct": 2.9455081001472756
+}

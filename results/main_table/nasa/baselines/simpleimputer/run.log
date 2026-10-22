@@ -1,0 +1,13 @@
+SimpleImputer data cleaning (mean)
+dirty table: data/nasa/dirty_index.csv
+clean table: data/nasa/clean_index.csv
+task: nasa_simpleimputer
+fill strategy: mean
+repaired data saved: nasa_simpleimputer_cleaned.csv
+run time: 0.05 s
+status: success
+filled cells: 30
+ground-truth cost: 0 (fully automatic)
+
+results saved to: nasa_simpleimputer
+log file: nasa_simpleimputer.log

@@ -1,0 +1,24 @@
+dataset: flights
+source: UniClean
+task: classification
+label_col: arrival_delay_bucket
+categorical_cols:
+- act_arr_time
+- act_dep_time
+- flight
+- sched_arr_time
+- sched_dep_time
+- src
+downstream_model: dt
+metric: accuracy
+reward_model: random_forest
+split: train_val_test
+inference: offline
+total_cells: 16632
+training:
+  n_episodes: 300
+  raha_detector: false
+evaluation:
+  unseen_categories: nearest
+second_model: rf
+seed: 0
