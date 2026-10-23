@@ -36,7 +36,6 @@ SOURCE_RECORD = dict(method='DAGPipe', source='https://zenodo.org/records/204925
                      source_file='https://zenodo.org/records/20492518/files/dagpipe-artifact.zip?download=1',
                      doi='10.5281/zenodo.20492518',
                      sha256='14d8f10f057cc2322328707888b7cf67cac11cdbddc43c8207d882efd418ad72')
-SUPPORTED = ['breast_cancer', 'beers', 'flights', 'soccer', 'hospitals', 'smartfactory', 'adult']
 
 
 def json_write(path, value):
