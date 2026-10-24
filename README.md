@@ -40,7 +40,7 @@ Use each run’s `manifest.json` for its recorded parameters and seed. See the [
 - [Code and evaluation guide](docs/CODE_TOUR.md): implementation structure, evaluation protocol, and commands for the paper’s tables and figures.
 - [FM replay and logs](results/llm/README.md): prompts, responses, and token accounting.
 - [Figures](figures/): plotting scripts and final inputs.
-- Appendix of the paper: full proofs, the sufficiency analysis of the quality state, method details, implementation details, and additional results ([English](docs/appendix.pdf), [中文](docs/appendix_zh.pdf)).
+- Appendix of the paper ([English](docs/appendix.pdf), [中文](docs/appendix_zh.pdf)). It carries what the twelve-page limit left out: the proof that the reachable quality states are dense in the region anchored by the four extreme strategies, the proof that optimal operation selection is NP-complete, the sufficiency analysis that bounds the planning error by the oscillation of performance inside one quality-state fiber, the features of the learned agent and its training setup, the detectors and the value-estimation chain as implemented, and the full per-dataset results with wall-clock runtimes.
 
 The implementation is under [demandclean/](demandclean/), dataset settings under [configs/](configs/), and data with rule libraries under [data/](data/).
 
