@@ -192,7 +192,7 @@ def figure_baselines(out_dir):
         for b in x[:-1] + 0.5:
             ax.axvline(x=b, color='#999999', linewidth=1.2, linestyle=(0, (3, 3)), alpha=0.6, zorder=0)
         ax.set_xticks(x)
-        ax.set_xticklabels(TICKS, rotation=40, ha='right', fontsize=18)
+        ax.set_xticklabels(TICKS, rotation=55, ha='right', fontsize=18)
         ax.set_xlabel(title, fontsize=22, labelpad=-7,
                       fontfamily='Times New Roman', fontweight='bold')
         ax.grid(axis='y', alpha=0.3, linewidth=0.6, linestyle='--', color='#888888')
