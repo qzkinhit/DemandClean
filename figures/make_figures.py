@@ -122,8 +122,10 @@ def figure_baselines(out_dir):
     expected = {(ds, method) for ds in DATASETS for method in METHODS}
     if len(rows) != len(expected) or set(data) != expected:
         raise ValueError('Figure 4 needs exactly one observation per dataset and method. Rebuild its CSV input')
-    panels = [(r'$\mathrm{Tol}_{\mathrm{rel}}$', 'tol_rel', (-1.3, 2.5)), ('REDR', 'redr', (-2.4, 1.08)),
-              ('GT Usage of GT-Using Methods (%)', 'gt_pct', None), ('Detection F1', 'det_f1', (-0.05, 1.08))]
+    panels = [(r'(a) Relative Tolerance $\mathrm{Tol}_{\mathrm{rel}}$', 'tol_rel', (-1.3, 2.5)),
+              ('(b) Record-Level Error Drop (REDR)', 'redr', (-2.4, 1.08)),
+              ('(c) GT Usage of GT-Using Methods (%)', 'gt_pct', None),
+              ('(d) Cell-Level Detection F1', 'det_f1', (-0.05, 1.08))]
     fig, axes = plt.subplots(2, 2, figsize=(13, 11))
     axes = axes.flatten()
     x = np.arange(len(DATASETS))
@@ -191,7 +193,8 @@ def figure_baselines(out_dir):
             ax.axvline(x=b, color='#999999', linewidth=1.2, linestyle=(0, (3, 3)), alpha=0.6, zorder=0)
         ax.set_xticks(x)
         ax.set_xticklabels(TICKS, rotation=40, ha='right', fontsize=18)
-        ax.set_title(title, fontsize=24, pad=8)
+        ax.set_xlabel(title, fontsize=22, labelpad=-7,
+                      fontfamily='Times New Roman', fontweight='bold')
         ax.grid(axis='y', alpha=0.3, linewidth=0.6, linestyle='--', color='#888888')
         ax.set_axisbelow(True)
         if ylim:
