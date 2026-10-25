@@ -5,8 +5,9 @@
     python figures/make_figures.py [--out figures]
 
 Figure 4 has four panels over eight datasets: Tol_rel, record-level REDR, GT usage of the methods
-that read GT and detection F1 of DemandClean and eighteen baselines, including FM (Opus 4.8). DAGPipe
-outputs transformed features and has no REDR or detection F1. Figure 5 has (a) a radar of
+that read GT and detection F1 of DemandClean and eighteen baselines, including FM (Opus 4.8). Only
+DemandClean is drawn as a line; a baseline carries its marker alone except on the GT panel, whose
+four series are curves. DAGPipe outputs transformed features and has no REDR or detection F1. Figure 5 has (a) a radar of
 Tol_rel of DemandClean and of its four ablation variants and (b) the distribution of these values
 over the eight datasets, where the black line and the label mark the mean. The inputs are
 figures/data/fig_baselines.csv and figures/data/fig_ablation.csv. The axis transforms and
@@ -150,6 +151,7 @@ def figure_baselines(out_dir):
             jitter = (midx - len(METHODS) / 2) * 0.04
             ax.plot([xi + jitter for xi in vx], vy, marker=MARKERS[m], markersize=22 if dc else 13,
                     linewidth=4.5 if dc else 2.8, color=COLORS[m], alpha=1.0 if dc else 0.85,
+                    linestyle='-' if dc or key == 'gt_pct' else 'none',
                     zorder=10 if dc else 3, markeredgecolor='#222222', markeredgewidth=2.0 if dc else 1.2,
                     solid_capstyle='round')
         if key == 'gt_pct':
@@ -162,16 +164,18 @@ def figure_baselines(out_dir):
             for b in (gt_axis(10), gt_axis(30)):
                 ax.axhline(y=b, color='#999999', linewidth=0.8, linestyle='--', alpha=0.5, zorder=1)
         if key == 'tol_rel':
-            ax.axhspan(-10, 0, facecolor='#1F77B4', alpha=0.07, zorder=0)
+            ax.axhspan(-10, 0, facecolor='#1F77B4', alpha=0.16, zorder=0)
             ax.axhspan(1, 10, facecolor='#D62728', alpha=0.07, zorder=0)
             ax.axhline(y=0, color='#1F77B4', linewidth=2.6, linestyle=(0, (6, 3)), alpha=0.85, zorder=2)
             ax.axhline(y=1, color='#D62728', linewidth=2.6, linestyle=(0, (6, 3)), alpha=0.85, zorder=2)
             box = dict(boxstyle='round,pad=0.14', facecolor='white', linewidth=1.2, alpha=0.95)
-            ax.text(0.985, 1.10, r'RepairAll ($D_{\mathit{clean}}$)', fontsize=13, color='#D62728',
+            ax.text(0.985, 1.22, r'RepairAll ($D_{\mathit{clean}}$)', fontsize=13, color='#D62728',
                     transform=transforms.blended_transform_factory(ax.transAxes, ax.transData),
-                    va='bottom', ha='right', bbox=dict(box, edgecolor='#D62728'), zorder=20)
-            ax.text(3.5, -0.55, r'NoFix ($D_{\mathit{dirty}}$)', fontsize=12, color='#1F77B4',
-                    va='center', ha='center', bbox=dict(box, edgecolor='#1F77B4'), zorder=20)
+                    va='bottom', ha='right', bbox=dict(box, edgecolor='#D62728', alpha=0.72), zorder=20)
+            nofix = ax.text(1.07, 0.035, r'NoFix ($D_{\mathit{dirty}}$)', fontsize=12, color='#1F77B4',
+                            transform=ax.transAxes, va='center', ha='right', clip_on=False, zorder=20,
+                            bbox=dict(box, edgecolor='#1F77B4', alpha=0.72))
+            nofix.set_in_layout(False)
             ax.set_yscale('function', functions=squash_below(0.3, 0.0))
             ax.set_yticks([-1.0, 0.0, 1.0, 2.0])
             ax.set_yticklabels(['<-1', '0', '1', '2'])
@@ -183,6 +187,8 @@ def figure_baselines(out_dir):
             ax.set_yscale('function', functions=detection_axis())
             ax.set_yticks([0.0, 0.25, 0.5, 0.75, 0.9, 1.0])
             ax.set_yticklabels(['0', '0.25', '0.5', '0.75', '0.9', '1'])
+        for b in x[:-1] + 0.5:
+            ax.axvline(x=b, color='#999999', linewidth=1.2, linestyle=(0, (3, 3)), alpha=0.6, zorder=0)
         ax.set_xticks(x)
         ax.set_xticklabels(TICKS, rotation=40, ha='right', fontsize=18)
         ax.set_title(title, fontsize=24, pad=8)
@@ -197,7 +203,8 @@ def figure_baselines(out_dir):
 
     def handle(m):
         dc = m == 'DemandClean'
-        return Line2D([0], [0], marker=MARKERS[m], color=COLORS[m], linewidth=3.5 if dc else 2.2,
+        return Line2D([0], [0], marker=MARKERS[m], color=COLORS[m], linewidth=3.5 if dc else 0,
+                      linestyle='-' if dc else 'none',
                       markersize=16 if dc else 11, markeredgecolor='#222222', markeredgewidth=1.8 if dc else 0.8,
                       label=LABELS[m] + ('      ' if dc else ''))
     blank = Line2D([0], [0], color='none', marker='', linestyle='', label=' ')
@@ -294,17 +301,17 @@ def figure_ablation(out_dir):
     ax2.set_xticklabels(names, fontsize=22, rotation=25, ha='right')
     ax2.set_ylabel(r'$\mathrm{Tol}_{\mathrm{rel}}$', fontsize=24)
     lo, hi = ax2.get_ylim()
-    ax2.axhspan(lo, 0.0, facecolor='#1F77B4', alpha=0.07, zorder=0)
+    ax2.axhspan(lo, 0.0, facecolor='#1F77B4', alpha=0.16, zorder=0)
     ax2.axhspan(1.0, hi, facecolor='#D62728', alpha=0.07, zorder=0)
     ax2.axhline(y=1.0, color='#D62728', linewidth=3.0, linestyle=(0, (6, 3)), alpha=0.9, zorder=2)
     ax2.axhline(y=0.0, color='#1F77B4', linewidth=3.0, linestyle=(0, (6, 3)), alpha=0.9, zorder=2)
     ax2.set_ylim(lo, hi)
-    note_box = dict(boxstyle='round,pad=0.12', facecolor='white', edgecolor='none', alpha=0.85)
-    ax2.text(len(names) + 0.4, 1.05, r'RepairAll ($D_{\mathit{clean}}$)', fontsize=18,
-             color='#D62728', ha='right', va='bottom',
-             bbox=note_box, zorder=8)
+    note_box = dict(boxstyle='round,pad=0.16', facecolor='white', linewidth=1.6, alpha=0.72)
+    ax2.text(2.9, 1.17, r'RepairAll ($D_{\mathit{clean}}$)', fontsize=18,
+             color='#D62728', ha='center', va='bottom',
+             bbox=dict(note_box, edgecolor='#D62728'), zorder=8)
     ax2.text(4, -0.15, r'NoFix ($D_{\mathit{dirty}}$)', fontsize=18, color='#1F77B4',
-             ha='center', va='top', bbox=note_box, zorder=8)
+             ha='center', va='top', bbox=dict(note_box, edgecolor='#1F77B4'), zorder=8)
     ax2.tick_params(axis='y', labelsize=20)
     for label in ax2.get_yticklabels():
         label.set_bbox(dict(tick_box))
