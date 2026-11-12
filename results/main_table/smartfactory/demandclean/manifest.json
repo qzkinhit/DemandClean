@@ -43,7 +43,7 @@
     "summary.json"
   ],
   "provenance": {
-    "manifest": "synthesized from the run log header and the run report",
+    "manifest": "compiled from the run log header and the run report",
     "log": "console output of the run",
     "log_matches_artifacts": {
       "ground_truth_repairs": true,

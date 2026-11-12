@@ -20,7 +20,7 @@ Paths in this guide are relative to the repository root. [The result index](../r
 
 The runner reads a dataset configuration and a variant from `configs/variants.yaml`, prepares the training split, builds the detector and reward model, trains or loads the policy, and exports the cleaned output. Dataset configuration and the run's manifest together specify the final execution. The five available variant identifiers are `full`, `ngt`, `nd`, `arch`, and `stage`.
 
-For example, the recorded breast_cancer setting uses the default seed:
+For example, the recorded breast_cancer setting runs with:
 
 ```sh
 python scripts/run_demandclean.py --config configs/datasets/breast_cancer.yaml \

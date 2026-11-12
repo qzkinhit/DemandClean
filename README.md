@@ -31,11 +31,11 @@ python scripts/run_demandclean.py --config configs/datasets/breast_cancer.yaml \
     --variant full --out results/runs/breast_cancer
 ```
 
-Use each run’s `manifest.json` for its recorded parameters and seed. See the [reproduction guide](docs/CODE_TOUR.md) for checkpoint inference, downstream scoring, attribution, and figure generation.
+Each run’s `manifest.json` records its command and parameters. We ran DemandClean with multiple random seeds, and every released run is the run that the paper reports. See the [reproduction guide](docs/CODE_TOUR.md) for checkpoint inference, downstream scoring, attribution, and figure generation.
 
 ## Documentation
 
-- [Baseline reproduction](baselines/README.md): source repositories, implementation adaptations, GT and validation use, reward and budget constants, and FM costs.
+- [Baseline reproduction](baselines/README.md): source repositories, implementation adaptations, GT and validation use, and FM costs.
 - [Released results](results/README.md): final outputs, run records, and the [result index](results/index.json).
 - [Code and evaluation guide](docs/CODE_TOUR.md): implementation structure, evaluation protocol, and commands for the paper’s tables and figures.
 - [FM replay and logs](results/llm/README.md): prompts, responses, and token accounting.

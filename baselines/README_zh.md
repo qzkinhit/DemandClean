@@ -4,7 +4,7 @@
 
 [返回项目首页](../README_zh.md)
 
-本页说明各基线的实现来源、训练数据适配、GT 用量和验证集用途，并列出论文报告运行的奖励与预算常数。本页命令均从仓库根目录执行。源码链接区分上游项目与本仓库的适配或重新实现。
+本页说明各基线的实现来源、训练数据适配、GT 用量和验证集用途，以及 FM 费用。本页命令均从仓库根目录执行。源码链接区分上游项目与本仓库的适配或重新实现。
 
 ## 基线复现说明
 
@@ -30,22 +30,6 @@
 | Learn2Clean | [LaureBerti/Learn2Clean](https://github.com/LaureBerti/Learn2Clean) V1，提交 169bac3，配合本仓库的[补丁](Methods/Learn2Clean/learn2clean_v1.patch)和[运行脚本](runners/run_learn2clean/) | 0 | 流水线选择 | Q-learning 图限定为填补、离群值删除、去重和一致性检查，各算子只在训练行上拟合，分类、回归和 `har` 的目标模型分别为 NB、OLS 和 HCA。在 `mercedes` 上 impyute 0.0.8 的 MICE 循环始终达不到停止条件，因此唯一使用 MICE 的候选流水线以平均每个含缺失列至多十次更新的上限运行（[l2c_mice_capped.py](runners/run_learn2clean/l2c_mice_capped.py)），其他数据集均使用未修改的算子，`mercedes` 上选中的流水线不使用 MICE。 |
 | RetClean | [qcri/RetClean](https://github.com/qcri/RetClean)，提交 7e72d93，使用本地 Ollama 部署的 Llama 3.1 (8B)，配合本仓库的[运行脚本](runners/run_retclean/) | 数据集与方法主比较表中以固定随机抽取的一半训练行的干净值作为数据湖，附录预算表的较低档位所用数据湖不小于全部单元格的 1.65% 与 DemandClean 的 GT 用量二者中的较大者 | 不使用 | 目标单元格来自脏训练行上的缺失标记、类型错误以及规则文件中的值域规则和 FD，按最多八个其他列语义检索最相近的三个数据湖元组，使用上游的提示词和解析器，以 `ast.literal_eval` 代替 `eval` |
 | DAGPipe | 作者发布的制品，[Zenodo 10.5281/zenodo.20492518](https://doi.org/10.5281/zenodo.20492518)，配合本仓库的[运行脚本](runners/run_dagpipe/) | 0 | 训练轮次选择 | 使用作者的损失函数在脏训练行上训练由填补、编码和缩放算子构成的层次化 DAG，算子统计量只在训练行上拟合，学到的图同时变换测试输入，主比较表的模型在其输出上训练和测试，回归使用 MSE 输出头，`har` 的脏活动标签作为替代任务。GPU 训练不能逐位复现，因此发布结果来自[运行脚本](runners/run_dagpipe/README.md)在单个 CPU 线程上的运行，该运行可以逐字节复现。 |
-
-## 各数据集的奖励与预算常数
-
-下表列出论文报告运行的常数。RF 为包含 10 棵树、深度为 8 的随机森林；Ridge 使用 alpha = 1；KMeans 使用 3 次初始化；T 为训练轮数；`bike` 和 `nasa` 的 lambda = 1e-4。
-
-| 数据集 | 代理模型 | T | r_max | lambda | delta_del | beta |
-|---|---|---|---|---|---|---|
-| `adult`, `beers` | RF | 300 | 0.3 | 0.03 | -0.02 | 0.2 |
-| `breast_c.`, `smartf.` | RF | 300 | 0.3 | 0.03 | -0.02 | 0.2 |
-| `bike` | RF | 200 | 1.0 | 1e-4 | -0.05 | 1.0 |
-| `mercedes` | Ridge | 300 | 0.3 | 0.03 | -0.05 | 1.0 |
-| `nasa` | RF | 200 | 1.0 | 1e-4 | -0.05 | 1.0 |
-| `soilmoist.` | Ridge | 300 | B = 0 | 0.03 | -0.05 | 1.0 |
-| `har` | KMeans | 300 | 0.3 | 0.1 | -0.02 | 0.2 |
-| `flights` | RF | 300 | 0.3 | 0.03 | -0.02 | 0.2 |
-| `soccer`, `hospital` | RF | 300 | B = 0 | 0.03 | -0.02 | 0.2 |
 
 ## FM 复现与费用
 

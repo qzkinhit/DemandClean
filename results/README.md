@@ -30,7 +30,7 @@ The budget directories contain ActiveClean, Comet, and Lopster on the nine bench
 
 | File | Content |
 | --- | --- |
-| `manifest.json` | Final command, configuration, seed where recorded, versions, artifact list, and provenance |
+| `manifest.json` | Final command, configuration, versions, artifact list, and provenance |
 | `run.log`, `demandclean.log`, `stderr.log` | Available execution messages; the manifest identifies the attached files |
 | `run.json` | Structured baseline execution record, when available |
 | `summary.json` | Operations, GT accounting, detection statistics, and execution time for DemandClean |
@@ -74,6 +74,6 @@ python evaluation/attribution_operation.py results/main_table/beers/demandclean
 python baselines/runners/run_llm.py --dataset mercedes --check
 ```
 
-The final manifest and score record determine the model, seed, and unseen-category encoding. Use `--nearest` only for scores whose record specifies that encoding. Classification and regression evaluate on clean test rows; clustering evaluates silhouette on the cleaned training rows. Recomputing scores fits the downstream models.
+The final manifest and score record determine the model and the unseen-category encoding. Use `--nearest` only for scores whose record specifies that encoding. Classification and regression evaluate on clean test rows; clustering evaluates silhouette on the cleaned training rows. Recomputing scores fits the downstream models.
 
 For a new cleaning run, write to `results/runs/` or a directory outside the release. The reproduction commands and artifact-to-paper mapping are detailed in [docs/CODE_TOUR.md](../docs/CODE_TOUR.md).

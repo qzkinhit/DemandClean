@@ -31,11 +31,11 @@ python scripts/run_demandclean.py --config configs/datasets/breast_cancer.yaml \
     --variant full --out results/runs/breast_cancer
 ```
 
-复现时请采用各运行 `manifest.json` 中记录的参数和随机种子。使用已有模型进行推理、下游评分、归因分析和图表生成的命令见[复现指南](docs/CODE_TOUR.md)。
+各运行的 `manifest.json` 记录了该运行的命令与参数。我们用多个随机种子运行了 DemandClean，仓库发布的每个运行都是论文所报告的运行。使用已有模型进行推理、下游评分、归因分析和图表生成的命令见[复现指南](docs/CODE_TOUR.md)。
 
 ## 详细文档
 
-- [基线复现](baselines/README_zh.md)：源码仓库、实现适配、GT 与验证集用途、奖励与预算常数，以及 FM 费用。
+- [基线复现](baselines/README_zh.md)：源码仓库、实现适配、GT 与验证集用途，以及 FM 费用。
 - [发布结果](results/README.md)：最终输出、运行记录及[结果索引](results/index.json)。
 - [代码与评估指南](docs/CODE_TOUR.md)：实现结构、评估口径，以及论文表格和插图的生成命令。
 - [FM 重放与日志](results/llm/README.md)：提示词、响应与 token 统计。
