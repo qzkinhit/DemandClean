@@ -31,7 +31,7 @@ python scripts/run_demandclean.py --config configs/datasets/breast_cancer.yaml \
     --variant full --out results/runs/breast_cancer
 ```
 
-Each run’s `manifest.json` records its command and parameters. We ran DemandClean with multiple random seeds, and every released run is the run that the paper reports. See the [reproduction guide](docs/CODE_TOUR.md) for checkpoint inference, downstream scoring, attribution, and figure generation.
+Each run’s `manifest.json` records its command and parameters. We ran DemandClean with multiple random seeds. See the [reproduction guide](docs/CODE_TOUR.md) for checkpoint inference, downstream scoring, attribution, and figure generation.
 
 ## Documentation
 

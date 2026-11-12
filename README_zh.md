@@ -31,7 +31,7 @@ python scripts/run_demandclean.py --config configs/datasets/breast_cancer.yaml \
     --variant full --out results/runs/breast_cancer
 ```
 
-各运行的 `manifest.json` 记录了该运行的命令与参数。我们用多个随机种子运行了 DemandClean，仓库发布的每个运行都是论文所报告的运行。使用已有模型进行推理、下游评分、归因分析和图表生成的命令见[复现指南](docs/CODE_TOUR.md)。
+各运行的 `manifest.json` 记录了该运行的命令与参数。我们用多个随机种子运行了 DemandClean。使用已有模型进行推理、下游评分、归因分析和图表生成的命令见[复现指南](docs/CODE_TOUR.md)。
 
 ## 详细文档
 
